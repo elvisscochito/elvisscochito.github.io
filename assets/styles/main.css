@@ -1,11 +1,3 @@
 @import url('themes.css');
+@import url('navbar.css');
 @import url('layout.css');
-
-nav a.btn {
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-
-nav a.btn:hover, nav a.btn-active {
-    background-color: var(--tertiary-color);
-}
