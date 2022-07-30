@@ -1,0 +1,9 @@
+:root {
+    color-scheme: light dark;
+    --tertiary-color: hsl(0, 0%, 83%);
+    accent-color: var(--tertiary-color);
+}
+
+::selection {
+    background-color: var(--tertiary-color);
+}
