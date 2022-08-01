@@ -4,9 +4,8 @@ nav {
 
 nav a:not(:first-child) {
     display: flex;
-   /*  justify-content: space-between;
-    align-items: center;
-    display: inline-flex; */
+    /* justify-content: flex-end;
+    align-items: center; */
 }
 
 nav a.btn {
@@ -15,6 +14,6 @@ nav a.btn {
     border-radius: 20px;
 }
 
-nav a.btn:hover, nav a.btn-active {
+nav a.btn:hover, nav a.btn:focus, nav a.btn-active {
     background-color: var(--tertiary-color);
 }
