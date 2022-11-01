@@ -1,0 +1,11 @@
+/* decimal (base-10) number system */
+
+html {
+    /* 62.5% of 16px browser font size is 10px */
+	font-size: 62.5%;
+}
+
+body {
+    /* font size back to 16px */
+	font-size: 1.6rem;
+}
