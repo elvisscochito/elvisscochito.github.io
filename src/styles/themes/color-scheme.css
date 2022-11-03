@@ -1,0 +1,25 @@
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    
+    --main-color: hsl(0, 0%, 0%);
+    --alter-color: hsl(0, 0%, 83%);
+    --aux-color: hsl(0, 0%, 96%);
+
+    --text-color: hsl(0, 0%, 100%);
+    
+    --details-color: hsl(0, 0%, 75%);
+    --accent-color: hsl(212, 100%, 48%);
+
+    /* color-scheme: light dark; */
+    accent-color: var(--accent-color);
+}
+
+::selection {
+    background-color: var(--accent-color);
+    color: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
