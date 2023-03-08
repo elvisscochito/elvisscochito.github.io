@@ -2,12 +2,12 @@
     --bg-color: hsl(0, 0%, 100%);
     
     --main-color: hsl(0, 0%, 0%);
-    --alter-color: hsl(0, 0%, 83%);
+    --alter-color: #d4d4d4;
     --aux-color: hsl(0, 0%, 96%);
 
     --text-color: hsl(0, 0%, 100%);
     
-    --details-color: hsl(0, 0%, 75%);
+    --details-color: hwb(0 75% 25%);
     --accent-color: hsl(212, 100%, 48%);
 
     /* color-scheme: light dark; */
