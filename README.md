@@ -1,5 +1,8 @@
 # elvisscochito.github.io
 
-My personal website
+*This is the repository for my personal website hosted on GitHub Pages. You can visit it at [elvisscochito.github.io](https://elvisscochito.github.io) that redirects to my personal custom domain [elvirodominguez.com](https://elvirodominguez.com).*
 
-__Preview:__ [elvisscochito.github.io](https://elvisscochito.github.io)
+## Stack
+This website is built with the following technologies:
+- Vite+React
+- CSS Modules
