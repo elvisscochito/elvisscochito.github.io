@@ -1,10 +1,53 @@
-import { useState } from 'react'
-import styles from '../styles/Navbar.module.css'
+import { useLayoutEffect, useState } from 'react';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
-  const [isActiveHashLink, setIsActiveHashLink] = useState('home')
+  const [isActiveHashLink, setIsActiveHashLink] = useState('home');
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+      const sections = document.querySelectorAll('section[id]');
+      const scroll = window.scrollY + 66;
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scroll >= sectionTop && scroll <= sectionTop + sectionHeight) {
+          setIsActiveHashLink(section.getAttribute('id'));
+        }
+      });
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isScrolled]);
+
+  /* useLayoutEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scroll = window.scrollY + 66;
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scroll >= sectionTop && scroll <= sectionTop + sectionHeight) {
+          setIsActiveHashLink(section.getAttribute('id'));
+        }
+      });
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []); */
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={isScrolled ? styles.navbarScrolled : styles.navbar}>
+      {/* <a href="#home" className={styles.navbarLink}>
+        <img src={logo} alt="logo" className={styles.navbarLogo} />
+      </a> */}
       <ul className={styles.navbarContainer}>
         <li className={styles.navbarItem}>
           <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>Home</a>
@@ -26,7 +69,7 @@ const Navbar = () => {
         </li>
       </ul>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

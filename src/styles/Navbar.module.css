@@ -1,4 +1,5 @@
-nav {
+nav.navbar,
+nav.navbarScrolled {
   height: 8vh;
   position: sticky;
   top: 0;
@@ -6,9 +7,28 @@ nav {
   border-bottom: 1px solid #eaeaea
     /* solid var(--details) */
   ;
+  /* background-color: rgba(250, 250, 250, 0.8); */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+nav.navbarScrolled {
   background-color: rgba(250, 250, 250, 0.8);
   backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
 }
+
+/* a.navbarLink:has(img.navbarLogo) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img.navbarLogo {
+  height: 3rem;
+} */
 
 ul {
   display: flex;
