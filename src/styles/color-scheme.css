@@ -1,0 +1,33 @@
+:root {
+  --text-color:
+    /* #213547 */
+    #333333
+    /* #171717 */
+  ;
+  --text-aux-color: #666666;
+  --details: hwb(0 75% 25%);
+  --accent-color: #007bff;
+  color-scheme: light dark;
+  accent-color: var(--accent-color);
+  color: var(--text-color);
+  /* background-color: #fafafa; */
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #EDEDED
+      /* #F0F0F0 */
+      /* rgba(255, 255, 255, 0.87) */
+    ;
+    --text-aux-color: #A1A1A1;
+    --details: hsla(0, 0%, 100%, .1);
+    --accent-color: rgb(36, 79, 207);
+    color: var(--text-color);
+    background-color: #000;
+  }
+}
