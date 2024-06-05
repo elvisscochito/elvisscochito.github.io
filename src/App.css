@@ -17,7 +17,7 @@
 section {
   height: 100vh;
   scroll-margin-top: 8vh;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .homeHeading {
