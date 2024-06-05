@@ -8,10 +8,10 @@ nav.navbarScrolled {
     /* solid var(--details) */
   ;
   /* background-color: rgba(250, 250, 250, 0.8); */
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
 }
 
 nav.navbarScrolled {
@@ -30,6 +30,11 @@ img.navbarLogo {
   height: 3rem;
 } */
 
+span.navbarLogo {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -46,8 +51,12 @@ ul {
   top: 0;
 } */
 
-li.navbarItem:is(:hover, :focus)>a {
+li.navbarItem:is(:hover, :focus)>a
+
+/* :not(.activeLink) */
+  {
   color: var(--text-color);
+  /* border-bottom: 1px solid #18181B; */
 }
 
 a.navbarLink,
@@ -56,8 +65,21 @@ a.activeLink {
   text-decoration: none;
 }
 
-a.activeLink {
+a.activeLink:not(ul li.navbarItem:last-child a) {
   color: var(--text-color);
   font-weight: 600;
   border-bottom: 2.5px solid #18181B;
+}
+
+/* li.navbarItem:last-child {
+  color: red;
+} */
+
+/* selecciona el ultimo elemento de la lista */
+ul li.navbarItem:last-child a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #18181B;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
