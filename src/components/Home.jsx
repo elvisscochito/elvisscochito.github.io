@@ -8,7 +8,10 @@ const Home = () => {
       </header>
       <div className={styles.content}>
         <p>Hi!, I'm <span className={styles.span}>@elvisscochito</span>, a <span className={styles.span}>Computer Science</span> student at <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University.</p>
+        {/* <div className={styles.buttonsContainer}>
+          <a href="#contact" className={styles.btnAux}>Download resume</a> */}
         <a href="#contact" className={styles.btn}>Get in touch</a>
+        {/* </div> */}
       </div>
       <footer>
       </footer>

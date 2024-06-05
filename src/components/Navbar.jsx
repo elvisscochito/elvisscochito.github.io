@@ -45,9 +45,9 @@ const Navbar = () => {
 
   return (
     <nav className={isScrolled ? styles.navbarScrolled : styles.navbar}>
-      {/* <a href="#home" className={styles.navbarLink}>
-        <img src={logo} alt="logo" className={styles.navbarLogo} />
-      </a> */}
+      <a href="#home" className={styles.navbarLink}>
+        <span className={styles.navbarLogo}>Elviro Dominguez Soriano</span>
+      </a>
       <ul className={styles.navbarContainer}>
         <li className={styles.navbarItem}>
           <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>Home</a>

@@ -44,7 +44,11 @@ section.home {
     text-decoration: none;
   }
 
-  a.btn {
+  a.btn
+
+  /* ,
+  a.btnAux */
+    {
     color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
@@ -54,7 +58,25 @@ section.home {
     text-decoration: none;
   }
 
-  a.btn:hover {
+  /*  a.btnAux {
+    background-color: transparent;
+    border: 1.5px solid var(--details);
+    color: var(--details);
+    font-weight: 550;
+  } */
+
+  /* div.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  } */
+
+  a.btn:hover
+
+  /* ,
+  a.btnAux:hover */
+    {
     scale: 1.05;
     transition: scale 0.3s ease-in-out;
   }
