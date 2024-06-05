@@ -59,4 +59,5 @@ a.activeLink {
 a.activeLink {
   color: var(--text-color);
   font-weight: 600;
+  border-bottom: 2.5px solid #18181B;
 }
