@@ -26,7 +26,7 @@
     ;
     --text-aux-color: #A1A1A1;
     --details: hsla(0, 0%, 100%, .1);
-    --accent-color: rgb(36, 79, 207);
+    --accent-color: #0070F3;
     color: var(--text-color);
     background-color: #000;
   }
