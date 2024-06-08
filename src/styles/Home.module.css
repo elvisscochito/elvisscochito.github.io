@@ -12,73 +12,74 @@ section.home {
     text-align: center;
   }
 
-  div.content {
+  div.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-  }
 
-  p {
-    color: #18181b;
-    font-size: 1.8rem;
-    text-align: center;
-    text-wrap: balance;
-  }
-
-  @media only screen and (min-width: 768px) {
     p {
-      width: 80%;
+      color: #18181b;
+      font-size: 1.8rem;
+      text-align: center;
+      text-wrap: balance;
+      max-inline-size: 40ch;
+
+      span.span {
+        font-weight: bold;
+      }
+
+      a.link {
+        color: var(--accent-color);
+        font-weight: bold;
+        border-bottom: 2.5px solid var(--accent-color);
+        text-decoration: none;
+      }
     }
-  }
 
-  span.span {
-    font-weight: bold;
-  }
+    /* @media only screen and (min-width: 768px) {
+        p {
+          width: 80%;
+        }
+    } */
 
-  a.link {
-    color: var(--accent-color);
-    font-weight: bold;
-    border-bottom: 2.5px solid var(--accent-color);
-    text-decoration: none;
-  }
+    /* div.buttonsContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    } */
 
-  a.btn
+    a.btn
 
-  /* ,
-  a.btnAux */
-    {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.5rem;
-    background-color: #18181b;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-  }
+    /* ,
+      a.btnAux */
+      {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      background-color: #18181b;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
 
-  /*  a.btnAux {
-    background-color: transparent;
-    border: 1.5px solid var(--details);
-    color: var(--details);
-    font-weight: 550;
-  } */
+    /*  a.btnAux {
+            background-color: transparent;
+            border: 1.5px solid var(--details);
+            color: var(--details);
+            font-weight: 550;
+    } */
 
-  /* div.buttonsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  } */
+    a.btn:hover
 
-  a.btn:hover
-
-  /* ,
-  a.btnAux:hover */
-    {
-    scale: 1.05;
-    transition: scale 0.3s ease-in-out;
+    /* ,
+      a.btnAux:hover */
+      {
+      scale: 1.05;
+      transition: scale 0.3s ease-in-out;
+    }
   }
 
   footer {

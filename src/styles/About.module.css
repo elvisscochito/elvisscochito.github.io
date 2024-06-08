@@ -1,3 +1,136 @@
-.about {
-  height: 100vh;
+section.about {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; */
+  padding: 0 2rem;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2.h2 {
+      color: #18181b;
+      font-size: 2.8rem;
+    }
+  }
+
+  div.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+    gap: 3.5rem;
+
+    div.info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+
+      div.school {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      div.school,
+      div.phone,
+      div.location,
+      div.email {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        /* border: 1px solid #eaeaea;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            background-color: rgba(250, 250, 250, 0.8); */
+
+        span:first-of-type {
+          font-weight: 400;
+          color: var(--details);
+          font-size: 1rem !important;
+        }
+
+        span:nth-of-type(2) {
+          font-weight: bold;
+          /* color: black; */
+        }
+
+        .icon {
+          color: var(--accent-color);
+          font-size: 1.8rem;
+        }
+
+        div.schoolInfo,
+        div.phoneInfo,
+        div.locationInfo,
+        div.emailInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          span {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      /* div.phone,
+          div.location,
+          div.email {
+            span:first-of-type {
+              font-weight: 400;
+              color: var(--details);
+              font-size: 1rem !important;
+            }
+
+            span:nth-of-type(2) {
+              font-weight: 400;
+            }
+
+            span:last-of-type {
+              font-weight: 600;
+            }
+          } */
+
+      div.email {
+        /* span:nth-of-type(2) {
+              font-weight: 400;
+            } */
+
+        a {
+          color: var(--text-color);
+          text-decoration: none;
+          font-size: 1.3rem;
+          /* font-weight: 600; */
+        }
+      }
+    }
+
+    /* div.image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem; */
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* aspect-ratio: 16/9; */
+    }
+
+    /* } */
+  }
 }
