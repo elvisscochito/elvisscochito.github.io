@@ -11,6 +11,7 @@
   accent-color: var(--accent-color);
   color: var(--text-color);
   /* background-color: #fafafa; */
+  scrollbar-color: #18181b transparent;
 }
 
 ::selection {

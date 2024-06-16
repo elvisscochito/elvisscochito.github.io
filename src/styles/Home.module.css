@@ -5,6 +5,13 @@ section.home {
   align-items: center;
   gap: 2rem;
   padding-top: 2rem;
+  /* background: radial-gradient(100% 50% at 20% 70%, rgba(0, 123, 255, 0.25) 0%, rgba(30, 25, 173, 0) 50%, rgba(131, 126, 127, 0) 100%),
+
+    radial-gradient(100% 50% at 70% 70%, rgba(173, 109, 244, 0.5) 0%, rgba(173, 109, 244, 0) 50%, rgba(173, 109, 244, 0) 100%),
+
+    radial-gradient(100% 50% at 30% 50%, rgba(219, 25, 64, 0.25) 0%, rgba(173, 109, 244, 0) 50%, rgba(173, 109, 244, 0) 100%),
+
+    radial-gradient(100% 50% at 80% 50%, rgba(0, 123, 255, 0.25) 0%, rgba(255, 0, 0, 0) 50%, rgba(131, 126, 127, 0) 100%); */
 
   h1.h1 {
     color: #18181b;

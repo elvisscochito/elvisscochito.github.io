@@ -1,0 +1,68 @@
+aside.asideNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  height: 100%;
+  padding: 1rem;
+
+  a {
+    text-decoration: none;
+    color: transparent;
+    z-index: 1;
+
+    .dot,
+    .dotActive {
+      background-color: #D9D9D9;
+      border-radius: 50%;
+      border: 3px solid white;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .dotActive {
+      background-color: silver;
+    }
+
+    .dotSize1 {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .dotSize2 {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .dotSize3 {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    .dotSize4 {
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+
+    .dotSize5 {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+
+aside.asideNav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  /* Centro del contenedor */
+  left: 50%;
+  width: 1.5px;
+  /* Ajusta el ancho de la línea */
+  height: 28%;
+  /* Ajusta la altura de la línea (50% de la altura del contenedor) */
+  background-color: var(--details);
+  /* Ajusta el color de la línea */
+  transform: translate(-50%, -50%);
+}

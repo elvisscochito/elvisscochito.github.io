@@ -1,3 +1,4 @@
+import { faClone } from '@fortawesome/free-regular-svg-icons';
 import { faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import me from '../assets/me.jpg';
@@ -43,7 +44,7 @@ const About = () => {
             <div className={styles.emailInfo}>
               <span>Email</span>
               <span>Send me an email at:</span>
-              <a href="mailto:contact@elvirodominguez.com" className={styles.link}>contact@elvirodominguez.com</a>
+              <a href="mailto:contact@elvirodominguez.com" className={styles.link}>contact@elvirodominguez.com<FontAwesomeIcon icon={faClone} className={styles.iconAux} /></a>
             </div>
           </div>
         </div>
