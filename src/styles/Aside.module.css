@@ -21,6 +21,11 @@ aside.asideNav {
       transition: all 0.2s ease-in-out;
     }
 
+    .dot:hover {
+      background-color: silver;
+      scale: 1.1;
+    }
+
     .dotActive {
       background-color: silver;
     }

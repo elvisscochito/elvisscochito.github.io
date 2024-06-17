@@ -1,4 +1,4 @@
-import { faCircle } from '@fortawesome/free-regular-svg-icons';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from 'react';
 import styles from '../styles/Aside.module.css';
@@ -6,6 +6,8 @@ import styles from '../styles/Aside.module.css';
 const Aside = () => {
   const [isActiveDot, setIsActiveDot] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const dots = ['home', 'about', 'skills', 'projects', 'contact'];
+  const dotSizes = ['dotSize5', 'dotSize4', 'dotSize3', 'dotSize2', 'dotSize1'];
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -28,25 +30,34 @@ const Aside = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isScrolled]);
 
-  const dots = ['home', 'about', 'skills', 'projects', 'contact'];
-  const dotSizes = ['dotSize5', 'dotSize4', 'dotSize3', 'dotSize2', 'dotSize1'];
-
-  const getDotClass = (index) => {
+  /* const getDotClass = (index) => {
     const activeIndex = dots.indexOf(isActiveDot);
     const distance = Math.abs(activeIndex - index);
     return styles[dotSizes[distance]];
-  };
+  }; */
+
+  const getDotClass = (index, dot) => {
+    /* console.log("dot:", dot);
+    console.log("isActiveDot:", isActiveDot);
+    console.log("index:", index); */
+    const activeIndex = dots.indexOf(isActiveDot);
+    const distance = Math.abs(activeIndex - index);
+    /* console.log("styles[dotSizes[distance]]", styles[dotSizes[distance]]); */
+    return styles[dotSizes[distance]];
+  }
 
   return (
     <aside className={styles.asideNav}>
-      {dots.map((dot, index) => (
-        <a key={dot} href={`#${dot}`} onClick={() => setIsActiveDot(dot)}>
-          <FontAwesomeIcon
-            icon={faCircle}
-            className={`${isActiveDot === dot ? styles.dotActive : styles.dot} ${getDotClass(index)}`}
-          />
-        </a>
-      ))}
+      {
+        dots.map((dot, index) => (
+          <a key={dot} href={`#${dot}`} onClick={() => setIsActiveDot(dot)}>
+            <FontAwesomeIcon
+              icon={faCircle}
+              className={`${isActiveDot === dot ? styles.dotActive : styles.dot} ${getDotClass(index, dot)}`}
+            />
+          </a>
+        ))
+      }
     </aside>
   );
 }
