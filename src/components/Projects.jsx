@@ -1,29 +1,46 @@
 import { useState } from 'react';
+import Card from '../components/Card';
 import styles from '../styles/Projects.module.css';
 
 const Projects = () => {
   const [projectsButtons, setProjectsButtons] = useState([
     {
       id: 1,
-      name: 'Web dev',
+      path: 'Web dev',
       active: true
     },
     {
       id: 2,
-      name: 'Mobile dev',
+      path: 'Mobile dev',
       active: false
     },
     {
       id: 3,
-      name: 'Game dev',
+      path: 'Game dev',
       active: false
     },
     {
       id: 4,
-      name: 'Data science',
+      path: 'Data science',
       active: false
     }
   ]);
+  const [projects, setProjects] = useState([
+    {
+      id: 1,
+      title: 'Wizeline',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://www.wizeline.com/',
+      repo: 'https://github.com/elvisscochito'
+    },
+    {
+      id: 2,
+      title: 'Wizeline',
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://www.wizeline.com/',
+      repo: 'https://github.com/elvisscochito'
+    }
+  ])
 
   /* const buttonStyles = (active) => {
     return {
@@ -54,12 +71,19 @@ const Projects = () => {
                 className={`${styles.projectsBtn} ${button.active ? styles.activeButton : styles.inactiveButton}`}
                 onClick={() => handleProjectsSwitch(button.id)}
               >
-                {button.name}
+                {button.path}
               </button>
               {
                 index < projectsButtons.length - 1 && <span className={styles.separator}></span>
               }
             </>
+          ))
+        }
+      </div>
+      <div className={styles.projectsContainer}>
+        {
+          projects.map(project => (
+            <Card key={project.id} title={project.title} thumbnail={project.thumbnail} link={project.link} repo={project.repo} />
           ))
         }
       </div>

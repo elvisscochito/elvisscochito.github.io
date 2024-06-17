@@ -79,6 +79,20 @@ button.activeButton {
   background-color: #ddd;
 }
 
+div.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; */
+}
+
 /* button.projectsBtn {
   display: flex;
   flex-direction: row;

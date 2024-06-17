@@ -69,6 +69,11 @@ section.about {
           font-size: 1.8rem;
         }
 
+        .iconAux {
+          color: #d5d5d5;
+          font-size: 1.5rem;
+        }
+
         div.schoolInfo,
         div.phoneInfo,
         div.locationInfo,
@@ -82,6 +87,10 @@ section.about {
             font-size: 1.3rem;
           }
         }
+
+        /* div.emailInfo {
+          flex-direction: row;
+        } */
       }
 
       /* div.phone,
