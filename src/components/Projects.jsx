@@ -28,6 +28,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([
     {
       id: 1,
+      path: 'Web dev',
       title: 'Wizeline',
       thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: 'https://www.wizeline.com/',
@@ -35,6 +36,15 @@ const Projects = () => {
     },
     {
       id: 2,
+      path: 'Web dev',
+      title: 'Wizeline',
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://www.wizeline.com/',
+      repo: 'https://github.com/elvisscochito'
+    },
+    {
+      id: 3,
+      path: 'Mobile dev',
       title: 'Wizeline',
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: 'https://www.wizeline.com/',
@@ -54,6 +64,8 @@ const Projects = () => {
       active: button.id === id
     })));
   }
+
+  const activeButton = projectsButtons.find(button => button.active);
 
   return (
     <section id="projects">
@@ -82,9 +94,17 @@ const Projects = () => {
       </div>
       <div className={styles.projectsContainer}>
         {
-          projects.map(project => (
-            <Card key={project.id} title={project.title} thumbnail={project.thumbnail} link={project.link} repo={project.repo} />
-          ))
+          projects
+            .filter(project => project.path === activeButton.path)
+            .map(project => (
+              <Card
+                key={project.id}
+                title={project.title}
+                thumbnail={project.thumbnail}
+                link={project.link}
+                repo={project.repo}
+              />
+            ))
         }
       </div>
     </section>
