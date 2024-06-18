@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/Home.module.css';
 
@@ -11,11 +11,9 @@ const Home = () => {
       </header>
       <div className={styles.body}>
         <p>Hi!, I'm <span className={styles.span}>@elvisscochito</span>, a <span className={styles.span}>Computer Science</span> student at <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University.</p>
-        <div className={styles.buttonsContainer}>
-          <div className={styles.cta}>
-            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>View Resume</a>
-            <a href="#contact" className={styles.btn}>Get in touch</a>
-          </div>
+        <div className={styles.buttonsCtaContainer}>
+          <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>View Resume</a>
+          <a href="#contact" className={styles.btn}>Get in touch</a>
         </div>
       </div>
       <footer className={styles.buttons}>
@@ -36,6 +34,12 @@ const Home = () => {
           <FontAwesomeIcon icon={faGithub} className={styles.icon} />
         </a>
       </footer>
+      <div className={styles.more}>
+        <span>Scroll down to know more</span>
+        <a href="#about">
+          <FontAwesomeIcon icon={faArrowDown} className={styles.arrowIcon} />
+        </a>
+      </div>
     </section>
   );
 }

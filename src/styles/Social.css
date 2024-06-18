@@ -13,9 +13,12 @@ div.container {
   border: 1px solid #eaeaea;
   background-color: rgba(250, 250, 250, 0.8);
   gap: 1rem;
+  /* box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.05); */
 
   /* &:hover {
     transform: scale(1.1);
+    filter: drop-shadow(0 0 2em #007bffc9);
+
   } */
 
   .icon {
