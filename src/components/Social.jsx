@@ -6,6 +6,7 @@ import '../styles/Social.css';
 const Social = () => {
   return (
     <div className="container">
+      {/* <h2>@</h2> */}
       <a href="https://www.linkedin.com/in/elviro-dominguez-soriano" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faLinkedin} className="icon" />
       </a>

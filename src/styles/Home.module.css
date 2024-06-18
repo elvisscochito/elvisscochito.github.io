@@ -19,7 +19,7 @@ section.home {
     text-align: center;
   }
 
-  div.main {
+  div.body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,50 +51,87 @@ section.home {
         }
     } */
 
-    /* div.buttonsContainer {
+    div.buttonsContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+
+      div.cta {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         gap: 1rem;
-    } */
 
-    a.btn
+        a.btn,
+        a.btnAux {
+          color: #fff;
+          font-weight: bold;
+          font-size: 1.5rem;
+          background-color: #18181b;
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          text-decoration: none;
+        }
 
-    /* ,
-      a.btnAux */
-      {
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.5rem;
-      background-color: #18181b;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-    }
+        a.btnAux {
+          background-color: transparent;
+          border: 1.5px solid #18181b;
+          color: #18181b;
+          font-weight: 550;
+        }
 
-    /*  a.btnAux {
-            background-color: transparent;
-            border: 1.5px solid var(--details);
-            color: var(--details);
-            font-weight: 550;
-    } */
-
-    a.btn:hover
-
-    /* ,
-      a.btnAux:hover */
-      {
-      scale: 1.05;
-      transition: scale 0.3s ease-in-out;
+        a:is(.btn, .btnAux):hover {
+          scale: 1.05;
+          transition: scale 0.3s ease-in-out;
+        }
+      }
     }
   }
 
-  footer {
+  footer.buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 50%;
     width: 100%;
+    gap: 1rem;
+
+    span.link,
+    .icon {
+      background-color: rgba(250, 250, 250, 0.8);
+      border-radius: 50rem;
+      font-size: 1.8rem;
+      padding: 1rem;
+      color: #24292e;
+      border: 1px solid #eaeaea;
+      border-radius: 50%;
+
+      /* &:hover {
+                  transform: scale(1.1);
+                } */
+    }
+
+    .icon {
+      aspect-ratio: 1/1;
+    }
+
+    span.link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 1.5rem;
+      padding: 0.8rem;
+    }
+
+    /* background: linear-gradient(to top, rgb(195, 73, 73) 0%, rgba(0, 0, 0, 0) 50%);
+              pointer-events: none; */
+    /* Permite interactuar con elementos debajo del mask */
   }
 }
