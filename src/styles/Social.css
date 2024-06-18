@@ -20,7 +20,7 @@ div.container {
 
   .icon {
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: #24292e;
 
     &:hover {
       transform: scale(1.1);
