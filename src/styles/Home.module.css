@@ -3,8 +3,34 @@ section.home {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding-top: 2rem;
+  height: 92vh;
+  position: relative;
+  z-index: 1;
+
+  img.reactLogo {
+    position: fixed;
+    top: 35%;
+    left: 15%;
+    width: 10rem;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+
+  img.jsLogo {
+    position: fixed;
+    top: 25%;
+    right: 15%;
+    width: 10rem;
+    transform: rotate(10deg);
+    filter: drop-shadow(0 0 2em #f0db4f);
+  }
+
   /* background: radial-gradient(100% 50% at 20% 70%, rgba(0, 123, 255, 0.25) 0%, rgba(30, 25, 173, 0) 50%, rgba(131, 126, 127, 0) 100%),
 
     radial-gradient(100% 50% at 70% 70%, rgba(173, 109, 244, 0.5) 0%, rgba(173, 109, 244, 0) 50%, rgba(173, 109, 244, 0) 100%),
@@ -13,11 +39,32 @@ section.home {
 
     radial-gradient(100% 50% at 80% 50%, rgba(0, 123, 255, 0.25) 0%, rgba(255, 0, 0, 0) 50%, rgba(131, 126, 127, 0) 100%); */
 
-  h1.h1 {
-    color: #18181b;
-    font-size: 2.8rem;
+  header {
     text-align: center;
+    color: #18181b;
+
+    h1.h1 {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    /* h2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--details);
+    } */
   }
+
+  /* h2,
+  h3 {
+    color: #18181b;
+    font-weight: bold;
+  } */
 
   div.body {
     display: flex;
@@ -92,7 +139,11 @@ section.home {
     width: 100%;
     gap: 1rem;
 
-    /* span.link, */
+    .copy {
+      color: rgb(225, 225, 225);
+    }
+
+    span.link,
     .icon {
       background-color: rgba(250, 250, 250, 0.8);
       border-radius: 50rem;
@@ -111,7 +162,7 @@ section.home {
       aspect-ratio: 1/1;
     }
 
-    /* span.link {
+    span.link {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -121,8 +172,8 @@ section.home {
       text-decoration: none;
       font-weight: 500;
       border-radius: 1.5rem;
-      padding: 0.8rem;
-    } */
+      padding: 0.5rem 0.8rem;
+    }
 
     /* background: linear-gradient(to top, rgb(195, 73, 73) 0%, rgba(0, 0, 0, 0) 50%);
               pointer-events: none; */
@@ -141,6 +192,8 @@ section.home {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    position: absolute;
+    bottom: 2rem;
 
     span {
       color: var(--details);
@@ -172,5 +225,101 @@ section.home {
 @media (prefers-reduced-motion: no-preference) {
   .arrowIcon {
     animation: upAndDown 2s infinite linear;
+  }
+}
+
+/* TODO bordes animados */
+
+span.workStatus,
+span.workType {
+  color: #25ac59
+    /* var(--accent-color) */
+  ;
+  border: 1px solid #25ac59
+    /* var(--accent-color) */
+  ;
+  background-color: rgba(19, 208, 91, 0.1)
+    /* rgba(0, 123, 255, 0.1) */
+  ;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  font-weight: 500;
+  /* filter: drop-shadow(0 0 2em #25ac59); */
+}
+
+div.workStatusContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  div.workTypeContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  span.workType,
+  span.first {
+    color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+    background-color: rgba(240, 173, 78, 0.1);
+    /* filter: drop-shadow(0 0 2em #f0ad4e); */
+  }
+
+  span.second {
+    color: #b74fd9;
+    border: 1px solid #b74fd9;
+    background-color: rgba(183, 79, 217, 0.1);
+    /* filter: drop-shadow(0 0 2em #d9534f); */
+  }
+
+  span.third {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    background-color: rgba(0, 123, 255, 0.1);
+    /* filter: drop-shadow(0 0 2em #5bc0de); */
+  }
+}
+
+
+div.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span:first-of-type {
+      color: #18181b;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    span:last-of-type {
+      font-weight: 500;
+    }
+
+    /* span {
+      color: #18181b;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    p {
+      color: #18181b;
+      font-size: 1.2rem;
+      font-weight: 500;
+    } */
   }
 }

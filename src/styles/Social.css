@@ -12,6 +12,7 @@ div.container {
   border-radius: 0.5rem;
   border: 1px solid #eaeaea;
   background-color: rgba(250, 250, 250, 0.8);
+  backdrop-filter: blur(8px);
   gap: 1rem;
   /* box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.05); */
 
