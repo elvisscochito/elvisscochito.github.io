@@ -10,8 +10,13 @@ import styles from '../styles/Home.module.css';
 const Home = () => {
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
-  const [emailText, setEmailText] = useState('');
-  const [phoneText, setPhoneText] = useState('');
+  /* const timerRef = useRef(null); */
+  const [text, setText] = useState(
+    {
+      email: '',
+      phone: ''
+    }
+  );
   const [copiedText, setCopiedText] = useState(
     {
       email: false,
@@ -20,32 +25,56 @@ const Home = () => {
   );
 
   useEffect(() => {
-    setEmailText(emailRef.current.textContent);
-    setPhoneText(phoneRef.current.textContent);
+    /* const refEmailText = emailRef.current.textContent;
+    const refPhoneText = phoneRef.current.textContent; */
+    if (emailRef.current && phoneRef.current) {
+      setText(
+        {
+          email: emailRef.current.textContent,
+          phone: phoneRef.current.textContent
+        }
+      );
+    };
   }, []);
 
   const handleCopyToClipboard = async (text, type) => {
     /* const emailText = emailRef.current.textContent; */
     await navigator.clipboard.writeText(text);
 
-    /* if (type === 'email') {
+    /* console.log('Copied to clipboard:', text); */
+
+    if (type === 'email') {
       setCopiedText({
-        ...copiedText,
-        email: true
+        email: true,
+        phone: false
       });
-      setTimeout(() => setCopiedText({ ...copiedText, email: false }), 2000);
+      setTimeout(() => setCopiedText({ email: false, phone: false }), 2000);
     } else if (type === 'phone') {
       setCopiedText({
-        ...copiedText,
+        email: false,
         phone: true
       });
-      setTimeout(() => setCopiedText({ ...copiedText, phone: false }), 2000);
-    } */
-    setCopiedText({
-      ...copiedText,
+      setTimeout(() => setCopiedText({ email: false, phone: false }), 2000);
+    }
+
+    /* set both to false but one to true depending the type */
+    /* setCopiedText({
+      email: false,
+      phone: false,
       [type]: true
-    });
-    setTimeout(() => setCopiedText({ ...copiedText, [type]: false }), 2000);
+    }); */
+
+    /* clean prev timer if exits */
+    /* if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    } */
+
+    /* set new timer */
+    /* timerRef.current = setTimeout(() =>
+      setCopiedText((prevCopiedText) => ({
+        ...prevCopiedText,
+        [type]: false
+      })), 2000); */
   }
 
   /* const [copiedText, setCopiedText] = useState();
@@ -85,7 +114,7 @@ const Home = () => {
                 copiedText.email ?
                   <FontAwesomeIcon icon={faCheck} className={styles.copied} />
                   :
-                  <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(emailText, 'email')} />
+                  <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.email, 'email')} />
               }
             </span>
             <span a href="tel:+527773464786" className={styles.button}>
@@ -97,7 +126,7 @@ const Home = () => {
                 copiedText.phone ?
                   <FontAwesomeIcon icon={faCheck} className={styles.copied} />
                   :
-                  <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(phoneText, 'phone')} />
+                  <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.phone, 'phone')} />
               }
             </span>
             {/* <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
