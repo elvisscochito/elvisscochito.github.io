@@ -146,10 +146,16 @@ section.home {
 
         .copy {
           color: rgb(225, 225, 225);
+          font-size: 1rem;
 
           &:hover {
             color: var(--details);
           }
+        }
+
+        .copied {
+          color: #24292e;
+          font-size: 1rem;
         }
 
         span.button {

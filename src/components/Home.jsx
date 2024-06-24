@@ -1,38 +1,92 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faArrowDown, faBolt, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import js from '../assets/js.png';
 import me from '../assets/me.jpg';
 import react from '../assets/react.svg';
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
-  /* const emailRef = useRef(null);
-  const [emailText, setEmailText] = useState('');
-  const [emailCopied, setEmailCopied] = useState(false); */
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  /* const timerRef = useRef(null); */
+  const [text, setText] = useState(
+    {
+      email: '',
+      phone: ''
+    }
+  );
+  const [copiedText, setCopiedText] = useState(
+    {
+      email: false,
+      phone: false
+    }
+  );
 
-  /* useEffect(() => {
-    const emailText = emailRef.current.textContent;
-    setEmailText(emailText);
-  }, []); */
+  useEffect(() => {
+    /* const refEmailText = emailRef.current.textContent;
+    const refPhoneText = phoneRef.current.textContent; */
+    if (emailRef.current && phoneRef.current) {
+      setText(
+        {
+          email: emailRef.current.textContent,
+          phone: phoneRef.current.textContent
+        }
+      );
+    };
+  }, []);
 
-  /* const handleEmailCopy = async () => {
-    const emailText = emailRef.current.textContent;
-    const copyText = await navigator.clipboard.readText(emailText);
-    setEmailCopied(true);
-    setTimeout(() => setEmailCopied(false), 2000);
-  } */
+  const handleCopyToClipboard = async (text, type) => {
+    /* const emailText = emailRef.current.textContent; */
+    await navigator.clipboard.writeText(text);
 
+    /* console.log('Copied to clipboard:', text); */
+
+    if (type === 'email') {
+      setCopiedText({
+        email: true,
+        phone: false
+      });
+      setTimeout(() => setCopiedText({ email: false, phone: false }), 2000);
+    } else if (type === 'phone') {
+      setCopiedText({
+        email: false,
+        phone: true
+      });
+      setTimeout(() => setCopiedText({ email: false, phone: false }), 2000);
+    }
+
+    /* set both to false but one to true depending the type */
+    /* setCopiedText({
+      email: false,
+      phone: false,
+      [type]: true
+    }); */
+
+    /* clean prev timer if exits */
+    /* if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    } */
+
+    /* set new timer */
+    /* timerRef.current = setTimeout(() =>
+      setCopiedText((prevCopiedText) => ({
+        ...prevCopiedText,
+        [type]: false
+      })), 2000); */
+  }
+
+  /* const [copiedText, setCopiedText] = useState();
   const [copied, setCopiedId] = useState();
 
   useEffect(() => {
     (async function run() {
       const emailText = await navigator.clipboard.readText();
-      console.log(emailText, 'xd');
+      setCopiedText(emailText);
     }
     )();
-  }, [copied]);
+  }, [copied]); */
 
   return (
     <section id="home" className={styles.home}>
@@ -53,20 +107,27 @@ const Home = () => {
           <div className={styles.buttons}>
             <span className={styles.button}>
               <FontAwesomeIcon icon={faEnvelope} />
-              <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20opportunity&body=Hello,%20Elviro:" /* ref={emailRef} */>
+              <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20opportunity&body=Hello,%20Elviro:" ref={emailRef}>
                 contact@elvirodominguez.com
               </a>
-              <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() =>
-                setCopiedId('emailText')
+              {
+                copiedText.email ?
+                  <FontAwesomeIcon icon={faCheck} className={styles.copied} />
+                  :
+                  <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.email, 'email')} />
               }
-              />
             </span>
             <span a href="tel:+527773464786" className={styles.button}>
               <FontAwesomeIcon icon={faPhone} />
-              <a href="tel:+527773464786">
+              <a href="tel:+527773464786" ref={phoneRef}>
                 +52 777 346 4786
               </a>
-              <FontAwesomeIcon icon={faClone} className={styles.copy} />
+              {
+                copiedText.phone ?
+                  <FontAwesomeIcon icon={faCheck} className={styles.copied} />
+                  :
+                  <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.phone, 'phone')} />
+              }
             </span>
             {/* <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
         <FontAwesomeIcon icon={faPhone} className={styles.icon} /> */}
