@@ -6,7 +6,7 @@ aside.asideNav {
   gap: 1rem;
   position: fixed;
   height: 100%;
-  padding: 1rem;
+  padding: 2rem;
 
   a {
     text-decoration: none;
