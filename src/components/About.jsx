@@ -1,10 +1,61 @@
 /* import { faClone } from '@fortawesome/free-regular-svg-icons'; */
-import { faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faClone, faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import me from '../assets/me.jpg';
+import { useEffect, useRef, useState } from 'react';
+import me from '../assets/profile.png';
 import styles from '../styles/About.module.css';
 
 const About = () => {
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  /* const timerRef = useRef(null); */
+  const [text, setText] = useState(
+    {
+      email: '',
+      phone: ''
+    }
+  );
+  const [copiedText, setCopiedText] = useState(
+    {
+      email: false,
+      phone: false
+    }
+  );
+
+  useEffect(() => {
+    /* const refEmailText = emailRef.current.textContent;
+    const refPhoneText = phoneRef.current.textContent; */
+    if (emailRef.current && phoneRef.current) {
+      setText(
+        {
+          email: emailRef.current.textContent,
+          phone: phoneRef.current.textContent
+        }
+      );
+    }
+  }, []);
+
+  const handleCopyToClipboard = async (text, type) => {
+    /* const emailText = emailRef.current.textContent; */
+    await navigator.clipboard.writeText(text);
+
+    /* console.log('Copied to clipboard:', text); */
+
+    if (type === 'email') {
+      setCopiedText({
+        email: true,
+        phone: false
+      });
+      setTimeout(() => setCopiedText({ email: false, phone: false }), 2000);
+    } else if (type === 'phone') {
+      setCopiedText({
+        email: false,
+        phone: true
+      });
+      setTimeout(() => setCopiedText({ email: false, phone: false }), 2000);
+    }
+  }
+
   return (
     <section id="about" className={styles.about}>
       <header className={styles.header}>
@@ -26,7 +77,17 @@ const About = () => {
             <div className={styles.phoneInfo}>
               <span>Phone number</span>
               <span>Give me a call or send me a message at:</span>
-              <span>+52 777 139 5795</span>
+              <span className={styles.row}>
+                <a href="tel:+527771395795" ref={phoneRef}>
+                  +52 777 139 5795
+                </a>
+                {
+                  copiedText.phone ?
+                    <FontAwesomeIcon icon={faCheck} className={styles.copied} />
+                    :
+                    <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.phone, 'phone')} />
+                }
+              </span>
             </div>
           </div>
 
@@ -34,8 +95,10 @@ const About = () => {
             <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             <div className={styles.locationInfo}>
               <span>Location</span>
-              <span>I'm from:</span>
-              <span>Cuernavaca, Morelos, México{/*  (the city of the Eternal Spring) */}</span>
+              <span>I&apos;m from:</span>
+              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">Cuernavaca, Morelos, México&#8599;{/*  (the city of the Eternal Spring) */}</a>
+              <span className={styles.bold}>Currently living in:</span>
+              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">Cuernavaca, Morelos, México&#8599;</a>
             </div>
           </div>
 
@@ -43,8 +106,19 @@ const About = () => {
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             <div className={styles.emailInfo}>
               <span>Email</span>
-              <span>Send me an email at:</span>
-              <a href="mailto:contact@elvirodominguez.com" className={styles.link}>contact@elvirodominguez.com{/* <FontAwesomeIcon icon={faClone} className={styles.iconAux} /> */}</a>
+              <span>You can send me an email at:</span>
+              <span className={styles.row}>
+                <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20opportunity&body=Hello,%20Elviro:" className={styles.link} ref={emailRef}>
+                  contact@elvirodominguez.com
+                  {/* <FontAwesomeIcon icon={faClone} className={styles.iconAux} /> */}
+                </a>
+                {
+                  copiedText.email ?
+                    <FontAwesomeIcon icon={faCheck} className={styles.copied} />
+                    :
+                    <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.email, 'email')} />
+                }
+              </span>
             </div>
           </div>
         </div>
@@ -60,7 +134,7 @@ const About = () => {
           </div>
         </div> */}
       </div>
-    </section>
+    </section >
   )
 }
 

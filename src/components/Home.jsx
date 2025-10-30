@@ -2,8 +2,9 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown, faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
+import css from '../assets/css.png';
 import js from '../assets/js.png';
-import me from '../assets/me.jpg';
+import me from '../assets/profile.png';
 import react from '../assets/react.svg';
 import styles from '../styles/Home.module.css';
 
@@ -34,7 +35,7 @@ const Home = () => {
           phone: phoneRef.current.textContent
         }
       );
-    };
+    }
   }, []);
 
   const handleCopyToClipboard = async (text, type) => {
@@ -97,7 +98,7 @@ const Home = () => {
           <h2 className={styles.h2}>Last year Computer Science student</h2>
         </header>
         <div className={styles.body}>
-          <p>At <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University. Looking for a <span className={styles.italic}>Part-Time </span><span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> or <span className={styles.bold}>Fullstack</span> job opportunity.</p>
+          <p>At <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University. Looking for a <span className={styles.italic}>Part-Time</span> or <span className={styles.italic}>Full-Time</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> or <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> or <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> or any other <span className={`${styles.italic} ${styles.bold}`}>IT</span> job opportunity.</p>
           <div className={styles.buttonsCtaContainer}>
             <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>View Resume</a>
             <a href="#contact" className={styles.btn}>Get in touch</a>
@@ -117,10 +118,10 @@ const Home = () => {
                   <FontAwesomeIcon icon={faClone} className={styles.copy} onClick={() => handleCopyToClipboard(text.email, 'email')} />
               }
             </span>
-            <span a href="tel:+527773464786" className={styles.button}>
+            <span className={styles.button}>
               <FontAwesomeIcon icon={faPhone} />
-              <a href="tel:+527773464786" ref={phoneRef}>
-                +52 777 346 4786
+              <a href="tel:+527771395795" ref={phoneRef}>
+                +52 777 139 5795
               </a>
               {
                 copiedText.phone ?
@@ -150,19 +151,20 @@ const Home = () => {
       </div>
       <div className={styles.secondDivision}>
         <img src={react} alt="React logo" className={styles.reactLogo} />
-        <img src={js} alt="Tec de Monterrey logo" className={styles.jsLogo} />
+        <img src={js} alt="JavaScript logo" className={styles.jsLogo} />
+        <img src={css} alt="CSS logo" className={styles.cssLogo} />
         <img src={me} alt="Elviro Dominguez" className={styles.me} />
         <div className={styles.stats}>
           <div>
-            <span className={styles.breakAfterEachWord}>+3 Months</span>
+            <span className={styles.breakAfterEachWord}>+1 Year</span>
             <span className={styles.breakAfterEachWord}>Of experience</span>
           </div>
           <div>
-            <span className={styles.breakAfterEachWord}>+17</span>
-            <span className={styles.breakAfterEachWord}>repositories</span>
+            <span className={styles.breakAfterEachWord}>+10</span>
+            <span className={styles.breakAfterEachWord}>projects</span>
           </div>
           <div>
-            <span className={styles.breakAfterEachWord}>+678</span>
+            <span className={styles.breakAfterEachWord}>+1k</span>
             <span className={styles.breakAfterEachWord}>commits</span>
           </div>
         </div>

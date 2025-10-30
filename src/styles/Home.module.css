@@ -304,7 +304,16 @@ section.home {
       -moz-transform: rotate(40deg);
       -ms-transform: rotate(40deg);
       -o-transform: rotate(40deg);
-      filter: drop-shadow(0 0 2em #61dafbaa);
+      filter: drop-shadow(0 0 2em hsla(193, 95%, 68%, 0.9));
+    }
+
+    img.cssLogo {
+      position: absolute;
+      top: 15%;
+      right: 55%;
+      width: 6rem;
+      transform: rotate(-15deg);
+      filter: drop-shadow(0 0 2em hsla(266, 47%, 40%, 0.9));
     }
 
     img.jsLogo {
@@ -313,7 +322,7 @@ section.home {
       right: 10%;
       width: 6rem;
       transform: rotate(10deg);
-      filter: drop-shadow(0 0 2em #f0db4f);
+      filter: drop-shadow(0 0 2em hsla(52, 84%, 63%, 0.9));
     }
 
     img.me {
@@ -322,7 +331,7 @@ section.home {
       aspect-ratio: 1/1;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       object-fit: cover;
-      object-position: top;
+      object-position: bottom;
     }
   }
 

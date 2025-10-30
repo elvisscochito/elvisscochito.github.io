@@ -59,7 +59,8 @@ section.about {
           font-size: 1rem !important;
         }
 
-        span:nth-of-type(2) {
+        span:nth-of-type(2),
+        span.bold {
           font-weight: bold;
           /* color: black; */
         }
@@ -88,6 +89,14 @@ section.about {
           }
         }
 
+        div.locationInfo {
+          a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.3rem;
+          }
+        }
+
         /* div.emailInfo {
           flex-direction: row;
         } */
@@ -111,16 +120,39 @@ section.about {
             }
           } */
 
-      div.email {
+      div.email,
+      div.phone {
         /* span:nth-of-type(2) {
               font-weight: 400;
             } */
 
-        a {
-          color: var(--text-color);
-          text-decoration: none;
-          font-size: 1.3rem;
-          /* font-weight: 600; */
+        span.row {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.5rem;
+
+          a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.3rem;
+            /* font-weight: 600; */
+          }
+
+          .copy {
+            color: rgb(225, 225, 225);
+            font-size: 1.3rem;
+
+            &:hover {
+              color: var(--details);
+            }
+          }
+
+          .copied {
+            color: #24292e;
+            font-size: 1.3rem;
+          }
         }
       }
     }
@@ -134,10 +166,12 @@ section.about {
 
     img {
       width: 100%;
-      max-width: 300px;
+      max-width: 16rem;
       border-radius: 0.5rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       /* aspect-ratio: 16/9; */
+      object-fit: cover;
+      object-position: center;
     }
 
     /* } */
