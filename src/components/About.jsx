@@ -2,7 +2,7 @@
 import { faCheck, faClone, faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
-import me from '../assets/profile.png';
+import me from '../assets/profile.jpg';
 import styles from '../styles/About.module.css';
 
 const About = () => {

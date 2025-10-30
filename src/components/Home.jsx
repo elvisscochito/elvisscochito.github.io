@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import css from '../assets/css.png';
 import js from '../assets/js.png';
-import me from '../assets/profile.png';
+import me from '../assets/profile.jpg';
 import react from '../assets/react.svg';
 import styles from '../styles/Home.module.css';
 
