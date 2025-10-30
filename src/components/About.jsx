@@ -26,7 +26,7 @@ const About = () => {
             <div className={styles.phoneInfo}>
               <span>Phone number</span>
               <span>Give me a call or send me a message at:</span>
-              <span>+52 777 346 4786</span>
+              <span>+52 777 139 5795</span>
             </div>
           </div>
 
