@@ -7,33 +7,52 @@ div.card {
   height: 20rem;
 
   header.headerIcons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 0.75rem;
+    z-index: 2;
+    pointer-events: auto;
 
-    .firstIcon {
+    div:is(.leftContainer, .rightContainer) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    div.rightContainer {
+      justify-content: flex-end;
+    }
+
+    .infoDescriptionIcon {
       color: white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 8px;
-      /* Ajusta el margen según tus necesidades */
-      z-index: 2;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    span.date {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .codeIcon {
+      color: white;
       width: 1.8rem;
       height: 1.8rem;
     }
 
     a.link {
       color: white;
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 8px;
-      /* Ajusta el margen según tus necesidades */
-      z-index: 3;
 
-      .secondIcon {
+      .gitHubIcon {
         color: white;
         width: 1.8rem;
         height: 1.8rem;
@@ -52,7 +71,38 @@ div.card {
       /* mask-image: linear-gradient(black, transparent); */
     }
 
+    &:hover {
+      img:first-of-type {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        /* blur and brightness */
+        filter: blur(5px) brightness(0.8);
+      }
+    }
+
+    img:last-of-type {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.95);
+      width: 5rem;
+      height: auto;
+      z-index: 1;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    /* Aparece solo al hacer hover sobre el figure */
+    &:hover img:last-of-type {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
     figcaption {
+      text-align: center;
+      /* font-size: 2.8rem;
+      color: red; */
       position: absolute;
       top: 50%;
       left: 50%;
@@ -60,6 +110,14 @@ div.card {
       color: #fff;
       font-size: 2rem;
       font-weight: 600;
+      opacity: 1;
+      transition: opacity 0.25s ease;
+    }
+
+    &:hover {
+      figcaption {
+        opacity: 0;
+      }
     }
   }
 

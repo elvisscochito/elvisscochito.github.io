@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import '../styles/CustomCursor.css';
+import styles from '../styles/CustomCursor.module.css';
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -28,7 +28,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className={`cursor ${cursorType}`}
+      className={`${styles.cursor} ${styles[cursorType]}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     ></div>

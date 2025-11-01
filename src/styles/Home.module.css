@@ -297,7 +297,7 @@ section.home {
     img.reactLogo {
       position: absolute;
       top: 25%;
-      left: -25%;
+      left: -35%;
       width: 8rem;
       transform: rotate(40deg);
       -webkit-transform: rotate(40deg);
@@ -310,7 +310,7 @@ section.home {
     img.cssLogo {
       position: absolute;
       top: 15%;
-      right: 55%;
+      right: 60%;
       width: 6rem;
       transform: rotate(-15deg);
       filter: drop-shadow(0 0 2em hsla(266, 47%, 40%, 0.9));
