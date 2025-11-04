@@ -1,0 +1,61 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  max-width: 20rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1000;
+  bottom: 120%;
+  /* show above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--accent-color) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus-within .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* support optional data-tooltip attribute via pseudo-element if tooltiptext is empty */
+.tooltip[data-tooltip] .tooltiptext:empty::before {
+  content: attr(data-tooltip);
+  display: block;
+}
+
+/* For the CSS-only tooltip we rely on :hover and :focus-within selectors
+  to toggle visibility. No portal support needed here. */
+
+/* Utility to force visibility when tooltip is rendered in a portal */
+.tooltipVisible {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  bottom: auto !important;
+}

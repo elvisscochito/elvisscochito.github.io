@@ -94,7 +94,7 @@ const Home = () => {
       <div className={styles.firstDivision}>
         <header>
           <h3 className={styles.h1}>Welcome to my website!</h3>
-          <h1 className={styles.h1}>Hi!, I'm <span className={styles.span}>@elvisscochito</span></h1>
+          <h1 className={styles.h1}>Hi!, I&apos;m <span className={styles.span}>@elvisscochito</span></h1>
           <h2 className={styles.h2}>Last year Computer Science student</h2>
         </header>
         <div className={styles.body}>

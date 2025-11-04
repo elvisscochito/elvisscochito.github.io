@@ -34,11 +34,13 @@ const Projects = () => {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      path: 'Web dev',
-      title: 'Red BAMX - Food bank system · Front-end Developer',
+      path: ['Web dev'],
+      brand: 'Red BAMX',
+      project: 'Food bank system',
+      role: 'Front-end Developer',
       date: 'Aug 2022 - Oct 2022',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: bamx,
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      logo: bamx,
       description: '• Improved manual processes by building a modern and robust system. Designed both mobile and web application mockups in Figma. Developed the frontend of the web application using React.js and CSS.',
       link: 'https://bamx.org.mx',
       preview: 'https://bamx.org.mx',
@@ -46,11 +48,13 @@ const Projects = () => {
     },
     {
       id: 2,
-      path: 'Web dev',
-      title: 'Wizeline - Wizeprompt · Front-end Developer',
+      path: ['Web dev'],
+      brand: 'Wizeline',
+      project: 'Wizeprompt',
+      role: 'Front-end Developer',
       date: 'Sep 2023 - Dec 2023',
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: wizeline,
+      logo: wizeline,
       description: '• Designed and developed an intuitive and easy to use internal platform for employee developers to access AI-powered conversations.',
       link: 'https://www.wizeline.com/',
       preview: 'https://bamx.org.mx',
@@ -58,11 +62,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      path: 'Web dev',
-      title: 'A3E Ingenieros - Meetings rooms app • Full-stack Developer',
+      path: ['Web dev'],
+      brand: 'A3E Ingenieros',
+      project: 'Meeting rooms app',
+      role: 'Full-Stack Developer',
       date: 'Aug 2023 - Sep 2023',
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: a3e,
+      logo: a3e,
       description: '• Designed and developed a full stack web application to facilitate meeting scheduling using MongoDB, Express.js, Node.js and React.js (MERN stack).',
       link: 'https://www.a3eingenieros.com.mx',
       preview: 'https://meeting-rooms-app.vercel.app',
@@ -70,11 +76,13 @@ const Projects = () => {
     },
     {
       id: 4,
-      path: 'Mobile dev',
-      title: 'myCover App - iOS development application · Mobile Developer',
+      path: ['Mobile dev'],
+      brand: 'Neza Startup',
+      project: 'myCover App',
+      role: 'Mobile Developer',
       date: 'Nov 2023 - Present',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: bamx,
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      logo: bamx,
       description: '• Designed and developed an intuitive mobile application using Apple technologies to easily create, share and save unique, personalized digital tickets for any social event directly to the pre-installed Apple “Wallet" app.',
       link: 'https://github.com/elvisscochito/mycover-app',
       preview: 'https://github.com/elvisscochito/mycover-app',
@@ -82,11 +90,13 @@ const Projects = () => {
     },
     {
       id: 5,
-      path: 'Data science',
-      title: 'Danu Analitica - Data analytics dashboard · Data Scientist and Front-end Developer',
+      path: ['Data science', 'Web dev'],
+      brand: 'Danu Analitica',
+      project: 'Data analytics dashboard',
+      role: 'Data Scientist and Front-end Developer',
       date: 'Aug 2024 - Dec 2024',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: danu,
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      logo: danu,
       description: '• Analyzed and cleaned a provided database to integrate and display the data models in charts through an user-friendly web interface.',
       link: 'https://github.com/elvisscochito/data-analytics-dashboard',
       preview: 'https://danu-data-analytics-dashboard.streamlit.app',
@@ -94,11 +104,13 @@ const Projects = () => {
     },
     {
       id: 6,
-      path: 'Game dev',
-      title: 'Amazon - Puzzle videogame · Game Developer and Front-end Developer',
+      path: ['Game dev', 'Web dev'],
+      brand: 'Amazon',
+      project: 'Puzzle videogame',
+      role: 'Game Developer and Front-end Developer',
       date: 'Feb 2022 - Jun 2022',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: amazon,
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      logo: amazon,
       description: '• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics.',
       link: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
       preview: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
@@ -106,11 +118,13 @@ const Projects = () => {
     },
     {
       id: 7,
-      path: 'Web dev',
-      title: 'Kanbanize - Kanbanize Lite · Full-Stack Developer',
+      path: ['Web dev'],
+      brand: 'Kanbanize',
+      project: 'Kanbanize Lite',
+      role: 'Full-Stack Developer',
       date: 'Feb 2023 - Jun 2023',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      brand: kanbanize,
+      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      logo: kanbanize,
       description: '• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics.',
       link: 'https://github.com/elvisscochito/kanbanize-lite',
       preview: 'https://github.com/elvisscochito/kanbanize-lite',
@@ -161,14 +175,16 @@ const Projects = () => {
       <div className={styles.projectsContainer}>
         {
           projects
-            .filter(project => project.path === activeButton.path)
+            .filter(project => project.path.includes(activeButton.path))
             .map(project => (
               <Card
                 key={project.id}
-                title={project.title}
+                brand={project.brand}
+                project={project.project}
+                role={project?.role}
                 date={project.date}
                 thumbnail={project.thumbnail}
-                brand={project.brand}
+                logo={project.logo}
                 link={project.link}
                 preview={project.preview}
                 repo={project.repo}
