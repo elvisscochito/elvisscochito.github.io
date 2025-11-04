@@ -3,7 +3,6 @@ import { faCircleInfo, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* import PropTypes from 'prop-types'; */
 import styles from '../styles/Card.module.css';
-/* import Tooltip from './Tooltip'; */
 
 const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview, repo }) => {
   return (
@@ -13,7 +12,7 @@ const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview
           role && (
             <div className={styles.leftContainer}>
               {/* <Tooltip text="Role Information"> */}
-              <span className={styles.role}>| {role}</span>
+              <span className={styles.role} data-tooltip-id="global-tooltip" data-tooltip-content={role}>| {role}</span>
               {/* </Tooltip> */}
             </div>
           )
@@ -23,17 +22,17 @@ const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview
         </div>
         <div className={styles.rightContainer}>
           {/*  <Tooltip text="React, CSS"> */}
-          <button className={styles.iconBtn} aria-label="Technologies Used" title="React, CSS">
+          <button className={styles.iconBtn} aria-label="Technologies Used" /* title="React, CSS" */ data-tooltip-id="global-tooltip" data-tooltip-content="React, CSS">
             <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
           </button>
           {/* </Tooltip> */}
           {/* <Tooltip text="View Source Code on GitHub Repository"> */}
-          <a href={repo} target='_blank' rel='noreferrer' className={styles.link} title="View Source Code on GitHub Repository">
+          <a href={repo} target='_blank' rel='noreferrer' className={styles.link} /* title="View Source Code on GitHub Repository" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Source Code on GitHub">
             <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
           </a>
           {/*  </Tooltip> */}
           {/* <Tooltip text="View Project Description Information"> */}
-          <button className={styles.iconBtn} aria-label="Info" title="View Project Description Information">
+          <button className={styles.iconBtn} aria-label="Info" /* title="View Project Description Information" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Project Description Information">
             <FontAwesomeIcon icon={faCircleInfo} className={styles.infoDescriptionIcon} />
           </button>
           {/* </Tooltip> */}

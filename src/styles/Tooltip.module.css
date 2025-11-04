@@ -1,3 +1,62 @@
+/* Tooltip styles need to be top-level so the className passed from App.jsx matches.
+   When defined nested inside `.card header.headerIcons` the generated CSS selector
+   requires that structure and won't apply to the global Tooltip rendered from App. */
+.tooltip {
+  z-index: 99999 !important;
+  pointer-events: auto;
+  background-color: var(--accent-color) !important;
+  opacity: 1 !important;
+  font-weight: bold;
+  border-radius: 0.4rem;
+}
+
+/* en card.jsx */
+/* .tooltipContainer {
+  position: relative;
+  display: inline-block;
+} */
+
+/* .tooltipText {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  position: absolute;
+  bottom: 125%; */
+/* encima del ícono */
+/* left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 999;
+  pointer-events: none;
+  white-space: nowrap;
+} */
+
+/* Triángulo del tooltip */
+/* .tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%; */
+/* abajo del tooltip */
+/* left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+} */
+
+/* Mostrar al pasar el cursor */
+/* .tooltipContainer:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+} */
+
 /* .tooltip {
   position: relative; */
 /* keep tooltip positioned relative to its wrapper */
