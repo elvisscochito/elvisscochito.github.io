@@ -3,7 +3,7 @@ import { faCircleInfo, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* import PropTypes from 'prop-types'; */
 import styles from '../styles/Card.module.css';
-import Tooltip from './Tooltip';
+/* import Tooltip from './Tooltip'; */
 
 const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview, repo }) => {
   return (
@@ -22,17 +22,17 @@ const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview
           <span className={styles.date}>{date}</span>
         </div>
         <div className={styles.rightContainer}>
-          <Tooltip text="React, CSS">
-            <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
-          </Tooltip>
-          <Tooltip text="View Source Code on GitHub Repository">
-            <a href={repo} target='_blank' rel='noreferrer' className={styles.link}>
-              <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
-            </a>
-          </Tooltip>
-          <Tooltip text="View Project Description Information">
-            <FontAwesomeIcon icon={faCircleInfo} className={styles.infoDescriptionIcon} />
-          </Tooltip>
+          {/*  <Tooltip text="React, CSS"> */}
+          <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
+          {/* </Tooltip> */}
+          {/* <Tooltip text="View Source Code on GitHub Repository"> */}
+          <a href={repo} target='_blank' rel='noreferrer' className={styles.link}>
+            <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
+          </a>
+          {/*  </Tooltip> */}
+          {/* <Tooltip text="View Project Description Information"> */}
+          <FontAwesomeIcon icon={faCircleInfo} className={styles.infoDescriptionIcon} />
+          {/* </Tooltip> */}
         </div>
       </header>
       <figure className={styles.body}>

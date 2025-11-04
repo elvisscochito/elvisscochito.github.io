@@ -1,4 +1,4 @@
-import styles from '../styles/Tooltip.module.css';
+/* import styles from '../styles/Tooltip.module.css';
 const Tooltip = ({ text, children }) => {
   return (
     <div className={styles.tooltip}>
@@ -9,3 +9,4 @@ const Tooltip = ({ text, children }) => {
 };
 
 export default Tooltip;
+ */

@@ -1,10 +1,10 @@
-.tooltip {
-  position: relative;
-  /* keep tooltip positioned relative to its wrapper */
-  display: inline-block;
-}
+/* .tooltip {
+  position: relative; */
+/* keep tooltip positioned relative to its wrapper */
+/* display: inline-block;
+} */
 
-.tooltiptext {
+/* .tooltiptext {
   position: absolute;
   left: 50%;
   bottom: calc(100% + 8px);
@@ -19,9 +19,9 @@
   pointer-events: none;
   z-index: 1000;
   transition: opacity 180ms cubic-bezier(.2, .9, .2, 1), transform 180ms cubic-bezier(.2, .9, .2, 1);
-}
+} */
 
-.tooltiptext::after {
+/* .tooltiptext::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -30,13 +30,13 @@
   border-width: 6px;
   border-style: solid;
   border-color: var(--accent-color) transparent transparent transparent;
-}
+} */
 
 /* show on hover or focus of the wrapper */
-.tooltip:hover .tooltiptext,
+/* .tooltip:hover .tooltiptext,
 .tooltip:focus-within .tooltiptext {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
   pointer-events: auto;
-}
+} */
