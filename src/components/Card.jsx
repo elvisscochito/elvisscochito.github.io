@@ -23,17 +23,17 @@ const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview
         </div>
         <div className={styles.rightContainer}>
           {/*  <Tooltip text="React, CSS"> */}
-          <button className={styles.iconBtn} aria-label="Technologies Used">
+          <button className={styles.iconBtn} aria-label="Technologies Used" title="React, CSS">
             <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
           </button>
           {/* </Tooltip> */}
           {/* <Tooltip text="View Source Code on GitHub Repository"> */}
-          <a href={repo} target='_blank' rel='noreferrer' className={styles.link}>
+          <a href={repo} target='_blank' rel='noreferrer' className={styles.link} title="View Source Code on GitHub Repository">
             <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
           </a>
           {/*  </Tooltip> */}
           {/* <Tooltip text="View Project Description Information"> */}
-          <button className={styles.iconBtn} aria-label="Info">
+          <button className={styles.iconBtn} aria-label="Info" title="View Project Description Information">
             <FontAwesomeIcon icon={faCircleInfo} className={styles.infoDescriptionIcon} />
           </button>
           {/* </Tooltip> */}
