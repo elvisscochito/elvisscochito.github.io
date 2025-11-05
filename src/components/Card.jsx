@@ -2,9 +2,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCircleInfo, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* import PropTypes from 'prop-types'; */
+import { useState } from 'react';
 import styles from '../styles/Card.module.css';
 
-const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview, repo }) => {
+const Card = ({ brand, project, role, date, thumbnail, logo, description, skills, /* link, */ preview, repo }) => {
+  const [isFrontCard, setIsFrontCard] = useState(true);
   return (
     <div className={styles.card}>
       <header className={styles.headerIcons}>
@@ -22,12 +24,12 @@ const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview
         </div>
         <div className={styles.rightContainer}>
           {/*  <Tooltip text="React, CSS"> */}
-          <button className={styles.iconBtn} aria-label="Technologies Used" /* title="React, CSS" */ data-tooltip-id="global-tooltip" data-tooltip-content="React, CSS">
+          <button className={styles.iconBtn} aria-label="Technologies Used" /* title="React, CSS" */ data-tooltip-id="global-tooltip" data-tooltip-content={skills.join(', ')}>
             <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
           </button>
           {/* </Tooltip> */}
           {/* <Tooltip text="View Source Code on GitHub Repository"> */}
-          <a href={repo} target='_blank' rel='noreferrer' className={styles.link} /* title="View Source Code on GitHub Repository" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Source Code on GitHub">
+          <a href={repo} target='_blank' rel='noopener noreferrer' className={styles.link} /* title="View Source Code on GitHub Repository" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Source Code on GitHub">
             <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
           </a>
           {/*  </Tooltip> */}
@@ -40,11 +42,11 @@ const Card = ({ brand, project, role, date, thumbnail, logo, /* link, */ preview
       </header>
       <figure className={styles.body}>
         <img src={thumbnail} alt="Project 1" />
-        <img src={logo} alt="Brand Logo" className={styles.brandLogo} />
+        <a href={preview} target='_blank' rel='noopener noreferrer' className={styles.linkImage}><img src={logo} alt="Brand Logo" className={styles.brandLogo} /></a>
         <figcaption className={styles.figcaption}>&quot;{project}&quot; {/* <span> */}{/* - */}• {/* | */} {brand}{/* </span> */}</figcaption>
       </figure>
       <footer className={styles.footer}>
-        <a href={preview} target='_blank'>Preview&#8599;</a>
+        <a href={preview} target='_blank' rel='noopener noreferrer'>Preview Project &#8599;</a>
       </footer>
     </div>
   );

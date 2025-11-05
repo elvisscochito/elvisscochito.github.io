@@ -77,7 +77,6 @@ div.card {
 
     /* } */
 
-
     span.date {
       color: white;
       font-size: 1.2rem;
@@ -105,37 +104,42 @@ div.card {
     position: relative;
     height: 100%;
 
-    img {
+    img:first-of-type {
       width: 100%;
       height: 100%;
       object-fit: cover;
       /* mask-image: linear-gradient(black, transparent); */
+      transition: transform 0.3s ease-in-out;
     }
 
-    &:hover {
-      img:first-of-type {
-        transform: scale(1.05);
-        transition: transform 0.3s ease-in-out;
-        /* blur and brightness */
-        filter: blur(5px) brightness(0.8);
-      }
+    &:hover img:first-of-type {
+      transform: scale(1.05);
+      /* blur and brightness */
+      filter: blur(5px) brightness(0.8);
     }
 
-    img:last-of-type {
+    a.linkImage {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0.95);
       width: 5rem;
       height: auto;
-      z-index: 1;
-      opacity: 0;
-      pointer-events: none;
+      z-index: 3;
+      display: block;
       transition: opacity 0.25s ease, transform 0.25s ease;
+      opacity: 0;
+      pointer-events: auto;
     }
 
-    /* Aparece solo al hacer hover sobre el figure */
-    &:hover img:last-of-type {
+    a.linkImage img.brandLogo {
+      width: 100%;
+      height: auto;
+      /* object-fit: contain; */
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+
+    &:hover a.linkImage {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
     }

@@ -7,7 +7,6 @@
   background-color: var(--accent-color) !important;
   opacity: 1 !important;
   font-weight: bold;
-  border-radius: 0.4rem;
 }
 
 /* en card.jsx */
