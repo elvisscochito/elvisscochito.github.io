@@ -9,6 +9,16 @@
   font-weight: bold;
 }
 
+/* When a card flip is in progress we add `tooltip-hidden` to <body> to
+   prevent the global tooltip from getting stuck visible. The Tooltip in
+   App.jsx also receives the fixed class `global-tooltip` so we can target
+   it with a global selector here. */
+:global(body.tooltip-hidden .global-tooltip) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 /* en card.jsx */
 /* .tooltipContainer {
   position: relative;

@@ -26,7 +26,9 @@ function App() {
       <Projects />
       <Contact />
       {/* Global Tooltip for cards and other elements that use data-tooltip-id="global-tooltip" */}
-      <Tooltip id="global-tooltip" place="top" className={styles.tooltip} />
+      {/* Add a stable global class name so we can hide/show the tooltip with a simple body class when cards flip */}
+      {/* <Tooltip id="global-tooltip" place="top" className={styles.tooltip} /> */}
+      <Tooltip id="global-tooltip" place="top" className={`global-tooltip ${styles.tooltip}`} />
       {/* </main> */}
     </>
   )

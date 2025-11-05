@@ -9,6 +9,16 @@ const Card = ({ brand, project, role, date, thumbnail, logo, description, skills
   const [isFrontCard, setIsFrontCard] = useState(true);
 
   const handleCardClick = () => {
+    // Prevent any visible tooltip from getting stuck when we flip the card.
+    // Add a body class that hides the global Tooltip for the duration of the flip animation.
+    try {
+      document?.body?.classList.add('tooltip-hidden');
+      // clean up after the flip transition (0.7s in CSS). Give a little buffer.
+      window.setTimeout(() => document?.body?.classList.remove('tooltip-hidden'), 800);
+    } catch (e) {
+      // ignore in non-browser environments
+    }
+
     setIsFrontCard(!isFrontCard);
   };
 
@@ -33,7 +43,7 @@ const Card = ({ brand, project, role, date, thumbnail, logo, description, skills
             </div>
             <div className={styles.rightContainer}>
               {/*  <Tooltip text="React, CSS"> */}
-              <button className={styles.iconBtn} aria-label="Technologies Used" /* title="React, CSS" */ data-tooltip-id="global-tooltip" data-tooltip-content={`Skills/Stack: ${skills.join(', ')}`}>
+              <button className={styles.iconBtn} aria-label="Technologies Used" /* title="React, CSS" */ data-tooltip-id="global-tooltip" data-tooltip-content={`Skills/Stack: ${(skills || []).join(', ')}`}>
                 <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
               </button>
               {/* </Tooltip> */}
