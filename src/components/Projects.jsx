@@ -188,7 +188,7 @@ const Projects = () => {
                 key={project.id}
                 brand={project.brand}
                 project={project.project}
-                role={project?.role}
+                role={project.role}
                 date={project.date}
                 thumbnail={project.thumbnail}
                 logo={project.logo}
