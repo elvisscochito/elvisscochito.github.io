@@ -1,100 +1,97 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCircleInfo, faCircleXmark, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+/* import PropTypes from 'prop-types'; */
 import { useState } from 'react';
 import styles from '../styles/Card.module.css';
 
-const Card = ({ brand, project, role, date, thumbnail, logo, description, preview, repo }) => {
-  const [flipped, setFlipped] = useState(false);
+const Card = ({ brand, project, role, date, thumbnail, logo, description, skills, /* link, */ preview, repo }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  /* const handleCardClick = () => {
+    setIsFlipped(!isFlipped);
+  }; */
 
   return (
-    <div className={styles.cardWrapper}>
-      <div className={`${styles.cardInner} ${flipped ? styles.flipped : ''}`}>
+    <div className={styles.cardContainer}>
 
-        {/* FRONT SIDE */}
-        <div className={`${styles.cardFace} ${styles.frontCard}`}>
+      <div className={`${styles.cardInner} ${isFlipped ? styles.flipped : ''}`}>
+
+        {/* FRONT CARD */}
+        <div className={`${styles.card} ${styles.frontCard}`}>
           <header className={styles.headerIcons}>
-            <div className={styles.leftContainer}>
-              {role && <span className={styles.role}>| {role}</span>}
-            </div>
+            {
+              role && (
+                <div className={styles.leftContainer}>
+                  {/* <Tooltip text="Role Information"> */}
+                  <span className={styles.role} data-tooltip-id="global-tooltip" data-tooltip-content={role}>| {role}</span>
+                  {/* </Tooltip> */}
+                </div>
+              )
+            }
             <div className={styles.middleContainer}>
-              {date && <span className={styles.date}>{date}</span>}
+              <span className={styles.date}>{date}</span>
             </div>
             <div className={styles.rightContainer}>
-              <button className={styles.iconBtn}>
-                <FontAwesomeIcon icon={faCode} />
+              {/*  <Tooltip text="React, CSS"> */}
+              <button className={styles.iconBtn} aria-label="Technologies Used" /* title="React, CSS" */ data-tooltip-id="global-tooltip" data-tooltip-content={`Skills/Stack: ${skills.join(', ')}`}>
+                <FontAwesomeIcon icon={faCode} className={styles.codeIcon} />
               </button>
-              {repo && (
-                <a href={repo} target="_blank" rel="noopener noreferrer" className={styles.iconBtn}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              )}
-              <button
-                className={styles.iconBtn}
-                onClick={() => setFlipped(true)}
-                aria-label="Show description"
-              >
-                <FontAwesomeIcon icon={faCircleInfo} />
+              {/* </Tooltip> */}
+              {/* <Tooltip text="View Source Code on GitHub Repository"> */}
+              <a href={repo} target='_blank' rel='noopener noreferrer' className={styles.link} /* title="View Source Code on GitHub Repository" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Source Code on GitHub Repository">
+                <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
+              </a>
+              {/*  </Tooltip> */}
+              {/* <Tooltip text="View Project Description Information"> */}
+              <button className={styles.iconBtn} aria-label="Info" /* title="View Project Description Information" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Project Description Information" onClick={() => setIsFlipped(true)}>
+                <FontAwesomeIcon icon={faCircleInfo} className={styles.infoDescriptionIcon} />
               </button>
+              {/* </Tooltip> */}
             </div>
           </header>
 
           <figure className={styles.body}>
-            <img src={thumbnail} alt={project} />
-            {logo && (
-              <a
-                href={preview}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.linkImage}
-              >
-                <img src={logo} alt={`${brand} logo`} className={styles.brandLogo} />
-              </a>
-            )}
-            <figcaption className={styles.figcaption}>
-              “{project}” • {brand}
-            </figcaption>
+            <img src={thumbnail} alt="Project 1" />
+            <a href={preview} target='_blank' rel='noopener noreferrer' className={styles.linkImage}><img src={logo} alt="Brand Logo" className={styles.brandLogo} /></a>
+            <figcaption className={styles.figcaption}>&quot;{project}&quot; {/* <span> */}{/* - */}• {/* | */} {brand}{/* </span> */}</figcaption>
           </figure>
 
           <footer className={styles.footer}>
-            {preview && (
-              <a href={preview} target="_blank" rel="noopener noreferrer">
-                Preview Project ↗
-              </a>
-            )}
+            <a href={preview} target='_blank' rel='noopener noreferrer'>Preview Project &#8599;</a>
           </footer>
         </div>
-
-        {/* BACK SIDE */}
-        <div className={`${styles.cardFace} ${styles.backCard}`}>
-          <header className={styles.headerBack}>
-            <button
-              className={styles.iconBtn}
-              onClick={() => setFlipped(false)}
-              aria-label="Close description"
-            >
-              <FontAwesomeIcon icon={faCircleXmark} />
-            </button>
+        {/* BACK CARD */}
+        <div className={`${styles.card} ${styles.backCard}`}>
+          <header className={styles.headerBackIcons}>
+            <div className={styles.rightContainer}>
+              <button className={styles.iconBtn} aria-label="Info" /* title="View Project Description Information" */ data-tooltip-id="global-tooltip" data-tooltip-content="Close Project Description Information" onClick={() => setIsFlipped(false)}>
+                <FontAwesomeIcon icon={faCircleXmark} className={styles.infoDescriptionIcon} />
+              </button>
+              {/* </Tooltip> */}
+            </div>
           </header>
 
           <figure className={styles.bodyBack}>
-            <img src={thumbnail} alt={project} />
-            <figcaption className={styles.description}>
-              {description || 'No description provided.'}
-            </figcaption>
+            <img src={thumbnail} alt="Project 1" />
+            <figcaption className={styles.description}>{description}</figcaption>
           </figure>
 
           <footer className={styles.footer}>
-            {preview && (
-              <a href={preview} target="_blank" rel="noopener noreferrer">
-                Preview Project ↗
-              </a>
-            )}
+            <a href={preview} target='_blank' rel='noopener noreferrer'>Preview Project &#8599;</a>
           </footer>
         </div>
       </div>
     </div>
   );
-};
+}
+
+/* Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string,
+  brand: PropTypes.string,
+  link: PropTypes.string,
+  repo: PropTypes.string,
+}; */
 
 export default Card;
