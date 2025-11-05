@@ -1,234 +1,269 @@
-div.frontCard {
-  background-color: #F5F5F5;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
+div.cardContainer {
+  perspective: 1000px;
   width: 30rem;
   height: 20rem;
+  position: relative;
 
-  header.headerIcons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0.75rem;
-    z-index: 2;
-    pointer-events: auto;
-    backdrop-filter: blur(5px);
-
-    .iconBtn,
-    .link {
-      background: rgba(0, 0, 0, 0.45);
-      border: none;
-      cursor: pointer;
-      font-size: 1.4rem;
-      color: white;
-      border-radius: 50%;
-      width: 2.2rem;
-      height: 2.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s ease, transform 0.2s ease;
-      position: relative;
-      z-index: 2;
-    }
-
-    .iconBtn:hover,
-    .link:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.08);
-    }
-
-    div:is(.leftContainer, .middleContainer, .rightContainer) {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    div.rightContainer {
-      justify-content: flex-end;
-    }
-
-    .infoDescriptionIcon {
-      color: white;
-      width: 1.8rem;
-      height: 1.8rem;
-    }
-
-    /* div.leftContainer { */
-    span.role {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 500;
-      max-width: 10ch;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      /* text-wrap: balance;
-            overflow-wrap: break-word; */
-    }
-
-    /* } */
-
-    span.date {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
-
-    .codeIcon {
-      color: white;
-      width: 1.8rem;
-      height: 1.8rem;
-    }
-
-    a.link {
-      color: white;
-
-      .gitHubIcon {
-        color: white;
-        width: 1.8rem;
-        height: 1.8rem;
-      }
-    }
-  }
-
-  figure.body {
+  div.cardInner {
     position: relative;
+    width: 100%;
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
 
-    img:first-of-type {
+    &.flipped {
+      transform: rotateY(-180deg);
+    }
+
+    div.cardFace {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      /* mask-image: linear-gradient(black, transparent); */
-      transition: transform 0.3s ease-in-out;
-    }
-
-    &:hover img:first-of-type {
-      transform: scale(1.05);
-      /* blur and brightness */
-      filter: blur(5px) brightness(0.8);
-    }
-
-    a.linkImage {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.95);
-      width: 5rem;
-      height: auto;
-      z-index: 3;
-      display: block;
-      transition: opacity 0.25s ease, transform 0.25s ease;
-      opacity: 0;
-      pointer-events: auto;
-    }
-
-    a.linkImage img.brandLogo {
-      width: 100%;
-      height: auto;
-      /* object-fit: contain; */
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-    }
-
-    &:hover a.linkImage {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    figcaption.figcaption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      backdrop-filter: blur(5px);
-      padding: 0.25rem 0.5rem;
       border-radius: 0.5rem;
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: 600;
-      text-align: center;
-      opacity: 1;
-      transition: opacity 0.25s ease;
-      width: max-content;
-      /* display: flex;
+      overflow: hidden;
+      backface-visibility: hidden;
+      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center; */
+      justify-content: space-between;
+
+      &.frontCard {
+        z-index: 2;
+
+        header.headerIcons {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 0.75rem;
+          z-index: 5;
+          /* pointer-events: auto; */
+          backdrop-filter: blur(5px);
+
+          div:is(.leftContainer, .middleContainer, .rightContainer) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          div.rightContainer {
+            justify-content: flex-end;
+          }
+
+          .iconBtn,
+          .link {
+            background: rgba(0, 0, 0, 0.45);
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            color: white;
+            border-radius: 50%;
+            width: 2.2rem;
+            height: 2.2rem;
+            display:
+              /* inline- */
+              flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease, transform 0.2s ease;
+            /* position: relative; */
+            /* z-index: 2; */
+            /* padding: 0;
+            line-height: 1; */
+          }
+
+          .iconBtn:hover,
+          .link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.08);
+          }
+
+          span:is(.role, .date) {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+
+          /* div.leftContainer { */
+          span.role {
+            max-width: 10ch;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            /* text-wrap: balance;
+                  overflow-wrap: break-word; */
+          }
+
+          .codeIcon,
+          .infoDescriptionIcon {
+            color: white;
+            width: 1.8rem;
+            height: 1.8rem;
+          }
+
+          a.link {
+            .gitHubIcon {
+              color: white;
+              width: 1.8rem;
+              height: 1.8rem;
+            }
+          }
+        }
+
+        figure.body {
+          position: relative;
+          height: 100%;
+
+          img:first-of-type {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* display: block; */
+            /* mask-image: linear-gradient(black, transparent); */
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+          }
+
+          &:hover img:first-of-type {
+            transform: scale(1.05);
+            /* blur and brightness */
+            filter: blur(5px) brightness(0.8);
+          }
+
+          a.linkImage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            width: 5rem;
+            height: auto;
+            z-index: 6;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: auto;
+
+            img.brandLogo {
+              width: 100%;
+              height: auto;
+              /* object-fit: contain; */
+              filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+            }
+          }
+
+          &:hover {
+            a.linkImage {
+              opacity: 1;
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+
+          figcaption.figcaption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            backdrop-filter: blur(5px);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+            opacity: 1;
+            z-index: 4;
+            transition: opacity 0.25s ease;
+            width: max-content;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+          }
+
+          &:hover {
+            figcaption {
+              opacity: 0;
+            }
+          }
+        }
+
+        /* &:hover span {
+          transform: scale(1.1);
+        } */
+      }
     }
+  }
+}
+
+footer.footer {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%; */
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  z-index: 5;
+
+
+  /* position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  padding: 0 1rem; */
+
+
+  /* color: #fff; */
+  /* background: radial-gradient(100% 100% at 50% 100%, rgba(24, 24, 27, 1) 0%, rgba(147, 11, 43, 0) 100%);
+  transition: all 0.2s ease-in-out; */
+
+  a {
+    /* position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%); */
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    /* border-bottom: 2.5px solid var(--accent-color); */
+    /* text-decoration: none; */
+    transition: transform 0.3s ease-in-out
+      /* , border-bottom-color 0.3s ease-in-out */
+    ;
+    /* background-color: white; */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5px);
 
     &:hover {
-      figcaption {
-        opacity: 0;
-      }
+      transform: scale(1.05);
+      /* border-bottom-color: var(--accent-color-hover); */
     }
   }
-
-  footer.footer {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 1rem;
-    position: absolute;
-    bottom: 0;
-    height: 40%;
-    width: 100%;
-    /* color: #fff; */
-    /* background: radial-gradient(100% 100% at 50% 100%, rgba(24, 24, 27, 1) 0%, rgba(147, 11, 43, 0) 100%);
-    transition: all 0.2s ease-in-out; */
-
-    a {
-      /* position: absolute;
-      bottom: 5%;
-      left: 50%;
-      transform: translateX(-50%); */
-      font-size: 1.5rem;
-      color: var(--accent-color);
-      font-weight: 600;
-      /* border-bottom: 2.5px solid var(--accent-color); */
-      /* text-decoration: none; */
-      transition: transform 0.3s ease-in-out
-        /* , border-bottom-color 0.3s ease-in-out */
-      ;
-      /* background-color: white; */
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.5rem;
-      backdrop-filter: blur(5px);
-
-      &:hover {
-        transform: scale(1.05);
-        border-bottom-color: var(--accent-color-hover);
-      }
-    }
-  }
-
-  /* &:hover span {
-    transform: scale(1.1);
-  } */
 }
 
 div.backCard {
-  background-color: #F5F5F5;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  width: 30rem;
-  height: 20rem;
+
+  transform: rotateY(180deg);
+  z-index: 1;
 
   header.headerBackIcons {
     position: absolute;
@@ -240,7 +275,7 @@ div.backCard {
     justify-content: flex-end;
     align-items: center;
     padding: 0.5rem 0.75rem;
-    z-index: 2;
+    z-index: 6;
     pointer-events: auto;
 
     .iconBtn {
@@ -286,7 +321,7 @@ div.backCard {
       height: 100%;
       object-fit: cover;
       /* mask-image: linear-gradient(black, transparent); */
-      transition: transform 0.3s ease-in-out;
+      /* transition: transform 0.3s ease-in-out; */
       transform: scale(1.05);
       /* blur and brightness */
       filter: blur(5px) brightness(0.8);
@@ -307,6 +342,7 @@ div.backCard {
       background: rgba(0, 0, 0, 0.4);
       padding: 1rem;
       border-radius: 0.75rem;
+      z-index: 4;
       /* overflow-y: auto;
       opacity: 1; */
       /* transition: opacity 0.25s ease; */
