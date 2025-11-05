@@ -59,7 +59,8 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <header className={styles.header}>
-        <h2 className={styles.h2}>About me</h2>
+        <h2 className={styles.h2}>What about me?</h2>
+        <span>Here&apos;s a little more information about me.</span>
       </header>
       <div className={styles.main}>
         <div className={styles.info}>
