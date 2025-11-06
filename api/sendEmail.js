@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport(
     from: '"Elviro Dominguez Soriano" <contact@elvirodominguez.com>',
     to: "contact@elvirodominguez.com",
     subject: "Test Email from PORTFOLIO",
-    text: "This is a test email sent using Nodemailer with SMTP configuration.",
+    text: "This is a test email FROM MY PORTFOLIO sent using Nodemailer with SMTP configuration.",
   });
   console.log("Message sent: %s", info.messageId);
 })();
