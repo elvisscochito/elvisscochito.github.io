@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://elvisscochito-github-io-fuvy.vercel.app/api/$1"
+    }
+  ]
+}
