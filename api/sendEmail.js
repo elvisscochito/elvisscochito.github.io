@@ -1,14 +1,10 @@
-import cors from "cors";
-import dotenv from "dotenv";
-import express from "express";
 import nodemailer from "nodemailer";
-dotenv.config();
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method not allowed" });
+  }
 
-app.post("/api/sendEmail", async (req, res) => {
   const { subject, name, email, message } = req.body;
 
   try {
@@ -17,8 +13,8 @@ app.post("/api/sendEmail", async (req, res) => {
       port: 465,
       secure: true,
       auth: {
-        user: "elvirodominguez@icloud.com",
-        pass: "kgcf-adsi-syaq-futn",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
@@ -30,10 +26,8 @@ app.post("/api/sendEmail", async (req, res) => {
     });
 
     res.status(200).json({ message: "Sent successfully" });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Error sending message" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error sending email" });
   }
-});
-
-app.listen(3001, () => console.log("🚀 Server ready at http://localhost:3001"));
+}
