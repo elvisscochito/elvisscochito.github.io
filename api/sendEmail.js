@@ -2,9 +2,10 @@ import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport(
   {
-    host: "smtp.mail.me.com",
+    service: "iCloud",
+    /* host: "smtp.mail.me.com",
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false, */ // true for 465, false for other ports
     auth: {
       user: "elvirodominguez@icloud.com",
       pass: "kgcf-adsi-syaq-futn",
@@ -17,7 +18,7 @@ const transporter = nodemailer.createTransport(
     from: '"Elviro Dominguez Soriano" <contact@elvirodominguez.com>',
     to: "contact@elvirodominguez.com",
     subject: "Test Email from PORTFOLIO",
-    text: "This is a test email FROM MY PORTFOLIO sent using Nodemailer with SMTP configuration.",
+    text: "This is a test email FROM MY PORTFOLIO",
   });
   console.log("Message sent: %s", info.messageId);
 })();
