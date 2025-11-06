@@ -1,8 +1,5 @@
 import nodemailer from 'nodemailer';
 
-console.log("Usuario:", process.env.SMTP_USER);
-console.log("Contraseña:", process.env.SMTP_PASS ? "OK" : "VACÍA");
-
 const transporter = nodemailer.createTransport(
   {
     host: "smtp.mail.me.com",

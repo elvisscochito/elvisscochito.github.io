@@ -15,9 +15,6 @@ const Contact = () => {
     message: 'I want to get in touch with you regarding a job opportunity...',
   });
 
-  const [loading, setLoading] = useState(false);
-  const [statusMessage, setStatusMessage] = useState('');
-
   const toggleStatus = () => {
     setIsActive(!isActive);
   }
@@ -35,10 +32,8 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    setStatusMessage('');
 
     const { subject, name, /* email, */ message } = formData;
     /* const whatsappNumber = '+527771395795'; */
@@ -54,40 +49,36 @@ const Contact = () => {
       const mailtoLink = `mailto:contact@elvirodominguez.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello, Elviro:\n\nMy name is ${name}. ${message}`)}`;
       window.open(mailtoLink, '_blank');
     } else {
-      // Web (server) path: send to your serverless endpoint
-      setLoading(true);
-      try {
-        setStatusMessage('Sending message...');
-        const response = await fetch('/api/sendEmail', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
+      alert('Note: Web email clients may not support pre-filled body content. Please ensure your email client is configured correctly.');
 
-        if (response.ok) {
-          setStatusMessage('Message sent successfully!');
-          setFormData({
-            subject: 'Contacting for Job Opportunity (via portfolio)',
-            name: '',
-            email: '',
-            message: 'I want to get in touch with you regarding a job opportunity...',
+      const postEmail = async () => {
+        try {
+          const response = await fetch("/api/sendEmail", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
           });
-        } else {
-          let errText = 'Error sending message.';
-          try {
-            const data = await response.json();
-            if (data && data.error) errText = data.error;
-          } catch (e) {
-            console.error('Failed to parse error response', e);
+
+          if (response.ok) {
+            alert('Message sent successfully!');
+            setFormData({
+              subject: 'Contacting for Job Opportunity (via portfolio)',
+              name: '',
+              email: '',
+              message: 'I want to get in touch with you regarding a job opportunity...',
+            });
+          } else {
+            alert('Error sending message.');
           }
-          setStatusMessage(errText);
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Error sending message.');
         }
-      } catch (error) {
-        console.error('Error:', error);
-        setStatusMessage('Error sending message.');
-      } finally {
-        setLoading(false);
-      }
+      };
+
+      postEmail();
     }
   }
 
@@ -147,7 +138,7 @@ const Contact = () => {
           <label htmlFor='web'><input type='radio' id='web' name='contactMethod' value='web' className={styles.radioWeb} />Web Client</label>
         </fieldset> */}
 
-        <button type="submit" disabled={loading} className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
+        <button type="submit" className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
           <>
             WhatsApp
             <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
@@ -159,7 +150,6 @@ const Contact = () => {
           </>
         )}
         </button>
-        {statusMessage && <p className={styles.statusMessage}>{statusMessage}</p>}
       </form>
     </section>
   )
