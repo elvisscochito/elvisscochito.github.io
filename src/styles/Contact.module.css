@@ -4,22 +4,180 @@ section.contact {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
+  height: 100vh;
 
-header.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  header.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  h2.contactHeading {
-    color: #18181b;
-    font-size: 2.8rem;
-    text-align: center;
+    h2.contactHeading {
+      color: #18181b;
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    span {
+      color: #18181b;
+      font-size: 1.5rem;
+    }
   }
 
-  span {
-    color: #18181b;
-    font-size: 1.5rem;
+  form.contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 32rem;
+
+    fieldset.fieldset {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0.5rem;
+      width: 100%;
+      border: none;
+
+      label
+
+      /* ,
+      legend */
+        {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #18181b;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      label.statusLabelName,
+      label.checkboxLabelName {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    fieldset.fieldset:first-of-type {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      input.statusCheckbox[type="checkbox"],
+      input.checkbox[type="checkbox"] {
+        position: absolute;
+        visibility: hidden;
+        left: -9999;
+        top: -9999;
+      }
+
+      label.statusLabel,
+      label.checkboxLabel {
+        position: relative;
+        display: inline-block;
+        width: 4rem;
+        height: 2rem;
+        background-color: var(--accent-color);
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+
+      label.statusLabel::after,
+      label.checkboxLabel::after {
+        content: "";
+        position: absolute;
+        top: 0.2rem;
+        left: 0.2rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 1rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      input.statusCheckbox[type="checkbox"]:checked+label.statusLabel::after,
+      input.checkbox[type="checkbox"]:checked+label.checkboxLabel::after {
+        left: 2rem;
+        background-color: hsl(0, 0%, 100%);
+      }
+
+      input.statusCheckbox[type="checkbox"]:checked+label.statusLabel {
+        background-color: #22C55E;
+      }
+
+      input.checkbox[type="checkbox"]:checked:last-of-type+label.checkboxLabel {
+        background-color: #ccc;
+      }
+    }
+
+    /* fieldset.fieldset:last-of-type {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+
+      label {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    } */
+
+    button.submitButton {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #18181b;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #333;
+      }
+
+      .icon {
+        font-size: 1.2rem;
+      }
+
+      &.email {
+        background-color: var(--accent-color);
+
+        &:hover {
+          background-color: #1D4ED8;
+        }
+      }
+
+      &.whatsapp {
+        background-color: #22C55E;
+
+        &:hover {
+          background-color: #16A34A;
+        }
+      }
+    }
   }
 }

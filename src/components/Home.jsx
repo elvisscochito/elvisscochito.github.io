@@ -108,7 +108,7 @@ const Home = () => {
           <div className={styles.buttons}>
             <span className={styles.button}>
               <FontAwesomeIcon icon={faEnvelope} />
-              <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20opportunity&body=Hello,%20Elviro:" ref={emailRef}>
+              <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20Job%20Opportunity&body=Hello,%20Elviro:%0D%0A%0D%0AI%20want%20to%20get%20in%20touch%20with%20you%20regarding%20a%20job%20opportunity..." ref={emailRef}>
                 contact@elvirodominguez.com
               </a>
               {

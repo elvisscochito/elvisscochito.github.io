@@ -197,6 +197,115 @@ div.cardContainer {
           transform: scale(1.1);
         } */
       }
+
+      &.backCard {
+
+        transform: rotateY(180deg);
+        z-index: 1;
+
+        header.headerBackIcons {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 0.5rem 0.75rem;
+          z-index: 6;
+          pointer-events: auto;
+
+          .iconBtn {
+            background: rgba(0, 0, 0, 0.45);
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            color: white;
+            border-radius: 50%;
+            width: 2.2rem;
+            height: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease, transform 0.2s ease;
+            position: relative;
+            z-index: 2;
+          }
+
+          .iconBtn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.08);
+          }
+
+          .infoDescriptionIcon {
+            color: white;
+            width: 1.8rem;
+            height: 1.8rem;
+          }
+        }
+
+        figure.bodyBack {
+          position: relative;
+          height: 100%;
+          /* display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          padding: 1rem; */
+
+          img:first-of-type {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* mask-image: linear-gradient(black, transparent); */
+            /* transition: transform 0.3s ease-in-out; */
+            transform: scale(1.05);
+            /* blur and brightness */
+            filter: blur(5px) brightness(0.8);
+            /* transition: transform 0.3s ease-in-out,
+              filter 0.3s ease-in-out; */
+          }
+
+          /* &:hover img:first-of-type {
+            transform: scale(1.05); */
+          /* blur and brightness */
+          /* filter: blur(5px) brightness(0.8);
+          } */
+
+          figcaption.description {
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.5;
+            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            z-index: 4;
+            /* overflow-y: auto;
+            opacity: 1; */
+            /* transition: opacity 0.25s ease; */
+
+            /* span.description {
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-bottom: 0.5rem;
+              display: block;
+            } */
+          }
+        }
+      }
     }
   }
 }
@@ -256,104 +365,6 @@ footer.footer {
     &:hover {
       transform: scale(1.05);
       /* border-bottom-color: var(--accent-color-hover); */
-    }
-  }
-}
-
-div.backCard {
-
-  transform: rotateY(180deg);
-  z-index: 1;
-
-  header.headerBackIcons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0.5rem 0.75rem;
-    z-index: 6;
-    pointer-events: auto;
-
-    .iconBtn {
-      background: rgba(0, 0, 0, 0.45);
-      border: none;
-      cursor: pointer;
-      font-size: 1.4rem;
-      color: white;
-      border-radius: 50%;
-      width: 2.2rem;
-      height: 2.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s ease, transform 0.2s ease;
-      position: relative;
-      z-index: 2;
-    }
-
-    .iconBtn:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.08);
-    }
-
-    .infoDescriptionIcon {
-      color: white;
-      width: 1.8rem;
-      height: 1.8rem;
-    }
-  }
-
-  figure.bodyBack {
-    position: relative;
-    height: 100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 1rem; */
-
-    img:first-of-type {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* mask-image: linear-gradient(black, transparent); */
-      /* transition: transform 0.3s ease-in-out; */
-      transform: scale(1.05);
-      /* blur and brightness */
-      filter: blur(5px) brightness(0.8);
-      /* transition: transform 0.3s ease-in-out,
-        filter 0.3s ease-in-out; */
-    }
-
-    /* &:hover img:first-of-type {
-      transform: scale(1.05); */
-    /* blur and brightness */
-    /* filter: blur(5px) brightness(0.8);
-    } */
-
-    figcaption.description {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 85%;
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: 500;
-      text-align: center;
-      line-height: 1.5;
-      backdrop-filter: blur(6px);
-      background: rgba(0, 0, 0, 0.4);
-      padding: 1rem;
-      border-radius: 0.75rem;
-      z-index: 4;
-      /* overflow-y: auto;
-      opacity: 1; */
-      /* transition: opacity 0.25s ease; */
     }
   }
 }

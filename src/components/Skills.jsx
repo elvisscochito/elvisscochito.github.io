@@ -5,7 +5,7 @@ const Skills = () => {
     <section id="skills" className={styles.skills}>
       <header className={styles.header}>
         <h2 className={styles.skillsHeading}>Skills are never enough.</h2>
-        <span>So, I never stop learning.</span>
+        <span>So I never stop learning.</span>
       </header>
     </section>
   );

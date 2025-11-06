@@ -84,7 +84,7 @@ const Card = ({ brand, project, role, date, thumbnail, logo, description, skills
 
           <figure className={styles.bodyBack}>
             <img src={thumbnail} alt="Project 1" />
-            <figcaption className={styles.description}>{description}</figcaption>
+            <figcaption className={styles.description}>{/* <span className={styles.description}>Description:</span> */}{description}</figcaption>
           </figure>
 
           <footer className={styles.footer}>

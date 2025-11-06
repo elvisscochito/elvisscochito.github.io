@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import SocialPath from './components/SocialPath'
+/* import SoftSkills from './components/SoftSkills' */
 import styles from './styles/Tooltip.module.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Home />
       <SocialPath />
       <About />
+      {/* <SoftSkills /> */}
       <Skills />
       <Projects />
       <Contact />
