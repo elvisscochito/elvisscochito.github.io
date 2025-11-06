@@ -53,7 +53,7 @@ const Contact = () => {
 
       const postEmail = async () => {
         try {
-          const response = await fetch("https://formsubmit.co/4683a429fc79af4ffa0443e66e78b552", {
+          const response = await fetch("https://formspree.io/f/xgvpgydd", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -115,14 +115,14 @@ const Contact = () => {
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="name"> <FontAwesomeIcon icon={faUser} className={styles.icon} />&nbsp;Name:</label>
-          <input type="text" id="name" name="name" required placeholder='Type Your Name Here, e.g. John Doe' onChange={handleChange} autoComplete />
+          <input type="text" id="name" name="name" required placeholder='Type Your Name Here, e.g. John Doe' value={formData.name} onChange={handleChange} autoComplete />
         </fieldset>
 
         {
           !isActive && (
             <fieldset className={styles.fieldset}>
               <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
-              <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' onChange={handleChange} autoComplete />
+              <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' value={formData.email} onChange={handleChange} autoComplete />
             </fieldset>
           )
         }
