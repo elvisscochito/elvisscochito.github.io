@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Email sending API is running.");
+});
+
 app.post("/api/sendEmail", async (req, res) => {
   const { subject, name, email, message } = req.body;
 
