@@ -53,9 +53,11 @@ const Contact = () => {
 
       const postEmail = async () => {
         try {
-          const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+          const response = await fetch("https://formspree.io/f/xgvpgydd", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
             body: JSON.stringify(formData)
           });
 
