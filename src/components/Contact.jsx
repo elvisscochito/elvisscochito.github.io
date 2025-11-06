@@ -100,7 +100,7 @@ const Contact = () => {
           {
             !isActive && (
 
-              <label htmlFor="client" className={styles.checkboxLabelName}>({isChecked ? 'Desktop' : 'Web Client'})&nbsp;
+              <label htmlFor="client" className={styles.checkboxLabelName}>({isChecked ? 'Desktop App' : 'Web Client'})&nbsp;
                 <input type="checkbox" id="client" name="client" onChange={toggleCheckbox} checked={isChecked} className={styles.checkbox} />
                 <label htmlFor="client" className={styles.checkboxLabel}></label>
               </label>
