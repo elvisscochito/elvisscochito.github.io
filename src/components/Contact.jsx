@@ -53,7 +53,7 @@ const Contact = () => {
 
       const postEmail = async () => {
         try {
-          const response = await fetch("/api/sendEmail", {
+          const response = await fetch("http://localhost:3001/api/sendEmail", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
