@@ -1,46 +1,75 @@
 import cors from "cors";
-/* import dotenv from "dotenv"; */
+import dotenv from "dotenv";
 import express from "express";
+import morgan from "morgan";
 import nodemailer from "nodemailer";
 
-/* dotenv.config(); */
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
   res.send("Email sending API is running.");
-});
+})
 
 app.post("/api/sendEmail", async (req, res) => {
   const { subject, name, email, message } = req.body;
 
+  console.log("Received email request:", { subject, name, email, message });
+
   try {
     const transporter = nodemailer.createTransport({
+      /* service: "iCloud", */
       host: "smtp.mail.me.com",
-      port: 587,
+      port: 587, // true for 465, false for other ports
       secure: false,
       auth: {
-        user: "elvirodominguez@icloud.com",
-        pass: "kgcf-adsi-syaq-futn",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: "contact@elvirodominguez.com",
+      from: "Elviro Dominguez Soriano <contact@elvirodominguez.com>",
       to: "contact@elvirodominguez.com",
-      subject,
-      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      replyTo: email,
+      subject: subject,
+      /* text: `Hello Elviro:\n\nI'm ${name},\n\n"${message}"\n\n\nSent from my Portfolio`, */
+      /* text: `Name: ${name}\n\nFrom Email: ${email}\n\n Message:\n\n"${message}"\n\n\n\nSent from my Portfolio`, */
+      html: `
+      <span>Hello Elviro:</span>
+      <br/><br/>
+      <span>I'm</span> <b>${name}</b>,
+      <br/>
+      <p>"${(message)}"</p>
+      <br/>
+      ${email}
+      <br/><br/>
+      <span>Sent from Portfolio</span>`
+      /* html: `
+      <b>Name:</b> ${name}
+      <br/><br/>
+      <b>From Email:</b> &lt;${email}&gt;
+      <br/><br/>
+      <b>Message:</b> <p>"${(message)}"</p>
+      <hr/>
+      <br/>
+      <span>Sent from my Portfolio</span>` */
     });
 
+    {/* <p>${(message || '').replace(/\n/g, '<br/>')}</p><hr/><p>From: <strong>${name}</strong> &lt;${email}&gt;</p> */ }
+
+    /*  console.log('Mail sent:', info.messageId || info.response); */
     res.status(200).json({ message: "Sent successfully" });
   } catch (err) {
-    console.error("❌ Email error:", err);
-    res.status(500).json({ message: err.message || "Error sending message" });
+    console.log("Email error: ", err);
+    res.status(500).json({ message: err.message || "Internal Server Error" });
   }
+})
+
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
-
-app.listen(3001, () => console.log("🚀 Server ready at http://localhost:3001"));
-
-/* export default app; */
