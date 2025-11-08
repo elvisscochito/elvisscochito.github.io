@@ -1,10 +1,6 @@
 import nodemailer from "nodemailer";
 
-export const testEmailAPI = ("/", (req, res) => {
-  res.send("Hello from Email route.");
-})
-
-export const sendEmail = ("/api/sendEmail", async (req, res) => {
+export const postEmail = ("/api/postEmail", async (req, res) => {
   const { subject, name, email, phone, message } = req.body;
 
   console.log("Received email request:", { subject, name, email, phone, message });
