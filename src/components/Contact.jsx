@@ -1,5 +1,5 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faHeading, faMessage, faPaperPlane, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHeading, faMessage, faPaperPlane, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import styles from '../styles/Contact.module.css';
@@ -12,6 +12,7 @@ const Contact = () => {
     subject: 'Contacting for Job Opportunity (via portfolio)',
     name: '',
     email: '',
+    phone: '',
     message: 'I want to get in touch with you regarding a job opportunity...',
   });
 
@@ -67,6 +68,7 @@ const Contact = () => {
               subject: 'Contacting for Job Opportunity (via portfolio)',
               name: '',
               email: '',
+              phone: '',
               message: 'I want to get in touch with you regarding a job opportunity...',
             });
           } else {
@@ -120,10 +122,16 @@ const Contact = () => {
 
         {
           !isActive && (
-            <fieldset className={styles.fieldset}>
-              <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
-              <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' value={formData.email} onChange={handleChange} autoComplete />
-            </fieldset>
+            <>
+              <fieldset className={styles.fieldset}>
+                <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
+                <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' value={formData.email} onChange={handleChange} autoComplete />
+              </fieldset>
+              <fieldset className={styles.fieldset}>
+                <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder='+1 xxx xxxx' value={formData.phone} onChange={handleChange} autoComplete />
+              </fieldset>
+            </>
           )
         }
 

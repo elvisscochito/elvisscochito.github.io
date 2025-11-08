@@ -16,9 +16,9 @@ app.get("/", (req, res) => {
 })
 
 app.post("/api/sendEmail", async (req, res) => {
-  const { subject, name, email, message } = req.body;
+  const { subject, name, email, phone, message } = req.body;
 
-  console.log("Received email request:", { subject, name, email, message });
+  console.log("Received email request:", { subject, name, email, phone, message });
 
   try {
     const transporter = nodemailer.createTransport({
@@ -48,6 +48,7 @@ app.post("/api/sendEmail", async (req, res) => {
       <br/>
       ${email}
       <br/><br/>
+      ${phone ? `${phone}<br/><br/>` : ''}
       <span>Sent from Portfolio</span>`
       /* html: `
       <b>Name:</b> ${name}
