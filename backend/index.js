@@ -33,7 +33,7 @@ app.post("/api/sendEmail", async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: "Elviro Dominguez Soriano <contact@elvirodominguez.com>",
+      from: "Elviro Dominguez <contact@elvirodominguez.com>",
       to: "contact@elvirodominguez.com",
       replyTo: email,
       subject: subject,
