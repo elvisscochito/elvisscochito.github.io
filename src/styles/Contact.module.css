@@ -159,6 +159,12 @@ section.contact {
         background-color: #333;
       }
 
+      &:disabled {
+        cursor: not-allowed;
+        font-weight: 500;
+        transition: none;
+      }
+
       .icon {
         font-size: 1.2rem;
       }
@@ -169,6 +175,10 @@ section.contact {
         &:hover {
           background-color: #1D4ED8;
         }
+
+        &:disabled {
+          background-color: hsla(222, 78%, 56%, 0.5) !important;
+        }
       }
 
       &.whatsapp {
@@ -176,6 +186,10 @@ section.contact {
 
         &:hover {
           background-color: #16A34A;
+        }
+
+        &:disabled {
+          background-color: hsla(142, 76%, 36%, 0.5) !important;
         }
       }
     }

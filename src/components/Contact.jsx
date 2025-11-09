@@ -1,12 +1,14 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faHeading, faMessage, faPaperPlane, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
+  const formRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const [formData, setFormData] = useState({
     subject: 'Contacting for Job Opportunity (via portfolio)',
@@ -84,13 +86,19 @@ const Contact = () => {
     }
   }
 
+  const allowOnlyNumbers = (e) => {
+    const { name, value } = e.target;
+    const numericValue = value.replace(/\D+/g, '');
+    setFormData(prev => ({ ...prev, [name]: numericValue }));
+  }
+
   return (
     <section id="contact" className={styles.contact}>
       <header className={styles.header}>
         <h2 className={styles.contactHeading}>Let&apos;s build something together.</h2>
         <span>Feel free to reach me out for job opportunities!</span>
       </header>
-      <form className={styles.contactForm} /* action="https://formspree.io/f/xgvpgydd" method="POST" */ onSubmit={handleSubmit}>
+      <form className={styles.contactForm} /* action="https://formspree.io/f/xgvpgydd" method="POST" */ onSubmit={handleSubmit} ref={formRef} onChange={() => setIsButtonDisabled(!formRef.current?.checkValidity())}>
 
         <fieldset className={styles.fieldset}>
           {/* <legend className={styles.legend}>Contact Method</legend> */}
@@ -125,11 +133,12 @@ const Contact = () => {
             <>
               <fieldset className={styles.fieldset}>
                 <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
-                <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' value={formData.email} onChange={handleChange} autoComplete />
+                <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' value={formData.email} onChange={handleChange} autoComplete='email' />
               </fieldset>
               <fieldset className={styles.fieldset}>
                 <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
-                <input type="tel" id="phone" name="phone" placeholder='+1 xxx xxxx' value={formData.phone} onChange={handleChange} autoComplete />
+                {/* verify pattern */}
+                <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' autoComplete='tel' />
               </fieldset>
             </>
           )
@@ -146,7 +155,7 @@ const Contact = () => {
           <label htmlFor='web'><input type='radio' id='web' name='contactMethod' value='web' className={styles.radioWeb} />Web Client</label>
         </fieldset> */}
 
-        <button type="submit" className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
+        <button type="submit" disabled={isButtonDisabled} className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
           <>
             WhatsApp
             <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
