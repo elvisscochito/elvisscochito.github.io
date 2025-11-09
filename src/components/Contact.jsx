@@ -8,6 +8,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const [formData, setFormData] = useState({
@@ -24,6 +25,10 @@ const Contact = () => {
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
+  }
+
+  const toggleChecked = () => {
+    setChecked(!checked);
   }
 
   const handleChange = (e) => {
@@ -120,10 +125,14 @@ const Contact = () => {
           </label>
 
           {
-            !isActive && (
-
+            !isActive ? (
               <label htmlFor="client" className={styles.checkboxLabelName}>({isChecked ? 'Desktop App' : 'Web Client'})&nbsp;
                 <input type="checkbox" id="client" name="client" onChange={toggleCheckbox} checked={isChecked} className={styles.checkbox} />
+                <label htmlFor="client" className={styles.checkboxLabel}></label>
+              </label>
+            ) : (
+              <label htmlFor="client" className={styles.checkboxLabelName}>({checked ? 'URL Link' : 'Cloud API'})&nbsp;
+                <input type="checkbox" id="client" name="client" onChange={toggleChecked} checked={checked} className={styles.checkbox} />
                 <label htmlFor="client" className={styles.checkboxLabel}></label>
               </label>
             )
