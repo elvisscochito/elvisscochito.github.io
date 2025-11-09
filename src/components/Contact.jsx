@@ -133,7 +133,7 @@ const Contact = () => {
             ) : (
               <label htmlFor="client" className={styles.checkboxLabelName}>({checked ? 'URL Link' : 'Cloud API'})&nbsp;
                 <input type="checkbox" id="client" name="client" onChange={toggleChecked} checked={checked} className={styles.checkbox} />
-                <label htmlFor="client" className={styles.checkboxLabel}></label>
+                <label htmlFor="client" className={`${styles.checkboxLabel} ${styles.whatsapp}`}></label>
               </label>
             )
           }

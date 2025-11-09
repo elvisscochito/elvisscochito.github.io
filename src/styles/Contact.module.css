@@ -97,6 +97,10 @@ section.contact {
         cursor: pointer;
       }
 
+      label.checkboxLabel.whatsapp {
+        background-color: #22C55E;
+      }
+
       label.statusLabel::after,
       label.checkboxLabel::after {
         content: "";
