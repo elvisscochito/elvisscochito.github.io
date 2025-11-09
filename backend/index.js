@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
 import emailRoutes from './routes/email.js';
+import whatsappRoutes from './routes/whatsapp.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api", emailRoutes);
+app.use("/api", whatsappRoutes);
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
