@@ -86,10 +86,22 @@ const Contact = () => {
     }
   }
 
+  const autoCapitalizeWords = (str) => {
+    const { name, value } = str.target;
+    const capitalizedValue = value.replace(/\b\w/g, char => char.toUpperCase());
+    setFormData(prev => ({ ...prev, [name]: capitalizedValue }));
+  }
+
   const allowOnlyNumbers = (e) => {
     const { name, value } = e.target;
     const numericValue = value.replace(/\D+/g, '');
     setFormData(prev => ({ ...prev, [name]: numericValue }));
+  }
+
+  const autoLowercaseCharacters = (e) => {
+    const { name, value } = e.target;
+    const lowercasedValue = value.toLowerCase();
+    setFormData(prev => ({ ...prev, [name]: lowercasedValue }));
   }
 
   return (
@@ -120,12 +132,12 @@ const Contact = () => {
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="subject">                <FontAwesomeIcon icon={faHeading} className={styles.icon} />&nbsp;{isActive ? 'Title' : 'Subject'}:</label>
-          <input type="text" id="subject" name="subject" required placeholder='Type Your Custom Subject Here, e.g. Job Inquiry' value={formData.subject} onChange={handleChange} />
+          <input type="text" id="subject" name="subject" placeholder='Type Your Custom Subject Here, e.g. Job Inquiry' /* title='Enter the subject/title of your email/message' */ value={formData.subject} onChange={handleChange} required />
         </fieldset>
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="name"> <FontAwesomeIcon icon={faUser} className={styles.icon} />&nbsp;Name:</label>
-          <input type="text" id="name" name="name" required placeholder='Type Your Name Here, e.g. John Doe' value={formData.name} onChange={handleChange} autoComplete />
+          <input type="text" id="name" name="name" placeholder='Type Your Name Here, e.g. John Doe' /* title='Enter your full name' */ value={formData.name} /* onChange={handleChange} */ onInput={autoCapitalizeWords} minLength={3} maxLength={32} /* pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$" */ /* onInvalid={e => e.target.setCustomValidity('Please enter a valid name.')} */ autoComplete='name' required />
         </fieldset>
 
         {
@@ -133,12 +145,12 @@ const Contact = () => {
             <>
               <fieldset className={styles.fieldset}>
                 <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
-                <input type="email" id="email" name="email" required placeholder='Type Your Email Address Here, e.g. example@email.com' value={formData.email} onChange={handleChange} autoComplete='email' />
+                <input type="email" id="email" name="email" placeholder='Type Your Email Address Here, e.g. example@email.com' /* title='Enter your email address' */ value={formData.email} /* onChange={handleChange} */ onInput={autoLowercaseCharacters} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" /* onInvalid={e => e.target.setCustomValidity('Please enter a valid email address.')} */ autoComplete='email' required />
               </fieldset>
               <fieldset className={styles.fieldset}>
                 <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
                 {/* verify pattern */}
-                <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' autoComplete='tel' />
+                <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' />
               </fieldset>
             </>
           )
@@ -146,7 +158,7 @@ const Contact = () => {
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="message"> <FontAwesomeIcon icon={faMessage} className={styles.icon} />&nbsp; {isActive ? 'Message' : 'Body Content'}:</label>
-          <textarea id="message" name="message" required placeholder={isActive ? 'Type Your WhatsApp Message Here...' : 'Type Your Email Message Here...'} onChange={handleChange} value={formData.message}></textarea>
+          <textarea id="message" name="message" placeholder={isActive ? 'Type Your WhatsApp Message Here...' : 'Type Your Email Message Here...'} onChange={handleChange} value={formData.message} required></textarea>
         </fieldset>
 
         {/* <fieldset className={styles.fieldset}>
@@ -155,7 +167,7 @@ const Contact = () => {
           <label htmlFor='web'><input type='radio' id='web' name='contactMethod' value='web' className={styles.radioWeb} />Web Client</label>
         </fieldset> */}
 
-        <button type="submit" disabled={isButtonDisabled} className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
+        <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
           <>
             WhatsApp
             <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
