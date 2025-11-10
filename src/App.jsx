@@ -11,6 +11,7 @@ import Projects from './components/Projects'
 /* import Skills from './components/Skills' */
 import SocialPath from './components/SocialPath'
 /* import SoftSkills from './components/SoftSkills' */
+import BackToTop from './components/BackToTop'
 import Footer from './components/Footer'
 import styles from './styles/Tooltip.module.css'
 
@@ -33,6 +34,7 @@ function App() {
       {/* <Tooltip id="global-tooltip" place="top" className={styles.tooltip} /> */}
       <Tooltip id="global-tooltip" place="top" className={`global-tooltip ${styles.tooltip}`} />
       {/* </main> */}
+      <BackToTop />
       <Footer />
     </>
   )
