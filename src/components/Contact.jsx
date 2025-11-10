@@ -8,7 +8,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [isCheckedWhatsapp, setIsCheckedWhatsapp] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ const Contact = () => {
   }
 
   const toggleChecked = () => {
-    setChecked(!checked);
+    setIsCheckedWhatsapp(!isCheckedWhatsapp);
   }
 
   const handleChange = (e) => {
@@ -49,9 +49,39 @@ const Contact = () => {
     if (isActive) {
       const whatsappMessage = `_Subject_: *${subject}*.\n\nHello, Elviro.\n\nMy name is ${name}. ${message}`;
 
-      const whatsappURL = `https://wa.me/+527771395795?text=${encodeURIComponent(whatsappMessage)}`;
+      if (!isCheckedWhatsapp) {
+        const postWhatsApp = async () => {
+          try {
+            const response = await fetch("/api/postWhatsApp", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(formData)
 
-      window.open(whatsappURL, '_blank');
+            })/* () */;
+
+            if (response.ok) {
+              alert('Message sent successfully via WhatsApp API!');
+              setFormData({
+                subject: 'Contacting for job Opportunity (via portfolio)',
+                name: '',
+                email: '',
+                phone: '',
+                message: 'I want to get in touch with you regarding a job opportunity...',
+              });
+            }
+          } catch (error) {
+            console.error('Error:', error);
+            alert('Error sending message via WhatsApp API.');
+          }
+        }
+        postWhatsApp();
+      } else {
+        const whatsappURL = `https://wa.me/+527771395795?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappURL, '_blank');
+      }
     } else if (isChecked) {
       alert('Note: Desktop email applications may not support pre-filled body content. Please ensure your email client is configured correctly.');
       const mailtoLink = `mailto:contact@elvirodominguez.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello, Elviro:\n\nMy name is ${name}. ${message}`)}`;
@@ -131,8 +161,8 @@ const Contact = () => {
                 <label htmlFor="client" className={styles.checkboxLabel}></label>
               </label>
             ) : (
-              <label htmlFor="client" className={styles.checkboxLabelName}>({checked ? 'URL Link' : 'Cloud API'})&nbsp;
-                <input type="checkbox" id="client" name="client" onChange={toggleChecked} checked={checked} className={styles.checkbox} />
+              <label htmlFor="client" className={styles.checkboxLabelName}>({isCheckedWhatsapp ? 'URL Link' : 'Cloud API'})&nbsp;
+                <input type="checkbox" id="client" name="client" onChange={toggleChecked} checked={isCheckedWhatsapp} className={styles.checkbox} />
                 <label htmlFor="client" className={`${styles.checkboxLabel} ${styles.whatsapp}`}></label>
               </label>
             )
@@ -156,14 +186,15 @@ const Contact = () => {
                 <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
                 <input type="email" id="email" name="email" placeholder='Type Your Email Address Here, e.g. example@email.com' /* title='Enter your email address' */ value={formData.email} /* onChange={handleChange} */ onInput={autoLowercaseCharacters} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" /* onInvalid={e => e.target.setCustomValidity('Please enter a valid email address.')} */ autoComplete='email' required />
               </fieldset>
-              <fieldset className={styles.fieldset}>
-                <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
-                {/* verify pattern */}
-                <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' />
-              </fieldset>
             </>
           )
         }
+
+        <fieldset className={styles.fieldset}>
+          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
+          {/* verify pattern */}
+          <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' />
+        </fieldset>
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="message"> <FontAwesomeIcon icon={faMessage} className={styles.icon} />&nbsp; {isActive ? 'Message' : 'Body Content'}:</label>
