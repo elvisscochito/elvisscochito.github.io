@@ -1,7 +1,7 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faHeading, faMessage, faPaperPlane, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
@@ -139,13 +139,25 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: lowercasedValue }));
   }
 
+  /* useEffect(() => {
+    if (formRef.current) {
+      setIsButtonDisabled(!formRef.current.checkValidity());
+    }
+  }, [isActive, formData]); */
+
+  useEffect(() => {
+    if (formRef.current) {
+      setIsButtonDisabled(!formRef.current.checkValidity());
+    }
+  }, [isActive, formData]);
+
   return (
     <section id="contact" className={styles.contact}>
       <header className={styles.header}>
         <h2 className={styles.contactHeading}>Let&apos;s build something together.</h2>
         <span>Feel free to reach me out for job opportunities!</span>
       </header>
-      <form className={styles.contactForm} /* action="https://formspree.io/f/xgvpgydd" method="POST" */ onSubmit={handleSubmit} ref={formRef} onChange={() => setIsButtonDisabled(!formRef.current?.checkValidity())}>
+      <form className={styles.contactForm} /* action="https://formspree.io/f/xgvpgydd" method="POST" */ onSubmit={handleSubmit} ref={formRef} /* onChange={() => setIsButtonDisabled(!formRef.current?.checkValidity())} */>
 
         <fieldset className={styles.fieldset}>
           {/* <legend className={styles.legend}>Contact Method</legend> */}
@@ -193,7 +205,7 @@ const Contact = () => {
         <fieldset className={styles.fieldset}>
           <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
           {/* verify pattern */}
-          <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' />
+          <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' required={isActive} />
         </fieldset>
 
         <fieldset className={styles.fieldset}>
