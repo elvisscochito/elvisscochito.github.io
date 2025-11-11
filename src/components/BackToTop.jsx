@@ -11,7 +11,7 @@ const BackToTop = () => {
     ↑
   </button> */}
   return (
-    <a href="#home" className={styles.backToTop} aria-label="Back to top" /* data-tooltip-id="global-tooltip" data-tooltip-content="Back to Top" */>
+    <a href="#home" className={styles.backToTop} aria-label="Back to top" data-tooltip-id="global-tooltip" data-tooltip-content="Back to Top">
       <FontAwesomeIcon icon={faArrowUp} className={styles.icon} />
       {/* Back to Top */}
     </a>
