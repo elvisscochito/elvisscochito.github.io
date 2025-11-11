@@ -6,7 +6,7 @@ import danu from '../assets/danu.png';
 import kanbanize from '../assets/kanbanize.png';
 import wizeline from '../assets/wizeline.svg';
 import Card from '../components/Card';
-import { ProjectsContext } from '../contexts/ProjectsContext';
+/* import { ProjectsContext } from '../contexts/ProjectsContext'; */
 import styles from '../styles/Projects.module.css';
 import ProjectSwitcher from './ProjectSwitcher';
 
@@ -163,9 +163,10 @@ const Projects = () => {
         <span className={styles.span}>Here's some of my best projects yet where I applied my skills.</span>
       </header>
 
-      <ProjectsContext.Provider value={{ projectsButtons, handleProjectsSwitch }}>
+      {/* <ProjectsContext.Provider value={{ projectsButtons, handleProjectsSwitch }}>
         <ProjectSwitcher />
-      </ProjectsContext.Provider>
+      </ProjectsContext.Provider> */}
+      <ProjectSwitcher projectsButtons={projectsButtons} handleProjectsSwitch={handleProjectsSwitch} />
 
       <div className={styles.projectsContainer}>
         {

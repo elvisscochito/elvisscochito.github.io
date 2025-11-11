@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { ProjectsContext } from '../contexts/ProjectsContext';
+/* import { useContext }  from 'react'; */
+/* import { ProjectsContext } from '../contexts/ProjectsContext'; */
 import styles from '../styles/Projects.module.css';
-import { shortLabelFromPath } from '../utils/shortLabel';
+import { shortLabelFromPath } from "../utils/shortLabel";
 
-const ProjectSwitcher = () => {
-  const { projectsButtons, handleProjectsSwitch } = useContext(ProjectsContext);
+const ProjectSwitcher = ({ projectsButtons, handleProjectsSwitch }) => {
+  /* const { projectsButtons, handleProjectsSwitch } = useContext(ProjectsContext); */
 
   return (
     <div className={styles.projectSwitcher}>
@@ -19,8 +19,9 @@ const ProjectSwitcher = () => {
           .trim(); */
 
           return (
-            <React.Fragment key={button.id}>
+            <>
               <button
+                key={button.id}
                 data-short={shortLabel}
                 className={`${styles.projectsBtn} ${button.active ? styles.activeButton : styles.inactiveButton}`}
                 onClick={() => handleProjectsSwitch(button.id)}
@@ -31,7 +32,7 @@ const ProjectSwitcher = () => {
               {
                 index < projectsButtons.length - 1 && <span className={styles.separator}></span>
               }
-            </React.Fragment>
+            </>
           );
         })}
     </div>
