@@ -19,6 +19,12 @@
   pointer-events: none !important;
 }
 
+@media only screen and (max-width : 768px) {
+  .tooltip {
+    display: none !important;
+  }
+}
+
 /* en card.jsx */
 /* .tooltipContainer {
   position: relative;
