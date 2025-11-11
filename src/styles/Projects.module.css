@@ -13,7 +13,7 @@ section {
     justify-content: center;
     align-items: center;
 
-    h2.h2 {
+    h2.heading {
       color: #18181b;
       font-size: 2.8rem;
       text-align: center;
@@ -22,6 +22,7 @@ section {
     span {
       color: #18181b;
       font-size: 1.5rem;
+      text-align: center;
     }
   }
 
@@ -114,5 +115,63 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2rem; */
+  }
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 768px) {
+  section.projects {
+    padding: 1.5rem;
+
+    header.header {
+      h2.heading {
+        font-size: 2rem;
+      }
+
+      span.span {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    div.projectSwitcher {
+      gap: 1.5rem;
+
+      button.projectsBtn {
+        font-size: 1rem;
+        position: relative;
+        color: transparent;
+
+        /* remove last word */
+
+      }
+
+      button.projectsBtn::after {
+        content: attr(data-short);
+        /* Ensure the short label is visible on mobile; match active/inactive states below */
+        color: #18181b;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Match visual states for the pseudo-element when buttons are active/inactive */
+      button.projectsBtn.inactiveButton::after {
+        color: #999;
+      }
+
+      button.projectsBtn.activeButton::after {
+        color: #18181b;
+        font-weight: 500;
+      }
+    }
+
+    div.projectsContainer {
+      gap: 1.5rem;
+      width: 100%;
+    }
   }
 }

@@ -7,7 +7,7 @@ import Contact from './components/Contact'
 import CustomCursor from './components/CustomCursor'
 /* import Home from './components/Home' */
 /* import Navbar from './components/Navbar' */
-/* import Projects from './components/Projects' */
+import Projects from './components/Projects'
 /* import Skills from './components/Skills' */
 /* import SocialPath from './components/SocialPath' */
 /* import SoftSkills from './components/SoftSkills' */
@@ -27,7 +27,7 @@ function App() {
       <About /> */}
       {/* <SoftSkills /> */}
       {/* <Skills /> */}
-      {/* <Projects /> */}
+      <Projects />
       <Contact />
       {/* Global Tooltip for cards and other elements that use data-tooltip-id="global-tooltip" */}
       {/* Add a stable global class name so we can hide/show the tooltip with a simple body class when cards flip */}

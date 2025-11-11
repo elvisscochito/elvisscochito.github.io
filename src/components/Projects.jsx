@@ -6,7 +6,9 @@ import danu from '../assets/danu.png';
 import kanbanize from '../assets/kanbanize.png';
 import wizeline from '../assets/wizeline.svg';
 import Card from '../components/Card';
+import { ProjectsContext } from '../contexts/ProjectsContext';
 import styles from '../styles/Projects.module.css';
+import ProjectSwitcher from './ProjectSwitcher';
 
 const Projects = () => {
   const [projectsButtons, setProjectsButtons] = useState([
@@ -155,30 +157,16 @@ const Projects = () => {
   const activeButton = projectsButtons.find(button => button.active);
 
   return (
-    <section id="projects">
+    <section id="projects" className={styles.projects}>
       <header className={styles.header}>
-        <h2 className={styles.h2}>Beyond skills.</h2>
-        <span>Here's some of my best projects yet where I applied my skills.</span>
+        <h2 className={styles.heading}>Beyond skills.</h2>
+        <span className={styles.span}>Here's some of my best projects yet where I applied my skills.</span>
       </header>
 
-      <div className={styles.projectSwitcher}>
-        {
-          projectsButtons.map((button, index) => (
-            <>
-              <button
-                key={button.id}
-                className={`${styles.projectsBtn} ${button.active ? styles.activeButton : styles.inactiveButton}`}
-                onClick={() => handleProjectsSwitch(button.id)}
-              >
-                {button.path}
-              </button>
-              {
-                index < projectsButtons.length - 1 && <span className={styles.separator}></span>
-              }
-            </>
-          ))
-        }
-      </div>
+      <ProjectsContext.Provider value={{ projectsButtons, handleProjectsSwitch }}>
+        <ProjectSwitcher />
+      </ProjectsContext.Provider>
+
       <div className={styles.projectsContainer}>
         {
           projects
