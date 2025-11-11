@@ -50,6 +50,18 @@ a.backToTop {
   .icon {
     font-size: 2rem;
     cursor: pointer !important;
+    transition:
+      /* transform 0.2s ease-in-out, */
+      color 0.2s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--details)
+      /* #18181B */
+      /* #D9D9D9 */
+    ;
+    color: #FFFFFF;
+    /* transform: scale(1.1); */
   }
 }
 

@@ -5,6 +5,7 @@ section {
   align-items: center;
   gap: 2rem;
   /* margin-bottom: 10rem; */
+  /* overflow-x: hidden; */
 
   header.header {
     display: flex;
