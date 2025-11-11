@@ -63,7 +63,7 @@ const Card = ({ brand, project, role, date, thumbnail, logo, description, skills
           <figure className={styles.body}>
             <img src={thumbnail} alt="Project 1" />
             <a href={preview} target='_blank' rel='noopener noreferrer' className={styles.linkImage}><img src={logo} alt="Brand Logo" className={styles.brandLogo} /></a>
-            <figcaption className={styles.figcaption}>&quot;{project}&quot; {/* <span> */}{/* - */}• {/* | */} {brand}{/* </span> */}</figcaption>
+            <figcaption className={styles.figcaption}>&quot;{project}&quot; <span>{/* - */}• {/* | */} {brand}</span></figcaption>
           </figure>
 
           <footer className={styles.footer}>

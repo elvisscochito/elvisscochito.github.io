@@ -381,5 +381,86 @@ footer.footer {
     /* width: 100%;
     height: auto; */
     height: 60vw;
+
+    div.cardInner {
+      div.cardFace {
+        &.frontCard {
+          header.headerIcons {
+            div:is(.leftContainer, .middleContainer, .rightContainer) {
+              gap: 0.25rem;
+            }
+
+            span:is(.role, .date) {
+              font-size: 1rem;
+            }
+
+            div.middleContainer {
+
+              /* display: none; */
+              span.date {
+                max-width: 10ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+
+            .codeIcon,
+            .infoDescriptionIcon {
+              width: 1.4rem;
+              height: 1.4rem;
+            }
+
+            a.link {
+              .gitHubIcon {
+                width: 1.4rem;
+                height: 1.4rem;
+              }
+            }
+          }
+
+          figure.body {
+            /* a.linkImage {
+              top: 30%;
+              width: 4rem;
+              opacity: 1 !important;
+            } */
+
+            figcaption.figcaption {
+              font-size: 1rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+
+            }
+          }
+        }
+
+        &.backCard {
+
+          header.headerBackIcons {
+            .infoDescriptionIcon {
+              width: 1.4rem;
+              height: 1.4rem;
+            }
+          }
+
+          figure.bodyBack {
+            figcaption.description {
+              font-size: 1rem;
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+    footer.footer {
+      a {
+        font-size: 1.2rem;
+      }
+    }
   }
 }

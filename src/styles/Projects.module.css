@@ -136,7 +136,7 @@ section {
     }
 
     div.projectSwitcher {
-      gap: 1.5rem;
+      gap: 1rem;
 
       button.projectsBtn {
         font-size: 1rem;
