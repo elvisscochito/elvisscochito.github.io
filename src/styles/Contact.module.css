@@ -238,13 +238,37 @@ section.contact {
       fieldset.fieldset:first-of-type {
         flex-direction: column;
         align-items: flex-start;
+
+        label {
+          font-size: 1.1rem !important;
+        }
       }
 
-      label,
-      input,
-      textarea,
-      button {
-        font-size: 1rem !important;
+      fieldset.fieldset {
+
+        label {
+          font-size: 1.1rem !important;
+        }
+
+        input,
+        textarea {
+          font-size: 1rem !important;
+        }
+
+        button.submitButton {
+          font-size: 1rem !important;
+
+          .icon {
+            font-size: 1rem !important;
+          }
+        }
+
+        /* label,
+        input,
+        textarea,
+        button {
+          font-size: 1rem !important;
+        } */
       }
     }
   }
