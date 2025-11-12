@@ -398,7 +398,7 @@ section.home {
 
     div.firstDivision {
       align-items: center;
-      /* text-align: center; */
+      text-align: center;
 
       header {
         h1.h1 {
@@ -409,11 +409,13 @@ section.home {
         h2.h2 {
           font-size: 1.8rem;
           text-align: center;
+          font-weight: 600;
         }
 
         h3.h3 {
           font-size: 1.4rem;
           text-align: center;
+          font-weight: 500;
         }
       }
 
@@ -427,6 +429,7 @@ section.home {
           /* flex-direction: column; */
           /* width: 100%; */
           gap: 0.5rem;
+          width: 100%;
 
           a.btn,
           a.btnAux {
@@ -438,14 +441,16 @@ section.home {
 
       footer.footer {
         gap: 0.5rem;
+        align-items: center;
 
         div.buttons {
-          flex-direction: column;
-          align-items: flex-start;
+          /* flex-direction: column; */
+          align-items: center;
+          flex-wrap: wrap;
 
           span.button,
           .icon {
-            font-size: 1.5rem;
+            font-size: 1rem;
             padding: 0.8rem;
           }
 
@@ -453,22 +458,19 @@ section.home {
             font-size: 0.9rem;
             padding: 0.4rem 0.6rem;
           }
-
-
-
-
-          span.workStatus,
-          span.workType {
-            font-size: 0.9rem;
-
-            padding: 0.4rem 0.8rem;
-          }
-
         }
 
         div.workStatusContainer {
           gap: 0.5rem;
-          flex-direction: row !important;
+          /* flex-direction: column !important; */
+          flex-wrap: wrap;
+
+          span.workStatus,
+          span.workType {
+            font-size: 0.6rem;
+
+            padding: 0.4rem 0.8rem;
+          }
         }
       }
     }
@@ -507,6 +509,10 @@ section.home {
       img.cssLogo,
       img.jsLogo {
         display: none;
+      }
+
+      img.me {
+        max-width: 12rem;
       }
     }
 
