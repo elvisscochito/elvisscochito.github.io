@@ -1,7 +1,11 @@
 section.home {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  height: 92vh;
+  /* display: grid;
+  grid-template-columns: 1fr auto; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 92vh; */
   padding: 0rem 7rem;
   /* display: flex;
   flex-direction: column;
@@ -243,7 +247,8 @@ section.home {
     }
   }
 
-  div.secondDivision {
+  div.secondDivision,
+  div.imagesAndStats {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -335,6 +340,10 @@ section.home {
     }
   }
 
+  div.imagesAndStats {
+    display: none;
+  }
+
   div.more {
     display: flex;
     flex-direction: column;
@@ -376,5 +385,135 @@ section.home {
 @media (prefers-reduced-motion: no-preference) {
   .arrowIcon {
     animation: upAndDown 2s infinite linear;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.home {
+    /* display: grid;
+    padding: 0rem 3rem;
+    grid-template-columns: 1fr; */
+    /* flex-direction: column-reverse; */
+    padding: 1.5rem;
+
+    div.firstDivision {
+      align-items: center;
+      /* text-align: center; */
+
+      header {
+        h1.h1 {
+          font-size: 2.2rem;
+          text-align: center;
+        }
+
+        h2.h2 {
+          font-size: 1.8rem;
+          text-align: center;
+        }
+
+        h3.h3 {
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+
+      div.body {
+        p {
+          font-size: 1.4rem;
+          max-inline-size: 32ch;
+        }
+
+        div.buttonsCtaContainer {
+          /* flex-direction: column; */
+          /* width: 100%; */
+          gap: 0.5rem;
+
+          a.btn,
+          a.btnAux {
+            font-size: 1.2rem;
+            padding: 0.4rem 0.8rem;
+          }
+        }
+      }
+
+      footer.footer {
+        gap: 0.5rem;
+
+        div.buttons {
+          flex-direction: column;
+          align-items: flex-start;
+
+          span.button,
+          .icon {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+          }
+
+          span.button {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.6rem;
+          }
+
+
+
+
+          span.workStatus,
+          span.workType {
+            font-size: 0.9rem;
+
+            padding: 0.4rem 0.8rem;
+          }
+
+        }
+
+        div.workStatusContainer {
+          gap: 0.5rem;
+          flex-direction: row !important;
+        }
+      }
+    }
+
+    div.secondDivision {
+      display: none;
+    }
+
+    div.imagesAndStats {
+      /* margin-bottom: 3rem; */
+      display: flex;
+      /* flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem; */
+
+      div.stats {
+        gap: 1rem;
+
+        div {
+          span:first-of-type {
+            font-size: 1rem;
+          }
+
+          span:last-of-type {
+            font-size: 1.2rem;
+          }
+
+          .icon {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      img.reactLogo,
+      img.cssLogo,
+      img.jsLogo {
+        display: none;
+      }
+    }
+
+    div.more {
+      span {
+        font-size: 1rem;
+      }
+    }
   }
 }

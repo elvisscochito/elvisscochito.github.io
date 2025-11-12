@@ -264,6 +264,7 @@ section.about {
       }
 
       img {
+        /* display: none; */
         max-width: 12rem;
       }
     }

@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faArrowDown, faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import css from '../assets/css.png';
@@ -93,10 +93,32 @@ const Home = () => {
     <section id="home" className={styles.home}>
       <div className={styles.firstDivision}>
         <header>
-          <h3 className={styles.h1}>Welcome to my website!</h3>
+          <h3 className={styles.h3}>Welcome to my website!</h3>
           <h1 className={styles.h1}>Hi!, I&apos;m <span className={styles.span}>@elvisscochito</span></h1>
           <h2 className={styles.h2}>Last year Computer Science student</h2>
         </header>
+
+        <div className={styles.imagesAndStats}>
+          <img src={react} alt="React logo" className={styles.reactLogo} />
+          <img src={js} alt="JavaScript logo" className={styles.jsLogo} />
+          <img src={css} alt="CSS logo" className={styles.cssLogo} />
+          <img src={me} alt="Elviro Dominguez" className={styles.me} />
+          <div className={styles.stats}>
+            <div>
+              <span className={styles.breakAfterEachWord}>+1 Year</span>
+              <span className={styles.breakAfterEachWord}>Of experience</span>
+            </div>
+            <div>
+              <span className={styles.breakAfterEachWord}>+10</span>
+              <span className={styles.breakAfterEachWord}>projects</span>
+            </div>
+            <div>
+              <span className={styles.breakAfterEachWord}>+1k</span>
+              <span className={styles.breakAfterEachWord}>commits</span>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.body}>
           <p>At <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University. Looking for a <span className={styles.italic}>Part-Time</span> or <span className={styles.italic}>Full-Time</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> or <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> or <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> or any other <span className={`${styles.italic} ${styles.bold}`}>IT</span> job opportunity.</p>
           <div className={styles.buttonsCtaContainer}>
@@ -149,6 +171,7 @@ const Home = () => {
           </div>
         </footer>
       </div>
+
       <div className={styles.secondDivision}>
         <img src={react} alt="React logo" className={styles.reactLogo} />
         <img src={js} alt="JavaScript logo" className={styles.jsLogo} />
@@ -170,12 +193,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.more}>
+      {/* <div className={styles.more}>
         <span>Scroll down to know more</span>
         <a href="#about">
           <FontAwesomeIcon icon={faArrowDown} className={styles.arrowIcon} />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }
