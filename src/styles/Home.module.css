@@ -112,9 +112,11 @@ section.home {
           font-weight: 550;
         }
 
-        a:is(.btn, .btnAux):hover {
-          scale: 1.05;
-          transition: scale 0.3s ease-in-out;
+        @media (hover: hover) and (pointer: fine) {
+          a:is(.btn, .btnAux):hover {
+            scale: 1.05;
+            transition: scale 0.3s ease-in-out;
+          }
         }
       }
     }
@@ -152,8 +154,10 @@ section.home {
           color: rgb(225, 225, 225);
           font-size: 1rem;
 
-          &:hover {
-            color: var(--details);
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              color: var(--details);
+            }
           }
         }
 
@@ -505,11 +509,29 @@ section.home {
         }
       }
 
-      img.reactLogo,
+      img.reactLogo {
+        top: 10%;
+        left: 5%;
+        width: 5rem;
+      }
+
+      img.cssLogo {
+        top: 50%;
+        right: 45%;
+        width: 4rem;
+      }
+
+      img.jsLogo {
+        top: 20%;
+        right: 10%;
+        width: 4rem;
+      }
+
+      /* img.reactLogo,
       img.cssLogo,
       img.jsLogo {
         display: none;
-      }
+      } */
 
       img.me {
         max-width: 12rem;

@@ -27,8 +27,10 @@ div.container {
     font-size: 1.8rem;
     color: #24292e;
 
-    &:hover {
-      transform: scale(1.1);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 

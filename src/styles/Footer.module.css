@@ -31,9 +31,11 @@ footer.footer {
           color 0.2s ease-in-out;
       }
 
-      &:hover {
-        /* transform: scale(1.1); */
-        color: #18181B;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          /* transform: scale(1.1); */
+          color: #18181B;
+        }
       }
     }
   }

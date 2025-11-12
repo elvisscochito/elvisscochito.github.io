@@ -174,8 +174,10 @@ section.contact {
       cursor: pointer;
       transition: background-color 0.3s ease;
 
-      &:hover {
-        background-color: #333;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: #333;
+        }
       }
 
       &:disabled {
@@ -191,8 +193,10 @@ section.contact {
       &.email {
         background-color: var(--accent-color);
 
-        &:hover {
-          background-color: #1D4ED8;
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: #1D4ED8;
+          }
         }
 
         &:disabled {
@@ -203,8 +207,10 @@ section.contact {
       &.whatsapp {
         background-color: #22C55E;
 
-        &:hover {
-          background-color: #16A34A;
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: #16A34A;
+          }
         }
 
         &:disabled {

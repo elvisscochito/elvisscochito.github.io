@@ -151,8 +151,10 @@ section.about {
             color: rgb(225, 225, 225);
             font-size: 1.3rem;
 
-            &:hover {
-              color: var(--details);
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                color: var(--details);
+              }
             }
           }
 

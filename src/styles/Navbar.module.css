@@ -52,6 +52,7 @@ ul {
   top: 0;
 } */
 
+/* @media (hover: hover) and (pointer: fine) { */
 li.navbarItem:is(:hover, :focus)>a
 
 /* :not(.activeLink) */
@@ -59,6 +60,8 @@ li.navbarItem:is(:hover, :focus)>a
   color: var(--text-color);
   /* border-bottom: 1px solid #18181B; */
 }
+
+/* } */
 
 a.navbarLink,
 a.activeLink {
