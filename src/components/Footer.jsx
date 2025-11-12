@@ -6,7 +6,7 @@ import styles from '../styles/Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>Built with React &#43; Vite by Elviro Dominguez Soriano. &copy; {new Date().getFullYear()} All rights reserved.</p>
+      <p>Built with Vite &#43; React by Elviro Dominguez Soriano. &copy; {new Date().getFullYear()} All rights reserved.</p>
       <hr className={styles.divider} />
       <div className={styles.footerLinks}>
         <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20Job%20Opportunity&body=Hello,%20Elviro:%0D%0A%0D%0AI%20want%20to%20get%20in%20touch%20with%20you%20regarding%20a%20job%20opportunity..." target="_blank" rel="noopener noreferrer">

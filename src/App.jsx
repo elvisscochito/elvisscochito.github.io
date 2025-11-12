@@ -1,8 +1,8 @@
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import './App.css'
-/* import About from './components/About'
-import Aside from './components/Aside' */
+import About from './components/About'
+/* import Aside from './components/Aside' */
 import Contact from './components/Contact'
 /* import CustomCursor from './components/CustomCursor' */
 /* import Home from './components/Home' */
@@ -23,8 +23,8 @@ function App() {
       {/* <Aside /> */}
       {/* <main> */}
       {/* <Home />
-      <SocialPath />
-      <About /> */}
+      <SocialPath /> */}
+      <About />
       {/* <SoftSkills /> */}
       {/* <Skills /> */}
       <Projects />
