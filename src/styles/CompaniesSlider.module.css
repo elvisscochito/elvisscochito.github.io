@@ -1,0 +1,156 @@
+header.header {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h4.sliderTitle {
+    /* font-size: 1rem;
+    font-weight: 500; */
+    color: var(--text-secondary);
+    text-align: center;
+  }
+}
+
+div.slider {
+  width: 100%;
+  display: flex;
+  /* flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto; */
+  /* border: 1px solid red; */
+  padding: .5rem 1.5rem 1rem 1.5rem;
+  overflow-x: hidden;
+  /* background-color: blue; */
+
+  /* &::-webkit-scrollbar {
+    display: none;
+  } */
+
+  div.sliderTrack {
+    /* flex: 0 0 auto; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: infinityScroll 20s
+      /* 5s */
+      infinite linear
+      /* 20s linear infinite */
+    ;
+    padding-right: 1rem;
+
+    img.companyLogo {
+      height: 1.5rem;
+      width: auto;
+      /* object-fit: contain; */
+      opacity: 0.8;
+      filter: grayscale(100%);
+      transition: all 0.3s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          filter: grayscale(0%);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  /* Pause the scrolling animation while the user hovers (desktop only). */
+  @media (hover: hover) and (pointer: fine) {
+
+    /* Hovering the whole slider should pause the track animation */
+    &:hover div.sliderTrack {
+      animation-play-state: paused;
+    }
+
+    /* Hovering the track itself should also pause it */
+    div.sliderTrack:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0rem;
+  scroll-behavior: smooth; */
+
+  /* Hide scrollbar for WebKit browsers */
+  /* &::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  /* -ms-overflow-style: none; */
+  /* IE and Edge */
+  /* scrollbar-width: none; */
+  /* Firefox */
+
+  /* div.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      font-size: 1rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      height: 2.5rem;
+      padding: 0rem 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover { */
+  /* background-color: #F5F5F5; */
+  /* font-weight: 500;
+      }
+    }
+  } */
+}
+
+@keyframes infinityScroll
+
+/* slide */
+  {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+
+  /* 0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  } */
+}
+
+@media only screen and (max-width: 768px) {
+  div.slider {
+    /* padding: 1rem; */
+    padding: .5rem 1.5rem 1rem 1.5rem;
+
+    div.sliderTrack {
+      gap: 0.5rem;
+      padding-right: 0.5rem;
+
+      img.companyLogo {
+        height: 1rem;
+      }
+    }
+  }
+}

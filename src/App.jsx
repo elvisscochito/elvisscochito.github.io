@@ -12,6 +12,7 @@ import Projects from './components/Projects'
 import SocialPath from './components/SocialPath'
 /* import SoftSkills from './components/SoftSkills' */
 import BackToTop from './components/BackToTop'
+import CompaniesSlider from './components/CompaniesSlider'
 import Footer from './components/Footer'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import styles from './styles/Tooltip.module.css'
@@ -25,6 +26,7 @@ function App() {
       <Aside />
       {/* <main> */}
       <Home />
+      <CompaniesSlider />
       <SocialPath />
       <About />
       {/* <SoftSkills /> */}
