@@ -13,6 +13,7 @@ dist-ssr
 *.local
 
 # Ignore backend/.env
+.env
 backend/.env
 
 # Editor directories and files
