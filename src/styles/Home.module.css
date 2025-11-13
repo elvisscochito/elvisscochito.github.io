@@ -320,9 +320,9 @@ section.home {
     img.cssLogo {
       position: absolute;
       bottom: 20%;
-      right: 35%;
+      right: 40%;
       width: 5rem;
-      transform: rotate(-15deg);
+      transform: rotate(-10deg);
       filter: drop-shadow(0 0 2em hsla(266, 47%, 40%, 0.9));
     }
 
