@@ -122,21 +122,21 @@ div.slider {
 
 /* slide */
   {
-  from {
+  /* from {
     translate: 0;
   }
 
   to {
     translate: -100%;
-  }
+  } */
 
-  /* 0% {
+  0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-50%);
-  } */
+    transform: translateX(-100%);
+  }
 }
 
 @media only screen and (max-width: 768px) {
