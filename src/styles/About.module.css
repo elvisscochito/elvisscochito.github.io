@@ -4,7 +4,7 @@ section.about {
   justify-content: center;
   align-items: center;
   gap: 2rem; */
-  padding: 0 2rem;
+  padding: 0 2rem 1.5rem 2rem;
 
   header {
     display: flex;

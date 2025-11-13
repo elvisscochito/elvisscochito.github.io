@@ -6,7 +6,7 @@ section.home {
   justify-content: space-between;
   align-items: center;
   /* height: 92vh; */
-  padding: 0rem 7rem;
+  padding: 1.5rem 7rem 1.5rem 7rem;
   /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -131,8 +131,9 @@ section.home {
       div.buttons {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        flex-wrap: wrap;
         gap: 0.5rem;
 
         span.button,
@@ -305,8 +306,8 @@ section.home {
 
     img.reactLogo {
       position: absolute;
-      top: 25%;
-      left: -35%;
+      top: 10%;
+      left: -15%;
       width: 8rem;
       transform: rotate(40deg);
       -webkit-transform: rotate(40deg);
@@ -318,17 +319,17 @@ section.home {
 
     img.cssLogo {
       position: absolute;
-      top: 15%;
-      right: 60%;
-      width: 6rem;
+      bottom: 20%;
+      right: 35%;
+      width: 5rem;
       transform: rotate(-15deg);
       filter: drop-shadow(0 0 2em hsla(266, 47%, 40%, 0.9));
     }
 
     img.jsLogo {
       position: absolute;
-      top: 15%;
-      right: 10%;
+      top: 5%;
+      right: 0%;
       width: 6rem;
       transform: rotate(10deg);
       filter: drop-shadow(0 0 2em hsla(52, 84%, 63%, 0.9));
@@ -449,6 +450,7 @@ section.home {
 
         div.buttons {
           /* flex-direction: column; */
+          justify-content: center;
           align-items: center;
           flex-wrap: wrap;
 
