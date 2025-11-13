@@ -1,5 +1,6 @@
 div.cardContainer {
   perspective: 1000px;
+  -webkit-perspective: 1000px;
   width: 30rem;
   height: 20rem;
   position: relative;
@@ -9,10 +10,13 @@ div.cardContainer {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transition: transform 0.7s ease;
+    -webkit-transition: -webkit-transform 0.7s ease;
 
     &.flipped {
       transform: rotateY(-180deg);
+      -webkit-transform: rotateY(-180deg);
     }
 
     div.cardFace {
@@ -24,6 +28,7 @@ div.cardContainer {
       border-radius: 0.5rem;
       overflow: hidden;
       backface-visibility: hidden;
+      /* -webkit-backface-visibility: hidden; */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -205,6 +210,7 @@ div.cardContainer {
       &.backCard {
 
         transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
         z-index: 1;
 
         header.headerBackIcons {
