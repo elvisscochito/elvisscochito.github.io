@@ -4,7 +4,7 @@ import './App.css'
 import About from './components/About'
 import Aside from './components/Aside'
 import Contact from './components/Contact'
-/* import CustomCursor from './components/CustomCursor' */
+import CustomCursor from './components/CustomCursor'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <ScrollProgressBar />
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <Navbar />
       <Aside />
       {/* <main> */}

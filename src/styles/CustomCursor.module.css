@@ -1,4 +1,4 @@
-.cursor {
+div.cursor {
   position: fixed;
   width: 35px;
   height: 35px;
@@ -8,16 +8,22 @@
   pointer-events: none;
   transition: all 0.1s ease;
   z-index: 9999;
+
+  &.default {
+    transform: scale(1);
+    background-color: rgba(24, 24, 27, 0.1);
+    backdrop-filter: blur(8px);
+  }
+
+  &.hovered {
+    transform: scale(1.5);
+    background-color: transparent;
+    border-color: #000;
+  }
 }
 
-.default {
-  transform: scale(1);
-  background-color: rgba(24, 24, 27, 0.1);
-  backdrop-filter: blur(8px);
-}
-
-.hovered {
-  transform: scale(1.5);
-  background-color: transparent;
-  border-color: #000;
+@media only screen and (max-width: 768px) {
+  div.cursor {
+    display: none;
+  }
 }
