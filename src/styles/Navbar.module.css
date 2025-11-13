@@ -87,3 +87,59 @@ ul li.navbarItem:last-child a {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+
+  nav.navbar,
+  nav.navbarScrolled {
+    padding: 2rem 1rem;
+    /* a.navbarLink {
+      display: none; */
+
+    /* font-size: 0.8rem;
+      color: red; */
+    /* } */
+
+    a.navbarLink {
+
+      span {
+        display: none;
+        font-size: 0.8rem;
+      }
+    }
+
+    ul {
+      gap: 0.8rem;
+      width: 100%;
+      /* height: 100%; */
+      /* background-color: red; */
+    }
+
+    /* a.navbarLink:nth-child(1) {
+      display: none;
+    } */
+  }
+
+  /* nav.navbar,
+  nav.navbarScrolled {
+    padding: 1rem;
+  }
+
+  ul {
+    gap: 0.5rem;
+  }
+
+  a.navbarLink,
+  a.activeLink {
+    font-size: 0.9rem;
+  }
+
+  a.activeLink:not(ul li.navbarItem:last-child a) {
+    font-size: 0.9rem;
+  }
+
+  ul li.navbarItem:last-child a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  } */
+}

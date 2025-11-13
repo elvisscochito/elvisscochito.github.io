@@ -55,9 +55,9 @@ const Navbar = () => {
         <li className={styles.navbarItem}>
           <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>About</a>
         </li>
-        <li className={styles.navbarItem}>
+        {/* <li className={styles.navbarItem}>
           <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>Skills</a>
-        </li>
+        </li> */}
         <li className={styles.navbarItem}>
           <a href="#projects" className={isActiveHashLink === 'projects' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('projects')}>Projects</a>
         </li>
