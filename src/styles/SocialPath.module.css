@@ -53,3 +53,34 @@ div.container {
   background-position: center;
   backdrop-filter: blur(8px);
 } */
+
+@media only screen and (max-width: 768px) {
+  /* div.container {
+    top: auto;
+    bottom: 2%;
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+  } */
+
+  div.container {
+    right: 5%;
+    padding: 0.5rem 1rem;
+
+    /* a {
+      .icon {
+        font-size: 1.8rem;
+      }
+    } */
+  }
+
+  /* div.container {
+    top: auto;
+    bottom: 2%;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+  } */
+}
