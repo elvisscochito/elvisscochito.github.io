@@ -9,7 +9,7 @@
   --accent-color: #007bff;
   color-scheme: light dark;
   accent-color: var(--accent-color);
-  color: var(--text-color);
+  /* color: var(--text-color); */
   /* background-color: #fafafa; */
   scrollbar-color: #18181b transparent;
 }
@@ -28,7 +28,7 @@
     --text-aux-color: #A1A1A1;
     --details: hsla(0, 0%, 100%, .1);
     --accent-color: #0070F3;
-    color: var(--text-color);
-    background-color: #000;
+    /* color: var(--text-color); */
+    /* background-color: #000; */
   }
 }

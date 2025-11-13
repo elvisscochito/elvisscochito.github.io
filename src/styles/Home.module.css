@@ -34,7 +34,7 @@ section.home {
     gap: 1rem;
 
     header {
-      color: #18181b;
+      /* color: #18181b; */
 
       h1.h1 {
         font-size: 2.8rem;
@@ -60,7 +60,7 @@ section.home {
       gap: 1.5rem;
 
       p {
-        color: #18181b;
+        /* color: #18181b; */
         font-size: 1.8rem;
         text-wrap: balance;
         max-inline-size: 40ch;
@@ -107,8 +107,8 @@ section.home {
 
         a.btnAux {
           background-color: transparent;
-          border: 1.5px solid #18181b;
-          color: #18181b;
+          border: 1.5px solid light-dark(#18181b, #f0f0f0);
+          color: light-dark(#18181b, #f0f0f0);
           font-weight: 550;
         }
 
@@ -152,7 +152,7 @@ section.home {
         }
 
         .copy {
-          color: rgb(225, 225, 225);
+          color: light-dark(rgb(225, 225, 225), rgb(30, 30, 30));
           font-size: 1rem;
 
           @media (hover: hover) and (pointer: fine) {
@@ -281,7 +281,7 @@ section.home {
         align-items: center;
 
         span:first-of-type {
-          color: #18181b;
+          /* color: #18181b; */
           font-size: 1.1rem;
           font-weight: bold;
         }
