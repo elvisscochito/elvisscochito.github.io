@@ -1,4 +1,4 @@
-@keyframes appear {
+/* @keyframes appear {
   from {
     opacity: 0.75;
     transform: scale(0.75);
@@ -10,12 +10,12 @@
     transform: scale(1);
     filter: brightness(100%);
   }
-}
+} */
 
 section.contact {
-  animation: appear 3s linear;
+  /* animation: appear 3s linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  animation-range: entry 0% cover 20%; */
 
   display: flex;
   flex-direction: column;
