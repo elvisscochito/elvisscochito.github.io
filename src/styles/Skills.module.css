@@ -4,7 +4,7 @@ section.skills {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 100vh;
+  padding: 0 2rem 1.5rem 2rem;
 
   header.header {
     display: flex;
@@ -21,6 +21,44 @@ section.skills {
     span {
       /* color: #18181b; */
       font-size: 1.5rem;
+    }
+  }
+
+  div.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+
+    div.webDev,
+    div.dataScience,
+    div.mobileDev,
+    div.databases {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+        background-color: #F5F5F5;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+
+        /* li {
+          font-size: 1.2rem; */
+        /* color: #18181b; */
+        /* } */
+      }
     }
   }
 }
