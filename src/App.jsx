@@ -8,7 +8,7 @@ import CustomCursor from './components/CustomCursor'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
-/* import Skills from './components/Skills' */
+import Skills from './components/Skills'
 import SocialPath from './components/SocialPath'
 /* import SoftSkills from './components/SoftSkills' */
 import BackToTop from './components/BackToTop'
@@ -30,7 +30,7 @@ function App() {
       <SocialPath />
       <About />
       {/* <SoftSkills /> */}
-      {/* <Skills /> */}
+      <Skills />
       <Projects />
       <Contact />
       {/* Global Tooltip for cards and other elements that use data-tooltip-id="global-tooltip" */}

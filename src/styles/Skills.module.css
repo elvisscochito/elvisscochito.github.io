@@ -4,7 +4,7 @@ section.skills {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 100vh;
+  padding: 0 2rem 1.5rem 2rem;
 
   header.header {
     display: flex;
@@ -13,14 +13,122 @@ section.skills {
     align-items: center;
 
     h2.skillsHeading {
-      color: #18181b;
+      /* color: #18181b; */
       font-size: 2.8rem;
       text-align: center;
     }
 
     span {
-      color: #18181b;
+      /* color: #18181b; */
       font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  div.skillsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 80%;
+
+    div.webDev,
+    div.dataScience,
+    div.mobileDev,
+    div.databases,
+    div.versionControl,
+    div.design {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        background-color: #F5F5F5;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+
+        /* li {
+          font-size: 1.2rem; */
+        /* color: #18181b; */
+        /* } */
+
+        div.card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+
+          img.icon {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+
+          /* span {
+            font-size: 1rem; */
+          /* color: #18181b; */
+          /* } */
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  section.skills {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    header.header {
+      h2.skillsHeading {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    div.skillsContainer {
+      width: 100%;
+      gap: 1rem;
+      justify-content: flex-start;
+
+      div.webDev,
+      div.dataScience,
+      div.mobileDev,
+      div.databases,
+      div.versionControl,
+      div.design {
+
+        ul {
+          gap: 0.5rem;
+
+          div.card {
+            img.icon {
+              width: 2rem;
+              height: 2rem;
+            }
+
+            /* span {
+              font-size: 0.9rem;
+            } */
+          }
+        }
+      }
     }
   }
 }
