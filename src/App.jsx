@@ -3,18 +3,18 @@ import 'react-tooltip/dist/react-tooltip.css'
 import './App.css'
 import About from './components/About'
 import Aside from './components/Aside'
+import BackToTop from './components/BackToTop'
+import CompaniesSlider from './components/CompaniesSlider'
 import Contact from './components/Contact'
 import CustomCursor from './components/CustomCursor'
+import Footer from './components/Footer'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import ScrollProgressBar from './components/ScrollProgressBar'
 import Skills from './components/Skills'
 import SocialPath from './components/SocialPath'
-/* import SoftSkills from './components/SoftSkills' */
-import BackToTop from './components/BackToTop'
-import CompaniesSlider from './components/CompaniesSlider'
-import Footer from './components/Footer'
-import ScrollProgressBar from './components/ScrollProgressBar'
+import SoftSkills from './components/SoftSkills'
 import styles from './styles/Tooltip.module.css'
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
       <CompaniesSlider />
       <SocialPath />
       <About />
-      {/* <SoftSkills /> */}
+      <SoftSkills />
       <Skills />
       <Projects />
       <Contact />
