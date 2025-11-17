@@ -4,6 +4,7 @@ section.softSkills {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 0 2rem 1.5rem 2rem;
 
   header.header {
     display: flex;
@@ -20,6 +21,74 @@ section.softSkills {
     span {
       color: #18181b;
       font-size: 1.5rem;
+    }
+  }
+
+  ul.softSkillsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; */
+    gap: 2rem 3rem;
+    /* width: 100%; */
+    /* background-color: red; */
+    /* justify-items: start; */
+
+
+    li {
+      list-style: none;
+      /* width: 100%; */
+
+      div.skillCard {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  section.softSkills {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    header.header {
+      h2.softSkillsHeading {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    ul.softSkillsList {
+      gap: 1.5rem;
+      grid-template-columns: repeat(1, 1fr);
+
+      li {
+        div.skillCard {
+          gap: 0.5rem;
+
+          .icon {
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+        }
+      }
     }
   }
 }

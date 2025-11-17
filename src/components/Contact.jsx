@@ -203,7 +203,7 @@ const Contact = () => {
         }
 
         <fieldset className={styles.fieldset}>
-          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone:</label>
+          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone {!isActive && '(optional)'}:</label>
           {/* verify pattern */}
           <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' required={isActive} />
         </fieldset>
