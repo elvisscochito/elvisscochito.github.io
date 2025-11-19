@@ -1,0 +1,115 @@
+section.quickContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem 1.5rem 2rem;
+
+  header.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2.quickContactHeading {
+      /* color: #18181b; */
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    span.quickContactText {
+      /* color: #18181b; */
+      font-size: 1.5rem;
+      text-align: center;
+      width: 64ch;
+    }
+  }
+
+  form.quickContactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 32rem;
+
+    fieldset.fieldset {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      /* flex-direction: row;
+      justify-content: space-between;
+      align-items: center; */
+
+      gap: 0.5rem;
+      width: 100%;
+      border: none;
+
+      label
+
+      /* ,
+        legend */
+        {
+        font-size: 1.2rem;
+        font-weight: 500;
+        /* color: #18181b; */
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      input:focus {
+        outline: none;
+        border: 1px solid var(--accent-color);
+        caret-color: var(--accent-color);
+      }
+
+      /* label.statusLabelName,
+      label.checkboxLabelName {
+        display: flex;
+        align-items: center;
+      } */
+    }
+
+    button.submitButton {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #18181b;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: #333;
+        }
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        font-weight: 500;
+        transition: none;
+      }
+
+      .icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
