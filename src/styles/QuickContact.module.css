@@ -113,3 +113,44 @@ section.quickContact {
     }
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  section.quickContact {
+    padding: 0 1rem 1rem 1rem;
+
+    header.header {
+      h2.quickContactHeading {
+        font-size: 2rem;
+      }
+
+      span.quickContactText {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    form.quickContactForm {
+      max-width: 100%;
+
+      fieldset.fieldset {
+        label {
+          font-size: 1rem;
+        }
+
+        input {
+          font-size: 1rem;
+        }
+      }
+
+      button.submitButton {
+        font-size: 1rem;
+        /* padding: 0.5rem 1rem; */
+
+        .icon {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

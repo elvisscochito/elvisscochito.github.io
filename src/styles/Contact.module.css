@@ -288,20 +288,21 @@ section.contact {
           font-size: 1rem !important;
         }
 
-        button.submitButton {
-          font-size: 1rem !important;
-
-          .icon {
-            font-size: 1rem !important;
-          }
-        }
-
         /* label,
         input,
         textarea,
         button {
           font-size: 1rem !important;
-        } */
+          } */
+      }
+
+      button.submitButton {
+        font-size: 1rem !important;
+        /* padding: 0.5rem 1rem; */
+
+        .icon {
+          font-size: 1rem !important;
+        }
       }
     }
   }
