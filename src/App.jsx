@@ -16,6 +16,7 @@ import ScrollProgressBar from './components/ScrollProgressBar'
 import Skills from './components/Skills'
 import SocialPath from './components/SocialPath'
 import SoftSkills from './components/SoftSkills'
+/* import WorkExperience from './components/WorkExperience' */
 import styles from './styles/Tooltip.module.css'
 
 function App() {
