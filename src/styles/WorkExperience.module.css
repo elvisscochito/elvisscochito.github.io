@@ -1,0 +1,191 @@
+section.workExperience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem 1.5rem 2rem;
+
+  header.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2.workExperienceHeading {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    span {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  div.experiencesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* width: 100%;
+    max-width: 64rem; */
+    position: relative;
+
+    div.experience {
+      /* header.header {
+        display: none;
+      } */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      /* gap: 0.5rem; */
+
+      position: relative;
+      /* gap: 0.5rem; */
+
+      /* h3.company {
+        font-size: 1.6rem;
+        font-weight: 600;
+      } */
+
+      img.logo
+
+      /* ,
+      img.logoHeader */
+        {
+        position: absolute;
+        top: 0rem;
+        left: -5rem;
+        width: 4rem;
+        height: 4rem;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        object-position: center;
+        background-color: #F5F5F5;
+        background-color: rgba(250, 250, 250, 0.8);
+        border: 1px solid #eaeaea;
+        border-radius: 50%;
+        /* margin-bottom: 1rem; */
+      }
+
+      /* h4.title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 0.2rem;
+      } */
+
+      /* span.type {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--details);
+      } */
+
+      p.dateAndDuration {
+        /* font-size: 1.1rem; */
+        color: var(
+            /* --details */
+            --text-aux-color);
+        /* margin-top: 0.3rem; */
+      }
+
+      span.location {
+        /* font-size: 1.1rem; */
+        color: var(
+            /* --details */
+            --text-aux-color);
+        /* margin-top: 0.2rem; */
+      }
+
+      span.locationType {
+        /* font-size: 1.1rem; */
+        color: var(
+            /* --details */
+            --text-aux-color);
+        /* margin-left: 0.5rem; */
+      }
+
+      /* width: 100%; */
+      ul {
+        list-style: disc;
+        list-style-position: inside;
+        /* padding-left: 1rem; */
+
+        li {
+          max-inline-size: 64ch;
+          /* color: var(--details); */
+        }
+      }
+    }
+  }
+
+  /* hr.line, */
+  div.experiencesContainer::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    /* Centro del contenedor */
+    left: -7.5%;
+    width: 1.5px;
+    /* Ajusta el ancho de la línea */
+    height: 45%;
+    /* Ajusta la altura de la línea (50% de la altura del contenedor) */
+    background-color: #eaeaea;
+    /* Ajusta el color de la línea */
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.workExperience {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    header.header {
+      h2.workExperienceHeading {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    div.experiencesContainer {
+      div.experience {
+
+        /* h3.company,
+        img.logo {
+          display: none;
+        } */
+
+        /* header.header {
+          display: flex !important;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 0.5rem; */
+
+        img.logo {
+          position: static;
+          /* top: 0rem;
+          left: -25rem; */
+          width: 3.5rem;
+          height: 3.5rem;
+          /* margin-bottom: 1rem; */
+        }
+
+        /* } */
+      }
+
+      /* hr.line, */
+      /* div.experiencesContainer::before {
+        left: 50%; */
+      /* Centro del contenedor */
+      /* } */
+    }
+  }
+}

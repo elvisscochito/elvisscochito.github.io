@@ -59,3 +59,43 @@ export async function postWhatsAppMessage(req, res) {
     return res.status(500).json({ message: 'Internal server error', details: error.message });
   }
 }
+
+export async function postWhatsAppQuickMessage(req, res) {
+  const { contactInfo } = req.body;
+
+  /* QUICK and BASIC VALIDATION */
+
+  if (!contactInfo) {
+    return res.status(400).json({ message: "Missing required field: contactInfo" });
+  }
+
+  const whatsappMessage = `New quick contact submitted request from portfolio:\n\nPlease contact me at: ${contactInfo}`;
+
+  const payload = {
+    messaging_product: "whatsapp",
+    to: phoneNumber,
+    type: 'text',
+    text: {
+      body: whatsappMessage
+    }
+  }
+
+  console.log('Sending Quick Contact to WhatsApp:', JSON.stringify(payload, null, 2));
+
+  try {
+    const response = await fetch(whatsappApiURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${bearerToken}`,
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+    return res.status(200).json({ message: 'WhatsApp quick contact message sent successfully', data: data });
+  } catch (error) {
+    console.error('Error sending WhatsApp quick contact message:', error);
+    return res.status(500).json({ message: 'Internal server error', details: error.message });
+  }
+}

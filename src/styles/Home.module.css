@@ -140,7 +140,7 @@ section.home {
         span.button,
         .icon {
           background-color: rgba(250, 250, 250, 0.8);
-          border-radius: 50rem;
+          /* border-radius: 50rem; */
           font-size: 1.8rem;
           padding: 1rem;
           color: #24292e;
