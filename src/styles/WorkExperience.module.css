@@ -37,10 +37,10 @@ section.workExperience {
       /* header.header {
         display: none;
       } */
-      display: flex;
+      /* display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: flex-start;
+      align-items: flex-start; */
       /* gap: 0.5rem; */
 
       position: relative;
