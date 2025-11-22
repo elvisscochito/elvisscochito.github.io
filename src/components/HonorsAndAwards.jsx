@@ -51,7 +51,7 @@ const HonorsAndAwards = () => {
       <ul className={styles.honorsAndAwardsList}>
         {
           awards.map(award => (
-            <li key={award.id}>
+            <li className={styles.honorsAndAwardsItem} key={award.id}>
               <HonorsAndAwardsCard
                 linkedin={award.linkedin}
                 title={award.title}

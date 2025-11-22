@@ -114,16 +114,33 @@ section.honorsAndAwards {
 
     ul.honorsAndAwardsList {
       width: 100%;
-      max-width: 16rem;
       gap: 1rem;
 
-      li {
+      li.honorsAndAwardsItem {
         /* max-width: 100%; */
         padding: 0.75rem;
+        max-width: 10rem;
+
+        a.link {
+          top: 0.5rem;
+          right: 0.5rem;
+
+          .icon {
+            font-size: 1.3rem;
+          }
+        }
 
         img.image {
-          width: 6rem;
-          height: 6rem;
+          width: 4rem;
+          height: 4rem;
+        }
+
+        h3.awardTitle {
+          font-size: 1rem;
+        }
+
+        p.awardDescription {
+          font-size: 0.9rem;
         }
       }
     }
