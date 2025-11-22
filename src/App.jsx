@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import HonorsAndAwards from './components/HonorsAndAwards'
 import Languages from './components/Languages'
+import LicensesAndCertifications from './components/LicensesAndCertifications'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import QuickContact from './components/QuickContact'
@@ -39,6 +40,7 @@ function App() {
       <SoftSkills />
       <Skills />
       <Languages />
+      <LicensesAndCertifications />
       <Projects />
       <SocialProof />
       <Contact />
