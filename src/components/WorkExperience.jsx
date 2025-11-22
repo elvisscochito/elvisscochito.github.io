@@ -2,7 +2,7 @@ import { useState } from 'react';
 import softtek from '../assets/softtek.svg';
 import tec from '../assets/tecnologico.png';
 import styles from '../styles/WorkExperience.module.css';
-import Experience from './Experience';
+import ExperienceCard from './ExperienceCard.jsx';
 
 const WorkExperience = () => {
   const [experiences, setExperiences] = useState([
@@ -59,7 +59,7 @@ const WorkExperience = () => {
         {/* <hr className={styles.line} /> */}
         {
           experiences.map((exp) => (
-            <Experience
+            <ExperienceCard
               key={exp.id}
               title={exp.title}
               company={exp.company}
