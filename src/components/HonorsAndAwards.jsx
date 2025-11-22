@@ -14,32 +14,42 @@ const HonorsAndAwards = () => {
       id: 1,
       linkedin: 'https://www.linkedin.com/posts/elviro-dominguez-soriano_i-cant-believe-that-i-was-selected-and-had-activity-7304970693073424385-7bEg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEocAEBcDaj2s8qSInAEk1W7vfq-srSXug',
       title: 'Apple Developer Conference',
-      description: 'Attended in-person an Apple developer Conference in Cupertino, California.',
-      image: apple
+      description: 'Attended in-person an Apple developer Conference.',
+      image: apple,
+      date: 'February 2025',
+      location: 'Cupertino, CA'
     },
     {
       id: 2,
       title: 'Big Techs Conferences',
-      description: 'Selected to attend conferences in New York City at Technology Companies (Google, Amazon, Microsoft, Meta, among others)',
-      image: nyc
+      description: 'Selected to attend conferences at Technology Companies (Google, Amazon, Microsoft, Meta, among others)',
+      image: nyc,
+      date: 'March 2025',
+      location: 'New York City, NY'
     },
     {
       id: 3,
       title: 'NASA Trip',
-      description: 'Participated in an academic trip to a Campus Tour at Rice University and NASA in Dallas, Texas.',
-      image: nasa
+      description: 'Participated in an academic trip to a Campus Tour at Rice University and NASA.',
+      image: nasa,
+      date: 'April 2025',
+      location: 'Dallas, TX'
     },
     {
       id: 4,
       title: 'Study Abroad Program',
-      description: 'Coursework in Smart Cities and Citizenship and cultural immersion in Bogota, Colombia.',
-      image: colombia
+      description: 'Coursework in Smart Cities and Citizenship and cultural immersion.',
+      image: colombia,
+      date: 'August 2024',
+      location: 'Bogota, Colombia'
     },
     {
       id: 5,
       title: 'Global Entrepreneurship Summer School',
-      description: 'Selected among other international students to attend GESS in Queretaro, Mexico.',
-      image: gess
+      description: 'Selected among other international students to attend GESS.',
+      image: gess,
+      date: 'July 2024',
+      location: 'Queretaro, Mexico'
     }
   ]);
   return (
@@ -57,6 +67,8 @@ const HonorsAndAwards = () => {
                 title={award.title}
                 description={award.description}
                 image={award.image}
+                date={award.date}
+                location={award.location}
               />
             </li>
           ))
