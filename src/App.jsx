@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 import CustomCursor from './components/CustomCursor'
 import Footer from './components/Footer'
 import Home from './components/Home'
+import HonorsAndAwards from './components/HonorsAndAwards'
 import Languages from './components/Languages'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -33,6 +34,7 @@ function App() {
       <CompaniesSlider />
       <SocialPath />
       <About />
+      <HonorsAndAwards />
       <WorkExperience />
       <SoftSkills />
       <Skills />

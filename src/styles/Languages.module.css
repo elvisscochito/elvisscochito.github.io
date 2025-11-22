@@ -31,7 +31,9 @@ section.languagesSection {
       list-style: none;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      text-align: center;
       /* gap: 1rem; */
       background-color: #F5F5F5;
       border: 1px solid #eaeaea;
