@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
 import styles from '../styles/WorkExperience.module.css';
 
-const Experience = ({ title, company, type, date, duration, location, locationType, responsibilities = [], logo }) => {
+const ExperienceCard = ({ title, company, type, date, duration, location, locationType, responsibilities = [], logo }) => {
   return (
     <div className={styles.experience}>
       <img src={logo} alt={`${company} logo`} className={styles.logo} />
@@ -27,4 +27,4 @@ const Experience = ({ title, company, type, date, duration, location, locationTy
   );
 };
 
-export default Experience;
+export default ExperienceCard;

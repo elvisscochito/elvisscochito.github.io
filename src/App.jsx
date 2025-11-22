@@ -15,6 +15,7 @@ import QuickContact from './components/QuickContact'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import Skills from './components/Skills'
 import SocialPath from './components/SocialPath'
+import SocialProof from './components/SocialProof'
 import SoftSkills from './components/SoftSkills'
 import WorkExperience from './components/WorkExperience'
 import styles from './styles/Tooltip.module.css'
@@ -35,6 +36,7 @@ function App() {
       <SoftSkills />
       <Skills />
       <Projects />
+      <SocialProof />
       <Contact />
       <QuickContact />
       {/* Global Tooltip for cards and other elements that use data-tooltip-id="global-tooltip" */}
