@@ -46,7 +46,7 @@ const HonorsAndAwards = () => {
     {
       id: 5,
       title: 'Global Entrepreneurship Summer School',
-      description: 'Selected among other international students to attend GESS.',
+      description: 'Selected among other international students to attend GESS program.',
       image: gess,
       date: 'July 2024',
       location: 'Queretaro, Mexico'
