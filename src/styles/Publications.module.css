@@ -50,7 +50,7 @@ section.publications {
       list-style: none;
       /* width: 100%; */
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       transition: background-color 0.3s, color 0.3s;
       border: 1px solid #eaeaea;
       /* background-color: #F5F5F5; */

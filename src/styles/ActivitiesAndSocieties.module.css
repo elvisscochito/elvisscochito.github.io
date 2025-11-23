@@ -1,0 +1,125 @@
+section.activitiesAndSocieties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem 1.5rem 2rem;
+
+  header.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2.sectionTitle {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    span.sectionSubtitle {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  ul.activitiesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+
+    li.activityItem {
+      list-style: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s, color 0.3s;
+      border: 1px solid #eaeaea;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* gap: 0.5rem; */
+      text-align: center;
+      max-width: 24rem;
+
+      img.activityLogo {
+        width: 3rem;
+        height: 3rem;
+        aspect-ratio: 1/1 !important;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 0.5rem;
+      }
+
+      h3.activityName {
+        font-size: 1.5rem;
+      }
+
+      p.activityDescription {
+        font-size: 1.2rem;
+      }
+
+      a.learnMoreLink {
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--accent-color);
+        margin-top: 0.5rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.activitiesAndSocieties {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    header.header {
+      h2.sectionTitle {
+        font-size: 2rem;
+      }
+
+      span.sectionSubtitle {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    ul.activitiesList {
+      width: 100%;
+      gap: 1rem;
+
+      li.activityItem {
+        /* max-width: 100%; */
+        padding: 0.75rem;
+        max-width: 10rem;
+
+        img.activityLogo {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+
+        h3.activityName {
+          font-size: 1.2rem;
+        }
+
+        p.activityDescription {
+          font-size: 0.9rem;
+        }
+
+        a.learnMoreLink {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
