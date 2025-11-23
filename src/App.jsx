@@ -14,6 +14,7 @@ import Languages from './components/Languages'
 import LicensesAndCertifications from './components/LicensesAndCertifications'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import Publications from './components/Publications'
 import QuickContact from './components/QuickContact'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import Skills from './components/Skills'
@@ -41,6 +42,7 @@ function App() {
       <Skills />
       <Languages />
       <LicensesAndCertifications />
+      <Publications />
       <Projects />
       <SocialProof />
       <Contact />
