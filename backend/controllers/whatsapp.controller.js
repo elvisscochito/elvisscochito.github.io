@@ -2,9 +2,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const botId = process.env.WHATSAPP_BOT_ID/*  || '895817553606475' */;
-const phoneNumber = process.env.WHATSAPP_PHONE_NUMBER/*  || '527771395795' */;
-const bearerToken = process.env.WHATSAPP_BEARER_TOKEN/*  || 'EAAhJ35fPXFsBP0THLEWH9WLOgd7y2i6NpCuqF6ZCwpSeGzUcVzTnz2ohk9XH7ZB3k5nEtm6MVOLinzNkhSZByKKIDoPMwpAon4ArmwoJOFawmQswPHQj0TRlAUmQruub5hDgZBEWupdGJYF0ob8mT5Q5WnxMODIjsP4REpPmt8cqWjzRwLvMlF40nZAqp3aZAADRLgffztgs2KdRUbn0tWYEN9sCZAdJCr9SD5d5PGtiYpRM0ZA0STn8fDN9jUZBfEgbqvfwuwskSys9L8Iu0qAsIIHZBiqEnZBt76KYAZDZD' */;
+const botId = process.env.WHATSAPP_BOT_ID;
+const phoneNumber = process.env.WHATSAPP_PHONE_NUMBER;
+const bearerToken = process.env.WHATSAPP_BEARER_TOKEN;
 const whatsappApiURL = `https://graph.facebook.com/v22.0/${botId}/messages`;
 
 export async function postWhatsAppMessage(req, res) {
@@ -30,17 +30,54 @@ export async function postWhatsAppMessage(req, res) {
 
     /* switch to template message because is needed due to conversation window time span */
 
-    type: 'text',
+    /* type: 'text',
     text: {
-      body: whatsappMessage
-      /* body: 'Hello, this is a test message from the WhatsApp Business API.' */
+      body: whatsappMessage */
+    /* body: 'Hello, this is a test message from the WhatsApp Business API.' */
+    /* } */
+
+    /* contact_form_submission */
+
+    type: 'template',
+    template: {
+      name: "portfolio_lead",
+      language: {
+        code: "en"
+      },
+      components: [
+        {
+          type: "body",
+          parameters: [
+
+            {
+              type: "text",
+              text: subject
+            },
+            {
+              type: "text",
+              text: name
+            },
+            {
+              type: "text",
+              text: email || 'Not provided'
+            },
+            {
+              type: "text",
+              text: phone
+            },
+            {
+              type: "text",
+              text: message
+            }
+          ]
+        }
+      ]
     }
   }
 
   console.log('Sending to WhatsApp:', JSON.stringify(payload, null, 2));
   console.log('BOT_ID:', botId);
   console.log('TOKEN:', bearerToken.slice(0, 10) + '...');
-
 
   try {
     const response = await fetch(whatsappApiURL, {
