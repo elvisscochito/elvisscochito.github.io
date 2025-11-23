@@ -54,7 +54,9 @@ section.skills {
         align-items: center;
         gap: 1rem;
         flex-wrap: wrap;
-        background-color: #F5F5F5;
+        background-color: light-dark(#F5F5F5, #444444
+            /* #1e1e1e */
+          );
         border: 1px solid #eaeaea;
         padding: 1rem;
         border-radius: 0.5rem;

@@ -48,7 +48,7 @@ section.honorsAndAwards {
       border: 1px solid #eaeaea;
       padding: 1rem;
       border-radius: 0.5rem;
-      background-color: #F5F5F5;
+      background-color: light-dark(#F5F5F5, #444444);
       position: relative;
 
       a.link {
