@@ -2,9 +2,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const botId = process.env.WHATSAPP_BOT_ID/*  || '895817553606475' */;
-const phoneNumber = process.env.WHATSAPP_PHONE_NUMBER/*  || '527771395795' */;
-const bearerToken = process.env.WHATSAPP_BEARER_TOKEN/*  || 'EAAhJ35fPXFsBP0THLEWH9WLOgd7y2i6NpCuqF6ZCwpSeGzUcVzTnz2ohk9XH7ZB3k5nEtm6MVOLinzNkhSZByKKIDoPMwpAon4ArmwoJOFawmQswPHQj0TRlAUmQruub5hDgZBEWupdGJYF0ob8mT5Q5WnxMODIjsP4REpPmt8cqWjzRwLvMlF40nZAqp3aZAADRLgffztgs2KdRUbn0tWYEN9sCZAdJCr9SD5d5PGtiYpRM0ZA0STn8fDN9jUZBfEgbqvfwuwskSys9L8Iu0qAsIIHZBiqEnZBt76KYAZDZD' */;
+const botId = process.env.WHATSAPP_BOT_ID;
+const phoneNumber = process.env.WHATSAPP_PHONE_NUMBER;
+const bearerToken = process.env.WHATSAPP_BEARER_TOKEN;
 const whatsappApiURL = `https://graph.facebook.com/v22.0/${botId}/messages`;
 
 export async function postWhatsAppMessage(req, res) {
