@@ -24,8 +24,13 @@ section.LicensesAndCertifications {
   }
 
   ul.certificationsList {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 2rem 3rem;
 
     li.certificationItem {
@@ -40,6 +45,7 @@ section.LicensesAndCertifications {
       align-items: center;
       text-align: center;
       /* gap: 1rem; */
+      max-width: 24rem;
 
       img.certificationLogo {
         width: 4rem;
