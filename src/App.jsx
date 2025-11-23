@@ -2,6 +2,7 @@ import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import './App.css'
 import About from './components/About'
+import ActivitiesAndSocieties from './components/ActivitiesAndSocieties'
 import Aside from './components/Aside'
 import BackToTop from './components/BackToTop'
 import CompaniesSlider from './components/CompaniesSlider'
@@ -43,6 +44,7 @@ function App() {
       <Languages />
       <LicensesAndCertifications />
       <Publications />
+      <ActivitiesAndSocieties />
       <Projects />
       <SocialProof />
       <Contact />

@@ -12,6 +12,19 @@
   /* color: var(--text-color); */
   /* background-color: #fafafa; */
   scrollbar-color: #18181b transparent;
+
+  /* ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #18181b;
+    border-radius: 10px;
+  } */
 }
 
 ::selection {
