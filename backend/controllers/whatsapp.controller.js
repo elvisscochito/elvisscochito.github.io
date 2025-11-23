@@ -30,17 +30,54 @@ export async function postWhatsAppMessage(req, res) {
 
     /* switch to template message because is needed due to conversation window time span */
 
-    type: 'text',
+    /* type: 'text',
     text: {
-      body: whatsappMessage
-      /* body: 'Hello, this is a test message from the WhatsApp Business API.' */
+      body: whatsappMessage */
+    /* body: 'Hello, this is a test message from the WhatsApp Business API.' */
+    /* } */
+
+    /* contact_form_submission */
+
+    type: 'template',
+    template: {
+      name: "portfolio_lead",
+      language: {
+        code: "en"
+      },
+      components: [
+        {
+          type: "body",
+          parameters: [
+
+            {
+              type: "text",
+              text: subject
+            },
+            {
+              type: "text",
+              text: name
+            },
+            {
+              type: "text",
+              text: email || 'Not provided'
+            },
+            {
+              type: "text",
+              text: phone
+            },
+            {
+              type: "text",
+              text: message
+            }
+          ]
+        }
+      ]
     }
   }
 
   console.log('Sending to WhatsApp:', JSON.stringify(payload, null, 2));
   console.log('BOT_ID:', botId);
   console.log('TOKEN:', bearerToken.slice(0, 10) + '...');
-
 
   try {
     const response = await fetch(whatsappApiURL, {
