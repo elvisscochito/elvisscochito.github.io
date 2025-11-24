@@ -1,9 +1,11 @@
 /* import { faClone } from '@fortawesome/free-regular-svg-icons'; */
-import { faCheck, faClone, faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown /* , faArrowAltCircleDown */, faCheck, faClone, faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import me from '../assets/profile.jpg';
 import styles from '../styles/About.module.css';
+import Services from './Services.jsx';
+import TopSkills from './TopSkills.jsx';
 
 const About = () => {
   const emailRef = useRef(null);
@@ -135,6 +137,9 @@ const About = () => {
           </div>
         </div> */}
       </div>
+      <TopSkills />
+      <Services />
+      <a href="#contact" className={styles.btn}>Contact me <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
     </section >
   )
 }
