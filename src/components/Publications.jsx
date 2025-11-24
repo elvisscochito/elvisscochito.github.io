@@ -14,7 +14,8 @@ const Publications = () => {
       author: 'Elviro Dominguez Soriano',
       date: 'October 31, 2021',
       details: 'Published in Web Development Journal, March 2022',
-      link: 'https://medium.com/@elvisscochito/top-7-best-visual-studio-code-extensions-according-to-you-e3da4ebd136c'
+      link: 'https://medium.com/@elvisscochito/top-7-best-visual-studio-code-extensions-according-to-you-e3da4ebd136c',
+      readTime: '4 min read'
     },
     {
       id: 2,
@@ -23,7 +24,8 @@ const Publications = () => {
       author: 'Elviro Dominguez Soriano',
       date: 'September 20, 2022',
       details: 'Published in Frontend Monthly, July 2021',
-      link: 'https://medium.com/@elvisscochito/is-github-copilot-really-worth-it-802f1c775015'
+      link: 'https://medium.com/@elvisscochito/is-github-copilot-really-worth-it-802f1c775015',
+      readTime: '3 min read'
     }
     ,
     {
@@ -33,7 +35,8 @@ const Publications = () => {
       author: 'Elviro Dominguez Soriano',
       date: 'February 6, 2023',
       details: 'Published in Frontend Monthly, July 2021',
-      link: 'https://medium.com/@elvisscochito/the-truth-about-ai-generators-745842ccacc'
+      link: 'https://medium.com/@elvisscochito/the-truth-about-ai-generators-745842ccacc',
+      readTime: '2 min read'
     }
   ]);
   return (
@@ -58,6 +61,7 @@ const Publications = () => {
 
               <span className={styles.publicationDate}>{/* <FontAwesomeIcon icon={faCalendar} className={styles.icon} /> */}{publications.date}</span>
               {/* <p className={styles.publicationDetails}>{publications.details}</p> */}
+              <span className={styles.readTime}>{publications.readTime}</span>
               <a href={publications.link} target="_blank" rel="noopener noreferrer" className={styles.publicationLink}>Read More &#8599;</a>
             </li>
           ))

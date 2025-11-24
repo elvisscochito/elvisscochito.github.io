@@ -92,7 +92,8 @@ section.publications {
         }
       }
 
-      span.publicationDate {
+      span.publicationDate,
+      span.readTime {
         font-size: 1rem;
         font-weight: 400;
         color: var(--text-aux-color);
@@ -159,6 +160,7 @@ section.publications {
         }
 
         span.publicationDate,
+        span.readTime,
         a.publicationLink {
           font-size: 0.9rem;
         }
