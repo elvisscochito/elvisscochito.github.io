@@ -35,10 +35,12 @@ const Typewriter = ({ toRotate = [], period = 2000 }) => {
     }, delta);
 
     return () => clearInterval(timer);
-  }, [textRotate, isDeleting/* , delta, loopNum, toRotate */]);
+  }, [textRotate, isDeleting, delta, loopNum, toRotate]);
 
   return (
-    <span>{textRotate}</span>
+    <>
+      {textRotate}
+    </>
   );
 };
 
