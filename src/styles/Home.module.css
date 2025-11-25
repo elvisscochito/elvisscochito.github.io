@@ -39,6 +39,39 @@ section.home {
 
       h1.h1 {
         font-size: 2.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* gap: 1rem; */
+
+        span.span {
+          color: var(--text-aux-color);
+          font-size: 2rem;
+
+          /* typing velocity */
+          /* --speed: 120ms; */
+          /* pause between words */
+          /* --pause: 1500ms; */
+          /* fade in/out */
+          /* --fade: 300ms; */
+
+          /* display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: none; */
+
+          /* animation:
+            typing steps(var(--letters)) var(--speed) forwards,
+            fadeIn var(--fade) forwards,
+            fadeOut var(--fade) var(--pause) forwards; */
+        }
+
+        span.span::after {
+          content: '|';
+          animation: blink 0.7s infinite;
+          opacity: 1;
+        }
       }
 
       /* h2 {
@@ -410,6 +443,8 @@ section.home {
         h1.h1 {
           font-size: 2.2rem;
           text-align: center;
+          justify-content: center;
+          align-items: center;
         }
 
         h2.h2 {
@@ -548,3 +583,48 @@ section.home {
     }
   }
 }
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Fade In */
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* Fade Out */
+/* @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+} */
+
+/* Typing */
+/* @keyframes typing {
+  from {
+    width: 0ch;
+  }
+
+  to {
+    width: var(--letters);
+  }
+} */
