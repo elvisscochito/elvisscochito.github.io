@@ -111,9 +111,23 @@ export async function postWhatsAppQuickMessage(req, res) {
   const payload = {
     messaging_product: "whatsapp",
     to: phoneNumber,
-    type: 'text',
-    text: {
-      body: whatsappMessage
+    type: 'template',
+    template: {
+      name: "lead",
+      language: {
+        code: "en"
+      },
+      components: [
+        {
+          type: "body",
+          parameters: [
+            {
+              type: "text",
+              text: contactInfo
+            }
+          ]
+        }
+      ]
     }
   }
 
