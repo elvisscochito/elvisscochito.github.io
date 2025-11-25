@@ -349,6 +349,7 @@ section.home {
       -ms-transform: rotate(40deg);
       -o-transform: rotate(40deg);
       filter: drop-shadow(0 0 2em hsla(193, 95%, 68%, 0.9));
+      /* isolation: isolate; */
     }
 
     img.cssLogo {
@@ -358,6 +359,7 @@ section.home {
       width: 5rem;
       transform: rotate(-10deg);
       filter: drop-shadow(0 0 2em hsla(266, 47%, 40%, 0.9));
+      /* isolation: isolate; */
     }
 
     img.jsLogo {
@@ -367,6 +369,7 @@ section.home {
       width: 6rem;
       transform: rotate(10deg);
       filter: drop-shadow(0 0 2em hsla(52, 84%, 63%, 0.9));
+      /* isolation: isolate; */
     }
 
     img.me {
@@ -584,7 +587,7 @@ section.home {
   }
 }
 
-@keyframes blink {
+/* @keyframes blink {
 
   0%,
   100% {
@@ -594,7 +597,7 @@ section.home {
   50% {
     opacity: 0;
   }
-}
+} */
 
 /* Fade In */
 /* @keyframes fadeIn {
