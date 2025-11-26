@@ -11,7 +11,7 @@ aside.asideNav {
   padding: 2rem;
   z-index: 10;
 
-  a {
+  a.asideLink {
     text-decoration: none;
     color: transparent;
     z-index: 1;
@@ -36,28 +36,43 @@ aside.asideNav {
     }
 
     .dotSize1 {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1.20rem;
+      height: 1.20rem;
     }
 
     .dotSize2 {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.47rem;
+      height: 1.47rem;
     }
 
     .dotSize3 {
-      width: 1.8rem;
-      height: 1.8rem;
+      width: 1.73rem;
+      height: 1.73rem;
     }
 
     .dotSize4 {
-      width: 2.1rem;
-      height: 2.1rem;
+      width: 2.00rem;
+      height: 2.00rem;
     }
 
     .dotSize5 {
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 2.27rem;
+      height: 2.27rem;
+    }
+
+    .dotSize6 {
+      width: 2.53rem;
+      height: 2.53rem;
+    }
+
+    .dotSize7 {
+      width: 2.80rem;
+      height: 2.80rem;
+    }
+
+    .dot {
+      width: 2.20rem;
+      height: 2.20rem;
     }
   }
 }
@@ -70,7 +85,7 @@ aside.asideNav::before {
   left: 50%;
   width: 1.5px;
   /* Ajusta el ancho de la línea */
-  height: 28%;
+  height: 40%;
   /* Ajusta la altura de la línea (50% de la altura del contenedor) */
   background-color: #eaeaea;
   /* Ajusta el color de la línea */

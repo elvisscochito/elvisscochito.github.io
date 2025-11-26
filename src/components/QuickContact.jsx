@@ -68,7 +68,7 @@ const QuickContact = () => {
   }
 
   return (
-    <section className={styles.quickContact}>
+    <section id='quick-contact' className={styles.quickContact}>
       <header className={styles.header}>
         <h2 className={styles.quickContactHeading}>{/* Do you feel lazy?  */}Quick {/* one */}two-step contact</h2>
         <span className={styles.quickContactText}>If you would like to get in touch but don't want to fill the previous form please send me your email or phone number and I will contact you.{/*  just type your email or phone number and I will contact you. */}</span>

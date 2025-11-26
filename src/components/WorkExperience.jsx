@@ -50,7 +50,7 @@ const WorkExperience = () => {
   ]);
 
   return (
-    <section className={styles.workExperience}>
+    <section id="work-experience" className={styles.workExperience}>
       <header className={styles.header}>
         <h2 className={styles.workExperienceHeading}>Work Experience</h2>
         <span>Where I've applied my skills in real-world scenarios.</span>

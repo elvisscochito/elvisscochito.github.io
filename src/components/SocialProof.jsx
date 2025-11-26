@@ -28,7 +28,7 @@ const SocialProof = () => {
   ]);
 
   return (
-    <section className={styles.socialProof}>
+    <section id='social-proof' className={styles.socialProof}>
       <header className={styles.header}>
         <h2 className={styles.socialProofHeading}>Social Proof</h2>
         <span>Here are some testimonials from my colleagues and clients.</span>

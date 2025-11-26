@@ -55,11 +55,41 @@ const Navbar = () => {
         <li className={styles.navbarItem}>
           <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>About</a>
         </li>
+        <li className={styles.navbarItem}>
+          <a href="#honors-and-awards" className={isActiveHashLink === 'honors-and-awards' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('honors-and-awards')}>Honors & Awards{/*  Honors, Awards & Experiences */}</a>
+        </li>
+        <li className={styles.navbarItem}>
+          <a href="#work-experience" className={isActiveHashLink === 'work-experience' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('work-experience')}>{/* Work  */}Experience</a>
+        </li>
+        {/* <li className={styles.navbarItem}>
+          <a href="#soft-skills" className={isActiveHashLink === 'soft-skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('soft-skills')}>Soft Skills</a>
+        </li> */}
+        <li className={styles.navbarItem}>
+          <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>Skills</a>
+        </li>
+        {/* <li className={styles.navbarItem}>
+          <a href="#languages" className={isActiveHashLink === 'languages' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('languages')}>Languages</a>
+        </li> */}
+        <li className={styles.navbarItem}>
+          <a href="#licenses-and-certifications" className={isActiveHashLink === 'licenses-and-certifications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('licenses-and-certifications')}>{/* Licenses and  */}Certifications</a>
+        </li>
+        {/* <li className={styles.navbarItem}>
+          <a href="#publications" className={isActiveHashLink === 'publications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('publications')}>Publications</a>
+        </li> */}
+        {/* <li className={styles.navbarItem}>
+          <a href="#activities-and-societies" className={isActiveHashLink === 'activities-and-societies' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('activities-and-societies')}>Activities & Societies</a>
+        </li> */}
+        {/* <li className={styles.navbarItem}>
+          <a href="#hobbies-and-interests" className={isActiveHashLink === 'hobbies-and-interests' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('hobbies-and-interests')}>Hobbies & Interests</a>
+        </li> */}
         {/* <li className={styles.navbarItem}>
           <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>Skills</a>
         </li> */}
         <li className={styles.navbarItem}>
           <a href="#projects" className={isActiveHashLink === 'projects' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('projects')}>Projects</a>
+        </li>
+        <li className={styles.navbarItem}>
+          <a href="#social-proof" className={isActiveHashLink === 'social-proof' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('social-proof')}>Social Proof</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#services">Services</a>
@@ -67,6 +97,9 @@ const Navbar = () => {
         <li className={styles.navbarItem}>
           <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>Contact</a>
         </li>
+        {/* <li className={styles.navbarItem}>
+          <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>
+        </li> */}
       </ul>
     </nav>
   );
