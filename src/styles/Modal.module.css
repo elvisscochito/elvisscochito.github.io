@@ -1,4 +1,4 @@
-dialog:modal {
+dialog.modal:modal {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -9,7 +9,7 @@ dialog:modal {
   padding: 2rem;
 }
 
-dialog::backdrop {
+dialog.modal::backdrop {
   backdrop-filter: blur(1px);
   background-color: hsla(0, 0%, 0%, 0.5);
 }
@@ -18,7 +18,7 @@ dialog::backdrop {
   padding: 2rem;
 } */
 
-button {
+button.closeModalBtn {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
   cursor: pointer;

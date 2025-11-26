@@ -115,7 +115,7 @@ section.projects {
       font-weight: lighter;
     } */
 
-    .separator {
+    span.separator {
       height: 2.3rem;
       width: 1.5px;
       background-color: #ddd;
