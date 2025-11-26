@@ -15,7 +15,7 @@ div.container {
   backdrop-filter: blur(8px);
   gap: 1rem;
   /* box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.05); */
-  z-index: 10;
+  z-index: 9;
 
   /* &:hover {
     transform: scale(1.1);
@@ -68,7 +68,6 @@ div.container {
   div.container {
     right: 5%;
     padding: 0.5rem 1rem;
-    display: none;
 
     /* a {
       .icon {
@@ -76,6 +75,12 @@ div.container {
       }
     } */
   }
+
+  /* body:has(ul.sidebarContainer.isSidebarActive) {
+    div.container {
+      display: none !important;
+    }
+  } */
 
   /* div.container {
     top: auto;
