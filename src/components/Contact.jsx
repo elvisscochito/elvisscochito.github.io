@@ -3,8 +3,10 @@ import { faEnvelope, faHeading, faMessage, faPaperPlane, faPhone, faUser } from 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/Contact.module.css';
+import Modal from './Modal';
 
 const Contact = () => {
+  const modalRef = useRef(null);
   const formRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
@@ -62,7 +64,13 @@ const Contact = () => {
             })/* () */;
 
             if (response.ok) {
-              alert('Message sent successfully via WhatsApp API!');
+              /* alert('Message sent successfully via WhatsApp API!'); */
+
+              modalRef.current?.open(
+                'Message sent successfully via WhatsApp API!',
+                'I will reach out to you soon!'
+              );
+
               setFormData({
                 subject: 'Contacting for job Opportunity (via portfolio)',
                 name: '',
@@ -70,10 +78,18 @@ const Contact = () => {
                 phone: '',
                 message: 'I want to get in touch with you regarding a job opportunity...',
               });
+              /* close modal automatically after 3 seconds */
+              setTimeout(() => {
+                modalRef.current?.close();
+              }, 3000);
             }
           } catch (error) {
             console.error('Error:', error);
             alert('Error sending message via WhatsApp API.');
+            /* modalRef.current?.open(
+              'Error',
+              'There was an error sending your message via WhatsApp API. Please try again later.'
+            ); */
           }
         }
         postWhatsApp();
@@ -84,10 +100,21 @@ const Contact = () => {
       }
     } else if (isChecked) {
       alert('Note: Desktop email applications may not support pre-filled body content. Please ensure your email client is configured correctly.');
+
+      /* modalRef.current?.open(
+        'Note',
+        'Desktop email applications may not support pre-filled body content. Please ensure your email client is configured correctly.'
+      ); */
+
       const mailtoLink = `mailto:contact@elvirodominguez.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello, Elviro:\n\nMy name is ${name}. ${message}`)}`;
       window.open(mailtoLink, '_blank');
     } else {
       alert('Note: Web email clients may not support pre-filled body content. Please ensure your email client is configured correctly.');
+
+      /* modalRef.current?.open(
+        'Note',
+        'Web email clients may not support pre-filled body content. Please ensure your email client is configured correctly.'
+      ); */
 
       const postEmail = async () => {
         try {
@@ -100,7 +127,13 @@ const Contact = () => {
           });
 
           if (response.ok) {
-            alert('Message sent successfully!');
+            /* alert('Message sent successfully!'); */
+
+            modalRef.current?.open(
+              'Message sent successfully',
+              'I will reach out to you soon!'
+            );
+
             setFormData({
               subject: 'Contacting for Job Opportunity (via portfolio)',
               name: '',
@@ -108,12 +141,25 @@ const Contact = () => {
               phone: '',
               message: 'I want to get in touch with you regarding a job opportunity...',
             });
+
+            /* close modal automatically after 3 seconds */
+            setTimeout(() => {
+              modalRef.current?.close();
+            }, 3000);
           } else {
             alert('Error sending message.');
+            /* modalRef.current?.open(
+              'Error',
+              'There was an error sending your message. Please try again later.'
+            ); */
           }
         } catch (error) {
           console.error('Error:', error);
           alert('Error sending message.');
+          /* modalRef.current?.open(
+            'Error',
+            'There was an error sending your message. Please try again later.'
+          ); */
         }
       };
 
@@ -218,6 +264,8 @@ const Contact = () => {
 
           <label htmlFor='web'><input type='radio' id='web' name='contactMethod' value='web' className={styles.radioWeb} />Web Client</label>
         </fieldset> */}
+
+        <Modal ref={modalRef} />
 
         <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
           <>
