@@ -83,8 +83,15 @@ section.workExperience {
         color: var(--details);
       } */
 
-      p.dateAndDuration {
+      p.dateAndDuration,
+      p.locationInfo {
         /* font-size: 1.1rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
         color: var(
             /* --details */
             --text-aux-color);
@@ -93,6 +100,11 @@ section.workExperience {
 
       span.location {
         /* font-size: 1.1rem; */
+        /* display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem; */
         color: var(
             /* --details */
             --text-aux-color);
@@ -179,6 +191,11 @@ section.workExperience {
         }
 
         /* } */
+
+        p.dateAndDuration,
+        p.locationInfo {
+          gap: 0.3rem;
+        }
       }
 
       /* hr.line, */
