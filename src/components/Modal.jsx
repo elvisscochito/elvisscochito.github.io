@@ -1,5 +1,5 @@
 import { forwardRef, useImperativeHandle, useRef, useState } from "react";
-import "../styles/Modal.css";
+import styles from "../styles/Modal.module.css";
 
 const Modal = forwardRef((_, ref) => {
   const modalRef = useRef(null);
@@ -19,11 +19,11 @@ const Modal = forwardRef((_, ref) => {
   }));
 
   return (
-    <dialog ref={modalRef} className="modal">
+    <dialog ref={modalRef} className={styles.modal}>
       <h2>{content.title}</h2>
       <p>{content.message}</p>
 
-      <button onClick={() => modalRef.current?.close()}>
+      <button className={styles.closeModalBtn} onClick={() => modalRef.current?.close()}>
         Close
       </button>
     </dialog>
