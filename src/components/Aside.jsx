@@ -6,8 +6,8 @@ import styles from '../styles/Aside.module.css';
 const Aside = () => {
   const [isActiveDot, setIsActiveDot] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  const dots = ['home', 'about', 'skills', 'projects', 'contact'];
-  const dotSizes = ['dotSize5', 'dotSize4', 'dotSize3', 'dotSize2', 'dotSize1'];
+  const dots = ['home', 'about', /* 'honors-and-awards', */ 'work-experience', 'skills', /* 'licenses-and-certifications', */ 'projects', 'social-proof', 'contact'];
+  const dotSizes = [/* 'dotSize9', 'dotSize8',  */'dotSize7', 'dotSize6', 'dotSize5', 'dotSize4', 'dotSize3', 'dotSize2', 'dotSize1'];
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -50,7 +50,7 @@ const Aside = () => {
     <aside className={styles.asideNav}>
       {
         dots.map((dot, index) => (
-          <a key={dot} href={`#${dot}`} onClick={() => setIsActiveDot(dot)}>
+          <a key={dot} href={`#${dot}`} onClick={() => setIsActiveDot(dot)} className={styles.asideLink} data-tooltip-id="global-tooltip" data-tooltip-content={dot.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}>
             <FontAwesomeIcon
               icon={faCircle}
               className={`${isActiveDot === dot ? styles.dotActive : styles.dot} ${getDotClass(index, dot)}`}
