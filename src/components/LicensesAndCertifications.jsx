@@ -34,7 +34,7 @@ const LicensesAndCertifications = () => {
     }
   ]);
   return (
-    <section className={styles.LicensesAndCertifications}>
+    <section id='licenses-and-certifications' className={styles.LicensesAndCertifications}>
       <header className={styles.header}>
         <h2 className={styles.heading}>Licenses and Certifications</h2>
         <span>Here are some of my professional licenses and certifications.</span>

@@ -22,7 +22,7 @@ const ActivitiesAndSocieties = () => {
     }
   ]);
   return (
-    <section className={styles.activitiesAndSocieties}>
+    <section id='activities-and-societies' className={styles.activitiesAndSocieties}>
       <header className={styles.header}>
         <h2 className={styles.sectionTitle}>Activities & Societies</h2>
         <span className={styles.sectionSubtitle}>Some of the activities and societies I've been involved with.</span>

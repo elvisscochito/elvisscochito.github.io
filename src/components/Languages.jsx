@@ -6,7 +6,7 @@ import styles from '../styles/Languages.module.css';
 
 const Languages = () => {
   return (
-    <section className={styles.languagesSection}>
+    <section id='languages' className={styles.languagesSection}>
       <header className={styles.header}>
         <h2 className={styles.languagesHeading}>Languages{/* <FontAwesomeIcon icon={faLanguage} className={styles.icon} /> */}</h2>
         <span>Here are the languages I speak and my proficiency levels.</span>
