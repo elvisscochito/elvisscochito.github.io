@@ -7,7 +7,7 @@ import js from '../assets/js.png';
 import me from '../assets/profile.jpg';
 import react from '../assets/react.svg';
 import styles from '../styles/Home.module.css';
-/* import Typewriter from './Typewriter.jsx'; */
+import Typewriter from './Typewriter.jsx';
 
 const Home = () => {
   const emailRef = useRef(null);
@@ -95,7 +95,7 @@ const Home = () => {
       <div className={styles.firstDivision}>
         <header>
           <h3 className={styles.h3}>Welcome to my website!</h3>
-          <h1 className={styles.h1}>Hi!, I&apos;m @elvisscochito<span className={styles.span}>a {/* <Typewriter toRotate={["Web Developer", "Full-Stack Developer", "Front-End Developer", "Back-End Developer", "Data Scientist", "Mobile Developer"]} period={2000} /> */}</span></h1>
+          <h1 className={styles.h1}>Hi!, I&apos;m @elvisscochito<span className={styles.span}>a <Typewriter toRotate={["Web Developer", "Full-Stack Developer", "Front-End Developer", "Back-End Developer", "Data Scientist", "Mobile Developer"]} period={2000} /></span></h1>
           <h2 className={styles.h2}>Last year Computer Science student</h2>
         </header>
 
