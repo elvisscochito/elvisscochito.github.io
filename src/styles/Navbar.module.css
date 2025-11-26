@@ -17,8 +17,16 @@ nav.navbarScrolled {
 
 nav.navbarScrolled {
   background-color: light-dark(rgba(250, 250, 250, 0.8), rgba(0, 0, 0, 0.8));
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   transition: all 0.3s ease-in-out;
+}
+
+.navbarScrolled::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  z-index: -1;
 }
 
 /* a.navbarLink:has(img.navbarLogo) {
@@ -69,12 +77,12 @@ a.activeLink {
   text-decoration: none;
 }
 
-a.activeLink:not(ul li.navbarItem:last-child a) {
+a.activeLink:not(ul li.navbarItem:nth-child(9) a) {
   color: var(--text-color);
   font-weight: 600;
-  border-bottom: 2.5px solid var(--text-color)
-    /* light-dark(#18181B, #f0f0f0) */
-  ;
+  border-bottom: 2.5px solid
+    /* var(--text-color) */
+    light-dark(#18181B, #f0f0f0);
 }
 
 /* li.navbarItem:last-child {
@@ -82,12 +90,20 @@ a.activeLink:not(ul li.navbarItem:last-child a) {
 } */
 
 /* selecciona el ultimo elemento de la lista */
-ul li.navbarItem:last-child a {
+ul.navbarContainer li.navbarItem:nth-child(9) a {
   color: light-dark(#fff, #000);
   font-weight: bold;
   background-color: light-dark(#18181B, #f0f0f0);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+}
+
+ul.navbarContainer li.navbarItem:last-child {
+  display: none;
+}
+
+ul.sidebarContainer.sidebarInactive {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -117,7 +133,71 @@ ul li.navbarItem:last-child a {
       /* background-color: red; */
 
       /* show only 1st, 4th, 7th and last li */
-      li.navbarItem:not(:nth-child(4)):not(:nth-child(5)):not(:nth-child(7)):not(:last-child) {
+      li.navbarItem:not(:nth-child(4)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) {
+        display: none;
+      }
+
+      li.navbarItem:last-child {
+        display: block !important;
+
+        button.menuButton {
+          font-size: 1.8rem;
+          background: none;
+          border: none;
+          color: var(--text-color);
+          cursor: pointer;
+        }
+      }
+    }
+
+    ul.sidebarContainer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 60%;
+      background-color: light-dark(rgba(250, 250, 250, 0.95), rgba(20, 20, 20, 0.95));
+      backdrop-filter: blur(8px);
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 1rem;
+      z-index: 20;
+
+      li.navbarItem:first-child {
+        button.menuButton {
+          font-size: 1.8rem;
+          background: none;
+          border: none;
+          color: var(--text-color);
+          cursor: pointer;
+        }
+      }
+
+      li.navbarItem:last-child a {
+        color: light-dark(#fff, #000);
+        font-weight: bold;
+        background-color: light-dark(#18181B, #f0f0f0);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+
+    ul.sidebarContainer.isSidebarActive {
+      transform: translateX(0);
+    }
+
+    /* ul.sidebarContainer.isSidebarActive+ul.navbarContainer {
+      display: none;
+    } */
+
+    &:has(ul.sidebarContainer.isSidebarActive) {
+      ul.navbarContainer {
         display: none;
       }
     }
@@ -149,4 +229,42 @@ ul li.navbarItem:last-child a {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
   } */
+}
+
+/* div.overlayActive { */
+/* state 2 (close) */
+/* position: fixed !important;
+  z-index: 19;
+  inset: 0;
+  pointer-events: none;
+  transition: background-color 0.3s ease-in-out;
+} */
+
+/* body:has(nav.navbar ul.sidebarContainer.isSidebarActive) div.overlayActive { */
+/* state 1 (open) */
+/* pointer-events: auto;
+  background-color: hsla(0, 0%, 0%, 0.3); */
+
+/* state 0 (init) */
+/* @starting-style {
+    background-color: transparent;
+  }
+} */
+
+div.overlayActive {
+  position: fixed !important;
+  z-index: 19 !important;
+  inset: 0 !important;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  pointer-events: auto;
+  transition: background-color 0.3s ease-in-out;
+}
+
+div.overlay {
+  position: fixed !important;
+  z-index: 19 !important;
+  inset: 0 !important;
+  pointer-events: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }

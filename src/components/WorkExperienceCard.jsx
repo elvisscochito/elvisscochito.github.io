@@ -1,5 +1,5 @@
-/* import { faCalendar, faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
+import { faCalendar, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/WorkExperience.module.css';
 
 const WorkExperienceCard = ({ title, company, type, date, duration, location, locationType, responsibilities = [], logo }) => {
@@ -13,9 +13,19 @@ const WorkExperienceCard = ({ title, company, type, date, duration, location, lo
       </header> */}
       <h4 className={styles.title}>{title}</h4>
       <span className={styles.type}>{type}</span>
-      <p className={styles.dateAndDuration}>{/* <FontAwesomeIcon icon={faCalendar} className={styles.icon} /> */}{date} • &#40;{duration}&#41;</p>
-      <span className={styles.location}>{/* <FontAwesomeIcon icon={faLocationDot} className={styles.icon} /> */}{location}</span>
-      <span className={styles.locationType}> • {locationType}</span>
+      <p className={styles.dateAndDuration}>
+        <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
+        <span className={styles.date}>{date}</span>
+        •
+        <span className={styles.duration}>&#40;{duration}&#41;</span>
+      </p>
+
+      <p className={styles.locationInfo}>
+        <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
+        <span className={styles.location}>{location}</span>
+        •
+        <span className={styles.locationType}>{locationType}</span>
+      </p>
       <ul>
         {
           responsibilities.map((responsibility, index) => (

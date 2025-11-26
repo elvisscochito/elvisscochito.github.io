@@ -68,6 +68,7 @@ div.container {
   div.container {
     right: 5%;
     padding: 0.5rem 1rem;
+    display: none;
 
     /* a {
       .icon {
