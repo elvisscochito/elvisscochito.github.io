@@ -448,6 +448,10 @@ section.home {
           text-align: center;
           justify-content: center;
           align-items: center;
+
+          span.span {
+            font-size: 1.8rem;
+          }
         }
 
         h2.h2 {
