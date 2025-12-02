@@ -1,13 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import neza from '../assets/neza.svg';
 import softtek from '../assets/softtek.svg';
 import tec from '../assets/tecnologico.png';
 import styles from '../styles/CompaniesSlider.module.css';
 
 const CompaniesSlider = () => {
+  const { t } = useTranslation("global");
   return (
     <>
       <header className={styles.header}>
-        <h4 className={styles.sliderTitle}>Companies I've worked with:</h4>
+        <h4 className={styles.sliderTitle}>{t("CompaniesSlider.title")}</h4>
       </header>
       <div className={styles.slider}>
         <div className={styles.sliderTrack}>

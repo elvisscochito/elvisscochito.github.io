@@ -19,9 +19,25 @@
       "Technologies": "Technologies"
     },
     "Body": {
-      "paragraph1": "I'm Elviro Dominguez, a passionate Computer Science student in my final year at the University of Almeria. My journey in programming began at a young age, and over the years, I've honed my skills in various programming languages and technologies.",
-      "paragraph2": "Throughout my academic career, I've undertaken numerous projects that have allowed me to apply theoretical knowledge to practical scenarios. From web development to data science, I've explored different facets of computer science, always eager to learn and grow.",
-      "paragraph3": "Beyond academics, I'm an active contributor to open-source projects and enjoy collaborating with fellow developers. I believe in the power of community and continuous learning, which drives me to stay updated with the latest industry trends and advancements."
+      "At": "At",
+      "University": "University",
+      "Looking": "Looking for a",
+      "Part-Time": "Part-Time",
+      "Or": "or",
+      "Full-Time": "Full-Time",
+      "Any": "or any other",
+      "Opportunity": "job opportunity",
+      "btnAux": "View Resume",
+      "btn": "Get in touch"
+    },
+    "workStatusContainer": {
+      "open": "#OpenToWork",
+      "Hybrid": "Hybrid",
+      "Remote": "Remote",
+      "OnSite": "On-Site"
     }
+  },
+  "CompaniesSlider": {
+    "title": "Companies I've worked with:"
   }
 }

@@ -17,6 +17,27 @@
       "Experience": "De experiencia",
       "Projects": "Proyectos",
       "Technologies": "Tecnologías"
+    },
+    "Body": {
+      "At": "En el",
+      "University": "Universidad",
+      "Looking": "Buscando por un puesto de",
+      "Part-Time": "Medio Tiempo",
+      "Or": "o",
+      "Full-Time": "Tiempo Completo",
+      "Any": "o cualquier otro",
+      "Opportunity": "oportunidad de trabajo",
+      "btnAux": "Ver Currículum",
+      "btn": "Contáctame"
+    },
+    "workStatusContainer": {
+      "open": "#AbiertoATrabajar",
+      "Hybrid": "Híbrido",
+      "Remote": "Remoto",
+      "OnSite": "Presencial"
     }
+  },
+  "CompaniesSlider": {
+    "title": "Empresas con las que he trabajado:"
   }
 }

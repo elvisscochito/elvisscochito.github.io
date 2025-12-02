@@ -127,10 +127,10 @@ const Home = () => {
         </div>
 
         <div className={styles.body}>
-          <p>At <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University. Looking for a <span className={styles.italic}>Part-Time</span> or <span className={styles.italic}>Full-Time</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> or <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> or <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> or any other <span className={`${styles.italic} ${styles.bold}`}>IT</span> job opportunity.</p>
+          <p>{t('Home.Body.At')} <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> {t('Home.Body.University')}. {t('Home.Body.Looking')} <span className={styles.italic}>{t('Home.Body.Part-Time')}</span> {t('Home.Body.Or')} <span className={styles.italic}>{t('Home.Body.Full-Time')}</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> {t('Home.Body.Or')} <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> {t('Home.Body.Or')} <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> {t('Home.Body.Any')} <span className={`${styles.italic} ${styles.bold}`}>IT</span> {t('Home.Body.Opportunity')}.</p>
           <div className={styles.buttonsCtaContainer}>
-            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>View Resume</a>
-            <a href="#contact" className={styles.btn}>Get in touch</a>
+            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>{t('Home.Body.btnAux')}</a>
+            <a href="#contact" className={styles.btn}>{t('Home.Body.btn')}</a>
           </div>
         </div>
         <footer className={styles.footer}>
@@ -169,11 +169,11 @@ const Home = () => {
             </a>
           </div>
           <div className={styles.workStatusContainer}>
-            <span className={styles.workStatus}>#OpenToWork<FontAwesomeIcon icon={faCode} /></span>
+            <span className={styles.workStatus}>{t('Home.workStatusContainer.open')}<FontAwesomeIcon icon={faCode} /></span>
             {/* <div className={styles.workTypeContainer}> */}
-            <span className={`${styles.workType} ${styles.first}`}>Hybrid <FontAwesomeIcon icon={faBolt} /></span>
-            <span className={`${styles.workType} ${styles.second}`}>Remote <FontAwesomeIcon icon={faLaptop} /></span>
-            <span className={`${styles.workType} ${styles.third}`}>Onsite <FontAwesomeIcon icon={faMapPin} /></span>
+            <span className={`${styles.workType} ${styles.first}`}>{t('Home.workStatusContainer.Hybrid')} <FontAwesomeIcon icon={faBolt} /></span>
+            <span className={`${styles.workType} ${styles.second}`}>{t('Home.workStatusContainer.Remote')} <FontAwesomeIcon icon={faLaptop} /></span>
+            <span className={`${styles.workType} ${styles.third}`}>{t('Home.workStatusContainer.OnSite')} <FontAwesomeIcon icon={faMapPin} /></span>
             {/* </div> */}
           </div>
         </footer>
