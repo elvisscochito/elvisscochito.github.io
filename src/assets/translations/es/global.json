@@ -1,0 +1,22 @@
+{
+  "Home": {
+    "title": "Bienvenido a Mi Sitio Web",
+    "heading": "Hola, soy @elvisscochito",
+    "subheading": "Estudiante de último año de Ingeniería Informática",
+    "Typewriter": {
+      "A": "un",
+      "Web Developer": "Desarrollador Web",
+      "Full-Stack Developer": "Desarrollador Full-Stack",
+      "Front-End Developer": "Desarrollador Front-End",
+      "Back-End Developer": "Desarrollador Back-End",
+      "Data Scientist": "Científico de Datos",
+      "Mobile Developer": "Desarrollador Móvil"
+    },
+    "Stats": {
+      "Years": "Año",
+      "Experience": "De experiencia",
+      "Projects": "Proyectos",
+      "Technologies": "Tecnologías"
+    }
+  }
+}

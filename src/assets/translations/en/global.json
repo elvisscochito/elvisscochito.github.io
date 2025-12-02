@@ -1,0 +1,27 @@
+{
+  "Home": {
+    "title": "Welcome to My website!",
+    "heading": "Hi!, I'm @elvisscochito",
+    "subheading": "Last year Computer Science student",
+    "Typewriter": {
+      "A": "a",
+      "Web Developer": "Web Developer",
+      "Full-Stack Developer": "Full-Stack Developer",
+      "Front-End Developer": "Front-End Developer",
+      "Back-End Developer": "Back-End Developer",
+      "Data Scientist": "Data Scientist",
+      "Mobile Developer": "Mobile Developer"
+    },
+    "Stats": {
+      "Years": "Year",
+      "Experience": "Of experience",
+      "Projects": "Projects",
+      "Technologies": "Technologies"
+    },
+    "Body": {
+      "paragraph1": "I'm Elviro Dominguez, a passionate Computer Science student in my final year at the University of Almeria. My journey in programming began at a young age, and over the years, I've honed my skills in various programming languages and technologies.",
+      "paragraph2": "Throughout my academic career, I've undertaken numerous projects that have allowed me to apply theoretical knowledge to practical scenarios. From web development to data science, I've explored different facets of computer science, always eager to learn and grow.",
+      "paragraph3": "Beyond academics, I'm an active contributor to open-source projects and enjoy collaborating with fellow developers. I believe in the power of community and continuous learning, which drives me to stay updated with the latest industry trends and advancements."
+    }
+  }
+}

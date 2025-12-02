@@ -2,6 +2,7 @@ import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from 'react';
 import styles from '../styles/Navbar.module.css';
+import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
   const [isActiveHashLink, setIsActiveHashLink] = useState('home');
@@ -104,6 +105,9 @@ const Navbar = () => {
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>
         </li> */}
+        <li className={styles.navbarItem}>
+          |<ToggleLanguage />
+        </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
             <FontAwesomeIcon icon={faBars} />

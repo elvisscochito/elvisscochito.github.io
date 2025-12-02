@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import css from '../assets/css.png';
 import js from '../assets/js.png';
 import me from '../assets/profile.jpg';
@@ -10,6 +11,7 @@ import styles from '../styles/Home.module.css';
 import Typewriter from './Typewriter.jsx';
 
 const Home = () => {
+  const { t } = useTranslation("global");
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
   /* const timerRef = useRef(null); */
@@ -90,13 +92,17 @@ const Home = () => {
     )();
   }, [copied]); */
 
+  useEffect(() => {
+    console.log('t Home.Stats.Projects ->', t('Home.Stats.Projects'));
+  }, [t]);
+
   return (
     <section id="home" className={styles.home}>
       <div className={styles.firstDivision}>
         <header>
-          <h3 className={styles.h3}>Welcome to my website!</h3>
-          <h1 className={styles.h1}>Hi!, I&apos;m @elvisscochito<span className={styles.span}>a <Typewriter toRotate={["Web Developer", "Full-Stack Developer", "Front-End Developer", "Back-End Developer", "Data Scientist", "Mobile Developer"]} period={2000} /></span></h1>
-          <h2 className={styles.h2}>Last year Computer Science student</h2>
+          <h3 className={styles.h3}>{t('Home.title')}</h3>
+          <h1 className={styles.h1}>{t('Home.heading')}<span className={styles.span}>{t('Home.Typewriter.A')} <Typewriter toRotate={[t('Home.Typewriter.Web Developer'), t('Home.Typewriter.Full-Stack Developer'), t('Home.Typewriter.Front-End Developer'), t('Home.Typewriter.Back-End Developer'), t('Home.Typewriter.Data Scientist'), t('Home.Typewriter.Mobile Developer')]} period={2000} /></span></h1>
+          <h2 className={styles.h2}>{t('Home.subheading')}</h2>
         </header>
 
         <div className={styles.imagesAndStats}>
@@ -106,16 +112,16 @@ const Home = () => {
           <img src={me} alt="Elviro Dominguez" className={styles.me} />
           <div className={styles.stats}>
             <div>
-              <span className={styles.breakAfterEachWord}>+1 Year</span>
-              <span className={styles.breakAfterEachWord}>Of experience</span>
+              <span className={styles.breakAfterEachWord}>+1 {t('Home.Stats.Years')}</span>
+              <span className={styles.breakAfterEachWord}>{t('Home.Stats.Experience')}</span>
             </div>
             <div>
               <span className={styles.breakAfterEachWord}>+10</span>
-              <span className={styles.breakAfterEachWord}>projects</span>
+              <span className={styles.breakAfterEachWord}>{t('Home.Stats.Projects')}</span>
             </div>
             <div>
-              <span className={styles.breakAfterEachWord}>+1k</span>
-              <span className={styles.breakAfterEachWord}>commits</span>
+              <span className={styles.breakAfterEachWord}>+15</span>
+              <span className={styles.breakAfterEachWord}>{t('Home.Stats.Technologies')}</span>
             </div>
           </div>
         </div>
@@ -180,16 +186,16 @@ const Home = () => {
         <img src={me} alt="Elviro Dominguez" className={styles.me} />
         <div className={styles.stats}>
           <div>
-            <span className={styles.breakAfterEachWord}>+1 Year</span>
-            <span className={styles.breakAfterEachWord}>Of experience</span>
+            <span className={styles.breakAfterEachWord}>+1 {t('Home.Stats.Years')}</span>
+            <span className={styles.breakAfterEachWord}>{t('Home.Stats.Experience')}</span>
           </div>
           <div>
             <span className={styles.breakAfterEachWord}>+10</span>
-            <span className={styles.breakAfterEachWord}>projects</span>
+            <span className={styles.breakAfterEachWord}>{t('Home.Stats.Projects')}</span>
           </div>
           <div>
-            <span className={styles.breakAfterEachWord}>+1k</span>
-            <span className={styles.breakAfterEachWord}>commits</span>
+            <span className={styles.breakAfterEachWord}>+15</span>
+            <span className={styles.breakAfterEachWord}>{t('Home.Stats.Technologies')}</span>
           </div>
         </div>
       </div>

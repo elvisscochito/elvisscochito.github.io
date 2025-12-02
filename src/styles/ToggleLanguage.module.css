@@ -1,0 +1,17 @@
+button.toggleButton {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /* height: 2.5rem; */
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-aux-color);
+
+  &:hover {
+    /* background-color: #F5F5F5; */
+    color: var(--text-color);
+    font-weight: 600;
+  }
+}
