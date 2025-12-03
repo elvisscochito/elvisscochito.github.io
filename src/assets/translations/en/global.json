@@ -39,5 +39,40 @@
   },
   "CompaniesSlider": {
     "title": "Companies I've worked with:"
+  },
+  "SocialPath": {
+    "linkedin": "My LinkedIn",
+    "github": "My GitHub",
+    "whatsapp": "My WhatsApp",
+    "email": "My Email"
+  },
+  "About": {
+    "heading": "What about me?",
+    "subheading": "Here's a little more information about me.",
+    "main": {
+      "Education": "Education",
+      "Degree": "B.S. in Computer Science and Technology, concentration in Data Science",
+      "Phone": "Phone Number",
+      "Legend": "Give me a call or send me a message at:",
+      "Location": "Location",
+      "From": "I'm from:",
+      "FromPlace": "Cuernavaca, Morelos, Mexico",
+      "Living": "Currently living in:",
+      "LivingPlace": "Mexico City, Mexico",
+      "Email": "Email Address",
+      "EmailLegend": "You can send me an email at:",
+      "Contact": "Contact Me"
+    }
+  },
+  "TopSkills": {
+    "heading": "Top Skills"
+  },
+  "Services": {
+    "heading": "Services",
+    "WebDevelopment": "Web Development",
+    "SoftwareDevelopment": "Software Development",
+    "BusinessAnalytics": "Business Analytics",
+    "GraphicDesign": "Graphic Design",
+    "DigitalMarketing": "Digital Marketing"
   }
 }

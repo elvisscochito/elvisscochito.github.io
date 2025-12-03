@@ -39,5 +39,40 @@
   },
   "CompaniesSlider": {
     "title": "Empresas con las que he trabajado:"
+  },
+  "SocialPath": {
+    "linkedin": "Mi LinkedIn",
+    "github": "Mi GitHub",
+    "whatsapp": "Mi WhatsApp",
+    "email": "Mi Correo"
+  },
+  "About": {
+    "heading": "¿Qué hay sobre mí?",
+    "subheading": "Aquí tienes un poco más de información sobre mí.",
+    "main": {
+      "Education": "Educación",
+      "Degree": "Grado en Ingeniería Informática, con especialización en Ciencia de Datos",
+      "Phone": "Número de Teléfono",
+      "Legend": "Hazme una llamada o envíame un mensaje a:",
+      "Location": "Ubicación",
+      "From": "Soy de:",
+      "FromPlace": "Cuernavaca, Morelos, México",
+      "Living": "Actualmente vivo en:",
+      "LivingPlace": "Ciudad de México, México",
+      "Email": "Dirección de Correo",
+      "EmailLegend": "Puedes enviarme un correo a:",
+      "Contact": "Contáctame"
+    }
+  },
+  "TopSkills": {
+    "heading": "Habilidades Principales"
+  },
+  "Services": {
+    "heading": "Servicios",
+    "WebDevelopment": "Desarrollo Web",
+    "SoftwareDevelopment": "Desarrollo de Software",
+    "BusinessAnalytics": "Análisis de Negocios",
+    "GraphicDesign": "Diseño Gráfico",
+    "DigitalMarketing": "Marketing Digital"
   }
 }
