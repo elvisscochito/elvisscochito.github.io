@@ -74,5 +74,66 @@
     "BusinessAnalytics": "Business Analytics",
     "GraphicDesign": "Graphic Design",
     "DigitalMarketing": "Digital Marketing"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "Technologies": "Technologies",
+    "services": "Services",
+    "honorsAndAwards": "Honors & Awards",
+    "Experience": "Experience",
+    "softSkills": "Soft Skills",
+    "skills": "Skills",
+    "languages": "Languages",
+    "licensesAndCertifications": "Certifications",
+    "Publications": "Publications",
+    "Activities": "Activities & Societies",
+    "Hobbies": "Hobbies & Interests",
+    "Projects": "Projects",
+    "work": "Work",
+    "Social": "Social Proof",
+    "contact": "Contact",
+    "quickContact": "Quick Contact"
+  },
+  "HonorsAndAwards": {
+    "heading": "Honors, Awards & Experiences",
+    "subheading": "Recognitions I've received for my work, contributions and experiences I've had.",
+    "appleDeveloperConference": "Apple Developer Conference",
+    "appleDeveloperConferenceDescription": "Attended in-person an Apple developer Conference.",
+    "appleDeveloperConferenceDate": "February 2025",
+    "nycTitle": "Big Techs Conferences",
+    "nycDescription": "Selected to attend multiple conferences at Technology Companies (Google, Amazon, Microsoft, Meta, among others)",
+    "nycDate": "March 2025",
+    "nasaTitle": "NASA Trip",
+    "nasaDescription": "Participated in an academic trip to a Campus Tour at Rice University and NASA.",
+    "nasaDate": "April 2025",
+    "colombiaTitle": "Study Abroad Program",
+    "colombiaDescription": "Coursework in Smart Cities and Citizenship and cultural immersion.",
+    "colombiaDate": "August 2024",
+    "gessTittle": "Global Entrepreneurship Summer School",
+    "gessDescription": "Selected to participated in this program focused on developing entrepreneurial skills among other international students.",
+    "gessDate": "July 2024"
+  },
+  "WorkExperience": {
+    "heading": "Work Experience",
+    "subheading": "Where I've applied my skills in real-world scenarios.",
+    "softtekTitle": "DevOps Engineer",
+    "softtekType": "Internship",
+    "softtekDate": "October 2024 - May 2025",
+    "softtekDuration": "8 months",
+    "softtekLocation": "Monterrey, Nuevo Leon, Mexico",
+    "softtekLocationType": "Remote",
+    "softtekResponsibilities": {
+      "r1": "Developed CI/CD pipelines, managed cloud infrastructure, deployed containerized applications and implemented monitoring solutions to ensure eﬃcient and reliable software delivery."
+    },
+    "tecTitle": "On Campus Job Intern Program",
+    "tecType": "Internship",
+    "tecDate": "February 2022 - August 2023",
+    "tecDuration": "1 year 7 months",
+    "tecLocation": "Cuernavaca, Morelos, Mexico",
+    "tecLocationType": "On-Site",
+    "tecResponsibilities": {
+      "r1": "Gained a strong design sense, applied to webs and mobile User Interfaces designs in academic projects."
+    }
   }
 }

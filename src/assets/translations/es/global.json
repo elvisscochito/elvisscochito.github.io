@@ -74,5 +74,66 @@
     "BusinessAnalytics": "Análisis de Negocios",
     "GraphicDesign": "Diseño Gráfico",
     "DigitalMarketing": "Marketing Digital"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "Technologies": "Tecnologías",
+    "services": "Servicios",
+    "honorsAndAwards": "Honores y Premios",
+    "Experience": "Experiencia",
+    "softSkills": "Habilidades Blandas",
+    "skills": "Habilidades",
+    "languages": "Idiomas",
+    "licensesAndCertifications": "Certificaciones",
+    "Publications": "Publicaciones",
+    "Activities": "Actividades y Sociedades",
+    "Hobbies": "Pasatiempos e Intereses",
+    "Projects": "Proyectos",
+    "work": "Trabajo",
+    "Social": "Opiniones",
+    "contact": "Contacto",
+    "quickContact": "Contacto Rápido"
+  },
+  "HonorsAndAwards": {
+    "heading": "Honores, Premios y Experiencias",
+    "subheading": "Reconocimientos que he recibido por mi trabajo, contribuciones y experiencias que he tenido.",
+    "appleDeveloperConference": "Conferencia de Desarrolladores de Apple",
+    "appleDeveloperConferenceDescription": "Asistí en persona a una Conferencia de Desarrolladores de Apple.",
+    "appleDeveloperConferenceDate": "Febrero 2025",
+    "nycTitle": "Conferencias de Grandes Tecnológicos",
+    "nycDescription": "Seleccionado para asistir a varias conferencias en Empresas de Tecnología (Google, Amazon, Microsoft, Meta, entre otras)",
+    "nycDate": "Marzo 2025",
+    "nasaTitle": "Viaje a la NASA",
+    "nasaDescription": "Participé en un viaje académico a un tour a la Universidad de Rice y a la NASA.",
+    "nasaDate": "Abril 2025",
+    "colombiaTitle": "Programa de Estudios en el Extranjero",
+    "colombiaDescription": "Curso de Ciudades Inteligentes y ciudadanía y inmersión cultural.",
+    "colombiaDate": "Agosto 2024",
+    "gessTittle": "Escuela de Verano de Emprendimiento Global",
+    "gessDescription": "Participé en un programa de emprendimiento en conjunto de estudiantes internacionales.",
+    "gessDate": "Julio 2024"
+  },
+  "WorkExperience": {
+    "heading": "Experiencia Laboral",
+    "subheading": "Mi experiencia laboral relevante en el campo de la tecnología.",
+    "softtekTitle": "Ingeniero DevOps",
+    "softtekType": "Prácticas Profesionales",
+    "softtekDate": "Octubre 2024 - Mayo 2025",
+    "softtekDuration": "8 meses",
+    "softtekLocation": "Monterrey, Nuevo León, México",
+    "softtekLocationType": "Remoto",
+    "softtekResponsibilities": {
+      "r1": "Desarrollé pipelines CI/CD, gestioné infraestructura en la nube, desplegué aplicaciones en contenedores e implementé soluciones de monitoreo para asegurar una entrega de software eficiente y confiable."
+    },
+    "tecTitle": "Programa de Pasantías On Campus Job",
+    "tecType": "Pasantía",
+    "tecDate": "Febrero 2022 - Agosto 2023",
+    "tecDuration": "1 año 7 meses",
+    "tecLocation": "Cuernavaca, Morelos, México",
+    "tecLocationType": "Presencial",
+    "tecResponsibilities": {
+      "r1": "Adquirí un fuerte sentido del diseño, aplicado a diseños de interfaces de usuario web y móviles en proyectos académicos."
+    }
   }
 }
