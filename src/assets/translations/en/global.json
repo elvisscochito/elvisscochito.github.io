@@ -135,5 +135,121 @@
     "tecResponsibilities": {
       "r1": "Gained a strong design sense, applied to webs and mobile User Interfaces designs in academic projects."
     }
+  },
+  "SoftSkills": {
+    "heading": "Soft Skills.",
+    "subheading": "Not everything it's about code, soft skills are important too.",
+    "skillsList": {
+      "s1": {
+        "name": "Problem Solving",
+        "description": "Ability to analyze issues and find effective solutions."
+      },
+      "s2": {
+        "name": "Critical Thinking",
+        "description": "Capacity to evaluate information objectively to make informed decisions."
+      },
+      "s3": {
+        "name": "Effective Communication",
+        "description": "Clearly conveying ideas and collaborating with others."
+      },
+      "s4": {
+        "name": "Teamwork",
+        "description": "Working effectively with other team members to achieve common goals."
+      },
+      "s5": {
+        "name": "Time Management",
+        "description": "Organizing and planning time efficiently to prioritize tasks and meet deadlines."
+      },
+      "s6": {
+        "name": "Leadership",
+        "description": "Guiding and motivating teams to achieve goals and their best performance."
+      },
+      "s7": {
+        "name": "Creativity",
+        "description": "Thinking outside the box to develop innovative ideas and/or solutions."
+      },
+      "s8": {
+        "name": "Responsibility",
+        "description": "Demonstrating dedication and being reliable in all tasks."
+      },
+      "s9": {
+        "name": "Punctuality",
+        "description": "Consistently being on time for meetings, deadlines, and commitments."
+      },
+      "s10": {
+        "name": "Perseverance",
+        "description": "Staying determined and persistent in the face of challenges and setbacks. Maintaining effort and determination despite challenges and setbacks. Maintaining effort and persistence and staying determined and motivated despite challenges and setbacks."
+      },
+      "s11": {
+        "name": "Professionalism",
+        "description": "Maintaining a high standard of conduct, appearance, and work quality and ethic in the workplace."
+      },
+      "s12": {
+        "name": "Adaptability",
+        "description": "Adjusting to new changes, situations and environments with ease."
+      },
+      "s13": {
+        "name": "Emotional Intelligence",
+        "description": "Understanding and managing your own emotions, as well as empathizing with others. Understanding and managing emotions for better interpersonal relationships."
+      },
+      "s14": {
+        "name": "Conflict Resolution",
+        "description": "Effectively managing and resolving disagreements and finding mutually beneficial solutions. Effectively managing and resolving disagreements."
+      },
+      "s15": {
+        "name": "Work Ethic",
+        "description": "Demonstrating dedication and reliability in all tasks."
+      },
+      "s16": {
+        "name": "Empathy",
+        "description": "Ability to understand and share the feelings of others."
+      },
+      "s17": {
+        "name": "Work Under Pressure",
+        "description": "Maintaining calm and efficiency in high-pressure situations and tight deadlines."
+      }
+    }
+  },
+  "Skills": {
+    "heading": "Skills are never enough.",
+    "subheading": "So I never stop learning.",
+    "web": "Web Development",
+    "mobile": "Mobile Development",
+    "data": "Data Science & ML",
+    "bases": "Databases",
+    "git": "Version Control",
+    "design": "Design"
+  },
+  "Languages": {
+    "heading": "Languages",
+    "subheading": "Here are the languages I speak and my proficiency levels.",
+    "languagesList": {
+      "l1": {
+        "name": "Spanish",
+        "proficiency": "Native Proficiency"
+      },
+      "l2": {
+        "name": "English",
+        "proficiency": "B2 Intermediate"
+      }
+    }
+  },
+  "LicensesAndCertifications": {
+    "heading": "Licenses & Certifications",
+    "subheading": "Here are some of the certifications I've obtained to enhance my skills and knowledge.",
+    "issuer": "Issuer:",
+    "issued": "Issued:",
+    "credentialsList": {
+      "c1": {
+        "issueDate": "December 2021"
+      },
+      "c2": {
+        "issueDate": "March 2022"
+      },
+      "c3": {
+        "issueDate": "June 2023"
+      }
+    },
+    "btn": "View Credential"
   }
 }

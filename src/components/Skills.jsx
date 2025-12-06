@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import css from '../assets/css.png';
 import express from '../assets/expressjs.svg';
 import figma from '../assets/figma2.png';
@@ -16,15 +17,17 @@ import xcode from '../assets/xcode.png';
 import styles from '../styles/Skills.module.css';
 
 const Skills = () => {
+  const { t } = useTranslation("global");
+
   return (
     <section id="skills" className={styles.skills}>
       <header className={styles.header}>
-        <h2 className={styles.skillsHeading}>Skills are never enough.</h2>
-        <span>So I never stop learning.</span>
+        <h2 className={styles.skillsHeading}>{t("Skills.heading")}</h2>
+        <span>{t("Skills.subheading")}</span>
       </header>
       <div className={styles.skillsContainer}>
         <div className={styles.webDev}>
-          <h3>Web Development</h3>
+          <h3>{t("Skills.web")}</h3>
           <ul>
             <li>
               <div className={styles.card}>
@@ -66,7 +69,7 @@ const Skills = () => {
           </ul>
         </div>
         <div className={styles.mobileDev}>
-          <h3>Mobile Dev</h3>
+          <h3>{t("Skills.mobile")}</h3>
           <ul>
             <li>
               <div className={styles.card}>
@@ -90,7 +93,7 @@ const Skills = () => {
           </ul>
         </div>
         <div className={styles.dataScience}>
-          <h3>Data Science & ML</h3>
+          <h3>{t("Skills.data")}</h3>
           <ul>
             <li>
               <div className={styles.card}>
@@ -113,7 +116,7 @@ const Skills = () => {
           </ul>
         </div>
         <div className={styles.databases}>
-          <h3>Databases</h3>
+          <h3>{t("Skills.bases")}</h3>
           <ul>
             {/* <li>Relational/SQL:</li> */}
             <li>
@@ -132,7 +135,7 @@ const Skills = () => {
           </ul>
         </div>
         <div className={styles.versionControl}>
-          <h3>Version Control</h3>
+          <h3>{t("Skills.git")}</h3>
           <ul>
             <li>
               <div className={styles.card}>
@@ -149,7 +152,7 @@ const Skills = () => {
           </ul>
         </div>
         <div className={styles.design}>
-          <h3>Design</h3>
+          <h3>{t("Skills.design")}</h3>
           <ul>
             <li>
               <div className={styles.card}>

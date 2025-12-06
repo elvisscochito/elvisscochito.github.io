@@ -37,11 +37,15 @@ section.softSkills {
     /* width: 100%; */
     /* background-color: red; */
     /* justify-items: start; */
-
+    place-items: start;
 
     li {
       list-style: none;
       /* width: 100%; */
+      max-width: 48ch;
+      /* white-space: nowrap;
+      text-wrap: balance;
+      overflow-wrap: break-word; */
 
       div.skillCard {
         display: flex;
@@ -59,7 +63,6 @@ section.softSkills {
     }
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   section.softSkills {

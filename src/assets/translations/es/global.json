@@ -135,5 +135,123 @@
     "tecResponsibilities": {
       "r1": "Adquirí un fuerte sentido del diseño, aplicado a diseños de interfaces de usuario web y móviles en proyectos académicos."
     }
+  },
+  "SoftSkills": {
+    "heading": "Habilidades Blandas.",
+    "subheading": "No todo es código, las habilidades blandas también son importantes.",
+    "skillsList": {
+      "s1": {
+        "name": "Resolución de Problemas",
+        "description": "Habilidad para analizar problemas y encontrar soluciones efectivas."
+      },
+      "s2": {
+        "name": "Pensamiento Crítico",
+        "description": "Capacidad para evaluar información de manera objetiva para tomar decisiones informadas."
+      },
+      "s3": {
+        "name": "Comunicación Efectiva",
+        "description": "Capacidad para transmitir ideas y colaborar con otros."
+      },
+      "s4": {
+        "name": "Trabajo en Equipo",
+        "description": "Trabajo eficazmente con otros miembros del equipo para alcanzar objetivos comunes."
+      },
+      "s5": {
+        "name": "Gestión del Tiempo",
+        "description": "Organizo y planifico el tiempo de manera eficiente para priorizar tareas y cumplir con los plazos de entrega."
+      },
+      "s6": {
+        "name": "Liderazgo",
+        "description": "Guío y motivo equipos para lograr sus objetivos y su mejor desempeño."
+      },
+      "s7": {
+        "name": "Creatividad",
+        "description": "Pienso de manera innovadora y desarrollo ideas y/o soluciones originales."
+      },
+      "s8": {
+        "name": "Responsabilidad",
+        "description": "Demuestro dedicación y soy confiable en todas las tareas."
+      },
+      "s9": {
+        "name": "Puntualidad",
+        "description": "Siempre llego a tiempo a reuniones, plazos y compromisos."
+      },
+      "s10": {
+        "name": "Perseverancia",
+        "description": "Mantengo el esfuerzo y la determinación frente a los desafíos y obstáculos."
+      },
+      "s11": {
+        "name": "Profesionalismo",
+        "description": "Mantengo un alto estándar de conducta, apariencia y calidad y ética en el trabajo."
+      },
+      "s12": {
+        "name": "Adaptabilidad",
+        "description": "Me ajusto a cambios, situaciones y entornos nuevos con facilidad."
+      },
+      "s13": {
+        "name": "Inteligencia Emocional",
+        "description": "Habilidad para comprender y gestionar tus propias emociones, así como para empatizar con los demás."
+      },
+      "s14": {
+        "name": "Resolución de Conflictos",
+        "description": "Gestiono y resuelvo desacuerdos de manera efectiva."
+      },
+      "s15": {
+        "name": "Ética de Trabajo",
+        "description": "Demuestro dedicación y soy confiable en todas las tareas."
+      },
+      "s16": {
+        "name": "Empatía",
+        "description": "Habilidad para comprender y compartir los sentimientos de los demás."
+      },
+      "s17": {
+        "name": "Trabajo Bajo Presión",
+        "description": "Mantengo la calma y la eficiencia en situaciones de alta presión y plazos ajustados."
+      }
+    }
+  },
+  "Skills": {
+    "heading": "Las habilidades nunca son suficientes.",
+    "subheading": "Así que nunca dejo de aprender.",
+    "web": "Desarrollo Web",
+    "mobile": "Desarrollo Móvil",
+    "data": "Ciencia de Datos y ML",
+    "bases": "Bases de Datos",
+    "git": "Control de Versiones",
+    "devops": "DevOps",
+    "design": "Diseño",
+    "marketing": "Marketing Digital"
+  },
+  "Languages": {
+    "heading": "Idiomas",
+    "subheading": "Aquí están los idiomas que hablo y mis niveles de competencia.",
+    "languagesList": {
+      "l1": {
+        "name": "Español",
+        "proficiency": "Nativo"
+      },
+      "l2": {
+        "name": "Inglés",
+        "proficiency": "B2 Intermedio"
+      }
+    }
+  },
+  "LicensesAndCertifications": {
+    "heading": "Licencias y Certificaciones",
+    "subheading": "Aquí están algunas de las certificaciones que he obtenido para mejorar mis habilidades y conocimientos.",
+    "issuer": "Emisor:",
+    "issued": "Emitido:",
+    "credentialsList": {
+      "c1": {
+        "issueDate": "Diciembre 2021"
+      },
+      "c2": {
+        "issueDate": "Marzo 2022"
+      },
+      "c3": {
+        "issueDate": "Junio 2023"
+      }
+    },
+    "btn": "Ver Credencial"
   }
 }

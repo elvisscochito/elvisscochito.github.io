@@ -1,21 +1,25 @@
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/SoftSkills.module.css';
 
 const SoftSkills = () => {
+  const { t } = useTranslation("global");
+
   return (
     <section id="soft-skills" className={styles.softSkills}>
       <header className={styles.header}>
-        <h2 className={styles.softSkillsHeading}>Soft skills.</h2>
-        <span>Not everything it&apos;s about code, soft skills are important too.</span>
+        <h2 className={styles.softSkillsHeading}>{t('SoftSkills.heading')}</h2>
+        <span>{t('SoftSkills.subheading')}</span>
       </header>
+
       <ul className={styles.softSkillsList}>
         <li>
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Problem Solving</h3>
-              <p>Ability to analyze issues and find effective solutions.</p>
+              <h3>{t('SoftSkills.skillsList.s1.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s1.description')}</p>
             </div>
           </div>
         </li>
@@ -24,8 +28,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Critical Thinking</h3>
-              <p>Evaluating information objectively to make informed decisions.</p>
+              <h3>{t('SoftSkills.skillsList.s2.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s2.description')}</p>
             </div>
           </div>
         </li>
@@ -34,8 +38,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Effective Communication</h3>
-              <p>Clearly conveying ideas and collaborating with team members.</p>
+              <h3>{t('SoftSkills.skillsList.s3.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s3.description')}</p>
             </div>
           </div>
         </li>
@@ -44,8 +48,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Teamwork{/* Team Collaboration */}</h3>
-              <p>Working well with others to achieve common goals.</p>
+              <h3>{t('SoftSkills.skillsList.s4.name')}{/* Team Collaboration */}</h3>
+              <p>{t('SoftSkills.skillsList.s4.description')}</p>
             </div>
           </div>
         </li>
@@ -54,8 +58,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Time Management</h3>
-              <p>Prioritizing tasks to meet deadlines efficiently.</p>
+              <h3>{t('SoftSkills.skillsList.s5.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s5.description')}</p>
             </div>
           </div>
         </li>
@@ -64,8 +68,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Leadership</h3>
-              <p>Guiding and motivating teams to achieve their best performance.</p>
+              <h3>{t('SoftSkills.skillsList.s6.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s6.description')}</p>
             </div>
           </div>
         </li>
@@ -74,8 +78,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Creativity</h3>
-              <p>Thinking outside the box to develop innovative solutions.</p>
+              <h3>{t('SoftSkills.skillsList.s7.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s7.description')}</p>
             </div>
           </div>
         </li>
@@ -84,8 +88,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Responsibility</h3>
-              <p>Demonstrating dedication and reliability in all tasks.</p>
+              <h3>{t('SoftSkills.skillsList.s8.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s8.description')}</p>
             </div>
           </div>
         </li>
@@ -94,8 +98,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Punctuality</h3>
-              <p>Being consistently on time and respecting deadlines.</p>
+              <h3>{t('SoftSkills.skillsList.s9.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s9.description')}</p>
             </div>
           </div>
         </li>
@@ -104,8 +108,8 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Perseverance</h3>
-              <p>Maintaining effort and determination despite challenges.</p>
+              <h3>{t('SoftSkills.skillsList.s10.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s10.description')}</p>
             </div>
           </div>
         </li>
@@ -114,48 +118,48 @@ const SoftSkills = () => {
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Professionalism</h3>
-              <p>Maintaining a high standard of conduct and work quality.</p>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div className={styles.skillCard}>
-            <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
-            <div className={styles.skillContent}>
-              <h3>Adaptability</h3>
-              <p>Adjusting to new challenges and environments with ease.</p>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div className={styles.skillCard}>
-            <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
-            <div className={styles.skillContent}>
-              <h3>Emotional Intelligence</h3>
-              <p>Understanding and managing emotions for better interpersonal relationships.</p>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div className={styles.skillCard}>
-            <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
-            <div className={styles.skillContent}>
-              <h3>Conflict Resolution</h3>
-              <p>Effectively managing and resolving disagreements.</p>
+              <h3>{t('SoftSkills.skillsList.s11.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s11.description')}</p>
             </div>
           </div>
         </li> */}
 
+        <li>
+          <div className={styles.skillCard}>
+            <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
+            <div className={styles.skillContent}>
+              <h3>{t('SoftSkills.skillsList.s12.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s12.description')}</p>
+            </div>
+          </div>
+        </li>
+
         {/* <li>
           <div className={styles.skillCard}>
             <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
             <div className={styles.skillContent}>
-              <h3>Work Ethic</h3>
-              <p>Demonstrating dedication and reliability in all tasks.</p>
+              <h3>{t('SoftSkills.skillsList.s13.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s13.description')}</p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div className={styles.skillCard}>
+            <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
+            <div className={styles.skillContent}>
+              <h3>{t('SoftSkills.skillsList.s14.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s14.description')}</p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div className={styles.skillCard}>
+            <FontAwesomeIcon icon={faCircleCheck} className={styles.icon} />
+            <div className={styles.skillContent}>
+              <h3>{t('SoftSkills.skillsList.s17.name')}</h3>
+              <p>{t('SoftSkills.skillsList.s17.description')}</p>
             </div>
           </div>
         </li> */}
