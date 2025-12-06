@@ -1,9 +1,12 @@
-import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
+import { faBars, /* faLanguage,  */ faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Navbar.module.css';
+import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
+  const { t } = useTranslation("global");
   const [isActiveHashLink, setIsActiveHashLink] = useState('home');
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,28 +60,28 @@ const Navbar = () => {
       </a>
       <ul className={styles.navbarContainer}>
         <li className={styles.navbarItem}>
-          <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>Home</a>
+          <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>{t('Navbar.home')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>About</a>
+          <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>{t('Navbar.about')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#honors-and-awards" className={isActiveHashLink === 'honors-and-awards' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('honors-and-awards')}>Honors & Awards{/*  Honors, Awards & Experiences */}</a>
+          <a href="#honors-and-awards" className={isActiveHashLink === 'honors-and-awards' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('honors-and-awards')}>{t('Navbar.honorsAndAwards')}{/*  Honors, Awards & Experiences */}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#work-experience" className={isActiveHashLink === 'work-experience' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('work-experience')}>{/* Work  */}Experience</a>
+          <a href="#work-experience" className={isActiveHashLink === 'work-experience' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('work-experience')}>{/* Work  */}{t('Navbar.Experience')}</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#soft-skills" className={isActiveHashLink === 'soft-skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('soft-skills')}>Soft Skills</a>
         </li> */}
         <li className={styles.navbarItem}>
-          <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>Skills</a>
+          <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>{t('Navbar.skills')}</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#languages" className={isActiveHashLink === 'languages' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('languages')}>Languages</a>
         </li> */}
         <li className={styles.navbarItem}>
-          <a href="#licenses-and-certifications" className={isActiveHashLink === 'licenses-and-certifications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('licenses-and-certifications')}>{/* Licenses and  */}Certifications</a>
+          <a href="#licenses-and-certifications" className={isActiveHashLink === 'licenses-and-certifications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('licenses-and-certifications')}>{/* Licenses and  */}{t('Navbar.licensesAndCertifications')}</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#publications" className={isActiveHashLink === 'publications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('publications')}>Publications</a>
@@ -90,26 +93,30 @@ const Navbar = () => {
           <a href="#hobbies-and-interests" className={isActiveHashLink === 'hobbies-and-interests' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('hobbies-and-interests')}>Hobbies & Interests</a>
         </li> */}
         <li className={styles.navbarItem}>
-          <a href="#projects" className={isActiveHashLink === 'projects' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('projects')}>Projects</a>
+          <a href="#projects" className={isActiveHashLink === 'projects' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('projects')}>{t('Navbar.Projects')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#social-proof" className={isActiveHashLink === 'social-proof' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('social-proof')}>Social Proof</a>
+          <a href="#social-proof" className={isActiveHashLink === 'social-proof' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('social-proof')}>{t('Navbar.Social')}</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#services">Services</a>
         </li> */}
         <li className={styles.navbarItem}>
-          <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>Contact</a>
+          <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>{t('Navbar.contact')}</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>
         </li> */}
+        <li className={styles.navbarItem}>
+          |<ToggleLanguage />
+        </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
             <FontAwesomeIcon icon={faBars} />
           </button>
         </li>
       </ul>
+
       <ul className={`${styles.sidebarContainer} ${isSidebarActive ? styles.isSidebarActive : styles.sidebarInactive}`}>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
@@ -117,49 +124,53 @@ const Navbar = () => {
           </button>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>Home</a>
+          <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>{t('Navbar.home')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>About</a>
+          <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>{t('Navbar.about')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#honors-and-awards" className={isActiveHashLink === 'honors-and-awards' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('honors-and-awards')}>Honors & Awards{/*  Honors, Awards & Experiences */}</a>
+          <a href="#honors-and-awards" className={isActiveHashLink === 'honors-and-awards' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('honors-and-awards')}>{t('Navbar.honorsAndAwards')}{/*  Honors, Awards & Experiences */}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#work-experience" className={isActiveHashLink === 'work-experience' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('work-experience')}>{/* Work  */}Experience</a>
+          <a href="#work-experience" className={isActiveHashLink === 'work-experience' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('work-experience')}>{/* Work  */}{t('Navbar.Experience')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#soft-skills" className={isActiveHashLink === 'soft-skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('soft-skills')}>Soft Skills</a>
+          <a href="#soft-skills" className={isActiveHashLink === 'soft-skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('soft-skills')}>{t('Navbar.softSkills')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>Skills</a>
+          <a href="#skills" className={isActiveHashLink === 'skills' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('skills')}>{t('Navbar.skills')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#languages" className={isActiveHashLink === 'languages' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('languages')}>Languages</a>
+          <a href="#languages" className={isActiveHashLink === 'languages' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('languages')}>{t('Navbar.languages')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#licenses-and-certifications" className={isActiveHashLink === 'licenses-and-certifications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('licenses-and-certifications')}>{/* Licenses and  */}Certifications</a>
+          <a href="#licenses-and-certifications" className={isActiveHashLink === 'licenses-and-certifications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('licenses-and-certifications')}>{/* Licenses and  */}{t('Navbar.licensesAndCertifications')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#publications" className={isActiveHashLink === 'publications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('publications')}>Publications</a>
+          <a href="#publications" className={isActiveHashLink === 'publications' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('publications')}>{t('Navbar.Publications')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#activities-and-societies" className={isActiveHashLink === 'activities-and-societies' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('activities-and-societies')}>Activities & Societies</a>
+          <a href="#activities-and-societies" className={isActiveHashLink === 'activities-and-societies' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('activities-and-societies')}>{t('Navbar.Activities')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#hobbies-and-interests" className={isActiveHashLink === 'hobbies-and-interests' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('hobbies-and-interests')}>Hobbies & Interests</a>
+          <a href="#hobbies-and-interests" className={isActiveHashLink === 'hobbies-and-interests' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('hobbies-and-interests')}>{t('Navbar.Hobbies')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#projects" className={isActiveHashLink === 'projects' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('projects')}>Projects</a>
+          <a href="#projects" className={isActiveHashLink === 'projects' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('projects')}>{t('Navbar.Projects')}</a>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#social-proof" className={isActiveHashLink === 'social-proof' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('social-proof')}>Social Proof</a>
+          <a href="#social-proof" className={isActiveHashLink === 'social-proof' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('social-proof')}>{t('Navbar.Social')}</a>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#services">Services</a>
         </li> */}
         <li className={styles.navbarItem}>
-          <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>Contact</a>
+          <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>{t('Navbar.contact')}</a>
+        </li>
+        <li className={styles.navbarItem}>
+          {/* <FontAwesomeIcon icon={faLanguage} /> */}
+          {/* Toggle  */}{t('Navbar.language')} {/* |  */}<ToggleLanguage />{/*  | */}
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>

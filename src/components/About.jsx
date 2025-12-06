@@ -2,12 +2,14 @@
 import { faArrowDown /* , faArrowAltCircleDown */, faCheck, faClone, faEnvelope, faGraduationCap, faLocationDot, faMobile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import me from '../assets/profile.jpg';
 import styles from '../styles/About.module.css';
 import Services from './Services.jsx';
 import TopSkills from './TopSkills.jsx';
 
 const About = () => {
+  const { t } = useTranslation("global");
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
   /* const timerRef = useRef(null); */
@@ -61,25 +63,25 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <header className={styles.header}>
-        <h2 className={styles.h2}>What about me?</h2>
-        <span>Here&apos;s a little more information about me.</span>
+        <h2 className={styles.h2}>{t("About.heading")}</h2>
+        <span>{t("About.subheading")}</span>
       </header>
       <div className={styles.main}>
         <div className={styles.info}>
           <div className={styles.school}>
             <FontAwesomeIcon icon={faGraduationCap} className={styles.icon} />
             <div className={styles.schoolInfo}>
-              <span>Education</span>
+              <span>{t("About.main.Education")}</span>
               <span>Tecnológico de Monterrey, Campus Monterrey</span>
-              <span>B.S. in Computer Science and Technology, concentration in Data Science</span>
+              <span>{t("About.main.Degree")}</span>
             </div>
           </div>
 
           <div className={styles.phone}>
             <FontAwesomeIcon icon={faMobile} className={styles.icon} />
             <div className={styles.phoneInfo}>
-              <span>Phone number</span>
-              <span>Give me a call or send me a message at:</span>
+              <span>{t("About.main.Phone")}</span>
+              <span>{t("About.main.Legend")}</span>
               <span className={styles.row}>
                 <a href="tel:+527771395795" ref={phoneRef}>
                   +52 777 139 5795
@@ -97,19 +99,19 @@ const About = () => {
           <div className={styles.location}>
             <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             <div className={styles.locationInfo}>
-              <span>Location</span>
-              <span>I&apos;m from:</span>
-              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">Cuernavaca, Morelos, México&#8599;{/*  (the city of the Eternal Spring) */}</a>
-              <span className={styles.bold}>Currently living in:</span>
-              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">Cuernavaca, Morelos, México&#8599;</a>
+              <span>{t("About.main.Location")}</span>
+              <span>{t("About.main.From")}</span>
+              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">{t("About.main.FromPlace")}&#8599;{/*  (the city of the Eternal Spring) */}</a>
+              <span className={styles.bold}>{t("About.main.Living")}</span>
+              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">{t("About.main.LivingPlace")}&#8599;</a>
             </div>
           </div>
 
           <div className={styles.email}>
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             <div className={styles.emailInfo}>
-              <span>Email</span>
-              <span>You can send me an email at:</span>
+              <span>{t("About.main.Email")}</span>
+              <span>{t("About.main.EmailLegend")}</span>
               <span className={styles.row}>
                 <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20opportunity&body=Hello,%20Elviro:" className={styles.link} ref={emailRef}>
                   contact@elvirodominguez.com
@@ -139,7 +141,7 @@ const About = () => {
       </div>
       <TopSkills />
       <Services />
-      <a href="#contact" className={styles.btn}>Contact me <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
+      <a href="#contact" className={styles.btn}>{t("About.main.Contact")} <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
     </section >
   )
 }

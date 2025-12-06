@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import css from '../assets/css.png';
 import js from '../assets/js.png';
 import me from '../assets/profile.jpg';
@@ -10,6 +11,7 @@ import styles from '../styles/Home.module.css';
 import Typewriter from './Typewriter.jsx';
 
 const Home = () => {
+  const { t } = useTranslation("global");
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
   /* const timerRef = useRef(null); */
@@ -90,13 +92,17 @@ const Home = () => {
     )();
   }, [copied]); */
 
+  useEffect(() => {
+    console.log('t Home.Stats.Projects ->', t('Home.Stats.Projects'));
+  }, [t]);
+
   return (
     <section id="home" className={styles.home}>
       <div className={styles.firstDivision}>
         <header>
-          <h3 className={styles.h3}>Welcome to my website!</h3>
-          <h1 className={styles.h1}>Hi!, I&apos;m @elvisscochito<span className={styles.span}>a <Typewriter toRotate={["Web Developer", "Full-Stack Developer", "Front-End Developer", "Back-End Developer", "Data Scientist", "Mobile Developer"]} period={2000} /></span></h1>
-          <h2 className={styles.h2}>Last year Computer Science student</h2>
+          <h3 className={styles.h3}>{t('Home.title')}</h3>
+          <h1 className={styles.h1}>{t('Home.heading')}<span className={styles.span}>{t('Home.Typewriter.A')} <Typewriter toRotate={[t('Home.Typewriter.Web Developer'), t('Home.Typewriter.Full-Stack Developer'), t('Home.Typewriter.Front-End Developer'), t('Home.Typewriter.Back-End Developer'), t('Home.Typewriter.Data Scientist'), t('Home.Typewriter.Mobile Developer')]} period={2000} /></span></h1>
+          <h2 className={styles.h2}>{t('Home.subheading')}</h2>
         </header>
 
         <div className={styles.imagesAndStats}>
@@ -106,25 +112,25 @@ const Home = () => {
           <img src={me} alt="Elviro Dominguez" className={styles.me} />
           <div className={styles.stats}>
             <div>
-              <span className={styles.breakAfterEachWord}>+1 Year</span>
-              <span className={styles.breakAfterEachWord}>Of experience</span>
+              <span className={styles.breakAfterEachWord}>+1 {t('Home.Stats.Years')}</span>
+              <span className={styles.breakAfterEachWord}>{t('Home.Stats.Experience')}</span>
             </div>
             <div>
               <span className={styles.breakAfterEachWord}>+10</span>
-              <span className={styles.breakAfterEachWord}>projects</span>
+              <span className={styles.breakAfterEachWord}>{t('Home.Stats.Projects')}</span>
             </div>
             <div>
-              <span className={styles.breakAfterEachWord}>+1k</span>
-              <span className={styles.breakAfterEachWord}>commits</span>
+              <span className={styles.breakAfterEachWord}>+15</span>
+              <span className={styles.breakAfterEachWord}>{t('Home.Stats.Technologies')}</span>
             </div>
           </div>
         </div>
 
         <div className={styles.body}>
-          <p>At <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> University. Looking for a <span className={styles.italic}>Part-Time</span> or <span className={styles.italic}>Full-Time</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> or <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> or <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> or any other <span className={`${styles.italic} ${styles.bold}`}>IT</span> job opportunity.</p>
+          <p>{t('Home.Body.At')} <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> {t('Home.Body.University')}. {t('Home.Body.Looking')} <span className={styles.italic}>{t('Home.Body.Part-Time')}</span> {t('Home.Body.Or')} <span className={styles.italic}>{t('Home.Body.Full-Time')}</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> {t('Home.Body.Or')} <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> {t('Home.Body.Or')} <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> {t('Home.Body.Any')} <span className={`${styles.italic} ${styles.bold}`}>IT</span> {t('Home.Body.Opportunity')}.</p>
           <div className={styles.buttonsCtaContainer}>
-            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>View Resume</a>
-            <a href="#contact" className={styles.btn}>Get in touch</a>
+            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>{t('Home.Body.btnAux')}</a>
+            <a href="#contact" className={styles.btn}>{t('Home.Body.btn')}</a>
           </div>
         </div>
         <footer className={styles.footer}>
@@ -163,11 +169,11 @@ const Home = () => {
             </a>
           </div>
           <div className={styles.workStatusContainer}>
-            <span className={styles.workStatus}>#OpenToWork<FontAwesomeIcon icon={faCode} /></span>
+            <span className={styles.workStatus}>{t('Home.workStatusContainer.open')}<FontAwesomeIcon icon={faCode} /></span>
             {/* <div className={styles.workTypeContainer}> */}
-            <span className={`${styles.workType} ${styles.first}`}>Hybrid <FontAwesomeIcon icon={faBolt} /></span>
-            <span className={`${styles.workType} ${styles.second}`}>Remote <FontAwesomeIcon icon={faLaptop} /></span>
-            <span className={`${styles.workType} ${styles.third}`}>Onsite <FontAwesomeIcon icon={faMapPin} /></span>
+            <span className={`${styles.workType} ${styles.first}`}>{t('Home.workStatusContainer.Hybrid')} <FontAwesomeIcon icon={faBolt} /></span>
+            <span className={`${styles.workType} ${styles.second}`}>{t('Home.workStatusContainer.Remote')} <FontAwesomeIcon icon={faLaptop} /></span>
+            <span className={`${styles.workType} ${styles.third}`}>{t('Home.workStatusContainer.OnSite')} <FontAwesomeIcon icon={faMapPin} /></span>
             {/* </div> */}
           </div>
         </footer>
@@ -180,16 +186,16 @@ const Home = () => {
         <img src={me} alt="Elviro Dominguez" className={styles.me} />
         <div className={styles.stats}>
           <div>
-            <span className={styles.breakAfterEachWord}>+1 Year</span>
-            <span className={styles.breakAfterEachWord}>Of experience</span>
+            <span className={styles.breakAfterEachWord}>+1 {t('Home.Stats.Years')}</span>
+            <span className={styles.breakAfterEachWord}>{t('Home.Stats.Experience')}</span>
           </div>
           <div>
             <span className={styles.breakAfterEachWord}>+10</span>
-            <span className={styles.breakAfterEachWord}>projects</span>
+            <span className={styles.breakAfterEachWord}>{t('Home.Stats.Projects')}</span>
           </div>
           <div>
-            <span className={styles.breakAfterEachWord}>+1k</span>
-            <span className={styles.breakAfterEachWord}>commits</span>
+            <span className={styles.breakAfterEachWord}>+15</span>
+            <span className={styles.breakAfterEachWord}>{t('Home.Stats.Technologies')}</span>
           </div>
         </div>
       </div>

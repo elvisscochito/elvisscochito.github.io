@@ -1,0 +1,258 @@
+{
+  "Home": {
+    "title": "Bienvenido a Mi Sitio Web",
+    "heading": "Hola, soy @elvisscochito",
+    "subheading": "Estudiante de último año de Ingeniería Informática",
+    "Typewriter": {
+      "A": "un",
+      "Web Developer": "Desarrollador Web",
+      "Full-Stack Developer": "Desarrollador Full-Stack",
+      "Front-End Developer": "Desarrollador Front-End",
+      "Back-End Developer": "Desarrollador Back-End",
+      "Data Scientist": "Científico de Datos",
+      "Mobile Developer": "Desarrollador Móvil"
+    },
+    "Stats": {
+      "Years": "Año",
+      "Experience": "De experiencia",
+      "Projects": "Proyectos",
+      "Technologies": "Tecnologías"
+    },
+    "Body": {
+      "At": "En el",
+      "University": "Universidad",
+      "Looking": "Buscando por un puesto de",
+      "Part-Time": "Medio Tiempo",
+      "Or": "o",
+      "Full-Time": "Tiempo Completo",
+      "Any": "o cualquier otro",
+      "Opportunity": "oportunidad de trabajo",
+      "btnAux": "Ver Currículum",
+      "btn": "Contáctame"
+    },
+    "workStatusContainer": {
+      "open": "#AbiertoATrabajar",
+      "Hybrid": "Híbrido",
+      "Remote": "Remoto",
+      "OnSite": "Presencial"
+    }
+  },
+  "CompaniesSlider": {
+    "title": "Empresas con las que he trabajado:"
+  },
+  "SocialPath": {
+    "linkedin": "Mi LinkedIn",
+    "github": "Mi GitHub",
+    "whatsapp": "Mi WhatsApp",
+    "email": "Mi Correo"
+  },
+  "About": {
+    "heading": "¿Qué hay sobre mí?",
+    "subheading": "Aquí tienes un poco más de información sobre mí.",
+    "main": {
+      "Education": "Educación",
+      "Degree": "Grado en Ingeniería Informática, con especialización en Ciencia de Datos",
+      "Phone": "Número de Teléfono",
+      "Legend": "Hazme una llamada o envíame un mensaje a:",
+      "Location": "Ubicación",
+      "From": "Soy de:",
+      "FromPlace": "Cuernavaca, Morelos, México",
+      "Living": "Actualmente vivo en:",
+      "LivingPlace": "Ciudad de México, México",
+      "Email": "Dirección de Correo",
+      "EmailLegend": "Puedes enviarme un correo a:",
+      "Contact": "Contáctame"
+    }
+  },
+  "TopSkills": {
+    "heading": "Habilidades Principales"
+  },
+  "Services": {
+    "heading": "Servicios",
+    "WebDevelopment": "Desarrollo Web",
+    "SoftwareDevelopment": "Desarrollo de Software",
+    "BusinessAnalytics": "Análisis de Negocios",
+    "GraphicDesign": "Diseño Gráfico",
+    "DigitalMarketing": "Marketing Digital"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "Technologies": "Tecnologías",
+    "services": "Servicios",
+    "honorsAndAwards": "Honores y Premios",
+    "Experience": "Experiencia",
+    "softSkills": "Habilidades Blandas",
+    "skills": "Habilidades",
+    "languages": "Idiomas",
+    "licensesAndCertifications": "Certificaciones",
+    "Publications": "Publicaciones",
+    "Activities": "Actividades y Sociedades",
+    "Hobbies": "Pasatiempos e Intereses",
+    "Projects": "Proyectos",
+    "work": "Trabajo",
+    "Social": "Opiniones",
+    "contact": "Contacto",
+    "quickContact": "Contacto Rápido",
+    "language": "Idioma:"
+  },
+  "HonorsAndAwards": {
+    "heading": "Honores, Premios y Experiencias",
+    "subheading": "Reconocimientos que he recibido por mi trabajo, contribuciones y experiencias que he tenido.",
+    "appleDeveloperConference": "Conferencia de Desarrolladores de Apple",
+    "appleDeveloperConferenceDescription": "Asistí en persona a una Conferencia de Desarrolladores de Apple.",
+    "appleDeveloperConferenceDate": "Febrero 2025",
+    "nycTitle": "Conferencias de Grandes Tecnológicos",
+    "nycDescription": "Seleccionado para asistir a varias conferencias en Empresas de Tecnología (Google, Amazon, Microsoft, Meta, entre otras)",
+    "nycDate": "Marzo 2025",
+    "nasaTitle": "Viaje a la NASA",
+    "nasaDescription": "Participé en un viaje académico a un tour a la Universidad de Rice y a la NASA.",
+    "nasaDate": "Abril 2025",
+    "colombiaTitle": "Programa de Estudios en el Extranjero",
+    "colombiaDescription": "Curso de Ciudades Inteligentes y ciudadanía y inmersión cultural.",
+    "colombiaDate": "Agosto 2024",
+    "gessTittle": "Escuela de Verano de Emprendimiento Global",
+    "gessDescription": "Participé en un programa de emprendimiento en conjunto de estudiantes internacionales.",
+    "gessDate": "Julio 2024"
+  },
+  "WorkExperience": {
+    "heading": "Experiencia Laboral",
+    "subheading": "Mi experiencia laboral relevante en el campo de la tecnología.",
+    "softtekTitle": "Ingeniero DevOps",
+    "softtekType": "Prácticas Profesionales",
+    "softtekDate": "Octubre 2024 - Mayo 2025",
+    "softtekDuration": "8 meses",
+    "softtekLocation": "Monterrey, Nuevo León, México",
+    "softtekLocationType": "Remoto",
+    "softtekResponsibilities": {
+      "r1": "Desarrollé pipelines CI/CD, gestioné infraestructura en la nube, desplegué aplicaciones en contenedores e implementé soluciones de monitoreo para asegurar una entrega de software eficiente y confiable."
+    },
+    "tecTitle": "Programa de Pasantías On Campus Job",
+    "tecType": "Pasantía",
+    "tecDate": "Febrero 2022 - Agosto 2023",
+    "tecDuration": "1 año 7 meses",
+    "tecLocation": "Cuernavaca, Morelos, México",
+    "tecLocationType": "Presencial",
+    "tecResponsibilities": {
+      "r1": "Adquirí un fuerte sentido del diseño, aplicado a diseños de interfaces de usuario web y móviles en proyectos académicos."
+    }
+  },
+  "SoftSkills": {
+    "heading": "Habilidades Blandas.",
+    "subheading": "No todo es código, las habilidades blandas también son importantes.",
+    "skillsList": {
+      "s1": {
+        "name": "Resolución de Problemas",
+        "description": "Habilidad para analizar problemas y encontrar soluciones efectivas."
+      },
+      "s2": {
+        "name": "Pensamiento Crítico",
+        "description": "Capacidad para evaluar información de manera objetiva para tomar decisiones informadas."
+      },
+      "s3": {
+        "name": "Comunicación Efectiva",
+        "description": "Capacidad para transmitir ideas y colaborar con otros."
+      },
+      "s4": {
+        "name": "Trabajo en Equipo",
+        "description": "Trabajo eficazmente con otros miembros del equipo para alcanzar objetivos comunes."
+      },
+      "s5": {
+        "name": "Gestión del Tiempo",
+        "description": "Organizo y planifico el tiempo de manera eficiente para priorizar tareas y cumplir con los plazos de entrega."
+      },
+      "s6": {
+        "name": "Liderazgo",
+        "description": "Guío y motivo equipos para lograr sus objetivos y su mejor desempeño."
+      },
+      "s7": {
+        "name": "Creatividad",
+        "description": "Pienso de manera innovadora y desarrollo ideas y/o soluciones originales."
+      },
+      "s8": {
+        "name": "Responsabilidad",
+        "description": "Demuestro dedicación y soy confiable en todas las tareas."
+      },
+      "s9": {
+        "name": "Puntualidad",
+        "description": "Siempre llego a tiempo a reuniones, plazos y compromisos."
+      },
+      "s10": {
+        "name": "Perseverancia",
+        "description": "Mantengo el esfuerzo y la determinación frente a los desafíos y obstáculos."
+      },
+      "s11": {
+        "name": "Profesionalismo",
+        "description": "Mantengo un alto estándar de conducta, apariencia y calidad y ética en el trabajo."
+      },
+      "s12": {
+        "name": "Adaptabilidad",
+        "description": "Me ajusto a cambios, situaciones y entornos nuevos con facilidad."
+      },
+      "s13": {
+        "name": "Inteligencia Emocional",
+        "description": "Habilidad para comprender y gestionar tus propias emociones, así como para empatizar con los demás."
+      },
+      "s14": {
+        "name": "Resolución de Conflictos",
+        "description": "Gestiono y resuelvo desacuerdos de manera efectiva."
+      },
+      "s15": {
+        "name": "Ética de Trabajo",
+        "description": "Demuestro dedicación y soy confiable en todas las tareas."
+      },
+      "s16": {
+        "name": "Empatía",
+        "description": "Habilidad para comprender y compartir los sentimientos de los demás."
+      },
+      "s17": {
+        "name": "Trabajo Bajo Presión",
+        "description": "Mantengo la calma y la eficiencia en situaciones de alta presión y plazos ajustados."
+      }
+    }
+  },
+  "Skills": {
+    "heading": "Las habilidades nunca son suficientes.",
+    "subheading": "Así que nunca dejo de aprender.",
+    "web": "Desarrollo Web",
+    "mobile": "Desarrollo Móvil",
+    "data": "Ciencia de Datos y ML",
+    "bases": "Bases de Datos",
+    "git": "Control de Versiones",
+    "devops": "DevOps",
+    "design": "Diseño",
+    "marketing": "Marketing Digital"
+  },
+  "Languages": {
+    "heading": "Idiomas",
+    "subheading": "Aquí están los idiomas que hablo y mis niveles de competencia.",
+    "languagesList": {
+      "l1": {
+        "name": "Español",
+        "proficiency": "Nativo"
+      },
+      "l2": {
+        "name": "Inglés",
+        "proficiency": "B2 Intermedio"
+      }
+    }
+  },
+  "LicensesAndCertifications": {
+    "heading": "Licencias y Certificaciones",
+    "subheading": "Aquí están algunas de las certificaciones que he obtenido para mejorar mis habilidades y conocimientos.",
+    "issuer": "Emisor:",
+    "issued": "Emitido:",
+    "credentialsList": {
+      "c1": {
+        "issueDate": "Diciembre 2021"
+      },
+      "c2": {
+        "issueDate": "Marzo 2022"
+      },
+      "c3": {
+        "issueDate": "Junio 2023"
+      }
+    },
+    "btn": "Ver Credencial"
+  }
+}

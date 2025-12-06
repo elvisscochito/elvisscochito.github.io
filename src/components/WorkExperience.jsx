@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import softtek from '../assets/softtek.svg';
 import tec from '../assets/tecnologico.png';
 import styles from '../styles/WorkExperience.module.css';
 import WorkExperienceCard from './WorkExperienceCard.jsx';
 
 const WorkExperience = () => {
-  const [experiences, setExperiences] = useState([
+  const { t, i18n } = useTranslation("global");
+
+  const buildExperiences = (tFn) => [
     /* {
       id: 1,
       title: 'Software Engineer',
@@ -21,39 +24,45 @@ const WorkExperience = () => {
     }, */
     {
       id: 2,
-      title: 'DevOps Engineer',
+      title: tFn('WorkExperience.softtekTitle'),
       company: 'Softtek',
       logo: softtek,
-      type: 'Internship',
-      date: 'October 2024 - May 2025',
+      type: tFn('WorkExperience.softtekType'),
+      date: tFn('WorkExperience.softtekDate'),
       duration: '8 months',
-      location: 'Monterrey, Nuevo León, Mexico',
-      locationType: 'Remote',
+      location: tFn('WorkExperience.softtekLocation'),
+      locationType: tFn('WorkExperience.softtekLocationType'),
       responsibilities: [
-        'Developed CI/CD pipelines, managed cloud infrastructure, deployed containerized applications and implemented monitoring solutions to ensure eﬃcient and reliable software delivery.'
+        tFn('WorkExperience.softtekResponsibilities.r1')
       ]
     },
     {
       id: 3,
-      title: 'On Campus Job Intern Program',
+      title: tFn('WorkExperience.tecTitle'),
       company: 'Tecnológico de Monterrey',
       logo: tec,
-      type: 'Internship',
-      date: 'February 2022 - August 2023',
-      duration: '1 year 7 months',
-      location: 'Cuernavaca, Morelos, Mexico',
-      locationType: 'On-Site',
+      type: tFn('WorkExperience.tecType'),
+      date: tFn('WorkExperience.tecDate'),
+      duration: tFn('WorkExperience.tecDuration'),
+      location: tFn('WorkExperience.tecLocation'),
+      locationType: tFn('WorkExperience.tecLocationType'),
       responsibilities: [
-        'Gained a strong design sense, applied to webs and mobile User Interfaces designs in academic projects.'
+        tFn('WorkExperience.tecResponsibilities.r1')
       ]
     }
-  ]);
+  ];
+
+  const [experiences, setExperiences] = useState(() => buildExperiences(t));
+
+  useEffect(() => {
+    setExperiences(buildExperiences(t));
+  }, [i18n.language, t]);
 
   return (
     <section id="work-experience" className={styles.workExperience}>
       <header className={styles.header}>
-        <h2 className={styles.workExperienceHeading}>Work Experience</h2>
-        <span>Where I've applied my skills in real-world scenarios.</span>
+        <h2 className={styles.workExperienceHeading}>{t("WorkExperience.heading")}</h2>
+        <span>{t("WorkExperience.subheading")}</span>
       </header>
       <div className={styles.experiencesContainer}>
         {/* <hr className={styles.line} /> */}

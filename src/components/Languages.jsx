@@ -1,26 +1,28 @@
 /* import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
+import { useTranslation } from 'react-i18next';
 import mexico from '../assets/mexicoflag.svg';
 import usa from '../assets/usaflag.webp';
 import styles from '../styles/Languages.module.css';
 
 const Languages = () => {
+  const { t } = useTranslation("global");
   return (
     <section id='languages' className={styles.languagesSection}>
       <header className={styles.header}>
-        <h2 className={styles.languagesHeading}>Languages{/* <FontAwesomeIcon icon={faLanguage} className={styles.icon} /> */}</h2>
-        <span>Here are the languages I speak and my proficiency levels.</span>
+        <h2 className={styles.languagesHeading}>{t("Languages.heading")}{/* <FontAwesomeIcon icon={faLanguage} className={styles.icon} /> */}</h2>
+        <span>{t("Languages.subheading")}</span>
       </header>
       <ul className={styles.languagesList}>
         <li>
           <img src={mexico} alt="Mexico Flag" className={styles.flag} />
-          <h3 className={styles.languageName}>Spanish</h3>
-          <span className={styles.proficiency}>Native Proficiency</span>
+          <h3 className={styles.languageName}>{t("Languages.languagesList.l1.name")}</h3>
+          <span className={styles.proficiency}>{t("Languages.languagesList.l1.proficiency")}</span>
         </li>
         <li>
           <img src={usa} alt="USA Flag" className={styles.flag} />
-          <h3 className={styles.languageName}>English</h3>
-          <span className={styles.proficiency}>B2 Intermediate</span>
+          <h3 className={styles.languageName}>{t("Languages.languagesList.l2.name")}</h3>
+          <span className={styles.proficiency}>{t("Languages.languagesList.l2.proficiency")}</span>
         </li>
       </ul>
     </section>
