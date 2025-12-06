@@ -177,6 +177,14 @@ ul.navbarContainer li.navbarItem:has(button) {
       gap: 1rem;
       z-index: 20;
 
+      li.navbarItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        /* width: 100%; */
+      }
+
       li.navbarItem:first-child {
         button.menuButton {
           font-size: 1.8rem;
@@ -187,12 +195,22 @@ ul.navbarContainer li.navbarItem:has(button) {
         }
       }
 
-      li.navbarItem:last-child a {
+      li.navbarItem:nth-last-of-type(2) a {
         color: light-dark(#fff, #000);
         font-weight: bold;
         background-color: light-dark(#18181B, #f0f0f0);
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
+      }
+
+      li.navbarItem:last-child {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem !important;
+        /* width: 100%; */
       }
     }
 

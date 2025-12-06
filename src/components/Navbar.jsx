@@ -1,4 +1,4 @@
-import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
+import { faBars, /* faLanguage,  */ faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -167,6 +167,10 @@ const Navbar = () => {
         </li> */}
         <li className={styles.navbarItem}>
           <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>{t('Navbar.contact')}</a>
+        </li>
+        <li className={styles.navbarItem}>
+          {/* <FontAwesomeIcon icon={faLanguage} /> */}
+          {/* Toggle  */}{t('Navbar.language')} {/* |  */}<ToggleLanguage />{/*  | */}
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>
