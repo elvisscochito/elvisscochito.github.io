@@ -321,5 +321,23 @@
         "description": "Playing video games to unwind and have fun."
       }
     }
+  },
+  "SocialProof": {
+    "heading": "Social Proof",
+    "subheading": "Here are some testimonials from my colleagues and clients.",
+    "proofsList": {
+      "p1": {
+        "name": "Misael Delgado",
+        "position": "Data Scientist",
+        "company": "Tech Solutions Inc.",
+        "comment": "His technical skills in data analysis, statistical modeling, and programming languages such as Python and SQL are truly commendable."
+      },
+      "p2": {
+        "name": "John Doe",
+        "position": "Senior Developer at Web Innovations",
+        "comment": "Working with Elvis has been a pleasure. He is a team player who communicates effectively and contributes valuable ideas. Elvis consistently delivers high-quality work on time. His problem-solving skills and attention to detail are exceptional. Elvis exceeded our expectations with his innovative approach and dedication to our project. Highly recommended!"
+      }
+    },
+    "btn": "View Linkedin Profile"
   }
 }

@@ -91,7 +91,7 @@
     "Hobbies": "Pasatiempos e Intereses",
     "Projects": "Proyectos",
     "work": "Trabajo",
-    "Social": "Opiniones",
+    "Social": "Testimonios",
     "contact": "Contacto",
     "quickContact": "Contacto Rápido",
     "language": "Idioma:"
@@ -323,5 +323,17 @@
         "description": "Juego videojuegos en mi tiempo libre como una forma de entretenimiento y para relajarme."
       }
     }
+  },
+  "SocialProof": {
+    "heading": "Testimonios",
+    "subheading": "Lo que otros compañeros y clientes dicen sobre mí.",
+    "proofsList": {
+      "p1": {
+        "position": "Científico de Datos",
+        "company": "Empresa XYZ",
+        "comment": "Sus habilidades técnicas en análisis de datos, modelado estadístico y lenguajes de programación como Python y SQL son realmente encomiables."
+      }
+    },
+    "btn": "Ver Perfil de LinkedIn"
   }
 }
