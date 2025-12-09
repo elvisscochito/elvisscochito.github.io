@@ -5,7 +5,8 @@ const Modal = forwardRef((_, ref) => {
   const modalRef = useRef(null);
   const [content, setContent] = useState({
     title: "",
-    message: ""
+    message: "",
+    btn: ""
   });
 
   useImperativeHandle(ref, () => ({
@@ -49,7 +50,7 @@ const Modal = forwardRef((_, ref) => {
       <p>{content.message}</p>
 
       <button className={styles.closeModalBtn} onClick={() => modalRef.current?.close()}>
-        Close
+        {content.btn || "Close"}
       </button>
     </dialog>
   )
