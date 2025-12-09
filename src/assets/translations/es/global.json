@@ -254,5 +254,30 @@
       }
     },
     "btn": "Ver Credencial"
+  },
+  "Publications": {
+    "heading": "Publicaciones",
+    "subheading": "Una colección de mis trabajos publicados y contribuciones al campo.",
+    "published": "Publicado en:",
+    "by": "Por:",
+    "publicationsList": {
+      "p1": {
+        "publicationDate": "31 de Octubre de 2021",
+        "readTime": "4 minutos de lectura"
+      },
+      "p2": {
+        "publicationDate": "20 de Septiembre de 2022",
+        "readTime": "3 minutos de lectura"
+      },
+      "p3": {
+        "publicationDate": "6 de Febrero de 2023",
+        "readTime": "2 minutos de lectura"
+      }
+    },
+    "btn": "Leer Más"
+  },
+  "ActivitiesAndSocieties": {
+    "heading": "Actividades y Sociedades",
+    "subheading": "Algunas de las actividades y sociedades en las que he estado involucrado."
   }
 }

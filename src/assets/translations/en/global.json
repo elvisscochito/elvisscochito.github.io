@@ -252,5 +252,44 @@
       }
     },
     "btn": "View Credential"
+  },
+  "Publications": {
+    "heading": "Publications",
+    "subheading": "A collection of my published works and contributions to the field.",
+    "published": "Published in:",
+    "by": "By:",
+    "publicationsList": {
+      "p1": {
+        "publicationDate": "October 31, 2021",
+        "readTime": "4 min read"
+      },
+      "p2": {
+        "publicationDate": "September 20, 2022",
+        "readTime": "3 min read"
+      },
+      "p3": {
+        "publicationDate": "February 6, 2023",
+        "readTime": "2 min read"
+      }
+    },
+    "btn": "Read More"
+  },
+  "ActivitiesAndSocieties": {
+    "heading": "Activities & Societies",
+    "subheading": "Some of the activities and societies I've been involved with.",
+    "activitiesList": {
+      "a1": {
+        "name": "SEITC (Computer Science Student Society)",
+        "role": "Coordinator",
+        "duration": "2024 - 2025",
+        "description": "Engaged in weekly meetings, coding sessions, and tech talks to enhance programming skills and network with fellow enthusiasts. Organize workshops, hackathons, and guest lectures to foster a collaborative learning environment among computer science students. Participate in coding challenges, hackathons, and collaborative projects to enhance programming skills."
+      },
+      "a2": {
+        "name": "SwiftTec (Student group for Developers of Apple Technologies)",
+        "role": "Director",
+        "duration": "2024 - 2025",
+        "description": "Assisted in teaching coding fundamentals to beginners and helped organize bootcamp events. Organize workshops, guest lectures, and networking events focused on data science and analytics. Facilitate collaboration among members on data-driven projects."
+      }
+    }
   }
 }

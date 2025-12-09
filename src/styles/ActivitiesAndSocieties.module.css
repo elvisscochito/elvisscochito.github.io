@@ -64,6 +64,14 @@ section.activitiesAndSocieties {
         font-size: 1.2rem;
       }
 
+      p.activityRoleDuration {
+        font-size: 1rem;
+        font-style: italic;
+        margin-top: 0.5rem;
+        font-weight: 400;
+        color: var(--text-aux-color);
+      }
+
       a.learnMoreLink {
         text-decoration: none;
         font-size: 1.2rem;
@@ -113,6 +121,10 @@ section.activitiesAndSocieties {
         }
 
         p.activityDescription {
+          font-size: 0.9rem;
+        }
+
+        p.activityRoleDuration {
           font-size: 0.9rem;
         }
 
