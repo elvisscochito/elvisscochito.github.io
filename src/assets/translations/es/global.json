@@ -91,7 +91,7 @@
     "Hobbies": "Pasatiempos e Intereses",
     "Projects": "Proyectos",
     "work": "Trabajo",
-    "Social": "Opiniones",
+    "Social": "Testimonios",
     "contact": "Contacto",
     "quickContact": "Contacto Rápido",
     "language": "Idioma:"
@@ -254,5 +254,86 @@
       }
     },
     "btn": "Ver Credencial"
+  },
+  "Publications": {
+    "heading": "Publicaciones",
+    "subheading": "Una colección de mis trabajos publicados y contribuciones al campo.",
+    "published": "Publicado en:",
+    "by": "Por:",
+    "publicationsList": {
+      "p1": {
+        "publicationDate": "31 de Octubre de 2021",
+        "readTime": "4 minutos de lectura"
+      },
+      "p2": {
+        "publicationDate": "20 de Septiembre de 2022",
+        "readTime": "3 minutos de lectura"
+      },
+      "p3": {
+        "publicationDate": "6 de Febrero de 2023",
+        "readTime": "2 minutos de lectura"
+      }
+    },
+    "btn": "Leer Más"
+  },
+  "ActivitiesAndSocieties": {
+    "heading": "Actividades y Sociedades",
+    "subheading": "Algunas de las actividades y sociedades en las que he estado involucrado.",
+    "activitiesList": {
+      "a1": {
+        "name": "SEITC - Sociedad de Estudiantes de Ingeniería en Tecnologías Computacionales",
+        "role": "Coordinador",
+        "duration": "2024 - 2025",
+        "description": "Lideré y coordiné actividades y eventos para la sociedad estudiantil, fomentando la participación y el desarrollo profesional entre los miembros."
+      },
+      "a2": {
+        "name": "SwiftTec - Club de Desarrollo en Swift",
+        "role": "Director",
+        "duration": "2024 - 2025",
+        "description": "Dirigí el club enfocado en el desarrollo de aplicaciones utilizando Swift, organizando talleres y proyectos colaborativos para mejorar las habilidades de los miembros."
+      }
+    }
+  },
+  "HobbiesAndInterests": {
+    "heading": "Pasatiempos e Intereses",
+    "subheading": "Más allá de la programación, estas son algunas de mis pasiones.",
+    "hobbiesList": {
+      "h1": {
+        "name": "Programar",
+        "description": "Me apasiona la codificación y disfruto trabajando en proyectos personales para mejorar mis habilidades."
+      },
+      "h2": {
+        "name": "Fotografía",
+        "description": "Me gusta capturar momentos y paisajes a través de la fotografía, explorando diferentes técnicas y estilos."
+      },
+      "h3": {
+        "name": "Viajar",
+        "description": "Me encanta explorar nuevos lugares y culturas, lo que me permite aprender y crecer como persona."
+      },
+      "h4": {
+        "name": "Leer",
+        "description": "Disfruto leer libros de diversos géneros, desde ficción hasta no ficción, para expandir mi conocimiento y perspectiva."
+      },
+      "h5": {
+        "name": "Crear Contenido",
+        "description": "Me gusta crear contenido atractivo (fotos, videos, blogs) en varias plataformas para compartir conocimientos, inspirar a otros y expresar mi creatividad."
+      },
+      "h6": {
+        "name": "Videojuegos",
+        "description": "Juego videojuegos en mi tiempo libre como una forma de entretenimiento y para relajarme."
+      }
+    }
+  },
+  "SocialProof": {
+    "heading": "Testimonios",
+    "subheading": "Lo que otros compañeros y clientes dicen sobre mí.",
+    "proofsList": {
+      "p1": {
+        "position": "Científico de Datos",
+        "company": "Empresa XYZ",
+        "comment": "Sus habilidades técnicas en análisis de datos, modelado estadístico y lenguajes de programación como Python y SQL son realmente encomiables."
+      }
+    },
+    "btn": "Ver Perfil de LinkedIn"
   }
 }

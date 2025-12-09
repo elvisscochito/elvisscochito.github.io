@@ -3,10 +3,10 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/SocialProof.module.css';
 
-const SocialProofCard = ({ name, position, comment, profile, linkedin }) => {
+const SocialProofCard = ({ name, position, comment, profile, linkedin, tooltipText }) => {
   return (
     <div className={styles.socialProofCard}>
-      <a href={linkedin} target="_blank" rel="noopener noreferrer" className={styles.link} data-tooltip-id="global-tooltip" data-tooltip-content="View LinkedIn Profile">
+      <a href={linkedin} target="_blank" rel="noopener noreferrer" className={styles.link} data-tooltip-id="global-tooltip" data-tooltip-content={tooltipText}>
         <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
       </a>
       <img src={profile} alt="Social Proof" className={styles.profilePicture} />

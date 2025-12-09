@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import misael from '../assets/misael.jpeg';
 import styles from '../styles/SocialProof.module.css';
 import SocialProofCard from './SocialProofCard';
 
 const SocialProof = () => {
-  const [proofs, setProofs] = useState([
+  const { t, i18n } = useTranslation("global");
+
+  const buildProofs = (tfn) => [
     {
       id: 1,
       profile: misael,
       linkedin: 'https://www.linkedin.com/in/misael-delgado/',
       name: 'Misael Delgado',
-      position: 'Data Scientist',
-      comment: 'His technical skills in data analysis, statistical modeling, and programming languages such as Python and SQL are truly commendable.'
+      position: tfn('SocialProof.proofsList.p1.position'),
+      comment: tfn('SocialProof.proofsList.p1.comment')
     }/* ,
     {
       id: 2,
@@ -25,13 +28,19 @@ const SocialProof = () => {
       position: 'CTO at TechCorp',
       comment: 'Elvis is an exceptional developer who consistently delivers high-quality work.'
     } */
-  ]);
+  ];
+
+  const [proofs, setProofs] = useState(() => buildProofs(t));
+
+  useEffect(() => {
+    setProofs(buildProofs(t));
+  }, [i18n.language, t]);
 
   return (
     <section id='social-proof' className={styles.socialProof}>
       <header className={styles.header}>
-        <h2 className={styles.socialProofHeading}>Social Proof</h2>
-        <span>Here are some testimonials from my colleagues and clients.</span>
+        <h2 className={styles.socialProofHeading}>{t("SocialProof.heading")}</h2>
+        <span>{t("SocialProof.subheading")}{/* What others say about me. */}</span>
       </header>
       <div className={styles.proofsContainer}>
         {
@@ -43,6 +52,7 @@ const SocialProof = () => {
               name={proof.name}
               position={proof.position}
               comment={proof.comment}
+              tooltipText={t("SocialProof.btn")}
             />
           ))
         }

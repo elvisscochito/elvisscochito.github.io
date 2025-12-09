@@ -341,7 +341,7 @@ section.home {
     img.reactLogo {
       position: absolute;
       top: 10%;
-      left: -15%;
+      left: -10%;
       width: 8rem;
       transform: rotate(40deg);
       -webkit-transform: rotate(40deg);
@@ -556,7 +556,7 @@ section.home {
 
       img.reactLogo {
         top: 10%;
-        left: 5%;
+        left: 10%;
         width: 5rem;
       }
 

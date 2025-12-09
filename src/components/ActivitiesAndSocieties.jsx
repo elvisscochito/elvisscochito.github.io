@@ -1,31 +1,45 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import seitc from '../assets/seitc_logo.jpeg';
 import swifttec from '../assets/swift.png';
 import styles from '../styles/ActivitiesAndSocieties.module.css';
 import ActivitiesAndSocietiesCard from './ActivitiesAndSocietiesCard';
 
 const ActivitiesAndSocieties = () => {
-  const [activities, setActivities] = useState([
+  const { t, i18n } = useTranslation("global");
+
+  const buildActivities = (tFn) => [
     {
       id: 1,
-      name: 'Board Member in SEITC (Computer Science Student Society)',
-      description: 'Engaged in weekly meetings, coding sessions, and tech talks to enhance programming skills and network with fellow enthusiasts.',
+      name: t('ActivitiesAndSocieties.activitiesList.a1.name'),
+      role: t('ActivitiesAndSocieties.activitiesList.a1.role'),
+      duration: t('ActivitiesAndSocieties.activitiesList.a1.duration'),
+      description: t('ActivitiesAndSocieties.activitiesList.a1.description'),
       logo: seitc,
       link: 'https://www.linkedin.com/company/seitc/posts/?feedView=all'
     },
     {
       id: 2,
-      name: 'SwiftTec (Student group for Developers of Apple Technologies)',
-      description: 'Assisted in teaching coding fundamentals to beginners and helped organize bootcamp events.',
+      name: t('ActivitiesAndSocieties.activitiesList.a2.name'),
+      role: t('ActivitiesAndSocieties.activitiesList.a2.role'),
+      duration: t('ActivitiesAndSocieties.activitiesList.a2.duration'),
+      description: t('ActivitiesAndSocieties.activitiesList.a2.description'),
       logo: swifttec,
       link: 'https://www.linkedin.com/company/swifttecc/posts/?feedView=all'
     }
-  ]);
+  ];
+
+  const [activities, setActivities] = useState(buildActivities(t));
+
+  useEffect(() => {
+    setActivities(buildActivities(t));
+  }, [i18n.language, t]);
+
   return (
     <section id='activities-and-societies' className={styles.activitiesAndSocieties}>
       <header className={styles.header}>
-        <h2 className={styles.sectionTitle}>Activities & Societies</h2>
-        <span className={styles.sectionSubtitle}>Some of the activities and societies I've been involved with.</span>
+        <h2 className={styles.sectionTitle}>{t("ActivitiesAndSocieties.heading")}</h2>
+        <span className={styles.sectionSubtitle}>{t("ActivitiesAndSocieties.subheading")}</span>
       </header>
 
       <ul className={styles.activitiesList}>
@@ -33,6 +47,8 @@ const ActivitiesAndSocieties = () => {
           <li key={activity.id} className={styles.activityItem}>
             <ActivitiesAndSocietiesCard
               name={activity.name}
+              role={activity.role}
+              duration={activity.duration}
               description={activity.description}
               logo={activity.logo}
               link={activity.link}

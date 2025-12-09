@@ -252,5 +252,92 @@
       }
     },
     "btn": "View Credential"
+  },
+  "Publications": {
+    "heading": "Publications",
+    "subheading": "A collection of my published works and contributions to the field.",
+    "published": "Published in:",
+    "by": "By:",
+    "publicationsList": {
+      "p1": {
+        "publicationDate": "October 31, 2021",
+        "readTime": "4 min read"
+      },
+      "p2": {
+        "publicationDate": "September 20, 2022",
+        "readTime": "3 min read"
+      },
+      "p3": {
+        "publicationDate": "February 6, 2023",
+        "readTime": "2 min read"
+      }
+    },
+    "btn": "Read More"
+  },
+  "ActivitiesAndSocieties": {
+    "heading": "Activities & Societies",
+    "subheading": "Some of the activities and societies I've been involved with.",
+    "activitiesList": {
+      "a1": {
+        "name": "SEITC (Computer Science Student Society)",
+        "role": "Coordinator",
+        "duration": "2024 - 2025",
+        "description": "Engaged in weekly meetings, coding sessions, and tech talks to enhance programming skills and network with fellow enthusiasts."
+      },
+      "a2": {
+        "name": "SwiftTec (Student group for Developers of Apple Technologies)",
+        "role": "Director",
+        "duration": "2024 - 2025",
+        "description": "Assisted in teaching coding fundamentals to beginners and helped organize bootcamp events."
+      }
+    }
+  },
+  "HobbiesAndInterests": {
+    "heading": "Hobbies & Interests",
+    "subheading": "Beyond coding, these are some of my passions.",
+    "hobbiesList": {
+      "h1": {
+        "name": "Coding",
+        "description": "Exploring new programming languages and frameworks by building innovative projects that challenge and enhance my skills and creativity."
+      },
+      "h2": {
+        "name": "Photography",
+        "description": "Capturing moments through the lens, exploring different styles and techniques to create compelling visual stories. Capturing moments and telling stories through the lens, experimenting with different styles and techniques to improve my craft."
+      },
+      "h3": {
+        "name": "Traveling",
+        "description": "Exploring new cultures, cuisines, and landscapes to broaden my perspective of the world and gain new experiences."
+      },
+      "h4": {
+        "name": "Reading",
+        "description": "Diving into a variety of genres, from personal development to business growth, to expand my knowledge and imagination."
+      },
+      "h5": {
+        "name": "Content creation",
+        "description": "Creating engaging content (photos, videos, blogs) across various platforms to share knowledge, inspire others, and express creativity."
+      },
+      "h6": {
+        "name": "Gaming",
+        "description": "Playing video games to unwind and have fun."
+      }
+    }
+  },
+  "SocialProof": {
+    "heading": "Social Proof",
+    "subheading": "Here are some testimonials from my colleagues and clients.",
+    "proofsList": {
+      "p1": {
+        "name": "Misael Delgado",
+        "position": "Data Scientist",
+        "company": "Tech Solutions Inc.",
+        "comment": "His technical skills in data analysis, statistical modeling, and programming languages such as Python and SQL are truly commendable."
+      },
+      "p2": {
+        "name": "John Doe",
+        "position": "Senior Developer at Web Innovations",
+        "comment": "Working with Elvis has been a pleasure. He is a team player who communicates effectively and contributes valuable ideas. Elvis consistently delivers high-quality work on time. His problem-solving skills and attention to detail are exceptional. Elvis exceeded our expectations with his innovative approach and dedication to our project. Highly recommended!"
+      }
+    },
+    "btn": "View Linkedin Profile"
   }
 }

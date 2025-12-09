@@ -1,15 +1,18 @@
 import { faGithub, faGoodreads, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faBook, faCode, faPlane, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/HobbiesAndInterests.module.css';
 
 const HobbiesAndInterests = () => {
-  const [hobbies, setHobbies] = useState([
+  const { t, i18n } = useTranslation("global");
+
+  const buildHobbies = (tFn) => [
     {
       id: 1,
-      name: 'Coding',
-      description: 'Exploring new programming languages and frameworks by building innovative projects that challenge and enhance my skills and creativity.',
+      name: tFn('HobbiesAndInterests.hobbiesList.h1.name'),
+      description: tFn('HobbiesAndInterests.hobbiesList.h1.description'),
       icon: faCode,
       link: 'https://github.com/elvisscochito',
       platformName: 'GitHub',
@@ -17,14 +20,14 @@ const HobbiesAndInterests = () => {
     },
     /* {
       id: 2,
-      name: 'Photography',
-      description: 'Capturing moments through the lens, exploring different styles and techniques to create compelling visual stories.',
+      name: tFn('HobbiesAndInterests.hobbiesList.h2.name'),
+      description: tFn('HobbiesAndInterests.hobbiesList.h2.description'),
       icon: faCode
     }, */
     {
       id: 3,
-      name: 'Traveling',
-      description: 'Exploring new cultures, cuisines, and landscapes to broaden my perspective of the world and gain new experiences.',
+      name: tFn('HobbiesAndInterests.hobbiesList.h3.name'),
+      description: tFn('HobbiesAndInterests.hobbiesList.h3.description'),
       icon: faPlane,
       link: 'https://www.instagram.com/elvisscochito',
       platformName: 'Instagram',
@@ -32,8 +35,8 @@ const HobbiesAndInterests = () => {
     },
     {
       id: 4,
-      name: 'Reading',
-      description: 'Diving into a variety of genres, from fiction to non-fiction, to expand my knowledge and imagination.',
+      name: tFn('HobbiesAndInterests.hobbiesList.h4.name'),
+      description: tFn('HobbiesAndInterests.hobbiesList.h4.description'),
       icon: faBook,
       link: 'https://www.goodreads.com/user/show/12345678-elvisscochito',
       platformName: 'Goodreads',
@@ -42,20 +45,26 @@ const HobbiesAndInterests = () => {
     /* (videography, photography, blogging, podcasting), podcast */
     {
       id: 5,
-      name: 'Content creation',
-      description: 'Creating engaging content (photos, videos, blogs) across various platforms to share knowledge, inspire others, and express creativity.',
+      name: tFn('HobbiesAndInterests.hobbiesList.h5.name'),
+      description: tFn('HobbiesAndInterests.hobbiesList.h5.description'),
       icon: faPlay,
       link: 'https://medium.com/@elvisscochito',
       platformName: 'Medium',
       platformIcon: faMedium
     }
-  ]);
+  ];
+
+  const [hobbies, setHobbies] = useState(buildHobbies(t));
+
+  useEffect(() => {
+    setHobbies(buildHobbies(t));
+  }, [i18n.language, t]);
 
   return (
     <section id='hobbies-and-interests' className={styles.hobbiesSection}>
       <header className={styles.header}>
-        <h2 className={styles.sectionTitle}>Hobbies & Interests</h2>
-        <span className={styles.sectionSubtitle}>Beyond coding, these are some of my passions.</span>
+        <h2 className={styles.sectionTitle}>{t("HobbiesAndInterests.heading")}</h2>
+        <span className={styles.sectionSubtitle}>{t("HobbiesAndInterests.subheading")}</span>
       </header>
       <ul className={styles.hobbiesList}>
         {hobbies.map(hobby => (
