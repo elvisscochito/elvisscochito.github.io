@@ -346,6 +346,51 @@
     },
     "btn": "View Linkedin Profile"
   },
+  "Contact": {
+    "heading": "Let's build something together.",
+    "subheading": "Feel free to reach me out for job opportunities!",
+    "formData": {
+      "subject": "Contacting for Job Opportunity (via portfolio)",
+      "message": "I want to get in touch with you regarding a job opportunity..."
+    },
+    "note": "Note:",
+    "alertErrorWhatsapp": "Error sending message via WhatsApp API.",
+    "alertEmailDesktop": "Desktop email applications may not support pre-filled body content. Please ensure your email client is configured correctly.",
+    "alertEmailWeb": "Web email clients may not support pre-filled body content. Please ensure your email client is configured correctly.",
+    "alertErrorEmail": "Error sending message.",
+    "form": {
+      "sendThrough": "Send through",
+      "desktop": "Desktop App",
+      "web": "Web Client",
+      "url": "URL Link Link",
+      "cloud": "Cloud API",
+      "title": "Title",
+      "subject": "Subject",
+      "subjectPlaceholder": "Type Your Custom Subject Here, e.g. Job Inquiry",
+      "titlePlaceholder": "Type Your Custom Title Here. e.g. Job Inquiry",
+      "name": "Name:",
+      "namePlaceholder": "Type Your Name Here, e.g. John Doe",
+      "email": "From Email:",
+      "emailPlaceholder": "Type Your Email Address Here, e.g. example@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Type Your Phone Number Here, e.g. +1234567890",
+      "message": "Message",
+      "bodyContent": "Body Content",
+      "whatsappMessage": "Type Your WhatsApp Message Here...",
+      "emailMessage": "Type Your Email Message Here...",
+      "send": "Send"
+    },
+    "modalWhatsApp": {
+      "title": "Message sent successfully via WhatsApp API!",
+      "message": "I will reach out to you soon!",
+      "closeBtn": "Close"
+    },
+    "modalEmail": {
+      "title": "Message sent successfully!",
+      "message": "I will reach out to you soon!",
+      "closeBtn": "Close"
+    }
+  },
   "QuickContact": {
     "heading": "Quick two-step contact",
     "subheading": "If you would like to get in touch but don't want to fill the previous form please send me your email or phone number and I will contact you.",

@@ -2,10 +2,12 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faHeading, faMessage, faPaperPlane, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Contact.module.css';
 import Modal from './Modal';
 
 const Contact = () => {
+  const { t } = useTranslation("global");
   const modalRef = useRef(null);
   const formRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
@@ -14,11 +16,11 @@ const Contact = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const [formData, setFormData] = useState({
-    subject: 'Contacting for Job Opportunity (via portfolio)',
+    subject: t('Contact.formData.subject'),
     name: '',
     email: '',
     phone: '',
-    message: 'I want to get in touch with you regarding a job opportunity...',
+    message: t('Contact.formData.message'),
   });
 
   const toggleStatus = () => {
@@ -67,16 +69,16 @@ const Contact = () => {
               /* alert('Message sent successfully via WhatsApp API!'); */
 
               modalRef.current?.open(
-                'Message sent successfully via WhatsApp API!',
-                'I will reach out to you soon!'
+                t('Contact.modalWhatsApp.title'),
+                t('Contact.modalWhatsApp.message')
               );
 
               setFormData({
-                subject: 'Contacting for job Opportunity (via portfolio)',
+                subject: t('Contact.formData.subject'),
                 name: '',
                 email: '',
                 phone: '',
-                message: 'I want to get in touch with you regarding a job opportunity...',
+                message: t('Contact.formData.message'),
               });
               /* close modal automatically after 3 seconds */
               setTimeout(() => {
@@ -85,7 +87,7 @@ const Contact = () => {
             }
           } catch (error) {
             console.error('Error:', error);
-            alert('Error sending message via WhatsApp API.');
+            alert(t('Contact.alertErrorWhatsapp'));
             /* modalRef.current?.open(
               'Error',
               'There was an error sending your message via WhatsApp API. Please try again later.'
@@ -99,7 +101,7 @@ const Contact = () => {
         window.open(whatsappURL, '_blank');
       }
     } else if (isChecked) {
-      alert('Note: Desktop email applications may not support pre-filled body content. Please ensure your email client is configured correctly.');
+      alert(t('Contact.alertEmailDesktop'));
 
       /* modalRef.current?.open(
         'Note',
@@ -109,12 +111,15 @@ const Contact = () => {
       const mailtoLink = `mailto:contact@elvirodominguez.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello, Elviro:\n\nMy name is ${name}. ${message}`)}`;
       window.open(mailtoLink, '_blank');
     } else {
-      alert('Note: Web email clients may not support pre-filled body content. Please ensure your email client is configured correctly.');
+      /* alert(t('Contact.alertEmailWeb')); */
 
       /* modalRef.current?.open(
-        'Note',
-        'Web email clients may not support pre-filled body content. Please ensure your email client is configured correctly.'
-      ); */
+        t('Contact.note'),
+        t('Contact.alertEmailDesktop')
+      );
+      setTimeout(() => {
+        modalRef.current?.close();
+      }, 3000); */
 
       const postEmail = async () => {
         try {
@@ -130,16 +135,16 @@ const Contact = () => {
             /* alert('Message sent successfully!'); */
 
             modalRef.current?.open(
-              'Message sent successfully',
-              'I will reach out to you soon!'
+              t('Contact.modalEmail.title'),
+              t('Contact.modalEmail.message')
             );
 
             setFormData({
-              subject: 'Contacting for Job Opportunity (via portfolio)',
+              subject: t('Contact.formData.subject'),
               name: '',
               email: '',
               phone: '',
-              message: 'I want to get in touch with you regarding a job opportunity...',
+              message: t('Contact.formData.message'),
             });
 
             /* close modal automatically after 3 seconds */
@@ -147,7 +152,7 @@ const Contact = () => {
               modalRef.current?.close();
             }, 3000);
           } else {
-            alert('Error sending message.');
+            alert(t('Contact.alertErrorEmail'));
             /* modalRef.current?.open(
               'Error',
               'There was an error sending your message. Please try again later.'
@@ -155,7 +160,7 @@ const Contact = () => {
           }
         } catch (error) {
           console.error('Error:', error);
-          alert('Error sending message.');
+          alert(t('Contact.alertErrorEmail'));
           /* modalRef.current?.open(
             'Error',
             'There was an error sending your message. Please try again later.'
@@ -200,26 +205,26 @@ const Contact = () => {
   return (
     <section id="contact" className={styles.contact}>
       <header className={styles.header}>
-        <h2 className={styles.contactHeading}>Let&apos;s build something together.</h2>
-        <span>Feel free to reach me out for job opportunities!</span>
+        <h2 className={styles.contactHeading}>{t('Contact.heading')}</h2>
+        <span>{t('Contact.subheading')}</span>
       </header>
       <form className={styles.contactForm} /* action="https://formspree.io/f/xgvpgydd" method="POST" */ onSubmit={handleSubmit} ref={formRef} /* onChange={() => setIsButtonDisabled(!formRef.current?.checkValidity())} */>
 
         <fieldset className={styles.fieldset}>
           {/* <legend className={styles.legend}>Contact Method</legend> */}
-          <label htmlFor="status" className={styles.statusLabelName}>Send through {isActive ? 'WhatsApp' : 'Email'}:&nbsp;
+          <label htmlFor="status" className={styles.statusLabelName}>{t('Contact.form.sendThrough')} {isActive ? 'WhatsApp' : 'Email'}:&nbsp;
             <input type="checkbox" id="status" name="status" onChange={toggleStatus} checked={isActive} className={styles.statusCheckbox} />
             <label htmlFor="status" className={styles.statusLabel}></label>
           </label>
 
           {
             !isActive ? (
-              <label htmlFor="client" className={styles.checkboxLabelName}>({isChecked ? 'Desktop App' : 'Web Client'})&nbsp;
+              <label htmlFor="client" className={styles.checkboxLabelName}>({isChecked ? t('Contact.form.desktop') : t('Contact.form.web')})&nbsp;
                 <input type="checkbox" id="client" name="client" onChange={toggleCheckbox} checked={isChecked} className={styles.checkbox} />
                 <label htmlFor="client" className={styles.checkboxLabel}></label>
               </label>
             ) : (
-              <label htmlFor="client" className={styles.checkboxLabelName}>({isCheckedWhatsapp ? 'URL Link' : 'Cloud API'})&nbsp;
+              <label htmlFor="client" className={styles.checkboxLabelName}>({isCheckedWhatsapp ? t('Contact.form.url') : t('Contact.form.cloud')})&nbsp;
                 <input type="checkbox" id="client" name="client" onChange={toggleChecked} checked={isCheckedWhatsapp} className={styles.checkbox} />
                 <label htmlFor="client" className={`${styles.checkboxLabel} ${styles.whatsapp}`}></label>
               </label>
@@ -228,35 +233,35 @@ const Contact = () => {
         </fieldset>
 
         <fieldset className={styles.fieldset}>
-          <label htmlFor="subject">                <FontAwesomeIcon icon={faHeading} className={styles.icon} />&nbsp;{isActive ? 'Title' : 'Subject'}:</label>
-          <input type="text" id="subject" name="subject" placeholder='Type Your Custom Subject Here, e.g. Job Inquiry' /* title='Enter the subject/title of your email/message' */ value={formData.subject} onChange={handleChange} required />
+          <label htmlFor="subject">                <FontAwesomeIcon icon={faHeading} className={styles.icon} />&nbsp;{isActive ? t('Contact.form.title') : t('Contact.form.subject')}:</label>
+          <input type="text" id="subject" name="subject" placeholder={isActive ? t('Contact.form.titlePlaceholder') : t('Contact.form.subjectPlaceholder')} /* title='Enter the subject/title of your email/message' */ value={formData.subject} onChange={handleChange} required />
         </fieldset>
 
         <fieldset className={styles.fieldset}>
-          <label htmlFor="name"> <FontAwesomeIcon icon={faUser} className={styles.icon} />&nbsp;Name:</label>
-          <input type="text" id="name" name="name" placeholder='Type Your Name Here, e.g. John Doe' /* title='Enter your full name' */ value={formData.name} /* onChange={handleChange} */ onInput={autoCapitalizeWords} minLength={3} maxLength={32} /* pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$" */ /* onInvalid={e => e.target.setCustomValidity('Please enter a valid name.')} */ autoComplete='name' required />
+          <label htmlFor="name"> <FontAwesomeIcon icon={faUser} className={styles.icon} />&nbsp;{t('Contact.form.name')}</label>
+          <input type="text" id="name" name="name" placeholder={t('Contact.form.namePlaceholder')} /* title='Enter your full name' */ value={formData.name} /* onChange={handleChange} */ onInput={autoCapitalizeWords} minLength={3} maxLength={32} /* pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$" */ /* onInvalid={e => e.target.setCustomValidity('Please enter a valid name.')} */ autoComplete='name' required />
         </fieldset>
 
         {
           !isActive && (
             <>
               <fieldset className={styles.fieldset}>
-                <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;From Email:</label>
-                <input type="email" id="email" name="email" placeholder='Type Your Email Address Here, e.g. example@email.com' /* title='Enter your email address' */ value={formData.email} /* onChange={handleChange} */ onInput={autoLowercaseCharacters} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" /* onInvalid={e => e.target.setCustomValidity('Please enter a valid email address.')} */ autoComplete='email' required />
+                <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;{t('Contact.form.email')}</label>
+                <input type="email" id="email" name="email" placeholder={t('Contact.form.emailPlaceholder')} /* title='Enter your email address' */ value={formData.email} /* onChange={handleChange} */ onInput={autoLowercaseCharacters} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" /* onInvalid={e => e.target.setCustomValidity('Please enter a valid email address.')} */ autoComplete='email' required />
               </fieldset>
             </>
           )
         }
 
         <fieldset className={styles.fieldset}>
-          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; Phone {!isActive && '(optional)'}:</label>
+          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; {t('Contact.form.phone')} {!isActive && '(optional)'}:</label>
           {/* verify pattern */}
-          <input type="tel" id="phone" name="phone" placeholder='e.g. +1234567890' /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' required={isActive} />
+          <input type="tel" id="phone" name="phone" placeholder={t('Contact.form.phonePlaceholder')} /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' required={isActive} />
         </fieldset>
 
         <fieldset className={styles.fieldset}>
-          <label htmlFor="message"> <FontAwesomeIcon icon={faMessage} className={styles.icon} />&nbsp; {isActive ? 'Message' : 'Body Content'}:</label>
-          <textarea id="message" name="message" placeholder={isActive ? 'Type Your WhatsApp Message Here...' : 'Type Your Email Message Here...'} onChange={handleChange} value={formData.message} required></textarea>
+          <label htmlFor="message"> <FontAwesomeIcon icon={faMessage} className={styles.icon} />&nbsp; {isActive ? t('Contact.form.message') : t('Contact.form.bodyContent')}:</label>
+          <textarea id="message" name="message" placeholder={isActive ? t('Contact.form.whatsappMessage') : t('Contact.form.emailMessage')} onChange={handleChange} value={formData.message} required></textarea>
         </fieldset>
 
         {/* <fieldset className={styles.fieldset}>
@@ -267,7 +272,7 @@ const Contact = () => {
 
         <Modal ref={modalRef} />
 
-        <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>Send {isActive ? (
+        <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>{t('Contact.form.send')} {isActive ? (
           <>
             WhatsApp
             <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />

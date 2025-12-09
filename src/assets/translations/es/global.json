@@ -342,6 +342,51 @@
     },
     "btn": "Ver Perfil de LinkedIn"
   },
+  "Contact": {
+    "heading": "Construyamos algo juntos.",
+    "subheading": "¡No dudes en contactarme para oportunidades laborales!",
+    "formData": {
+      "subject": "Contacto por oportunidad laboral (vía portafolio)",
+      "message": "Quiero ponerme en contacto contigo respecto a una oportunidad de trabajo..."
+    },
+    "note": "Nota:",
+    "alertErrorWhatsapp": "Error al enviar el mensaje vía la API de WhatsApp.",
+    "alertEmailDesktop": "Las aplicaciones de correo de escritorio pueden no soportar contenido prellenado en el cuerpo. Por favor, asegúrate de que tu cliente de correo esté configurado correctamente.",
+    "alertEmailWeb": "Los clientes de correo web pueden no soportar contenido prellenado en el cuerpo. Por favor, asegúrate de que tu cliente de correo esté configurado correctamente.",
+    "alertErrorEmail": "Error al enviar el mensaje.",
+    "form": {
+      "sendThrough": "Enviar por",
+      "desktop": "Aplicación de Escritorio",
+      "web": "Cliente Web",
+      "url": "Enlace URL",
+      "cloud": "API en la Nube",
+      "title": "Título",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Escribe tu asunto personalizado aquí, ej. Consulta de empleo",
+      "titlePlaceholder": "Escribe tu título personalizado aquí, ej. Consulta de empleo",
+      "name": "Nombre:",
+      "namePlaceholder": "Escribe tu nombre aquí, ej. Juan Pérez",
+      "email": "Correo electrónico:",
+      "emailPlaceholder": "Escribe tu correo electrónico aquí, ej. ejemplo@email.com",
+      "phone": "Número de teléfono",
+      "phonePlaceholder": "Escribe tu número de teléfono aquí, ej. +521234567890",
+      "message": "Mensaje",
+      "bodyContent": "Contenido del cuerpo",
+      "whatsappMessage": "Escribe tu mensaje de WhatsApp aquí...",
+      "emailMessage": "Escribe tu mensaje de correo aquí...",
+      "send": "Enviar"
+    },
+    "modalWhatsApp": {
+      "title": "¡Mensaje enviado exitosamente vía la API de WhatsApp!",
+      "message": "¡Me pondré en contacto contigo pronto!",
+      "closeBtn": "Cerrar"
+    },
+    "modalEmail": {
+      "title": "¡Mensaje enviado exitosamente!",
+      "message": "¡Me pondré en contacto contigo pronto!",
+      "closeBtn": "Cerrar"
+    }
+  },
   "QuickContact": {
     "heading": "Contacto Rápido de dos pasos",
     "subheading": "Si quieres ponerte en contacto pero no quieres llenar el formulario anterior, por favor envíame tu correo electrónico o número de teléfono y me pondré en contacto contigo.",
