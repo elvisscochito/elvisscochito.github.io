@@ -1,8 +1,10 @@
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/BackToTop.module.css';
 
 const BackToTop = () => {
+  const { t } = useTranslation("global");
   /* const handleClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }; */
@@ -11,7 +13,7 @@ const BackToTop = () => {
     ↑
   </button> */}
   return (
-    <a href="#home" className={styles.backToTop} aria-label="Back to top" data-tooltip-id="global-tooltip" data-tooltip-content="Back to Top">
+    <a href="#home" className={styles.backToTop} aria-label="Back to top" data-tooltip-id="global-tooltip" data-tooltip-content={t("BackToTop.tooltip")}>
       <FontAwesomeIcon icon={faArrowUp} className={styles.icon} />
       {/* Back to Top */}
     </a>

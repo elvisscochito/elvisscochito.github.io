@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/QuickContact.module.css';
 import Modal from './Modal';
 
 const QuickContact = () => {
+  const { t } = useTranslation("global");
   const modalRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -40,8 +42,8 @@ const QuickContact = () => {
         if (response.ok) {
           /* alert('Your quick contact info has been sent successfully! I will get in touch with you soon.'); */
           modalRef.current?.open(
-            'Message sent successfully',
-            'I will reach out to you soon!'
+            t("QuickContact.modal.title"),
+            t("QuickContact.modal.message")
           );
           /* const data = await response.json();
           console.log('Success:', data); */
@@ -70,17 +72,18 @@ const QuickContact = () => {
   return (
     <section id='quick-contact' className={styles.quickContact}>
       <header className={styles.header}>
-        <h2 className={styles.quickContactHeading}>{/* Do you feel lazy?  */}Quick {/* one */}two-step contact</h2>
-        <span className={styles.quickContactText}>If you would like to get in touch but don't want to fill the previous form please send me your email or phone number and I will contact you.{/*  just type your email or phone number and I will contact you. */}</span>
+        <h2 className={styles.quickContactHeading}>{/* Do you feel lazy?  */} {t("QuickContact.heading")}</h2>
+        <span className={styles.quickContactText}>{t("QuickContact.subheading")}{/*  just type your email or phone number and I will contact you. */}</span>
       </header>
       <form className={styles.quickContactForm} onSubmit={handleSubmit}>
         <fieldset className={styles.fieldset}>
-          <label htmlFor="quickContactInfo" className={styles.label}>Your Email or Phone Number:</label>
-          <input type="text" id="quickContactInfo" name="contactInfo" className={styles.input} placeholder="Enter your email or phone number" value={formData.contactInfo} onChange={handleChange} />
+          <label htmlFor="quickContactInfo" className={styles.label}>{t("QuickContact.form.label")}</label>
+          <input type="text" id="quickContactInfo" name="contactInfo" className={styles.input} placeholder={t("QuickContact.form.placeholder")} value={formData.contactInfo} onChange={handleChange} />
         </fieldset>
-        <Modal title="Message sent successfully" message="I will reach out to you soon!" ref={modalRef} />
 
-        <button type="submit" className={styles.submitButton}>Send</button>
+        <Modal ref={modalRef} />
+
+        <button type="submit" className={styles.submitButton}>{t("QuickContact.form.btn")}</button>
       </form>
     </section>
   );

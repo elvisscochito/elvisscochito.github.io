@@ -42,7 +42,7 @@ footer.footer {
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           /* transform: scale(1.1); */
-          color: light-dark(#18181B, #ffffff);
+          color: light-dark(#18181B, var(--text-aux-color));
         }
       }
     }

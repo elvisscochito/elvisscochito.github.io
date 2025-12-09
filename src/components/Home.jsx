@@ -129,8 +129,8 @@ const Home = () => {
         <div className={styles.body}>
           <p>{t('Home.Body.At')} <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> {t('Home.Body.University')}. {t('Home.Body.Looking')} <span className={styles.italic}>{t('Home.Body.Part-Time')}</span> {t('Home.Body.Or')} <span className={styles.italic}>{t('Home.Body.Full-Time')}</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Frontend</span>, <span className={styles.bold}>Backend</span> {t('Home.Body.Or')} <span className={styles.bold}>Fullstack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> {t('Home.Body.Or')} <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> {t('Home.Body.Any')} <span className={`${styles.italic} ${styles.bold}`}>IT</span> {t('Home.Body.Opportunity')}.</p>
           <div className={styles.buttonsCtaContainer}>
-            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>{t('Home.Body.btnAux')}</a>
-            <a href="#contact" className={styles.btn}>{t('Home.Body.btn')}</a>
+            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>{t('Home.Body.cta.btnAux')}</a>
+            <a href="#contact" className={styles.btn}>{t('Home.Body.cta.btn')}</a>
           </div>
         </div>
         <footer className={styles.footer}>
@@ -161,10 +161,10 @@ const Home = () => {
             </span>
             {/* <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
         <FontAwesomeIcon icon={faPhone} className={styles.icon} /> */}
-            <a href="https://www.linkedin.com/in/elviro-dominguez-soriano" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/elviro-dominguez-soriano" target="_blank" rel="noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("Home.Links.linkedin")}>
               <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
             </a>
-            <a href="https://github.com/elvisscochito" target="_blank" rel="noreferrer">
+            <a href="https://github.com/elvisscochito" target="_blank" rel="noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("Home.Links.github")}>
               <FontAwesomeIcon icon={faGithub} className={styles.icon} />
             </a>
           </div>

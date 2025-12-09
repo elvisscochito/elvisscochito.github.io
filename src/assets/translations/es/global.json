@@ -3,6 +3,10 @@
     "title": "Bienvenido a Mi Sitio Web",
     "heading": "Hola, soy @elvisscochito",
     "subheading": "Estudiante de último año de Ingeniería Informática",
+    "Links": {
+      "linkedin": "Ir a mi LinkedIn",
+      "github": "Ir a mi GitHub"
+    },
     "Typewriter": {
       "A": "un",
       "Web Developer": "Desarrollador Web",
@@ -27,8 +31,10 @@
       "Full-Time": "Tiempo Completo",
       "Any": "o cualquier otro",
       "Opportunity": "oportunidad de trabajo",
-      "btnAux": "Ver Currículum",
-      "btn": "Contáctame"
+      "cta": {
+        "btn": "Contáctame",
+        "btnAux": "Ver Currículum"
+      }
     },
     "workStatusContainer": {
       "open": "#AbiertoATrabajar",
@@ -335,5 +341,33 @@
       }
     },
     "btn": "Ver Perfil de LinkedIn"
+  },
+  "QuickContact": {
+    "heading": "Contacto Rápido de dos pasos",
+    "subheading": "Si quieres ponerte en contacto pero no quieres llenar el formulario anterior, por favor envíame tu correo electrónico o número de teléfono y me pondré en contacto contigo.",
+    "form": {
+      "label": "Tu Correo Electrónico o Número de Teléfono:",
+      "placeholder": "Ingresa tu correo electrónico o número de teléfono",
+      "btn": "Enviar"
+    },
+    "modal": {
+      "title": "¡Gracias por contactarme!",
+      "message": "He recibido tu mensaje y me pondré en contacto contigo lo antes posible.",
+      "btn": "Cerrar"
+    }
+  },
+  "BackToTop": {
+    "tooltip": "Volver arriba"
+  },
+  "Footer": {
+    "paragraph": "Construido con Vite + React.",
+    "by": "Por",
+    "rights": "Todos los derechos reservados.",
+    "Links": {
+      "email": "Envíame un correo electrónico",
+      "whatsapp": "Hablemos por WhatsApp",
+      "linkedin": "Visita mi perfil de LinkedIn",
+      "github": "Checa mi GitHub"
+    }
   }
 }

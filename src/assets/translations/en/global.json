@@ -3,6 +3,10 @@
     "title": "Welcome to My website!",
     "heading": "Hi!, I'm @elvisscochito",
     "subheading": "Last year Computer Science student",
+    "Links": {
+      "linkedin": "Go to my LinkedIn",
+      "github": "Go to my GitHub"
+    },
     "Typewriter": {
       "A": "a",
       "Web Developer": "Web Developer",
@@ -27,8 +31,10 @@
       "Full-Time": "Full-Time",
       "Any": "or any other",
       "Opportunity": "job opportunity",
-      "btnAux": "View Resume",
-      "btn": "Get in touch"
+      "cta": {
+        "btn": "Get in touch",
+        "btnAux": "View Resume"
+      }
     },
     "workStatusContainer": {
       "open": "#OpenToWork",
@@ -339,5 +345,35 @@
       }
     },
     "btn": "View Linkedin Profile"
+  },
+  "QuickContact": {
+    "heading": "Quick two-step contact",
+    "subheading": "If you would like to get in touch but don't want to fill the previous form please send me your email or phone number and I will contact you.",
+    "form": {
+      "label": "Your Email or Phone Number:",
+      "placeholder": "Type your email or phone number here",
+      "successMessage": "Thank you for reaching out! I'll get back to you as soon as possible.",
+      "errorMessage": "Oops! Something went wrong. Please try again later.",
+      "btn": "Send"
+    },
+    "modal": {
+      "title": "Message Sent Successfully!",
+      "message": "I will reach out to you soon!",
+      "closeBtn": "Close"
+    }
+  },
+  "BackToTop": {
+    "tooltip": "Back to top"
+  },
+  "Footer": {
+    "paragraph": "Built with Vite + React.",
+    "by": "By",
+    "rights": "All rights reserved.",
+    "Links": {
+      "email": "Send me an email",
+      "whatsapp": "Chat with me on WhatsApp",
+      "linkedin": "Visit my LinkedIn profile",
+      "github": "Check out my GitHub"
+    }
   }
 }
