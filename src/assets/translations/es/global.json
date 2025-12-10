@@ -330,6 +330,61 @@
       }
     }
   },
+  "Projects": {
+    "heading": "Más allá de las habilidades.",
+    "subheading": "Aquí están algunos de mis mejores proyectos donde apliqué mis habilidades.",
+    "btnSwitcher": {
+      "all": "Todos",
+      "web": "Web",
+      "mobile": "Móvil",
+      "game": "Juegos",
+      "data": "Datos"
+    },
+    "projectsList": {
+      "p1": {
+        "title": "Sistema de banco de alimentos",
+        "role": "Desarrollador Front-End",
+        "date": "Ago 2022 - Oct 2022",
+        "description": "• Mejoré procesos manuales construyendo un sistema moderno y robusto. Diseñé prototipos de aplicaciones móviles y web en Figma. Desarrollé el frontend de la aplicación web usando React.js y CSS."
+      },
+      "p2": {
+        "title": "Wizeprompt",
+        "role": "Desarrollador Front-End",
+        "date": "Sep 2023 - Dic 2023",
+        "description": "• Diseñé y desarrollé una plataforma interna intuitiva y fácil de usar para que los desarrolladores empleados accedieran a conversaciones impulsadas por IA."
+      },
+      "p3": {
+        "title": "Aplicación de salas de reuniones",
+        "role": "Desarrollador Full-Stack (Front-End y Back-End)",
+        "date": "Ago 2023 - Sep 2023",
+        "description": "• Diseñé y desarrollé una aplicación web full stack para facilitar la programación de reuniones usando MongoDB, Express.js, Node.js y React.js (stack MERN)."
+      },
+      "p4": {
+        "title": "myCover App",
+        "role": "Desarrollador Móvil",
+        "date": "Nov 2023 - Presente",
+        "description": "• Diseñé y desarrollé una aplicación móvil intuitiva usando tecnologías de Apple para crear, compartir y guardar fácilmente boletos digitales únicos y personalizados para cualquier evento social directamente en la app 'Wallet' preinstalada de Apple."
+      },
+      "p5": {
+        "title": "Panel de análisis de datos",
+        "role": "Científico de Datos y Desarrollador Front-End",
+        "date": "Ago 2024 - Dic 2024",
+        "description": "• Analicé y limpié una base de datos proporcionada para integrar y mostrar los modelos de datos en gráficos a través de una interfaz web fácil de usar."
+      },
+      "p6": {
+        "title": "Videojuego de rompecabezas",
+        "role": "Desarrollador de Juegos y Front-End",
+        "date": "Feb 2022 - Jun 2022",
+        "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego."
+      },
+      "p7": {
+        "title": "Kanbanize Lite",
+        "role": "Desarrollador Full-Stack (Front-End y Back-End)",
+        "date": "Feb 2023 - Jun 2023",
+        "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego."
+      }
+    }
+  },
   "SocialProof": {
     "heading": "Testimonios",
     "subheading": "Lo que otros compañeros y clientes dicen sobre mí.",
