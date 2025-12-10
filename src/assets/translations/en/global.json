@@ -328,6 +328,101 @@
       }
     }
   },
+  "Projects": {
+    "heading": "Beyond skills.",
+    "subheading": "Here's some of my best projects yet where I applied my skills.",
+    "btnSwitcher": {
+      "all": "All",
+      "web": "Web Dev",
+      "mobile": "Mobile Dev",
+      "game": "Game Dev",
+      "data": "Data Science"
+    },
+    "projectsList": {
+      "p1": {
+        "title": "Food bank system",
+        "role": "Front-End Developer",
+        "date": "Aug 2022 - Oct 2022",
+        "description": "• Improved manual processes by building a modern and robust system. Designed both mobile and web application mockups in Figma. Developed the frontend of the web application using React.js and CSS."
+      },
+      "p2": {
+        "title": "Wizeprompt",
+        "role": "Front-End Developer",
+        "date": "Sep 2023 - Dec 2023",
+        "description": "• Designed and developed an intuitive and easy to use internal platform for employee developers to access AI-powered conversations."
+      },
+      "p3": {
+        "title": "Meeting rooms app",
+        "role": "Full-Stack Developer (Front-End and Back-End)",
+        "date": "Aug 2023 - Sep 2023",
+        "description": "• Designed and developed a full stack web application to facilitate meeting scheduling using MongoDB, Express.js, Node.js and React.js (MERN stack)."
+      },
+      "p4": {
+        "title": "myCover App",
+        "role": "Mobile Developer",
+        "date": "Nov 2023 - Present",
+        "description": "• Designed and developed an intuitive mobile application using Apple technologies to easily create, share and save unique, personalized digital tickets for any social event directly to the pre-installed Apple 'Wallet' app."
+      },
+      "p5": {
+        "title": "Data analytics dashboard",
+        "role": "Data Scientist and Front-End Developer",
+        "date": "Aug 2024 - Dec 2024",
+        "description": "• Analyzed and cleaned a provided database to integrate and display the data models in charts through an user-friendly web interface."
+      },
+      "p6": {
+        "title": "Puzzle videogame",
+        "role": "Game Developer and Front-End Developer",
+        "date": "Feb 2022 - Jun 2022",
+        "description": "• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics."
+      },
+      "p7": {
+        "title": "Kanbanize Lite",
+        "role": "Full-Stack Developer (Front-End and Back-End)",
+        "date": "Feb 2023 - Jun 2023",
+        "description": "• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics."
+      },
+      "p8": {
+        "title": "Weather App",
+        "description": "A web application that provides real-time weather information using OpenWeatherMap API and React.js."
+      },
+      "p9": {
+        "title": "Chat Application",
+        "description": "A real-time chat application with user authentication and group chat features using Socket.io and Node.js."
+      },
+      "p10": {
+        "title": "Task Manager App",
+        "description": "A web application to manage tasks and to-dos with user authentication using MERN stack."
+      },
+      "p11": {
+        "title": "Portfolio Website",
+        "description": "A personal portfolio website to showcase my skills, projects, and experiences using React and Vite."
+      },
+      "p12": {
+        "title": "E-commerce App",
+        "description": "A full-stack e-commerce application with user authentication, product management, and payment integration using MERN stack. A full-featured e-commerce website with product listings, shopping cart, and payment integration using MERN stack."
+      },
+      "p13": {
+        "title": "Mobile Fitness Tracker",
+        "description": "A mobile app to track fitness activities, set goals, and monitor progress using React Native."
+      },
+      "p14": {
+        "title": "Data Analysis Dashboard",
+        "description": "An interactive dashboard for visualizing and analyzing datasets using Python, Pandas, and Plotly."
+      },
+      "p15": {
+        "title": "Personal Blog",
+        "description": "A personal blog website built with Gatsby.js and GraphQL to share articles and tutorials on web development."
+      },
+      "p16": {
+        "title": "Personal Finance Tracker",
+        "description": "A web application to track personal expenses and income using React.js and Node.js."
+      },
+      "p17": {
+        "title": "Personal Budget App",
+        "description": "A mobile application to track personal expenses and income using React Native and Expo."
+      }
+    }
+  },
   "SocialProof": {
     "heading": "Social Proof",
     "subheading": "Here are some testimonials from my colleagues and clients.",

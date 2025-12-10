@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import a3e from '../assets/a3e.webp';
 import amazon from '../assets/amazon.svg';
 import bamx from '../assets/bamx.webp';
@@ -7,43 +7,52 @@ import kanbanize from '../assets/kanbanize.png';
 import wizeline from '../assets/wizeline.svg';
 import Card from '../components/Card';
 /* import { ProjectsContext } from '../contexts/ProjectsContext'; */
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Projects.module.css';
 import ProjectSwitcher from './ProjectSwitcher';
 
 const Projects = () => {
-  const [projectsButtons, setProjectsButtons] = useState([
+  const { t, i18n } = useTranslation("global");
+
+  const [paths, setPaths] = useState([
     {
       id: 1,
-      path: 'Web dev',
-      active: true
-    },
-    {
-      id: 2,
-      path: 'Mobile dev',
+      path: t('Projects.btnSwitcher.all'),
       active: false
     },
     {
+      id: 2,
+      path: t('Projects.btnSwitcher.web'),
+      active: true
+    },
+    {
       id: 3,
-      path: 'Game dev',
+      path: t('Projects.btnSwitcher.mobile'),
       active: false
     },
     {
       id: 4,
-      path: 'Data science',
+      path: t('Projects.btnSwitcher.game'),
+      active: false
+    },
+    {
+      id: 5,
+      path: t('Projects.btnSwitcher.data'),
       active: false
     }
   ]);
-  const [projects, setProjects] = useState([
+
+  const buildProjects = (tFn) => [
     {
       id: 1,
-      path: ['Web dev'],
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
       brand: 'Red BAMX',
-      project: 'Food bank system',
-      role: 'Front-End Developer',
-      date: 'Aug 2022 - Oct 2022',
+      title: tFn('Projects.projectsList.p1.title'),
+      role: tFn('Projects.projectsList.p1.role'),
+      date: tFn('Projects.projectsList.p1.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: bamx,
-      description: '• Improved manual processes by building a modern and robust system. Designed both mobile and web application mockups in Figma. Developed the frontend of the web application using React.js and CSS.',
+      description: tFn('Projects.projectsList.p1.description'),
       skills: ['React', 'CSS', 'Figma', 'UI/UX'],
       link: 'https://bamx.org.mx',
       preview: 'https://bamx.org.mx',
@@ -51,29 +60,29 @@ const Projects = () => {
     },
     {
       id: 2,
-      path: ['Web dev'],
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
       brand: 'Wizeline',
-      project: 'Wizeprompt',
-      role: 'Front-End Developer',
-      date: 'Sep 2023 - Dec 2023',
+      title: tFn('Projects.projectsList.p2.title'),
+      role: tFn('Projects.projectsList.p2.role'),
+      date: tFn('Projects.projectsList.p2.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: wizeline,
-      description: '• Designed and developed an intuitive and easy to use internal platform for employee developers to access AI-powered conversations.',
-      link: 'https://www.wizeline.com/',
+      description: tFn('Projects.projectsList.p2.description'),
       skills: ['Next.js', 'Tailwind'],
+      link: 'https://www.wizeline.com/',
       preview: 'https://bamx.org.mx',
       repo: 'https://github.com/wizelineacademy/itesm-socioformador-ago-dec-2023-team-03'
     },
     {
       id: 3,
-      path: ['Web dev'],
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
       brand: 'A3E Ingenieros',
-      project: 'Meeting rooms app',
-      role: 'Full-Stack Developer (Front-End and Back-End)',
-      date: 'Aug 2023 - Sep 2023',
+      title: tFn('Projects.projectsList.p3.title'),
+      role: tFn('Projects.projectsList.p3.role'),
+      date: tFn('Projects.projectsList.p3.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: a3e,
-      description: '• Designed and developed a full stack web application to facilitate meeting scheduling using MongoDB, Express.js, Node.js and React.js (MERN stack).',
+      description: tFn('Projects.projectsList.p3.description'),
       skills: ['MongoDB', 'Express.js', 'Node.js', 'React.js'],
       link: 'https://www.a3eingenieros.com.mx',
       preview: 'https://meeting-rooms-app.vercel.app',
@@ -81,14 +90,14 @@ const Projects = () => {
     },
     {
       id: 4,
-      path: ['Mobile dev'],
+      path: [tFn('Projects.btnSwitcher.mobile'), tFn('Projects.btnSwitcher.all')],
       brand: 'Neza Startup',
-      project: 'myCover App',
-      role: 'Mobile Developer',
-      date: 'Nov 2023 - Present',
+      title: tFn('Projects.projectsList.p4.title'),
+      role: tFn('Projects.projectsList.p4.role'),
+      date: tFn('Projects.projectsList.p4.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: bamx,
-      description: '• Designed and developed an intuitive mobile application using Apple technologies to easily create, share and save unique, personalized digital tickets for any social event directly to the pre-installed Apple “Wallet" app.',
+      description: tFn('Projects.projectsList.p4.description'),
       skills: ['Swift', 'iOS', 'Xcode', 'UI/UX'],
       link: 'https://github.com/elvisscochito/mycover-app',
       preview: 'https://github.com/elvisscochito/mycover-app',
@@ -96,14 +105,14 @@ const Projects = () => {
     },
     {
       id: 5,
-      path: ['Data science', 'Web dev'],
+      path: [tFn('Projects.btnSwitcher.data'), tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
       brand: 'Danu Analitica',
-      project: 'Data analytics dashboard',
-      role: 'Data Scientist and Front-End Developer',
-      date: 'Aug 2024 - Dec 2024',
+      title: tFn('Projects.projectsList.p5.title'),
+      role: tFn('Projects.projectsList.p5.role'),
+      date: tFn('Projects.projectsList.p5.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: danu,
-      description: '• Analyzed and cleaned a provided database to integrate and display the data models in charts through an user-friendly web interface.',
+      description: tFn('Projects.projectsList.p5.description'),
       skills: ['Python', 'Streamlit', 'Pandas', 'Data Visualization', 'AI/ML'],
       link: 'https://github.com/elvisscochito/data-analytics-dashboard',
       preview: 'https://danu-data-analytics-dashboard.streamlit.app',
@@ -111,14 +120,14 @@ const Projects = () => {
     },
     {
       id: 6,
-      path: ['Game dev', 'Web dev'],
+      path: [tFn('Projects.btnSwitcher.game'), tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
       brand: 'Amazon',
-      project: 'Puzzle videogame',
-      role: 'Game Developer and Front-End Developer',
-      date: 'Feb 2022 - Jun 2022',
+      title: tFn('Projects.projectsList.p6.title'),
+      role: tFn('Projects.projectsList.p6.role'),
+      date: tFn('Projects.projectsList.p6.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: amazon,
-      description: '• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics.',
+      description: tFn('Projects.projectsList.p6.description'),
       skills: ['Unity', 'C#', 'Web3', 'React.js', 'CSS'],
       link: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
       preview: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
@@ -126,20 +135,27 @@ const Projects = () => {
     },
     {
       id: 7,
-      path: ['Web dev'],
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
       brand: 'Kanbanize',
-      project: 'Kanbanize Lite',
-      role: 'Full-Stack Developer (Front-End and Back-End)',
-      date: 'Feb 2023 - Jun 2023',
+      title: tFn('Projects.projectsList.p7.title'),
+      role: tFn('Projects.projectsList.p7.role'),
+      date: tFn('Projects.projectsList.p7.date'),
       thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       logo: kanbanize,
-      description: '• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics.',
+      description: tFn('Projects.projectsList.p7.description'),
       skills: ['React.js', 'Express.js', 'Node.js'],
       link: 'https://github.com/elvisscochito/kanbanize-lite',
       preview: 'https://github.com/elvisscochito/kanbanize-lite',
       repo: 'https://github.com/elvisscochito/kanbanize-lite'
     }
-  ])
+  ];
+
+  const [projects, setProjects] = useState(buildProjects(t));
+
+  // Update projects when language changes
+  useEffect(() => {
+    setProjects(buildProjects(t));
+  }, [i18n.language, t]);
 
   /* const buttonStyles = (active) => {
     return {
@@ -147,36 +163,36 @@ const Projects = () => {
     }
   } */
 
-  const handleProjectsSwitch = (id) => {
-    setProjectsButtons(projectsButtons.map(button => ({
-      ...button,
-      active: button.id === id
+  const handlePathSwitch = (id) => {
+    setPaths(paths.map(path => ({
+      ...path,
+      active: path.id === id
     })));
   }
 
-  const activeButton = projectsButtons.find(button => button.active);
+  const activePath = paths.find(path => path.active);
 
   return (
     <section id="projects" className={styles.projects}>
       <header className={styles.header}>
-        <h2 className={styles.heading}>Beyond skills.</h2>
-        <span className={styles.span}>Here's some of my best projects yet where I applied my skills.</span>
+        <h2 className={styles.heading}>{t("Projects.heading")}</h2>
+        <span className={styles.span}>{t("Projects.subheading")}</span>
       </header>
 
       {/* <ProjectsContext.Provider value={{ projectsButtons, handleProjectsSwitch }}>
         <ProjectSwitcher />
       </ProjectsContext.Provider> */}
-      <ProjectSwitcher projectsButtons={projectsButtons} handleProjectsSwitch={handleProjectsSwitch} />
+      <ProjectSwitcher projectsButtons={paths} handleProjectsSwitch={handlePathSwitch} />
 
       <div className={styles.projectsContainer}>
         {
           projects
-            .filter(project => project.path.includes(activeButton.path))
+            .filter(project => project.path.includes(activePath.path))
             .map(project => (
               <Card
                 key={project.id}
                 brand={project.brand}
-                project={project.project}
+                title={project.title}
                 role={project.role}
                 date={project.date}
                 thumbnail={project.thumbnail}
