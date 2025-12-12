@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Landing from "../pages/Landing";
-import LinkInBio from "../Pages/LinkInBio";
+import Landing from "../pages/Landing.jsx";
+import LinkInBio from "../Pages/LinkInBio.jsx";
 
 const AppRouter = () => {
   return (
