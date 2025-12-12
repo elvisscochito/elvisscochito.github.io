@@ -3,6 +3,10 @@
     {
       "source": "/api/(.*)",
       "destination": "https://elvisscochito-github-io-backend.vercel.app/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
