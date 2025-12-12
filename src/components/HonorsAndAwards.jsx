@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import apple from '../assets/apple.jpeg';
 import apple10 from '../assets/apple10.jpeg';
+import apple11 from '../assets/apple11.jpeg';
 import apple2 from '../assets/apple2.jpeg';
 import apple3 from '../assets/apple3.jpeg';
 import apple4 from '../assets/apple4.jpeg';
@@ -60,6 +61,7 @@ const HonorsAndAwards = () => {
       description: tFn('HonorsAndAwards.appleDeveloperConferenceDescription'),
       images: [
         apple,
+        apple11,
         apple2,
         apple3,
         apple4,
