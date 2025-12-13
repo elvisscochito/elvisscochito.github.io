@@ -401,6 +401,18 @@
         "role": "Desarrollador Full-Stack",
         "date": "Jun 2022 - Jul 2022",
         "description": "• Un sitio web de blog personal construido con Marked y Mongoose para compartir artículos y tutoriales sobre desarrollo web."
+      },
+      "p11": {
+        "title": "Tarjetas de GitHub",
+        "role": "Desarrollador Front-End",
+        "date": "Noviembre 2022",
+        "description": "Una aplicación web que obtiene y muestra perfiles de usuarios de GitHub en formatos de tarjetas personalizables usando React.js, CSS y la API de GitHub."
+      },
+      "p12": {
+        "title": "Tarjetas de Conciertos",
+        "role": "Desarrollador Front-End",
+        "date": "Jul 2022 - Ago 2022",
+        "description": "Una aplicación web que muestra próximos conciertos y eventos falsos usando React.js, CSS."
       }
     }
   },

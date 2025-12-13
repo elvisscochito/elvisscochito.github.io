@@ -401,40 +401,52 @@
         "description": "A personal blog website built with Marked and Mongoose to share articles and tutorials on web development."
       },
       "p11": {
-        "title": "Task Manager App",
-        "description": "A web application to manage tasks and to-dos with user authentication using MERN stack."
+        "title": "GitHub Cards",
+        "role": "Front-End Developer",
+        "date": "November 2022",
+        "description": "A web application who fetches and displays GitHub user profiles in customizable card formats using React.js, CSS and GitHub API."
       },
       "p12": {
+        "title": "Concert Cards",
+        "role": "Front-End Developer",
+        "date": "Jul 2022 - August 2022",
+        "description": "A web application that displays upcoming fake concerts and events using React.js, CSS."
+      },
+      "p13": {
         "title": "Portfolio Website",
         "description": "A personal portfolio website to showcase my skills, projects, and experiences using React and Vite."
       },
-      "p13": {
+      "p14": {
         "title": "E-commerce App",
         "description": "A full-stack e-commerce application with user authentication, product management, and payment integration using MERN stack. A full-featured e-commerce website with product listings, shopping cart, and payment integration using MERN stack."
       },
-      "p14": {
+      "p15": {
         "title": "Mobile Fitness Tracker",
         "description": "A mobile app to track fitness activities, set goals, and monitor progress using React Native."
       },
-      "p15": {
+      "p16": {
         "title": "Data Analysis Dashboard",
         "description": "An interactive dashboard for visualizing and analyzing datasets using Python, Pandas, and Plotly."
       },
-      "p16": {
+      "p17": {
         "title": "Personal Finance Tracker",
         "description": "A web application to track personal expenses and income using React.js and Node.js."
       },
-      "p17": {
+      "p18": {
         "title": "Personal Budget App",
         "description": "A mobile application to track personal expenses and income using React Native and Expo."
       },
-      "p18": {
+      "p19": {
         "title": "Weather App",
         "description": "A web application that provides real-time weather information using OpenWeatherMap API and React.js."
       },
-      "p19": {
+      "p20": {
         "title": "Chat Application",
         "description": "A real-time chat application with user authentication and group chat features using Socket.io and Node.js."
+      },
+      "p21": {
+        "title": "Task Manager App",
+        "description": "A web application to manage tasks and to-dos with user authentication using MERN stack."
       }
     }
   },
