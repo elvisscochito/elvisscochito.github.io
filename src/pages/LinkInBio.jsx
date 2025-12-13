@@ -1,16 +1,18 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin, faMedium, faTiktok, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faGlobe, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import corncrunch from '../assets/corncrunch.png';
 import neza from '../assets/neza-logo.png';
 import profile from '../assets/profile.jpg';
 import tec from '../assets/tec.svg';
+import Modal from '../components/Modal';
 import styles from '../styles/LinkInBio.module.css';
 
 function LinkInBio() {
   const { t } = useTranslation("global");
+  const modalRef = useRef(null);
   const [tabs, setTabs] = useState([
     {
       id: 1,
@@ -122,6 +124,13 @@ function LinkInBio() {
     );
   };
 
+  const handleModal = () => {
+    modalRef.current?.open(
+      "Welcome",
+      "Hi there! Thanks for checking out my Link In Bio page. Feel free to explore my socials and projects. If you'd like to get in touch, don't hesitate to reach out via email or WhatsApp. Have a great day!"
+    );
+  }
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -134,7 +143,7 @@ function LinkInBio() {
       <div className={styles.linkInBio}>
         {/* TODO: ADD Modal like Instagram Stories */}
         <figure className={styles.profileFigure}>
-          <img src={profile} alt="My Profile Picture" className={styles.profileImage} />
+          <img src={profile} alt="My Profile Picture" className={styles.profileImage} onClick={handleModal} />
           <div className={styles.onlineStatus}>
             {/* <span className={styles.statusIndicator}></span> */}
             {/* <span>Online</span> */}
@@ -292,6 +301,8 @@ function LinkInBio() {
         <footer className={styles.footer}>
           <span className={styles.footerText}>Copyright &#169; {new Date().getFullYear()}. Elviro Dominguez Soriano. All rights reserved.</span>
         </footer>
+
+        <Modal ref={modalRef} />
       </div>
     </>
   );
