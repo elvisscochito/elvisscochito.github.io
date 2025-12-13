@@ -1,5 +1,5 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin, faMedium, faTiktok, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faGlobe, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -127,7 +127,7 @@ function LinkInBio() {
   const handleModal = () => {
     modalRef.current?.open(
       "Welcome",
-      "Hi there! Thanks for checking out my Link In Bio page. Feel free to explore my socials and projects. If you'd like to get in touch, don't hesitate to reach out via email or WhatsApp. Have a great day!"
+      "Hi there! Thanks for checking out my Link In Bio page. Feel free to explore my socials and projects. If you'd like to get in touch, don't hesitate to reach out via email, phone or WhatsApp. Have a great day!"
     );
   }
 
@@ -153,15 +153,20 @@ function LinkInBio() {
           <span className={styles.username}>@elvisscochito</span>
           <h1 className={styles.heading}>Elviro Dominguez Soriano</h1>
 
-          {/* <div className={styles.description}>
-            <span className={styles.location}>Mexico City, Mexico</span>
-            <span className={styles.role}>Full Stack Developer</span>
-            <span className={styles.tagline}>Building the future, one line of code at a time.</span>
-            <span className={styles.roles}>Full-Stack Developer | Front-End Developer | Back-End Developer | Data Scientist | Mobile Developer </span>
-            <span className={styles.stack}>#JavaScript #React #NodeJS #Python #Django #Flutter #TechEnthusiast</span>
-            <span className={styles.hashtags}># coding # programming # developer # technology # innovation</span>
+          <p className={styles.subheading}>CS Student <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer" className={styles.link}>@tecdemonterrey <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>  (On Hold)</p>
 
-            <span className={styles.skills}>
+          {/* <div className={styles.description}>
+            <span className={styles.location}>
+              <FontAwesomeIcon icon={faLocationDot} />
+              Mexico  City, Mexico
+            </span> */}
+          {/* <span className={styles.role}>Full Stack Developer</span>
+            <span className={styles.tagline}>Building the future, one line of code at a time.</span> */}
+          {/* <span className={styles.roles}>Full-Stack Developer | Front-End Developer | Back-End Developer | Data Scientist | Mobile Developer </span> */}
+          {/* <span className={styles.stack}>#JavaScript #React #NodeJS #Python #Django #Flutter #TechEnthusiast</span> */}
+          {/* <span className={styles.hashtags}>#coding #programming #developer #technology #innovation</span> */}
+
+          {/* <span className={styles.skills}>
               Skills:
               Web Development
               •
@@ -172,10 +177,8 @@ function LinkInBio() {
               Graphic Design
               •
               Digital Marketing
-            </span>
-          </div> */}
-
-          <p className={styles.subheading}>CS Student <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer" className={styles.link}>@tecdemonterrey <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>  (On Hold)</p>
+            </span> */}
+          {/* </div> */}
 
           <div className={styles.socialLinks}>
             <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20Job%20Opportunity&body=Hello,%20Elviro:%0D%0A%0D%0AI%20want%20to%20get%20in%20touch%20with%20you%20regarding%20a%20job%20opportunity..." target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.email")} className={styles.headerLink}>
@@ -193,11 +196,14 @@ function LinkInBio() {
             <a href="https://www.elvirodominguez.com/" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content="Personal Website" className={styles.headerLink}>
               <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
             </a>
+            <a href='https://maps.app.goo.gl/xTnkPChgPfQgdtzN8' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
+              <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
+            </a>
           </div>
 
           {/* <figure>
         <h2>My Anthem:</h2> */}
-          <iframe
+          {/* <iframe
             allow="autoplay *; encrypted-media *; fullscreen *"
             frameBorder="0"
             height="150"
@@ -206,18 +212,18 @@ function LinkInBio() {
             src="https://embed.music.apple.com/mx/album/desenfocao/1596868386?i=1596868402&l=en-GB"
             title="Apple Music Player"
             className={styles.appleMusicIframe}
-          ></iframe>
+          ></iframe> */}
 
           {/* <figcaption>Song from Apple Music</figcaption>
       </figure> */}
 
-          <div className={styles.disclaimer}>
+          {/* <div className={styles.disclaimer}>
             <p className={styles.disclaimerText}>
               Here’s all my presence online.
-              Tap down bellow to open it.
-              {/* {t("LinkInBio.disclaimer")} */}
-            </p>
-          </div>
+              Tap down bellow to open it. */}
+          {/* {t("LinkInBio.disclaimer")} */}
+          {/* </p>
+          </div> */}
         </header>
 
         <div className={styles.switchTab}>
