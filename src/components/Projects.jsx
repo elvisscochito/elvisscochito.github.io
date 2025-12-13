@@ -1,13 +1,24 @@
 import { useEffect, useState } from 'react';
+import a3eBanner from '../assets/a3e-banner-dark.png';
 import a3e from '../assets/a3e.webp';
+import amazonBanner from '../assets/amazon-dark.png';
 import amazon from '../assets/amazon.svg';
 import bamx from '../assets/bamx.webp';
+import danuBanner from '../assets/danu-banner-dark.png';
 import danu from '../assets/danu.png';
+import kanbanizeBanner from '../assets/kanbanize-banner-dark.png';
 import kanbanize from '../assets/kanbanize.png';
+import wizelineBanner from '../assets/wizeline-banner.png';
 import wizeline from '../assets/wizeline.svg';
 import Card from '../components/Card';
 /* import { ProjectsContext } from '../contexts/ProjectsContext'; */
 import { useTranslation } from 'react-i18next';
+import bamxBanner from '../assets/bamx-dark.png';
+import blogBanner from '../assets/blog-banner-dark.png';
+import cotizadorBanner from '../assets/cotizador-banner-dark.png';
+import mixtliBanner from '../assets/mixtli-banner-dark.png';
+import mixtli from '../assets/mixtli.png';
+import myCoverBanner from '../assets/mycover-banner-dark.png';
 import styles from '../styles/Projects.module.css';
 import ProjectSwitcher from './ProjectSwitcher';
 
@@ -50,7 +61,7 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p1.title'),
       role: tFn('Projects.projectsList.p1.role'),
       date: tFn('Projects.projectsList.p1.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: bamxBanner,
       logo: bamx,
       description: tFn('Projects.projectsList.p1.description'),
       skills: ['React', 'CSS', 'Figma', 'UI/UX'],
@@ -65,12 +76,12 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p2.title'),
       role: tFn('Projects.projectsList.p2.role'),
       date: tFn('Projects.projectsList.p2.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: wizelineBanner,
       logo: wizeline,
       description: tFn('Projects.projectsList.p2.description'),
       skills: ['Next.js', 'Tailwind'],
       link: 'https://www.wizeline.com/',
-      preview: 'https://bamx.org.mx',
+      preview: 'https://www.wizeline.com/',
       repo: 'https://github.com/wizelineacademy/itesm-socioformador-ago-dec-2023-team-03'
     },
     {
@@ -80,7 +91,7 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p3.title'),
       role: tFn('Projects.projectsList.p3.role'),
       date: tFn('Projects.projectsList.p3.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: a3eBanner,
       logo: a3e,
       description: tFn('Projects.projectsList.p3.description'),
       skills: ['MongoDB', 'Express.js', 'Node.js', 'React.js'],
@@ -95,7 +106,7 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p4.title'),
       role: tFn('Projects.projectsList.p4.role'),
       date: tFn('Projects.projectsList.p4.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: myCoverBanner,
       logo: bamx,
       description: tFn('Projects.projectsList.p4.description'),
       skills: ['Swift', 'iOS', 'Xcode', 'UI/UX'],
@@ -110,7 +121,7 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p5.title'),
       role: tFn('Projects.projectsList.p5.role'),
       date: tFn('Projects.projectsList.p5.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: danuBanner,
       logo: danu,
       description: tFn('Projects.projectsList.p5.description'),
       skills: ['Python', 'Streamlit', 'Pandas', 'Data Visualization', 'AI/ML'],
@@ -125,7 +136,7 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p6.title'),
       role: tFn('Projects.projectsList.p6.role'),
       date: tFn('Projects.projectsList.p6.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: amazonBanner,
       logo: amazon,
       description: tFn('Projects.projectsList.p6.description'),
       skills: ['Unity', 'C#', 'Web3', 'React.js', 'CSS'],
@@ -140,13 +151,58 @@ const Projects = () => {
       title: tFn('Projects.projectsList.p7.title'),
       role: tFn('Projects.projectsList.p7.role'),
       date: tFn('Projects.projectsList.p7.date'),
-      thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      thumbnail: kanbanizeBanner,
       logo: kanbanize,
       description: tFn('Projects.projectsList.p7.description'),
       skills: ['React.js', 'Express.js', 'Node.js'],
       link: 'https://github.com/elvisscochito/kanbanize-lite',
       preview: 'https://github.com/elvisscochito/kanbanize-lite',
       repo: 'https://github.com/elvisscochito/kanbanize-lite'
+    },
+    {
+      id: 8,
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
+      brand: 'Mixtli',
+      title: tFn('Projects.projectsList.p8.title'),
+      role: tFn('Projects.projectsList.p8.role'),
+      date: tFn('Projects.projectsList.p8.date'),
+      thumbnail: mixtliBanner,
+      logo: mixtli,
+      description: tFn('Projects.projectsList.p8.description'),
+      skills: ['Python', 'Flask', 'React', 'CSS', 'Figma', 'UI/UX'],
+      link: 'https://www.instagram.com/tecmixtli/',
+      preview: 'https://github.com/Autonomous-Mechatronics-Grand-Prix/Cuernavaca-2024/tree/main/Mision1-Control-de-Trayectoria/cva-drone/cesar-elviss-yemi/web/frontend',
+      repo: 'https://github.com/Autonomous-Mechatronics-Grand-Prix/Cuernavaca-2024/tree/main/Mision1-Control-de-Trayectoria/cva-drone/cesar-elviss-yemi/web/frontend'
+    },
+    {
+      id: 9,
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
+      brand: 'Hit Médica',
+      title: tFn('Projects.projectsList.p9.title'),
+      role: tFn('Projects.projectsList.p9.role'),
+      date: tFn('Projects.projectsList.p9.date'),
+      thumbnail: cotizadorBanner,
+      logo: bamx,
+      description: tFn('Projects.projectsList.p9.description'),
+      skills: ['React.js', 'CSS', 'API'],
+      link: 'https://github.com/MikeDev0X/Cotizador',
+      preview: 'https://github.com/MikeDev0X/Cotizador',
+      repo: 'https://github.com/MikeDev0X/Cotizador'
+    },
+    {
+      id: 10,
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
+      brand: 'Personal',
+      title: tFn('Projects.projectsList.p10.title'),
+      role: tFn('Projects.projectsList.p10.role'),
+      date: tFn('Projects.projectsList.p10.date'),
+      thumbnail: blogBanner,
+      logo: bamx,
+      description: tFn('Projects.projectsList.p10.description'),
+      skills: ['Marked', 'Mongoose', 'Node.js', 'Express.js'],
+      link: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
+      preview: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
+      repo: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog'
     }
   ];
 
