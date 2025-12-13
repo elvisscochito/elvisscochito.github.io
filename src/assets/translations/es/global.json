@@ -383,6 +383,24 @@
         "role": "Desarrollador Full-Stack (Front-End y Back-End)",
         "date": "Feb 2023 - Jun 2023",
         "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego."
+      },
+      "p8": {
+        "title": "Visión de dron Mixtli",
+        "role": "Ingeniero de Software y Desarrollador Front-End",
+        "date": "Feb 2024 - Jun 2024",
+        "description": "• Escribimos un script en Python para el reconocimiento de color y forma con el dron Tello y construí una aplicación web para la visualización de transmisión de video en tiempo real, incluyendo botones para enviar comandos de control al dron."
+      },
+      "p9": {
+        "title": "Cotizador SaaS Healthcare",
+        "role": "Desarrollador Front-End",
+        "date": "Jun 2023 - Jul 2023",
+        "description": "• Una aplicación web que permite a los usuarios obtener cotizaciones para servicios de salud seleccionando diferentes opciones y características usando React.js y CSS."
+      },
+      "p10": {
+        "title": "Blog Markdown",
+        "role": "Desarrollador Full-Stack",
+        "date": "Jun 2022 - Jul 2022",
+        "description": "• Un sitio web de blog personal construido con Marked y Mongoose para compartir artículos y tutoriales sobre desarrollo web."
       }
     }
   },
