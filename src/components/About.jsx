@@ -103,7 +103,7 @@ const About = () => {
               <span>{t("About.main.From")}</span>
               <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">{t("About.main.FromPlace")}&#8599;{/*  (the city of the Eternal Spring) */}</a>
               <span className={styles.bold}>{t("About.main.Living")}</span>
-              <a href="https://maps.app.goo.gl/xTnkPChgPfQgdtzN8" target="_blank" rel="noopener noreferrer">{t("About.main.LivingPlace")}&#8599;</a>
+              <a href="https://maps.app.goo.gl/bvc5VhjiGeQQvTNV9" target="_blank" rel="noopener noreferrer">{t("About.main.LivingPlace")}&#8599;</a>
             </div>
           </div>
 
