@@ -1,4 +1,4 @@
-import { faFacebook, faGithub, faInstagram, faLinkedin, faMedium, faTiktok, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin, faMedium, faPaypal, faTiktok, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
@@ -199,6 +199,9 @@ function LinkInBio() {
             <a href='https://maps.app.goo.gl/bvc5VhjiGeQQvTNV9' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             </a>
+            <a href='https://www.paypal.com/paypalme/elvirodominguez' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
+              <FontAwesomeIcon icon={faPaypal} className={styles.icon} />
+            </a>
           </div>
 
           {/* <figure>
@@ -291,11 +294,11 @@ function LinkInBio() {
                   <img src={neza} alt="Neza Logo" className={styles.icon} />
                   Neza Startup
                 </a>
-                <a href="https://www.nezastartup.com/link-in-bio" target="_blank" rel="noopener noreferrer" className={styles.linkButtonProjects}>
+                <a href="https://www.corncrunch.com/link-in-bio" target="_blank" rel="noopener noreferrer" className={styles.linkButtonProjects}>
                   <img src={corncrunch} alt="Corn Crunch Logo" className={styles.icon} />
                   Corn Crunch
                 </a>
-                <a href="https://www.nezastartup.com/link-in-bio" target="_blank" rel="noopener noreferrer" className={styles.linkButtonProjects}>
+                <a href="https://www.instagram.com/mycover_app/" target="_blank" rel="noopener noreferrer" className={styles.linkButtonProjects}>
                   <FontAwesomeIcon icon={faMobile} className={styles.icon} />
                   myCover App
                 </a>
