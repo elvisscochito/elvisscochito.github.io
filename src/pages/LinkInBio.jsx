@@ -196,7 +196,7 @@ function LinkInBio() {
             <a href="https://www.elvirodominguez.com/" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content="Personal Website" className={styles.headerLink}>
               <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
             </a>
-            <a href='https://maps.app.goo.gl/xTnkPChgPfQgdtzN8' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
+            <a href='https://maps.app.goo.gl/bvc5VhjiGeQQvTNV9' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             </a>
           </div>
