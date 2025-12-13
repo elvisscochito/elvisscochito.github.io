@@ -15,7 +15,9 @@ import Card from '../components/Card';
 import { useTranslation } from 'react-i18next';
 import bamxBanner from '../assets/bamx-dark.png';
 import blogBanner from '../assets/blog-banner-dark.png';
+import concertsBanner from '../assets/concert-cards-banner.png';
 import cotizadorBanner from '../assets/cotizador-banner-dark.png';
+import githubBanner from '../assets/github-cards-banner-dark.png';
 import mixtliBanner from '../assets/mixtli-banner-dark.png';
 import mixtli from '../assets/mixtli.png';
 import myCoverBanner from '../assets/mycover-banner-dark.png';
@@ -203,7 +205,37 @@ const Projects = () => {
       link: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
       preview: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
       repo: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog'
-    }
+    },
+    {
+      id: 11,
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
+      brand: 'Personal',
+      title: tFn('Projects.projectsList.p11.title'),
+      role: tFn('Projects.projectsList.p11.role'),
+      date: tFn('Projects.projectsList.p11.date'),
+      thumbnail: githubBanner,
+      logo: bamx,
+      description: tFn('Projects.projectsList.p11.description'),
+      skills: ['MERN Stack', 'JWT', 'REST API'],
+      link: 'https://github.com/elvisscochito/projects/tree/main/github-cards',
+      preview: 'https://github-cards-rose.vercel.app',
+      repo: 'https://github.com/elvisscochito/projects/tree/main/github-cards'
+    },
+    {
+      id: 12,
+      path: [tFn('Projects.btnSwitcher.web'), tFn('Projects.btnSwitcher.all')],
+      brand: 'Personal',
+      title: tFn('Projects.projectsList.p12.title'),
+      role: tFn('Projects.projectsList.p12.role'),
+      date: tFn('Projects.projectsList.p12.date'),
+      thumbnail: concertsBanner,
+      logo: bamx,
+      description: tFn('Projects.projectsList.p12.description'),
+      skills: ['React.js', 'CSS', 'API'],
+      link: 'https://github.com/elvisscochito/projects/tree/main/concert-cards',
+      preview: 'https://concert-cards.vercel.app',
+      repo: 'https://github.com/elvisscochito/projects/tree/main/concert-cards'
+    },
   ];
 
   const [projects, setProjects] = useState(buildProjects(t));
