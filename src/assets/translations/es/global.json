@@ -487,6 +487,32 @@
       "btn": "Cerrar"
     }
   },
+  "FAQ": {
+    "heading": "Preguntas Frecuentes",
+    "subheading": "Algunas de las preguntas que más me hacen.",
+    "faqsList": {
+      "f1": {
+        "question": "¿En qué lenguajes de programación te especializas?",
+        "answer": "Me especializo en JavaScript, Python y Swift, pero siempre estoy interesado en aprender nuevos lenguajes y tecnologías."
+      },
+      "f2": {
+        "question": "¿Estás abierto a oportunidades de trabajo remoto?",
+        "answer": "Sí, estoy abierto tanto a trabajo remoto como presencial, según los requisitos del proyecto."
+      },
+      "f3": {
+        "question": "¿Cómo puedo contactarte para un proyecto o colaboración?",
+        "answer": "Puedes contactarme mediante el formulario de contacto en mi sitio web o por correo a contact@elvirodominguez.com."
+      },
+      "f4": {
+        "question": "¿Cuál es tu disponibilidad para nuevos proyectos?",
+        "answer": "Actualmente estoy disponible para nuevos proyectos y colaboraciones. No dudes en escribirme para conversar sobre tus necesidades."
+      },
+      "f5": {
+        "question": "¿Ofreces servicios como freelancer?",
+        "answer": "Sí, ofrezco servicios como freelancer. Contáctame para hablar de los requisitos de tu proyecto."
+      }
+    }
+  },
   "BackToTop": {
     "tooltip": "Volver arriba"
   },

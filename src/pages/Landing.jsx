@@ -8,6 +8,7 @@ import BackToTop from '../components/BackToTop'
 import CompaniesSlider from '../components/CompaniesSlider'
 import Contact from '../components/Contact'
 import CustomCursor from '../components/CustomCursor'
+import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import HobbiesAndInterests from '../components/HobbiesAndInterests'
 import Home from '../components/Home'
@@ -51,6 +52,7 @@ function Landing() {
       <SocialProof />
       <Contact />
       <QuickContact />
+      <FAQ />
       {/* Global Tooltip for cards and other elements that use data-tooltip-id="global-tooltip" */}
       {/* Add a stable global class name so we can hide/show the tooltip with a simple body class when cards flip */}
       {/* <Tooltip id="global-tooltip" place="top" className={styles.tooltip} /> */}

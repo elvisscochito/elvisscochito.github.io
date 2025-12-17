@@ -529,6 +529,96 @@
       "closeBtn": "Close"
     }
   },
+  "FAQ": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Here are some of the most common questions I get asked.",
+    "faqsList": {
+      "f1": {
+        "question": "What job opportunities are you looking for?",
+        "answer": "I am looking for job opportunities, either Part-Time or Full-Time positions, internships, freelance projects, or any other type of collaboration that allows me to apply my skills and contribute to meaningful projects while continuing to learn and grow professionally in Web (Front-End, Back-End or Full-Stack), Data Science, Mobile (Android, iOS or Hybrid), Networking, DevOps or any other IT job opportunity."
+      },
+      "f2": {
+        "question": "What work modalities are you comfortable with?",
+        "answer": "I'm open to any type of work modalities, including Remote, On-Site or Hybrid work opportunities, I'm also willing to relocate, depending on the project's requirements or job needs."
+      },
+      "f3": {
+        "question": "What employment types are you open to?",
+        "answer": "I'm open to any kinds of work opportunities, including Full-Time, Part-Time, Freelance/Project, Contract (Temporary, Fixed-term and/or Permanent) and/or Internship positions."
+      },
+      "f4": {
+        "question": "How many years of experience do you have?",
+        "answer": "I have around 1 year of professional experience through internships and on-campus job programs, as well as numerous academic projects and personal projects that have helped me develop my skills and knowledge in various areas of technology."
+      },
+      "f5": {
+        "question": "How can I contact you for a job, project or collaboration?",
+        "answer": "You can reach me 24/7 through the contact forms on my website, my LinkedIn profile linkedin.com/in/elviro-dominguez-soriano, at my phone number +52 777 139 5795 or via my professional email at contact@elvirodominguez.com."
+      },
+      "f6": {
+        "question": "What is your availability for new projects?",
+        "answer": "I am currently available for new projects and collaborations. Please feel free to reach out to discuss your requirements."
+      },
+      "f7": {
+        "question": "Do you offer freelance services?",
+        "answer": "Yes, I do offer freelance services. Please contact me to discuss your project needs and requirements."
+      },
+      "f8": {
+        "question": "What services do you offer?",
+        "answer": "I offer a range of services including web development, mobile app development, data analysis, software engineering, graphic design and digital marketing, among others."
+      },
+      "f9": {
+        "question": "Which companies have you worked with or for?",
+        "answer": "I have worked with various companies, including Softtek and participated in different projects and activities during my time at Tecnológico de Monterrey. You can find more details in the 'Companies I've worked with', 'Work Experience' and 'Projects' sections of my portfolio."
+      },
+      "f10": {
+        "question": "Do you attended school?",
+        "answer": "Yes, I am currently pursuing a B.S. in Computer Science and Technology with a concentration in Data Science at Tecnológico de Monterrey university. However, I'm actually not enrolled in any courses this semester (It's on Hold) due to personal reasons/life situations and I'm not graduated yet but I only have two subject left to complete and get my degree. Furthermore, I am always continues learning and eager to learn new skills and technologies outside of formal education."
+      },
+      "f11": {
+        "question": "Where are you located?",
+        "answer": "I'm from Cuernavaca, Morelos, Mexico but I'm currently living in Mexico City, Mexico."
+      },
+      "f12": {
+        "question": "Do have any honors, awards or enriching experiences?",
+        "answer": "Yes, I have received several honors and awards throughout experiences on my academic journey, including attending the Apple Developer Conference, assisted to Big Techs Conferences, participating in a NASA trip, being selected for the Global Entrepreneurship Summer School (GESS) and enrolled in a Coursework in a Study Abroad Program that enriching my professional background. You can find more details in the 'Honors, Awards & Experiences' section of my portfolio."
+      },
+      "f13": {
+        "question": "What are your soft skills?",
+        "answer": "Some of my key soft skills include problem solving, critical thinking, effective communication, teamwork, time management, leadership, creativity, responsibility, punctuality, perseverance, professionalism, adaptability, emotional intelligence, conflict resolution, work ethic, empathy, and ability to work under pressure."
+      },
+      "f14": {
+        "question": "What areas and technologies/stack are you specialize in?",
+        "answer": "I specialize in Web (Front-End: HTML, CSS, JavaScript, React.js; Back-End: Node.js, Express.js, REST API's), Data Science (Python), Databases (MySQL, MongoDB), Mobile (Swift), Networks/Cybersecurity (Cisco), Design (Figma, Affinity), SVC (Git and GitHub) and DevOps (AWS) but I'm always eager to learn new languages and technologies."
+      },
+      "f15": {
+        "question": "Which languages do you speak?",
+        "answer": "I am fluent in English (B2 Intermediate) and native proficiency in Spanish. I am always  learning and improving my languages proficiency to better communicate with clients and colleagues."
+      },
+      "f16": {
+        "question": "Do you hold any licenses or certifications?",
+        "answer": "Yes, I hold some certifications in web development, data science, and other relevant fields. You can find more details in the 'Licenses & Certifications' section of my portfolio."
+      },
+      "f17": {
+        "question": "Do you published any publications?",
+        "answer": "Yes, I have published several articles and contributions in the field of technology. You can find more details in the 'Publications' section of my portfolio."
+      },
+      "f18": {
+        "question": "Have you been part of any activities or societies?",
+        "answer": "Yes, I have been involved in various activities and societies during my academic journey, including being a coordinator for SEITC (Computer Science Student Society) and a director for SwiftTec (Student group for Developers of Apple Technologies). You can find more details in the 'Activities & Societies' section of my portfolio."
+      },
+      "f19": {
+        "question": "What are your hobbies and interests?",
+        "answer": "Some of my hobbies and interests include coding, photography, traveling, reading, content creation, and gaming. I enjoy reading, hiking, playing video games, and experimenting with new technologies in my free time. These hobbies help me relax and stay creative."
+      },
+      "f20": {
+        "question": "Can you provide references or examples of your previous work?",
+        "answer": "Yes, I can provide references and examples of my previous work upon request. Please feel free to ask for more information. You can also check the 'Projects' section of my portfolio for examples of my work."
+      },
+      "f21": {
+        "question": "What do others say about working with you?",
+        "answer": "You can find testimonials and feedback from my colleagues and clients in the 'Social Proof' section of my portfolio. They highlight my technical skills, professionalism, and ability to deliver high-quality work. But in general, they provided a good experience overall. Also, you can check my LinkedIn profile for more recommendations and endorsements. And feel free to reach out to my previous employers or colleagues for direct feedback. I'm confident they will speak positively about my work ethic, professionalism and contributions. I'm always open to providing references upon request."
+      }
+    }
+  },
   "BackToTop": {
     "tooltip": "Back to top"
   },
