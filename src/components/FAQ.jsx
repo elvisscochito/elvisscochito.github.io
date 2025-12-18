@@ -17,7 +17,7 @@ const FAQ = () => {
   ,
       "f22": {
         "question": "What is your experience level?",
-        "answer": "I have experience working on various projects, both academic and personal, and I'm continuously learning and improving my skills."
+        "answer": "I have experience working on various projects, both academic and personal, and I'm continuously learning and improving my skills. In fact, I can consider myself a Junior to Mid-Level professional, depending on the specific technology or domain. However, I am highly motivated and eager to take on new challenges to further develop my expertise."
       },
       "f23": {
         "question": "What is your typical project timeline?",

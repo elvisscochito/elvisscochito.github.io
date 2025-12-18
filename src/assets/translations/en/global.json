@@ -538,24 +538,24 @@
         "answer": "I am looking for job opportunities, either Part-Time or Full-Time positions, internships, freelance projects, or any other type of collaboration that allows me to apply my skills and contribute to meaningful projects while continuing to learn and grow professionally in Web (Front-End, Back-End or Full-Stack), Data Science, Mobile (Android, iOS or Hybrid), Networking, DevOps or any other IT job opportunity."
       },
       "f2": {
+        "question": "What is your current work status?",
+        "answer": "I am currently available for new projects and collaborations. Please feel free to reach out to discuss your requirements."
+      },
+      "f3": {
         "question": "What work modalities are you comfortable with?",
         "answer": "I'm open to any type of work modalities, including Remote, On-Site or Hybrid work opportunities, I'm also willing to relocate, depending on the project's requirements or job needs."
       },
-      "f3": {
+      "f4": {
         "question": "What employment types are you open to?",
         "answer": "I'm open to any kinds of work opportunities, including Full-Time, Part-Time, Freelance/Project, Contract (Temporary, Fixed-term and/or Permanent) and/or Internship positions."
       },
-      "f4": {
+      "f5": {
         "question": "How many years of experience do you have?",
         "answer": "I have around 1 year of professional experience through internships and on-campus job programs, as well as numerous academic projects and personal projects that have helped me develop my skills and knowledge in various areas of technology."
       },
-      "f5": {
+      "f6": {
         "question": "How can I contact you for a job, project or collaboration?",
         "answer": "You can reach me 24/7 through the contact forms on my website, my LinkedIn profile linkedin.com/in/elviro-dominguez-soriano, at my phone number +52 777 139 5795 or via my professional email at contact@elvirodominguez.com."
-      },
-      "f6": {
-        "question": "What is your availability for new projects?",
-        "answer": "I am currently available for new projects and collaborations. Please feel free to reach out to discuss your requirements."
       },
       "f7": {
         "question": "Do you offer freelance services?",
