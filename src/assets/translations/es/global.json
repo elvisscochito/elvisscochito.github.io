@@ -490,7 +490,8 @@
       "bodyContent": "Contenido del cuerpo",
       "whatsappMessage": "Escribe tu mensaje de WhatsApp aquí...",
       "emailMessage": "Escribe tu mensaje de correo aquí...",
-      "send": "Enviar"
+      "send": "Enviar",
+      "btnDisabledTooltip": "Por favor, completa el campo de entrada para habilitar el botón de enviar."
     },
     "modalWhatsApp": {
       "title": "¡Mensaje enviado exitosamente vía la API de WhatsApp!",
@@ -509,7 +510,8 @@
     "form": {
       "label": "Tu Correo Electrónico o Número de Teléfono:",
       "placeholder": "Ingresa tu correo electrónico o número de teléfono",
-      "btn": "Enviar"
+      "btn": "Enviar",
+      "btnDisabledTooltip": "Por favor, completa el campo de entrada para habilitar el botón de enviar."
     },
     "modal": {
       "title": "¡Gracias por contactarme!",

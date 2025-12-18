@@ -105,6 +105,7 @@ section.quickContact {
         cursor: not-allowed;
         font-weight: 500;
         transition: none;
+        background-color: hsla(240, 6%, 10%, 0.5);
       }
 
       .icon {
@@ -113,7 +114,6 @@ section.quickContact {
     }
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   section.quickContact {
