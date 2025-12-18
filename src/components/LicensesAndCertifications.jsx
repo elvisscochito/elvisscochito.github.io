@@ -2,9 +2,9 @@ import { faBuilding, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import coursera from '../assets/coursera.png';
+import coursera from '../assets/coursera.svg';
 import mongodb from '../assets/mongodb.svg';
-import scrumstudy from '../assets/scrum.png';
+import scrumstudy from '../assets/scrum.svg';
 import styles from '../styles/LicensesAndCertifications.module.css';
 
 const LicensesAndCertifications = () => {

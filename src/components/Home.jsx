@@ -3,9 +3,9 @@ import { faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPho
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import css from '../assets/css.png';
-import js from '../assets/js.png';
-import me from '../assets/profile.jpg';
+import css from '../assets/css.svg';
+import js from '../assets/js.svg';
+import me from '../assets/profile.webp';
 import react from '../assets/react.svg';
 import styles from '../styles/Home.module.css';
 import Typewriter from './Typewriter.jsx';

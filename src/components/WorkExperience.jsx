@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import softtek from '../assets/softtek.svg';
-import tec from '../assets/tecnologico.png';
+import tec from '../assets/tecnologico.svg';
 import styles from '../styles/WorkExperience.module.css';
 import WorkExperienceCard from './WorkExperienceCard.jsx';
 

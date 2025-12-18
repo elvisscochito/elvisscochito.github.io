@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import neza from '../assets/neza.svg';
 import softtek from '../assets/softtek.svg';
-import tec from '../assets/tecnologico.png';
+import tec from '../assets/tecnologico.svg';
 import styles from '../styles/CompaniesSlider.module.css';
 
 const CompaniesSlider = () => {

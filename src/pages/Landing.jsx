@@ -35,9 +35,9 @@ function Landing() {
       <Navbar />
       <Aside />
       {/* <main> */}
+      <SocialPath />
       <Home />
       <CompaniesSlider />
-      <SocialPath />
       <About />
       <HonorsAndAwards />
       <WorkExperience />

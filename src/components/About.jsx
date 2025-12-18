@@ -3,7 +3,7 @@ import { faArrowDown /* , faArrowAltCircleDown */, faCheck, faClone, faEnvelope,
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import me from '../assets/profile.jpg';
+import me from '../assets/profile.webp';
 import styles from '../styles/About.module.css';
 import Services from './Services.jsx';
 import TopSkills from './TopSkills.jsx';

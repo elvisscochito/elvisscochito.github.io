@@ -1,21 +1,21 @@
 import { useTranslation } from 'react-i18next';
-import affinity from '../assets/affinity.webp';
-import canva from '../assets/canva.webp';
-import css from '../assets/css.png';
+import affinity from '../assets/affinity.svg';
+import canva from '../assets/canva.svg';
+import css from '../assets/css.svg';
 import express from '../assets/expressjs.svg';
-import figma from '../assets/figma2.png';
-import git from '../assets/git.png';
-import github from '../assets/github.png';
-import html from '../assets/html.png';
-import js from '../assets/js.png';
-import jupyter from '../assets/jupyter.png';
+import figma from '../assets/figma2.svg';
+import git from '../assets/git.svg';
+import github from '../assets/github.svg';
+import html from '../assets/html.svg';
+import js from '../assets/js.svg';
+import jupyter from '../assets/jupyter.svg';
 import mongodb from '../assets/mongodb.svg';
-import mysql from '../assets/mysql.png';
-import node from '../assets/nodejs.png';
-import python from '../assets/python.png';
+import mysql from '../assets/mysql.svg';
+import node from '../assets/nodejs.svg';
+import python from '../assets/python.svg';
 import react from '../assets/react.svg';
-import swift from '../assets/swift.png';
-import xcode from '../assets/xcode.png';
+import swift from '../assets/swift.svg';
+import xcode from '../assets/xcode.svg';
 import styles from '../styles/Skills.module.css';
 
 const Skills = () => {

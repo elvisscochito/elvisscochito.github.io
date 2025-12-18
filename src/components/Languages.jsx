@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
 import { useTranslation } from 'react-i18next';
 import mexico from '../assets/mexicoflag.svg';
-import usa from '../assets/usaflag.webp';
+import usa from '../assets/usaflag.svg';
 import styles from '../styles/Languages.module.css';
 
 const Languages = () => {

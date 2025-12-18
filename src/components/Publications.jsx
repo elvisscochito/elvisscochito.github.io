@@ -2,8 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import medium from '../assets/medium.png';
-import me from '../assets/profile.jpg';
+import medium from '../assets/medium.svg';
+import me from '../assets/profile.webp';
 import styles from '../styles/Publications.module.css';
 
 const Publications = () => {
