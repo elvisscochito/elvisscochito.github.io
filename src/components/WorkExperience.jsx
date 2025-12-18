@@ -25,7 +25,7 @@ const WorkExperience = () => {
     {
       id: 2,
       title: tFn('WorkExperience.softtekTitle'),
-      url: "https://www.softtek.com",
+      website: "https://www.softtek.com",
       company: 'Softtek',
       logo: softtek,
       type: tFn('WorkExperience.softtekType'),
@@ -42,7 +42,7 @@ const WorkExperience = () => {
       id: 3,
       title: tFn('WorkExperience.tecTitle'),
       company: 'Tecnológico de Monterrey',
-      url: "https://www.tec.mx",
+      website: "https://www.tec.mx/en",
       logo: tec,
       type: tFn('WorkExperience.tecType'),
       positionLink: "http://www.ccm.itesm.mx/life/oncampusjobs.html",
@@ -75,7 +75,7 @@ const WorkExperience = () => {
             <WorkExperienceCard
               key={exp.id}
               title={exp.title}
-              url={exp.url}
+              website={exp.website}
               company={exp.company}
               logo={exp.logo}
               type={exp.type}

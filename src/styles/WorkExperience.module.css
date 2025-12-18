@@ -62,24 +62,28 @@ section.workExperience {
         }
       }
 
-      img.logo
+      a.logoLink {
+        text-decoration: none;
 
-      /* ,
-      img.logoHeader */
-        {
-        position: absolute;
-        top: 0rem;
-        left: -5rem;
-        width: 4rem;
-        height: 4rem;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-        object-position: center;
-        background-color: #F5F5F5;
-        background-color: rgba(250, 250, 250, 0.8);
-        border: 1px solid #eaeaea;
-        border-radius: 50%;
-        /* margin-bottom: 1rem; */
+        img.logo
+
+        /* ,
+        img.logoHeader */
+          {
+          position: absolute;
+          top: 0rem;
+          left: -5rem;
+          width: 4rem;
+          height: 4rem;
+          aspect-ratio: 1/1;
+          object-fit: contain;
+          object-position: center;
+          background-color: #F5F5F5;
+          background-color: rgba(250, 250, 250, 0.8);
+          border: 1px solid #eaeaea;
+          border-radius: 50%;
+          /* margin-bottom: 1rem; */
+        }
       }
 
       h4.title {

@@ -3,12 +3,14 @@ import { faCalendar, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/WorkExperience.module.css';
 
-const WorkExperienceCard = ({ title, url, company, type, positionLink, date, duration, location, locationType, responsibilities = [], logo }) => {
+const WorkExperienceCard = ({ title, website, company, type, positionLink, date, duration, location, locationType, responsibilities = [], logo }) => {
   return (
     <div className={styles.experience}>
-      <img src={logo} alt={`${company} logo`} className={styles.logo} />
+      <a href={website} target="_blank" rel="noopener noreferrer" className={styles.logoLink}>
+        <img src={logo} alt={`${company} logo`} className={styles.logo} />
+      </a>
       <h3 className={styles.company}>
-        <a href={url} target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
+        <a href={website} target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
           {company}
           &nbsp;
           {/* <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
