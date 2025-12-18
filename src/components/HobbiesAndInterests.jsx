@@ -1,8 +1,8 @@
 import { faGithub, faGoodreads, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { faBook, faCode, faPlane, faPlay } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
+import HobbiesAndInterestsCard from '../components/HobbiesAndInterestsCard';
 import styles from '../styles/HobbiesAndInterests.module.css';
 
 const HobbiesAndInterests = () => {
@@ -69,9 +69,14 @@ const HobbiesAndInterests = () => {
       <ul className={styles.hobbiesList}>
         {hobbies.map(hobby => (
           <li key={hobby.id} className={styles.hobbyItem}>
-            <h3 className={styles.hobbyName}><FontAwesomeIcon icon={hobby.icon} className={styles.icon} />{hobby.name}</h3>
-            <p className={styles.hobbyDescription}>{hobby.description}</p>
-            <a href={hobby.link} target="_blank" rel="noopener noreferrer" className={styles.hobbyLink}><FontAwesomeIcon icon={hobby.platformIcon} className={styles.icon} /> {hobby.platformName} &#8599;</a>
+            <HobbiesAndInterestsCard
+              name={hobby.name}
+              description={hobby.description}
+              icon={hobby.icon}
+              link={hobby.link}
+              platformName={hobby.platformName}
+              platformIcon={hobby.platformIcon}
+            />
           </li>
         ))}
       </ul>
