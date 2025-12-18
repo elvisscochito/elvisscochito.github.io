@@ -9,6 +9,31 @@ div.servicesContainer {
   border-radius: 0.5rem;
   margin-top: 1.5rem;
 
+  header.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* gap: 1rem;
+    margin-bottom: 1rem; */
+
+    a.link {
+      text-decoration: none;
+      color: inherit;
+
+      .icon {
+        font-size: 1.38rem;
+        color: #0a66c2;
+        /* transition: color 0.3s ease-in-out; */
+
+        /* &:hover {
+          color: #0073b1;
+        } */
+      }
+    }
+  }
+
   ul.serviceList {
     /* margin-top: 1rem;
     display: flex;

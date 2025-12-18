@@ -1,3 +1,4 @@
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +10,10 @@ const Services = () => {
     <div id="services" className={styles.servicesContainer}>
       <header className={styles.header}>
         <h3 className={styles.topSkillsHeading}><FontAwesomeIcon icon={faStar} className={styles.icon} /> {t("Services.heading")}</h3>
+        <a href="https://www.linkedin.com/services/page/94049531a961b25782/" target="_blank" rel="noopener noreferrer" className={styles.link} data-tooltip-id="global-tooltip" data-tooltip-content={t("Services.btn")}>
+          <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+          {/* {t("HonorsAndAwards.btn")} */}
+        </a>
       </header>
       {/* <p>Details about services will go here.</p> */}
       <ul className={styles.serviceList}>
