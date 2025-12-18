@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import affinity from '../assets/affinity.webp';
+import canva from '../assets/canva.webp';
 import css from '../assets/css.png';
 import express from '../assets/expressjs.svg';
 import figma from '../assets/figma2.png';
@@ -164,7 +165,13 @@ const Skills = () => {
             <li>
               <div className={styles.card}>
                 <img src={affinity} alt="Affinity Designer Logo" className={styles.icon} />
-                <span>Affinity Designer</span>
+                <span>Affinity</span>
+              </div>
+            </li>
+            <li>
+              <div className={styles.card}>
+                <img src={canva} alt="Canva Logo" className={styles.icon} />
+                <span>Canva</span>
               </div>
             </li>
             {/* <li>Adobe XD</li>

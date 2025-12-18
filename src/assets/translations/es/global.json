@@ -50,7 +50,8 @@
     "linkedin": "Mi LinkedIn",
     "github": "Mi GitHub",
     "whatsapp": "Mi WhatsApp",
-    "email": "Mi Correo"
+    "email": "Mi Correo",
+    "phone": "Mi Número de Teléfono"
   },
   "About": {
     "heading": "¿Qué hay sobre mí?",
@@ -100,6 +101,7 @@
     "Social": "Testimonios",
     "contact": "Contacto",
     "quickContact": "Contacto Rápido",
+    "faqs": "Preguntas",
     "language": "Idioma:"
   },
   "HonorsAndAwards": {
@@ -492,24 +494,96 @@
     "subheading": "Algunas de las preguntas que más me hacen.",
     "faqsList": {
       "f1": {
-        "question": "¿En qué lenguajes de programación te especializas?",
-        "answer": "Me especializo en JavaScript, Python y Swift, pero siempre estoy interesado en aprender nuevos lenguajes y tecnologías."
+        "question": "¿Qué oportunidades de trabajo estás buscando?",
+        "answer": "Estoy buscando oportunidades de trabajo, ya sea a tiempo parcial o completo, pasantías, proyectos freelance, o cualquier otro tipo de colaboración que me permita aplicar mis habilidades y contribuir a proyectos significativos mientras continúo aprendiendo y creciendo profesionalmente en Desarrollo Web (Front-End, Back-End o Full-Stack), Ciencia de Datos, Móvil (Android, iOS o Híbrido), Redes, DevOps o cualquier otra oportunidad laboral en TI."
       },
       "f2": {
-        "question": "¿Estás abierto a oportunidades de trabajo remoto?",
-        "answer": "Sí, estoy abierto tanto a trabajo remoto como presencial, según los requisitos del proyecto."
+        "question": "¿Cuál es tu estado laboral actual?",
+        "answer": "Actualmente estoy disponible para nuevos proyectos y colaboraciones. No dudes en contactarme para discutir tus requerimientos."
       },
       "f3": {
-        "question": "¿Cómo puedo contactarte para un proyecto o colaboración?",
-        "answer": "Puedes contactarme mediante el formulario de contacto en mi sitio web o por correo a contact@elvirodominguez.com."
+        "question": "¿Con qué modalidades de trabajo te sientes cómodo?",
+        "answer": "Estoy abierto a cualquier tipo de modalidad de trabajo, incluyendo oportunidades Remoto, Presencial o Híbrido. También estoy dispuesto a cambiar de ubicación, dependiendo de los requerimientos del proyecto o necesidades laborales."
       },
       "f4": {
-        "question": "¿Cuál es tu disponibilidad para nuevos proyectos?",
-        "answer": "Actualmente estoy disponible para nuevos proyectos y colaboraciones. No dudes en escribirme para conversar sobre tus necesidades."
+        "question": "¿Qué tipos de empleo estás abierto a?",
+        "answer": "Estoy abierto a cualquier tipo de oportunidades de trabajo, incluyendo posiciones a Tiempo Completo, Tiempo Parcial, Freelance/Proyecto, Contrato (Temporal, Plazo Fijo y/o Permanente) y/o Pasantía."
       },
       "f5": {
-        "question": "¿Ofreces servicios como freelancer?",
-        "answer": "Sí, ofrezco servicios como freelancer. Contáctame para hablar de los requisitos de tu proyecto."
+        "question": "¿Cuántos años de experiencia tienes?",
+        "answer": "Tengo aproximadamente 1 año de experiencia profesional a través de pasantías y programas de trabajo en campus, así como numerosos proyectos académicos y personales que me han ayudado a desarrollar mis habilidades y conocimientos en varias áreas de la tecnología."
+      },
+      "f6": {
+        "question": "¿Cómo puedo contactarte para un trabajo, proyecto o colaboración?",
+        "answer": "Puedes contactarme 24/7 a través de los formularios de contacto en mi sitio web, mi perfil de LinkedIn linkedin.com/in/elviro-dominguez-soriano, a mi número de teléfono +52 777 139 5795 o a través de mi correo profesional contact@elvirodominguez.com."
+      },
+      "f7": {
+        "question": "¿Cuáles son tus principales habilidades?",
+        "answer": "Algunas de mis principales habilidades son Front-End, HTML5, CSS, React.js, Node.js, Express.js, Git & GitHub, Python y Resolución de Problemas."
+      },
+      "f8": {
+        "question": "¿Ofreces servicios freelance?",
+        "answer": "Sí, ofrezco servicios freelance. Por favor, contactame para discutir los requerimientos y necesidades de tu proyecto."
+      },
+      "f9": {
+        "question": "¿Qué servicios ofreces?",
+        "answer": "Ofrezco una variedad de servicios incluyendo desarrollo web, desarrollo de aplicaciones móviles, análisis de datos, desarrollo de software en general, diseño gráfico y marketing digital, entre otros."
+      },
+      "f27": {
+        "question": "¿Cuál es tu estructura de precios?",
+        "answer": "Mi estructura de precios varía dependiendo del alcance, complejidad y requerimientos del proyecto. Típicamente proporciono cotizaciones personalizadas basadas en las necesidades específicas de cada proyecto. Ofrezco tarifas competitivas y estoy abierto a discutir presupuestos de proyectos para encontrar una solución que funcione para ambas partes."
+      },
+      "f10": {
+        "question": "¿Con qué empresas has trabajado o para qué empresas has trabajado?",
+        "answer": "He trabajado con varias empresas, incluyendo Softtek y participé en diferentes proyectos y actividades durante mi tiempo en Tecnológico de Monterrey. Puedes encontrar más detalles en las secciones 'Empresas con las que he trabajado', 'Experiencia Laboral' y 'Proyectos' de mi portafolio."
+      },
+      "f11": {
+        "question": "¿Asististe a la escuela?",
+        "answer": "Sí, actualmente estoy cursando una Licenciatura en Ingeniería Informática con especialización en Ciencia de Datos en la Universidad Tecnológico de Monterrey. Sin embargo, en realidad no estoy inscrito en ningún curso este semestre (está en pausa) debido a razones personales/situaciones de vida y aún no me he graduado, pero solo me faltan dos materias para completar y obtener mi título. Además, siempre estoy aprendiendo y tengo el deseo de aprender nuevas habilidades y tecnologías fuera de la educación formal."
+      },
+      "f12": {
+        "question": "¿Dónde estás ubicado?",
+        "answer": "Soy de Cuernavaca, Morelos, México pero actualmente vivo en la Ciudad de México, México."
+      },
+      "f13": {
+        "question": "¿Tienes honores, premios o experiencias enriquecedoras?",
+        "answer": "Sí, he recibido varios honores y premios a lo largo de mi trayecto académico, incluyendo asistir a la Conferencia de Desarrolladores de Apple, asistir a Conferencias de Grandes Tecnológicas, participar en un viaje a la NASA, ser seleccionado para la Escuela de Verano de Emprendimiento Global (GESS) e inscribirme en un Programa de Estudios en el Extranjero que enriqueció mi perfil profesional. Puedes encontrar más detalles en la sección 'Honores, Premios y Experiencias' de mi portafolio."
+      },
+      "f14": {
+        "question": "¿Cuáles son tus habilidades blandas?",
+        "answer": "Algunas de mis principales habilidades blandas incluyen resolución de problemas, pensamiento crítico, comunicación efectiva, trabajo en equipo, gestión del tiempo, liderazgo, creatividad, responsabilidad, puntualidad, perseverancia, profesionalismo, adaptabilidad, inteligencia emocional, resolución de conflictos, ética de trabajo, empatía y capacidad de trabajar bajo presión."
+      },
+      "f15": {
+        "question": "¿En qué áreas y tecnologías/stack te especializas?",
+        "answer": "Me especializo en Web (Front-End: HTML, CSS, JavaScript, React.js; Back-End: Node.js, Express.js, APIs REST), Ciencia de Datos (Python), Bases de Datos (MySQL, MongoDB), Móvil (Swift), Redes/Ciberseguridad (Cisco), Diseño (Figma, Affinity), SVC (Git y GitHub) y DevOps (AWS), pero siempre estoy dispuesto a aprender nuevos lenguajes y tecnologías."
+      },
+      "f16": {
+        "question": "¿Qué idiomas hablas?",
+        "answer": "Soy fluido en Inglés (B2 Intermedio) y tengo dominio nativo del Español. Siempre estoy aprendiendo y mejorando mi competencia en idiomas para comunicarme mejor con clientes y colegas."
+      },
+      "f17": {
+        "question": "¿Tienes alguna licencia o certificación?",
+        "answer": "Sí, tengo algunas certificaciones en desarrollo web, ciencia de datos y otros campos relevantes. Puedes encontrar más detalles en la sección 'Licencias y Certificaciones' de mi portafolio."
+      },
+      "f18": {
+        "question": "¿Has publicado alguna publicación?",
+        "answer": "Sí, he publicado varios artículos y contribuciones en el campo de la tecnología. Puedes encontrar más detalles en la sección 'Publicaciones' de mi portafolio."
+      },
+      "f19": {
+        "question": "¿Has sido parte de alguna actividad o sociedad?",
+        "answer": "Sí, he estado involucrado en varias actividades y sociedades durante mi trayecto académico, incluyendo ser coordinador de SEITC (Sociedad de Estudiantes de Ingeniería en Tecnologías Computacionales) y director de SwiftTec (Grupo de estudiantes desarrolladores de tecnologías Apple). Puedes encontrar más detalles en la sección 'Actividades y Sociedades' de mi portafolio."
+      },
+      "f20": {
+        "question": "¿Cuáles son tus pasatiempos e intereses?",
+        "answer": "Algunos de mis pasatiempos e intereses incluyen programar, fotografía, viajar, leer, crear contenido y videojuegos. Disfruto leyendo, haciendo senderismo, jugando videojuegos y experimentando con nuevas tecnologías en mi tiempo libre. Estos pasatiempos me ayudan a relajarme y mantenerme creativo."
+      },
+      "f21": {
+        "question": "¿Puedes proporcionar referencias o ejemplos de tu trabajo anterior?",
+        "answer": "Sí, puedo proporcionar referencias y ejemplos de mi trabajo anterior si es necesario. No dudes en pedir más información. También puedes consultar la sección 'Proyectos' de mi portafolio para ver ejemplos de mi trabajo."
+      },
+      "f22": {
+        "question": "¿Qué dicen otros sobre trabajar contigo?",
+        "answer": "Puedes encontrar testimonios y comentarios de mis colegas y clientes en la sección 'Testimonios' de mi portafolio. Destacan mis habilidades técnicas, profesionalismo y capacidad de entregar trabajo de alta calidad. Pero en general, tuvieron una buena experiencia en general. También puedes consultar mi perfil de LinkedIn para más recomendaciones y respaldos. Y siéntete libre de contactar a mis empleadores o colegas anteriores para comentarios directos. Estoy seguro de que hablarán positivamente sobre mi ética de trabajo, profesionalismo y contribuciones. Siempre estoy abierto a proporcionar referencias si es necesario."
       }
     }
   },
@@ -521,6 +595,7 @@
     "by": "Por",
     "rights": "Todos los derechos reservados.",
     "Links": {
+      "phone": "Hazme una llamada",
       "email": "Envíame un correo electrónico",
       "whatsapp": "Hablemos por WhatsApp",
       "linkedin": "Visita mi perfil de LinkedIn",

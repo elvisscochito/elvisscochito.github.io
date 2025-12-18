@@ -50,7 +50,8 @@
     "linkedin": "My LinkedIn",
     "github": "My GitHub",
     "whatsapp": "My WhatsApp",
-    "email": "My Email"
+    "email": "My Email",
+    "phone": "My Phone Number"
   },
   "About": {
     "heading": "What about me?",
@@ -570,6 +571,10 @@
         "question": "What services do you offer?",
         "answer": "I offer a range of services including web development, mobile app development, data analysis, (basically software engineering/development), graphic design and digital marketing, among others."
       },
+      "f27": {
+        "question": "What is your pricing structure?",
+        "answer": "My pricing structure varies depending on the project's scope, complexity, and requirements. I typically provide custom quotes based on the specific needs of each project. I offer competitive rates and am open to discussing project budgets to find a solution that works for both parties."
+      },
       "f10": {
         "question": "Which companies have you worked with or for?",
         "answer": "I have worked with various companies, including Softtek and participated in different projects and activities during my time at Tecnológico de Monterrey. You can find more details in the 'Companies I've worked with', 'Work Experience' and 'Projects' sections of my portfolio."
@@ -632,6 +637,7 @@
     "by": "By",
     "rights": "All rights reserved.",
     "Links": {
+      "phone": "Give me a call",
       "email": "Send me an email",
       "whatsapp": "Chat with me on WhatsApp",
       "linkedin": "Visit my LinkedIn profile",
