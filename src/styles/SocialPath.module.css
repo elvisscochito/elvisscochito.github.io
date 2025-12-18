@@ -42,7 +42,7 @@ div.container {
     color: light-dark(#0e9f0e, #0e9f0e);
   }
 
-  a:last-of-type .icon {
+  a:is(:nth-of-type(4), :last-of-type) .icon {
     color: var(--details);
   }
 }

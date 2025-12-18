@@ -108,6 +108,9 @@ const Navbar = () => {
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>
         </li> */}
         <li className={styles.navbarItem}>
+          <a href="#faqs" className={isActiveHashLink === 'faqs' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('faqs')}>{t('Navbar.faqs')}</a>
+        </li>
+        <li className={styles.navbarItem}>
           |<ToggleLanguage />
         </li>
         <li className={styles.navbarItem}>
@@ -167,6 +170,9 @@ const Navbar = () => {
         </li> */}
         <li className={styles.navbarItem}>
           <a href="#contact" className={isActiveHashLink === 'contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('contact')}>{t('Navbar.contact')}</a>
+        </li>
+        <li className={styles.navbarItem}>
+          <a href="#faqs" className={isActiveHashLink === 'faqs' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('faqs')}>{t('Navbar.faqs')}</a>
         </li>
         <li className={styles.navbarItem}>
           {/* <FontAwesomeIcon icon={faLanguage} /> */}

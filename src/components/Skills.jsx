@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import affinity from '../assets/affinity.webp';
 import css from '../assets/css.png';
 import express from '../assets/expressjs.svg';
 import figma from '../assets/figma2.png';
@@ -158,6 +159,12 @@ const Skills = () => {
               <div className={styles.card}>
                 <img src={figma} alt="Figma Logo" className={styles.icon} />
                 <span>Figma</span>
+              </div>
+            </li>
+            <li>
+              <div className={styles.card}>
+                <img src={affinity} alt="Affinity Designer Logo" className={styles.icon} />
+                <span>Affinity Designer</span>
               </div>
             </li>
             {/* <li>Adobe XD</li>
