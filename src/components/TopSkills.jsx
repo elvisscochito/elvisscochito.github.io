@@ -11,21 +11,16 @@ const TopSkills = () => {
         <h3 className={styles.topSkillsHeading}><FontAwesomeIcon icon={faCode} className={styles.icon} /> {t("TopSkills.heading")}</h3>
       </header>
       <ul className={styles.skillsList}>
-        <li>HTML5</li>
-        •
-        <li>CSS</li>
-        {/* •
-        <li>JavaScript</li> */}
-        •
-        <li>React.js</li>
-        •
-        <li>Node.js</li>
-        •
-        <li>Express.js</li>
-        •
-        <li>Git & GitHub</li>
-        •
-        <li>Python</li>
+        <li className={styles.skillItem}>Front-End</li>
+        <li className={styles.skillItem}>HTML5</li>
+        <li className={styles.skillItem}>CSS</li>
+        {/* <li>JavaScript</li> */}
+        <li className={styles.skillItem}>React.js</li>
+        <li className={styles.skillItem}>Node.js</li>
+        <li className={styles.skillItem}>Express.js</li>
+        <li className={styles.skillItem}>Git & GitHub</li>
+        <li className={styles.skillItem}>Python</li>
+        <li className={styles.skillItem}>Problem Solving</li>
       </ul>
     </div>
   );

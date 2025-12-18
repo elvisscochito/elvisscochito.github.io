@@ -17,29 +17,24 @@ const Services = () => {
           {/* <h4 className={styles.serviceTitle}>Web Development</h4>
           <p className={styles.serviceDescription}>Building responsive and dynamic websites using modern technologies like React, Node.js, and more.</p> */}
         </li>
-        •
         <li className={styles.serviceItem}>
           {t("Services.SoftwareDevelopment")}
           {/* <h4 className={styles.serviceTitle}>Web Development</h4>
           <p className={styles.serviceDescription}>Building responsive and dynamic websites using modern technologies like React, Node.js, and more.</p> */}
         </li>
-        •
         <li className={styles.serviceItem}>
           {t("Services.BusinessAnalytics")}
         </li>
-        •
         <li className={styles.serviceItem}>
           {t("Services.GraphicDesign")}
           {/* <h4 className={styles.serviceTitle}>UI/UX Design</h4>
           <p className={styles.serviceDescription}>Designing intuitive user interfaces and engaging user experiences for web and mobile applications.</p> */}
         </li>
-        •
         {/* <li className={styles.serviceItem}>
           Mobile Application Development */}
         {/* <h4 className={styles.serviceTitle}> App Development</h4>
           <p className={styles.serviceDescription}>Creating user-friendly mobile applications for both Android and iOS platforms.</p> */}
-        {/* </li>
-        • */}
+        {/* </li> */}
         <li className={styles.serviceItem}>
           {t("Services.DigitalMarketing")}
           {/*  <h4 className={styles.serviceTitle}>Backend Development</h4>
