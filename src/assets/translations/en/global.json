@@ -341,82 +341,97 @@
       "game": "Game Dev",
       "data": "Data Science"
     },
+    "featuredProject": "Featured Project",
+    "noFeaturedProject": "No Featured Project",
     "projectsList": {
       "p1": {
         "title": "Food bank system",
         "role": "Front-End Developer",
         "date": "Aug 2022 - Oct 2022",
-        "description": "• Improved manual processes by building a modern and robust system. Designed both mobile and web application mockups in Figma. Developed the frontend of the web application using React.js and CSS."
+        "description": "• Improved manual processes by building a modern and robust system. Designed both mobile and web application mockups in Figma. Developed the frontend of the web application using React.js and CSS.",
+        "type": "Academic"
       },
       "p2": {
         "title": "Wizeprompt",
         "role": "Front-End Developer",
         "date": "Sep 2023 - Dec 2023",
-        "description": "• Designed and developed an intuitive and easy to use internal platform for employee developers to access AI-powered conversations."
+        "description": "• Designed and developed an intuitive and easy to use internal platform for employee developers to access AI-powered conversations.",
+        "type": "Academic"
       },
       "p3": {
         "title": "Meeting rooms app",
         "role": "Full-Stack Developer (Front-End and Back-End)",
         "date": "Aug 2023 - Sep 2023",
-        "description": "• Designed and developed a full stack web application to facilitate meeting scheduling using MongoDB, Express.js, Node.js and React.js (MERN stack)."
+        "description": "• Designed and developed a full stack web application to facilitate meeting scheduling using MongoDB, Express.js, Node.js and React.js (MERN stack).",
+        "type": "Professional"
       },
       "p4": {
         "title": "myCover App",
         "role": "Mobile Developer",
         "date": "Nov 2023 - Present",
-        "description": "• Designed and developed an intuitive mobile application using Apple technologies to easily create, share and save unique, personalized digital tickets for any social event directly to the pre-installed Apple 'Wallet' app."
+        "description": "• Designed and developed an intuitive mobile application using Apple technologies to easily create, share and save unique, personalized digital tickets for any social event directly to the pre-installed Apple 'Wallet' app.",
+        "type": "Personal"
       },
       "p5": {
         "title": "Data analytics dashboard",
         "role": "Data Scientist and Front-End Developer",
         "date": "Aug 2024 - Dec 2024",
-        "description": "• Analyzed and cleaned a provided database to integrate and display the data models in charts through an user-friendly web interface."
+        "description": "• Analyzed and cleaned a provided database to integrate and display the data models in charts through an user-friendly web interface.",
+        "type": "Academic"
       },
       "p6": {
         "title": "Puzzle videogame",
         "role": "Game Developer and Front-End Developer",
         "date": "Feb 2022 - Jun 2022",
-        "description": "• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics."
+        "description": "• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics.",
+        "type": "Academic"
       },
       "p7": {
         "title": "Kanbanize Lite",
         "role": "Full-Stack Developer (Front-End and Back-End)",
         "date": "Feb 2023 - Jun 2023",
-        "description": "• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics."
+        "description": "• Created a puzzle video game using the Unity game engine and metaverse technologies to improve ADHD, and designed and developed a web interface to manage user video game statistics.",
+        "type": "Academic"
       },
       "p8": {
         "title": "Mixtli drone vision",
         "role": "Software Engineer and Front-End Developer",
         "date": "Feb 2024 - Jun 2024",
-        "description": "• Wrote a Python script for color and shape recognition with the Tello drone and built a web application for real-time video streaming visualization, including buttons to send control commands to the drone."
+        "description": "• Wrote a Python script for color and shape recognition with the Tello drone and built a web application for real-time video streaming visualization, including buttons to send control commands to the drone.",
+        "type": "Academic"
       },
       "p9": {
         "title": "Cotizador SaaS Healthcare",
         "role": "Front-End Developer",
         "date": "Jun 2023 - Jul 2023",
-        "description": "A web application that allows users to get quotes for healthcare services by selecting different options and features using React.js and CSS."
+        "description": "A web application that allows users to get quotes for healthcare services by selecting different options and features using React.js and CSS.",
+        "type": "Professional"
       },
       "p10": {
         "title": "Markdown Blog",
         "role": "Full-Stack Developer",
         "date": "Jun 2022 - Jul 2022",
-        "description": "A personal blog website built with Marked and Mongoose to share articles and tutorials on web development."
+        "description": "A personal blog website built with Marked and Mongoose to share articles and tutorials on web development.",
+        "type": "Personal"
       },
       "p11": {
         "title": "GitHub Cards",
         "role": "Front-End Developer",
         "date": "November 2022",
-        "description": "A web application who fetches and displays GitHub user profiles in customizable card formats using React.js, CSS and GitHub API."
+        "description": "A web application who fetches and displays GitHub user profiles in customizable card formats using React.js, CSS and GitHub API.",
+        "type": "Personal"
       },
       "p12": {
         "title": "Concert Cards",
         "role": "Front-End Developer",
         "date": "Jul 2022 - August 2022",
-        "description": "A web application that displays upcoming fake concerts and events using React.js, CSS."
+        "description": "A web application that displays upcoming fake concerts and events using React.js, CSS.",
+        "type": "Personal"
       },
       "p13": {
         "title": "Portfolio Website",
-        "description": "A personal portfolio website to showcase my skills, projects, and experiences using React and Vite."
+        "description": "A personal portfolio website to showcase my skills, projects, and experiences using React and Vite.",
+        "type": "Professional"
       },
       "p14": {
         "title": "E-commerce App",
