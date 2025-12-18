@@ -54,6 +54,27 @@ div.topSkillsContainer {
     gap: 2rem;
     flex-wrap: wrap;
   } */
+
+  ul.skillsList {
+    /* margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem; */
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li.skillItem:not(:last-child)::after {
+      content: "•";
+      margin-left: 0.5rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -69,12 +90,19 @@ div.topSkillsContainer {
     }
 
     ul.skillsList {
-      gap: 1.5rem 2rem;
+      /* gap: 1.5rem 2rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      align-items: center;
+      align-items: center; */
+
+      gap: 0.3rem;
+      justify-content: flex-start;
+
+      li.skillItem:not(:last-child)::after {
+        margin-left: 0.3rem;
+      }
     }
   }
 }

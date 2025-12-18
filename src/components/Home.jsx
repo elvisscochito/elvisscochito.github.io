@@ -92,10 +92,6 @@ const Home = () => {
     )();
   }, [copied]); */
 
-  useEffect(() => {
-    console.log('t Home.Stats.Projects ->', t('Home.Stats.Projects'));
-  }, [t]);
-
   return (
     <section id="home" className={styles.home}>
       <div className={styles.firstDivision}>

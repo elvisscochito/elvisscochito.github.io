@@ -1,5 +1,6 @@
 /* import { useContext }  from 'react'; */
 /* import { ProjectsContext } from '../contexts/ProjectsContext'; */
+import { Fragment } from 'react';
 import styles from '../styles/Projects.module.css';
 import { shortLabelFromPath } from "../utils/shortLabel";
 
@@ -19,9 +20,8 @@ const ProjectSwitcher = ({ projectsButtons, handleProjectsSwitch }) => {
           .trim(); */
 
           return (
-            <>
+            <Fragment key={button.id}>
               <button
-                key={button.id}
                 data-short={shortLabel}
                 className={`${styles.projectsBtn} ${button.active ? styles.activeButton : styles.inactiveButton}`}
                 onClick={() => handleProjectsSwitch(button.id)}
@@ -32,7 +32,7 @@ const ProjectSwitcher = ({ projectsButtons, handleProjectsSwitch }) => {
               {
                 index < projectsButtons.length - 1 && <span className={styles.separator}></span>
               }
-            </>
+            </Fragment>
           );
         })}
     </div>

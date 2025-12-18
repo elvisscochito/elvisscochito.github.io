@@ -8,6 +8,27 @@ div.servicesContainer {
   border: 1px solid #eaeaea;
   border-radius: 0.5rem;
   margin-top: 1.5rem;
+
+  ul.serviceList {
+    /* margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; */
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li.serviceItem:not(:last-child)::after {
+      content: "•";
+      margin-left: 0.5rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -23,12 +44,19 @@ div.servicesContainer {
     }
 
     ul.serviceList {
-      gap: 1.5rem 2rem;
+      /* gap: 1.5rem 2rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      align-items: center;
+      align-items: center; */
+
+      gap: 0.3rem;
+      justify-content: flex-start;
+
+      li.serviceItem:not(:last-child)::after {
+        margin-left: 0.3rem;
+      }
     }
   }
 }
