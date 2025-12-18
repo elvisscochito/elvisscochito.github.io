@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import a3eBanner from '../assets/a3e-banner-dark.png';
+import a3eBanner from '../assets/a3e-banner-dark.webp';
 import a3e from '../assets/a3e.webp';
 import amazonBanner from '../assets/amazon-dark.png';
 import amazon from '../assets/amazon.svg';

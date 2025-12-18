@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import seitc from '../assets/seitc_logo.jpeg';
-import swifttec from '../assets/swift.png';
+import seitc from '../assets/seitc_logo.svg';
+import swifttec from '../assets/swift.svg';
 import styles from '../styles/ActivitiesAndSocieties.module.css';
 import ActivitiesAndSocietiesCard from './ActivitiesAndSocietiesCard';
 

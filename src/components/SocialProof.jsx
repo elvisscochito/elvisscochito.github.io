@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import misael from '../assets/misael.jpeg';
+import misael from '../assets/misael.webp';
 import styles from '../styles/SocialProof.module.css';
 import SocialProofCard from './SocialProofCard';
 
