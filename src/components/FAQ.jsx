@@ -74,7 +74,7 @@ const FAQ = () => {
   ]; */
 
   return (
-    <section className={styles.faqs}>
+    <section id="faqs" className={styles.faqs}>
       <header className={styles.header}>
         <h2 className={styles.heading}>{t("FAQ.heading")}</h2>
         <span className={styles.span}>{t("FAQ.subheading")}</span>

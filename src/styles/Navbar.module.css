@@ -195,7 +195,7 @@ ul.navbarContainer li.navbarItem:has(button) {
         }
       }
 
-      li.navbarItem:nth-last-of-type(2) a {
+      li.navbarItem:nth-last-of-type(3) a {
         color: light-dark(#fff, #000);
         font-weight: bold;
         background-color: light-dark(#18181B, #f0f0f0);
