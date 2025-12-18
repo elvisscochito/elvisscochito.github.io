@@ -44,14 +44,14 @@
     }
   },
   "CompaniesSlider": {
-    "title": "Companies I've worked with:"
+    "title": "Companies I've worked with or for:"
   },
   "SocialPath": {
-    "linkedin": "My LinkedIn",
-    "github": "My GitHub",
-    "whatsapp": "My WhatsApp",
-    "email": "My Email",
-    "phone": "My Phone Number"
+    "linkedin": "My LinkedIn \u2197",
+    "github": "My GitHub \u2197",
+    "whatsapp": "My WhatsApp \u2197",
+    "email": "My Email \u2197",
+    "phone": "My Phone Number \u2197"
   },
   "About": {
     "heading": "What about me?",
@@ -76,6 +76,7 @@
   },
   "Services": {
     "heading": "Services",
+    "btn": "Services Page on LinkedIn \u2197",
     "WebDevelopment": "Web Development",
     "SoftwareDevelopment": "Software Development",
     "BusinessAnalytics": "Business Analytics",
@@ -299,7 +300,8 @@
         "duration": "2024 - 2025",
         "description": "Assisted in teaching coding fundamentals to beginners and helped organize bootcamp events."
       }
-    }
+    },
+    "btn": "Learn More \u2197"
   },
   "HobbiesAndInterests": {
     "heading": "Hobbies & Interests",
@@ -465,25 +467,37 @@
         "title": "Task Manager App",
         "description": "A web application to manage tasks and to-dos with user authentication using MERN stack."
       }
-    }
+    },
+    "demo": "Live Demo",
+    "linkBtn": "Preview Project"
   },
   "SocialProof": {
     "heading": "Social Proof",
     "subheading": "Here are some testimonials from my colleagues and clients.",
     "proofsList": {
       "p1": {
+        "name": "Facundo Prieto",
+        "position": " Software Engineer",
+        "company": "Globallogic",
+        "date": "May 12, 2023",
+        "comment": "Fantastic work made by Elviro. Good communication and very proactive. A great person to work with.",
+        "type": "Review"
+      },
+      "p2": {
         "name": "Misael Delgado",
         "position": "Data Scientist",
         "company": "Tech Solutions Inc.",
-        "comment": "His technical skills in data analysis, statistical modeling, and programming languages such as Python and SQL are truly commendable."
+        "date": "December 15, 2023",
+        "comment": "His technical skills in data analysis, statistical modeling, and programming languages such as Python and SQL are truly commendable.",
+        "type": "Recommendation"
       },
-      "p2": {
+      "p3": {
         "name": "John Doe",
         "position": "Senior Developer at Web Innovations",
         "comment": "Working with Elvis has been a pleasure. He is a team player who communicates effectively and contributes valuable ideas. Elvis consistently delivers high-quality work on time. His problem-solving skills and attention to detail are exceptional. Elvis exceeded our expectations with his innovative approach and dedication to our project. Highly recommended!"
       }
     },
-    "btn": "View Linkedin Profile"
+    "btn": "View Linkedin Profile \u2197"
   },
   "Contact": {
     "heading": "Let's build something together.",
@@ -652,11 +666,11 @@
     "by": "By",
     "rights": "All rights reserved.",
     "Links": {
-      "phone": "Give me a call",
-      "email": "Send me an email",
-      "whatsapp": "Chat with me on WhatsApp",
-      "linkedin": "Visit my LinkedIn profile",
-      "github": "Check out my GitHub"
+      "phone": "Give me a call \u2197",
+      "email": "Send me an email \u2197",
+      "whatsapp": "Chat with me on WhatsApp \u2197",
+      "linkedin": "Visit my LinkedIn profile \u2197",
+      "github": "Check out my GitHub \u2197"
     }
   }
 }

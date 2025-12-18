@@ -33,37 +33,49 @@ const Skills = () => {
           <ul>
             <li>
               <div className={styles.card}>
-                <img src={html} alt="HTML5 Logo" className={styles.icon} />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="HyperText Markup Language &#8599;"/* "Learn More" */>
+                  <img src={html} alt="HTML5 Logo" className={styles.icon} />
+                </a>
                 <span>HTML</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={css} alt="CSS3 Logo" className={styles.icon} />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Cascading Style Sheets &#8599;">
+                  <img src={css} alt="CSS3 Logo" className={styles.icon} />
+                </a>
                 <span>CSS</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={js} alt="JavaScript Logo" className={styles.icon} />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="JavaScript Programming Language &#8599;">
+                  <img src={js} alt="JavaScript Logo" className={styles.icon} />
+                </a>
                 <span>JavaScript</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={react} alt="React Logo" className={styles.icon} />
+                <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="React JavaScript Library &#8599;">
+                  <img src={react} alt="React Logo" className={styles.icon} />
+                </a>
                 <span>React.js</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={node} alt="Node.js Logo" className={styles.icon} />
+                <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Node.js JavaScript Runtime &#8599;">
+                  <img src={node} alt="Node.js Logo" className={styles.icon} />
+                </a>
                 <span>Node.js</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={express} alt="Express.js Logo" className={styles.icon} />
+                <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Express.js Web Framework &#8599;">
+                  <img src={express} alt="Express.js Logo" className={styles.icon} />
+                </a>
                 <span>Express.js</span>
               </div>
             </li>
@@ -75,13 +87,17 @@ const Skills = () => {
           <ul>
             <li>
               <div className={styles.card}>
-                <img src={swift} alt="Swift Logo" className={styles.icon} />
+                <a href="https://developer.apple.com/swift/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Swift Programming Language and SwiftUI Framework &#8599;">
+                  <img src={swift} alt="Swift Logo" className={styles.icon} />
+                </a>
                 <span>Swift/SwiftUI</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={xcode} alt="Xcode Logo" className={styles.icon} />
+                <a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Xcode IDE &#8599;">
+                  <img src={xcode} alt="Xcode Logo" className={styles.icon} />
+                </a>
                 <span>Xcode</span>
               </div>
             </li>
@@ -99,7 +115,9 @@ const Skills = () => {
           <ul>
             <li>
               <div className={styles.card}>
-                <img src={python} alt="Python Logo" className={styles.icon} />
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Python Programming Language &#8599;">
+                  <img src={python} alt="Python Logo" className={styles.icon} />
+                </a>
                 <span>Python</span>
               </div>
             </li>
@@ -109,7 +127,9 @@ const Skills = () => {
             <li>Scikit-learn</li> */}
             <li>
               <div className={styles.card}>
-                <img src={jupyter} alt="Jupyter Notebooks Logo" className={styles.icon} />
+                <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Jupyter Notebooks &#8599;">
+                  <img src={jupyter} alt="Jupyter Notebooks Logo" className={styles.icon} />
+                </a>
                 <span>Jupyter Notebooks</span>
               </div>
             </li>
@@ -123,14 +143,18 @@ const Skills = () => {
             {/* <li>Relational/SQL:</li> */}
             <li>
               <div className={styles.card}>
-                <img src={mysql} alt="MySQL Logo" className={styles.icon} />
+                <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="MySQL Relational Database Management System &#8599;">
+                  <img src={mysql} alt="MySQL Logo" className={styles.icon} />
+                </a>
                 <span>MySQL</span>
               </div>
             </li>
             {/* <li>Non-relational/NoSQL:</li> */}
             <li>
               <div className={styles.card}>
-                <img src={mongodb} alt="MongoDB Logo" className={styles.icon} />
+                <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="MongoDB NoSQL Database &#8599;">
+                  <img src={mongodb} alt="MongoDB Logo" className={styles.icon} />
+                </a>
                 <span>MongoDB</span>
               </div>
             </li>
@@ -141,13 +165,17 @@ const Skills = () => {
           <ul>
             <li>
               <div className={styles.card}>
-                <img src={git} alt="Git Logo" className={styles.icon} />
+                <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Git Version Control System &#8599;">
+                  <img src={git} alt="Git Logo" className={styles.icon} />
+                </a>
                 <span>Git {/* & GitHub */}</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={github} alt="GitHub Logo" className={styles.icon} />
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="GitHub Code Hosting Platform &#8599;">
+                  <img src={github} alt="GitHub Logo" className={styles.icon} />
+                </a>
                 <span>GitHub</span>
               </div>
             </li>
@@ -158,19 +186,25 @@ const Skills = () => {
           <ul>
             <li>
               <div className={styles.card}>
-                <img src={figma} alt="Figma Logo" className={styles.icon} />
+                <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Figma Design Tool &#8599;">
+                  <img src={figma} alt="Figma Logo" className={styles.icon} />
+                </a>
                 <span>Figma</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={affinity} alt="Affinity Designer Logo" className={styles.icon} />
+                <a href="https://www.affinity.studio" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Affinity Studio Tool &#8599;">
+                  <img src={affinity} alt="Affinity Designer Logo" className={styles.icon} />
+                </a>
                 <span>Affinity</span>
               </div>
             </li>
             <li>
               <div className={styles.card}>
-                <img src={canva} alt="Canva Logo" className={styles.icon} />
+                <a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Canva Design Tool &#8599;"/* {`Learn more about:\nCanva Design Tool ↗`} */>
+                  <img src={canva} alt="Canva Logo" className={styles.icon} />
+                </a>
                 <span>Canva</span>
               </div>
             </li>

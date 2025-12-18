@@ -118,6 +118,17 @@ section.about {
 
           span {
             font-size: 1.3rem;
+
+            a {
+              color: inherit;
+              text-decoration: none;
+
+              @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
           }
         }
 
@@ -126,6 +137,12 @@ section.about {
             color: var(--text-color);
             text-decoration: none;
             font-size: 1.3rem;
+
+            @media (hover: hover) and (pointer: fine) {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
           }
         }
 

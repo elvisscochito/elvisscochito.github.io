@@ -35,7 +35,7 @@ section.languagesSection {
       align-items: center;
       text-align: center;
       /* gap: 1rem; */
-      background-color: light-dark(#F5F5F5, #444444);
+      /* background-color: light-dark(#F5F5F5, #444444); */
       border: 1px solid #eaeaea;
       padding: 1rem;
       border-radius: 0.5rem;
@@ -46,9 +46,24 @@ section.languagesSection {
         align-items: center;
         gap: 1rem; */
 
-      img.flag {
-        width: 3.5rem;
-        height: 3.5rem;
+      a.linkImage {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (hover: hover) and (pointer: fine) {
+          &:is(:hover, :focus) {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+          }
+        }
+
+        img.flag {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
       }
 
       h3.languageName {

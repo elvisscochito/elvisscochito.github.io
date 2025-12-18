@@ -15,12 +15,16 @@ const Languages = () => {
       </header>
       <ul className={styles.languagesList}>
         <li>
-          <img src={mexico} alt="Mexico Flag" className={styles.flag} />
+          <a href="https://en.wikipedia.org/wiki/Spanish_language" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Learn more about Spanish &#8599;">
+            <img src={mexico} alt="Mexico Flag" className={styles.flag} />
+          </a>
           <h3 className={styles.languageName}>{t("Languages.languagesList.l1.name")}</h3>
           <span className={styles.proficiency}>{t("Languages.languagesList.l1.proficiency")}</span>
         </li>
         <li>
-          <img src={usa} alt="USA Flag" className={styles.flag} />
+          <a href="https://en.wikipedia.org/wiki/English_language" target="_blank" rel="noopener noreferrer" className={styles.linkImage} data-tooltip-id="global-tooltip" data-tooltip-content="Learn more about English &#8599;">
+            <img src={usa} alt="USA Flag" className={styles.flag} />
+          </a>
           <h3 className={styles.languageName}>{t("Languages.languagesList.l2.name")}</h3>
           <span className={styles.proficiency}>{t("Languages.languagesList.l2.proficiency")}</span>
         </li>

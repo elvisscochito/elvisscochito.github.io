@@ -72,8 +72,16 @@ const About = () => {
             <FontAwesomeIcon icon={faGraduationCap} className={styles.icon} />
             <div className={styles.schoolInfo}>
               <span>{t("About.main.Education")}</span>
-              <span>Tecnológico de Monterrey, Campus Monterrey</span>
-              <span>{t("About.main.Degree")}</span>
+              <span>
+                <a href="https://www.tec.mx/en" target="_blank" rel="noopener noreferrer">
+                  Tecnológico de Monterrey, Campus Monterrey&#8599;
+                </a>
+              </span>
+              <span>
+                <a href="https://tec.mx/en/computer-science-and-information-technologies/bs-in-computer-science-and-technology" target="_blank" rel="noopener noreferrer">
+                  {t("About.main.Degree")}&#8599;
+                </a>
+              </span>
             </div>
           </div>
 
@@ -84,7 +92,7 @@ const About = () => {
               <span>{t("About.main.Legend")}</span>
               <span className={styles.row}>
                 <a href="tel:+527771395795" ref={phoneRef}>
-                  +52 777 139 5795
+                  +52 777 139 5795&#8599;
                 </a>
                 {
                   copiedText.phone ?
@@ -114,7 +122,7 @@ const About = () => {
               <span>{t("About.main.EmailLegend")}</span>
               <span className={styles.row}>
                 <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20opportunity&body=Hello,%20Elviro:" className={styles.link} ref={emailRef}>
-                  contact@elvirodominguez.com
+                  contact@elvirodominguez.com&#8599;
                   {/* <FontAwesomeIcon icon={faClone} className={styles.iconAux} /> */}
                 </a>
                 {

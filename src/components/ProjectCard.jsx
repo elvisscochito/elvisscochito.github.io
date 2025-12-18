@@ -26,7 +26,9 @@ const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, s
 
   const typeIconMap = {
     Academic: faGraduationCap,
+    Académico: faGraduationCap,
     Professional: faBriefcase,
+    Profesional: faBriefcase,
     Personal: faUser,
   };
 
@@ -56,7 +58,7 @@ const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, s
               </button>
               {/* </Tooltip> */}
               {/* <Tooltip text="View Source Code on GitHub Repository"> */}
-              <a href={repo} target='_blank' rel='noopener noreferrer' className={styles.link} /* title="View Source Code on GitHub Repository" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Source Code on GitHub Repository">
+              <a href={repo} target='_blank' rel='noopener noreferrer' className={styles.link} /* title="View Source Code on GitHub Repository" */ data-tooltip-id="global-tooltip" data-tooltip-content="View Source Code on GitHub Repository &#8599;">
                 <FontAwesomeIcon icon={faGithub} className={styles.gitHubIcon} />
               </a>
               {/*  </Tooltip> */}
@@ -86,7 +88,7 @@ const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, s
                 </>
               )
             }
-            <a href={preview} target='_blank' rel='noopener noreferrer'>Preview Project &#8599;</a>
+            <a href={preview} target='_blank' rel='noopener noreferrer' data-tooltip-id="global-tooltip" data-tooltip-content={t('Projects.demo')}>{t('Projects.linkBtn')} &#8599;</a>
             {
               type && (
                 <>

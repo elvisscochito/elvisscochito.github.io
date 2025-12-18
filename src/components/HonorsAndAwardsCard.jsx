@@ -13,7 +13,7 @@ const HonorsAndAwardsCard = ({ title, description, images, linkedin, date, locat
         <h4 className={styles.awardTitle}>{t("HonorsAndAwards.gallery")}</h4>
         {
           linkedin && (
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className={styles.link} data-tooltip-id="global-tooltip" data-tooltip-content="View LinkedIn Post">
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className={styles.link} data-tooltip-id="global-tooltip" data-tooltip-content="View LinkedIn Post &#8599;">
               <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
             </a>
           )

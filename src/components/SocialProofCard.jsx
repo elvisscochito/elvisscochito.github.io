@@ -3,7 +3,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/SocialProof.module.css';
 
-const SocialProofCard = ({ name, position, comment, profile, linkedin, tooltipText }) => {
+const SocialProofCard = ({ name, position, date, comment, profile, linkedin, link, type, tooltipText }) => {
   return (
     <div className={styles.socialProofCard}>
       <a href={linkedin} target="_blank" rel="noopener noreferrer" className={styles.link} data-tooltip-id="global-tooltip" data-tooltip-content={tooltipText}>
@@ -13,6 +13,8 @@ const SocialProofCard = ({ name, position, comment, profile, linkedin, tooltipTe
       <p className={styles.proofComment}>&quot;{comment}&quot;</p>
       <h3 className={styles.fullName}>{name}</h3>
       <span className={styles.position}>{position}</span>
+      <span className={styles.date}>{date}</span>
+      <a href={link} target="_blank" rel="noopener noreferrer" className={styles.linkBottom}>View Full {type} on LinkedIn &#8599;</a>
     </div>
   );
 };
