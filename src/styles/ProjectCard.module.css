@@ -425,7 +425,9 @@ footer.footer {
   .type {
     color: light-dark(#fff
         /* #4B0082 */
-        , #ADD8E6);
+        , #fff
+        /* #ADD8E6 */
+      );
   }
 }
 

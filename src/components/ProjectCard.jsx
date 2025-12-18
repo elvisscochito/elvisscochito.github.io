@@ -82,7 +82,7 @@ const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, s
                 </>
               ) : (
                 <>
-                  <FontAwesomeIcon icon={faStar} className={styles.starIconTransparent} data-tooltip-id="global-tooltip" data-tooltip-content={t('Projects.noFeaturedProject')} />{/*  Featured Project &nbsp;|&nbsp; */}
+                  <FontAwesomeIcon icon={faStar} className={styles.starIconTransparent}/*  data-tooltip-id="global-tooltip" data-tooltip-content={t('Projects.noFeaturedProject')}  */ />{/*  Featured Project &nbsp;|&nbsp; */}
                 </>
               )
             }
