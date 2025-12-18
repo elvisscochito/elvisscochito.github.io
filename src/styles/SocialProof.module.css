@@ -92,12 +92,21 @@ section.socialProof {
         font-weight: 500;
         /* color: #777; */
 
-        max-width: 10ch;
+        /* max-width: 10ch; */
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         /* text-wrap: balance;
                           overflow-wrap: break-word; */
+      }
+
+      span.date {
+        font-size: 1rem;
+        font-weight: 400;
+        color:
+          /* #777  */
+          var(--text-aux-color);
+        margin-top: 0.25rem;
       }
 
       a.linkBottom {
@@ -151,6 +160,14 @@ section.socialProof {
         }
 
         span.position {
+          font-size: 1rem;
+        }
+
+        span.date {
+          font-size: 0.9rem;
+        }
+
+        a.linkBottom {
           font-size: 1rem;
         }
       }

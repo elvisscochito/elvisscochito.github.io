@@ -67,6 +67,7 @@ const SocialProof = () => {
               linkedin={proof.linkedin}
               name={proof.name}
               position={proof.position}
+              date={proof.date}
               comment={proof.comment}
               link={proof.link}
               type={proof.type}

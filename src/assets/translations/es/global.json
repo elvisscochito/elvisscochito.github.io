@@ -301,7 +301,8 @@
         "duration": "2024 - 2025",
         "description": "Dirigí el club enfocado en el desarrollo de aplicaciones utilizando Swift, organizando talleres y proyectos colaborativos para mejorar las habilidades de los miembros."
       }
-    }
+    },
+    "btn": "Saber Más \u2197"
   },
   "HobbiesAndInterests": {
     "heading": "Pasatiempos e Intereses",
@@ -439,9 +440,20 @@
     "subheading": "Lo que otros compañeros y clientes dicen sobre mí.",
     "proofsList": {
       "p1": {
+        "name": "Facundo Prieto",
+        "position": "Ingeniero de Software",
+        "company": "Globallogic",
+        "date": "Mayo 12, 2023",
+        "comment": "Trabajo fantástico realizado por Elviro. Buena comunicación y muy proactivo. Una gran persona con la que trabajar.",
+        "type": "Reseña"
+      },
+      "p2": {
+        "name": "Misael Delgado",
         "position": "Científico de Datos",
         "company": "Empresa XYZ",
-        "comment": "Sus habilidades técnicas en análisis de datos, modelado estadístico y lenguajes de programación como Python y SQL son realmente encomiables."
+        "date": "Diciembre 15, 2023",
+        "comment": "Sus habilidades técnicas en análisis de datos, modelado estadístico y lenguajes de programación como Python y SQL son realmente encomiables.",
+        "type": "Recomendación"
       }
     },
     "btn": "Ver Perfil de LinkedIn \u2197"
