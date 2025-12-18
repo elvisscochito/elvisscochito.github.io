@@ -44,14 +44,14 @@
     }
   },
   "CompaniesSlider": {
-    "title": "Companies I've worked with:"
+    "title": "Companies I've worked with or for:"
   },
   "SocialPath": {
-    "linkedin": "My LinkedIn",
-    "github": "My GitHub",
-    "whatsapp": "My WhatsApp",
-    "email": "My Email",
-    "phone": "My Phone Number"
+    "linkedin": "My LinkedIn \u2197",
+    "github": "My GitHub \u2197",
+    "whatsapp": "My WhatsApp \u2197",
+    "email": "My Email \u2197",
+    "phone": "My Phone Number \u2197"
   },
   "About": {
     "heading": "What about me?",
@@ -465,7 +465,9 @@
         "title": "Task Manager App",
         "description": "A web application to manage tasks and to-dos with user authentication using MERN stack."
       }
-    }
+    },
+    "demo": "Live Demo",
+    "linkBtn": "Preview Project"
   },
   "SocialProof": {
     "heading": "Social Proof",
@@ -483,7 +485,7 @@
         "comment": "Working with Elvis has been a pleasure. He is a team player who communicates effectively and contributes valuable ideas. Elvis consistently delivers high-quality work on time. His problem-solving skills and attention to detail are exceptional. Elvis exceeded our expectations with his innovative approach and dedication to our project. Highly recommended!"
       }
     },
-    "btn": "View Linkedin Profile"
+    "btn": "View Linkedin Profile \u2197"
   },
   "Contact": {
     "heading": "Let's build something together.",
@@ -652,11 +654,11 @@
     "by": "By",
     "rights": "All rights reserved.",
     "Links": {
-      "phone": "Give me a call",
-      "email": "Send me an email",
-      "whatsapp": "Chat with me on WhatsApp",
-      "linkedin": "Visit my LinkedIn profile",
-      "github": "Check out my GitHub"
+      "phone": "Give me a call \u2197",
+      "email": "Send me an email \u2197",
+      "whatsapp": "Chat with me on WhatsApp \u2197",
+      "linkedin": "Visit my LinkedIn profile \u2197",
+      "github": "Check out my GitHub \u2197"
     }
   }
 }

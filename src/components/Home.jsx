@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBolt, faCheck, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faBolt, faCheck, faChevronRight, faClone, faCode, faEnvelope, faLaptop, faMapPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -125,8 +125,8 @@ const Home = () => {
         <div className={styles.body}>
           <p>{t('Home.Body.At')} <a href="https://tec.mx/en" target="_blank" className={styles.link}>Tecnologico de Monterrey&#8599;</a> {t('Home.Body.University')}. {t('Home.Body.Looking')} <span className={styles.italic}>{t('Home.Body.Part-Time')}</span> {t('Home.Body.Or')} <span className={styles.italic}>{t('Home.Body.Full-Time')}</span> <span className={`${styles.italic} ${styles.bold}`}>Web </span>&#40;<span className={styles.bold}>Front-End</span>, <span className={styles.bold}>Back-End</span> {t('Home.Body.Or')} <span className={styles.bold}>Full-Stack</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Data Science</span>, <span className={`${styles.italic} ${styles.bold}`}>Mobile </span>&#40;<span className={styles.bold}>Android</span>, <span className={styles.bold}>iOS</span> {t('Home.Body.Or')} <span className={styles.bold}>Hybrid</span>&#41;, <span className={`${styles.italic} ${styles.bold}`}>Networking</span>, <span className={`${styles.italic} ${styles.bold}`}>DevOps</span> {t('Home.Body.Any')} <span className={`${styles.italic} ${styles.bold}`}>IT</span> {t('Home.Body.Opportunity')}.</p>
           <div className={styles.buttonsCtaContainer}>
-            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>{t('Home.Body.cta.btnAux')}</a>
-            <a href="#contact" className={styles.btn}>{t('Home.Body.cta.btn')}</a>
+            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btnAux}>{t('Home.Body.cta.btnAux')}&nbsp;&#8599;</a>
+            <a href="#contact" className={styles.btn}>{t('Home.Body.cta.btn')}&nbsp;<FontAwesomeIcon icon={faChevronRight} /></a>
           </div>
         </div>
         <footer className={styles.footer}>

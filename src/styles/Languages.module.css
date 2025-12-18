@@ -35,7 +35,7 @@ section.languagesSection {
       align-items: center;
       text-align: center;
       /* gap: 1rem; */
-      background-color: light-dark(#F5F5F5, #444444);
+      /* background-color: light-dark(#F5F5F5, #444444); */
       border: 1px solid #eaeaea;
       padding: 1rem;
       border-radius: 0.5rem;

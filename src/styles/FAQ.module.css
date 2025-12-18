@@ -39,7 +39,9 @@ section.faqs {
 
     details {
       width: 100%;
-      border: 1px solid #d1d5db;
+      border: 1px solid
+        /* #d1d5db */
+        #eaeaea;
       padding: 1rem;
       border-radius: 0.5rem;
       cursor: pointer;

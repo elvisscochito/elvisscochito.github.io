@@ -44,14 +44,14 @@
     }
   },
   "CompaniesSlider": {
-    "title": "Empresas con las que he trabajado:"
+    "title": "Empresas con y para las que he trabajado:"
   },
   "SocialPath": {
-    "linkedin": "Mi LinkedIn",
-    "github": "Mi GitHub",
-    "whatsapp": "Mi WhatsApp",
-    "email": "Mi Correo",
-    "phone": "Mi Número de Teléfono"
+    "linkedin": "Mi LinkedIn \u2197",
+    "github": "Mi GitHub \u2197",
+    "whatsapp": "Mi WhatsApp \u2197",
+    "email": "Mi Correo \u2197",
+    "phone": "Mi Número de Teléfono \u2197"
   },
   "About": {
     "heading": "¿Qué hay sobre mí?",
@@ -350,75 +350,89 @@
         "title": "Sistema de banco de alimentos",
         "role": "Desarrollador Front-End",
         "date": "Ago 2022 - Oct 2022",
-        "description": "• Mejoré procesos manuales construyendo un sistema moderno y robusto. Diseñé prototipos de aplicaciones móviles y web en Figma. Desarrollé el frontend de la aplicación web usando React.js y CSS."
+        "description": "• Mejoré procesos manuales construyendo un sistema moderno y robusto. Diseñé prototipos de aplicaciones móviles y web en Figma. Desarrollé el frontend de la aplicación web usando React.js y CSS.",
+        "type": "Académico"
       },
       "p2": {
         "title": "Wizeprompt",
         "role": "Desarrollador Front-End",
         "date": "Sep 2023 - Dic 2023",
-        "description": "• Diseñé y desarrollé una plataforma interna intuitiva y fácil de usar para que los desarrolladores empleados accedieran a conversaciones impulsadas por IA."
+        "description": "• Diseñé y desarrollé una plataforma interna intuitiva y fácil de usar para que los desarrolladores empleados accedieran a conversaciones impulsadas por IA.",
+        "type": "Académico"
       },
       "p3": {
         "title": "Aplicación de salas de reuniones",
         "role": "Desarrollador Full-Stack (Front-End y Back-End)",
         "date": "Ago 2023 - Sep 2023",
-        "description": "• Diseñé y desarrollé una aplicación web full stack para facilitar la programación de reuniones usando MongoDB, Express.js, Node.js y React.js (stack MERN)."
+        "description": "• Diseñé y desarrollé una aplicación web full stack para facilitar la programación de reuniones usando MongoDB, Express.js, Node.js y React.js (stack MERN).",
+        "type": "Profesional"
       },
       "p4": {
         "title": "myCover App",
         "role": "Desarrollador Móvil",
         "date": "Nov 2023 - Presente",
-        "description": "• Diseñé y desarrollé una aplicación móvil intuitiva usando tecnologías de Apple para crear, compartir y guardar fácilmente boletos digitales únicos y personalizados para cualquier evento social directamente en la app 'Wallet' preinstalada de Apple."
+        "description": "• Diseñé y desarrollé una aplicación móvil intuitiva usando tecnologías de Apple para crear, compartir y guardar fácilmente boletos digitales únicos y personalizados para cualquier evento social directamente en la app 'Wallet' preinstalada de Apple.",
+        "type": "Personal"
       },
       "p5": {
         "title": "Panel de análisis de datos",
         "role": "Científico de Datos y Desarrollador Front-End",
         "date": "Ago 2024 - Dic 2024",
-        "description": "• Analicé y limpié una base de datos proporcionada para integrar y mostrar los modelos de datos en gráficos a través de una interfaz web fácil de usar."
+        "description": "• Analicé y limpié una base de datos proporcionada para integrar y mostrar los modelos de datos en gráficos a través de una interfaz web fácil de usar.",
+        "type": "Académico"
       },
       "p6": {
         "title": "Videojuego de rompecabezas",
         "role": "Desarrollador de Juegos y Front-End",
         "date": "Feb 2022 - Jun 2022",
-        "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego."
+        "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego.",
+        "type": "Académico"
       },
       "p7": {
         "title": "Kanbanize Lite",
         "role": "Desarrollador Full-Stack (Front-End y Back-End)",
         "date": "Feb 2023 - Jun 2023",
-        "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego."
+        "description": "• Creé un videojuego de rompecabezas usando el motor Unity y tecnologías de metaverso para mejorar el TDAH, y diseñé y desarrollé una interfaz web para gestionar estadísticas de usuarios del videojuego.",
+        "type": "Académico"
       },
       "p8": {
         "title": "Visión de dron Mixtli",
         "role": "Ingeniero de Software y Desarrollador Front-End",
         "date": "Feb 2024 - Jun 2024",
-        "description": "• Escribimos un script en Python para el reconocimiento de color y forma con el dron Tello y construí una aplicación web para la visualización de transmisión de video en tiempo real, incluyendo botones para enviar comandos de control al dron."
+        "description": "• Escribimos un script en Python para el reconocimiento de color y forma con el dron Tello y construí una aplicación web para la visualización de transmisión de video en tiempo real, incluyendo botones para enviar comandos de control al dron.",
+        "type": "Académico"
       },
       "p9": {
         "title": "Cotizador SaaS Healthcare",
         "role": "Desarrollador Front-End",
         "date": "Jun 2023 - Jul 2023",
-        "description": "• Una aplicación web que permite a los usuarios obtener cotizaciones para servicios de salud seleccionando diferentes opciones y características usando React.js y CSS."
+        "description": "• Una aplicación web que permite a los usuarios obtener cotizaciones para servicios de salud seleccionando diferentes opciones y características usando React.js y CSS.",
+        "type": "Profesional"
       },
       "p10": {
         "title": "Blog Markdown",
         "role": "Desarrollador Full-Stack",
         "date": "Jun 2022 - Jul 2022",
-        "description": "• Un sitio web de blog personal construido con Marked y Mongoose para compartir artículos y tutoriales sobre desarrollo web."
+        "description": "• Un sitio web de blog personal construido con Marked y Mongoose para compartir artículos y tutoriales sobre desarrollo web.",
+        "type": "Personal"
       },
       "p11": {
         "title": "Tarjetas de GitHub",
         "role": "Desarrollador Front-End",
         "date": "Noviembre 2022",
-        "description": "Una aplicación web que obtiene y muestra perfiles de usuarios de GitHub en formatos de tarjetas personalizables usando React.js, CSS y la API de GitHub."
+        "description": "Una aplicación web que obtiene y muestra perfiles de usuarios de GitHub en formatos de tarjetas personalizables usando React.js, CSS y la API de GitHub.",
+        "type": "Personal"
       },
       "p12": {
         "title": "Tarjetas de Conciertos",
         "role": "Desarrollador Front-End",
         "date": "Jul 2022 - Ago 2022",
-        "description": "Una aplicación web que muestra próximos conciertos y eventos falsos usando React.js, CSS."
+        "description": "Una aplicación web que muestra próximos conciertos y eventos falsos usando React.js, CSS.",
+        "type": "Personal"
       }
-    }
+    },
+    "demo": "Demostración en Vivo",
+    "linkBtn": "Vista Previa del Proyecto"
   },
   "SocialProof": {
     "heading": "Testimonios",
@@ -430,7 +444,7 @@
         "comment": "Sus habilidades técnicas en análisis de datos, modelado estadístico y lenguajes de programación como Python y SQL son realmente encomiables."
       }
     },
-    "btn": "Ver Perfil de LinkedIn"
+    "btn": "Ver Perfil de LinkedIn \u2197"
   },
   "Contact": {
     "heading": "Construyamos algo juntos.",
@@ -597,11 +611,11 @@
     "by": "Por",
     "rights": "Todos los derechos reservados.",
     "Links": {
-      "phone": "Hazme una llamada",
-      "email": "Envíame un correo electrónico",
-      "whatsapp": "Hablemos por WhatsApp",
-      "linkedin": "Visita mi perfil de LinkedIn",
-      "github": "Checa mi GitHub"
+      "phone": "Hazme una llamada \u2197",
+      "email": "Envíame un correo electrónico \u2197",
+      "whatsapp": "Hablemos por WhatsApp \u2197",
+      "linkedin": "Visita mi perfil de LinkedIn \u2197",
+      "github": "Checa mi GitHub \u2197"
     }
   }
 }

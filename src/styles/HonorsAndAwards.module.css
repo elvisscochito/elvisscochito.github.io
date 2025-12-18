@@ -45,10 +45,10 @@ section.honorsAndAwards {
       /* gap: 0.5rem; */
 
       /* div.awardCard { */
-      border: 1px solid #eaeaea;
       padding: 1rem;
       border-radius: 0.5rem;
-      background-color: light-dark(#F5F5F5, #444444);
+      /* background-color: light-dark(#F5F5F5, #444444); */
+      border: 1px solid #eaeaea;
       /* position: relative; */
 
       header.cardHeader {
@@ -66,6 +66,7 @@ section.honorsAndAwards {
           margin: 0;
           text-align: left; */
           color: var(--text-aux-color);
+          /* font-size: 0.8rem; */
         }
 
         a.link {

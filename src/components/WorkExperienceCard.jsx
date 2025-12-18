@@ -1,17 +1,35 @@
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCalendar, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/WorkExperience.module.css';
 
-const WorkExperienceCard = ({ title, company, type, date, duration, location, locationType, responsibilities = [], logo }) => {
+const WorkExperienceCard = ({ title, url, company, type, positionLink, date, duration, location, locationType, responsibilities = [], logo }) => {
   return (
     <div className={styles.experience}>
       <img src={logo} alt={`${company} logo`} className={styles.logo} />
-      <h3 className={styles.company}>{company}</h3>
+      <h3 className={styles.company}>
+        <a href={url} target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
+          {company}
+          &nbsp;
+          {/* <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+          &nbsp; */}
+          &#8599;
+        </a>
+      </h3>
       {/* <header className={styles.header}>
         <img src={logo} alt={`${company} logo`} className={styles.logoHeader} />
         <h3 className={styles.companyHeader}>{company}</h3>
       </header> */}
-      <h4 className={styles.title}>{title}</h4>
+      <h4 className={styles.title}>
+        <a href={positionLink} target="_blank" rel="noopener noreferrer" className={styles.titleLink}>
+          {title}
+          &nbsp;
+          {/* <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+          &nbsp; */}
+          &#8599;
+          {/* ↗ */}
+        </a>
+      </h4>
       <span className={styles.type}>{type}</span>
       <p className={styles.dateAndDuration}>
         <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
@@ -22,7 +40,13 @@ const WorkExperienceCard = ({ title, company, type, date, duration, location, lo
 
       <p className={styles.locationInfo}>
         <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
-        <span className={styles.location}>{location}</span>
+        <span className={styles.location}>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location + ', ' + company)}`} target="_blank" rel="noopener noreferrer" className={styles.locationLink}>
+            {location}
+            &nbsp;
+            &#8599;
+          </a>
+        </span>
         •
         <span className={styles.locationType}>{locationType}</span>
       </p>
@@ -33,6 +57,13 @@ const WorkExperienceCard = ({ title, company, type, date, duration, location, lo
           ))
         }
       </ul>
+      <a href="https://www.linkedin.com/in/elviro-dominguez-soriano/details/experience/" target="_blank" rel="noopener noreferrer" className={styles.viewMoreLink}>
+        View More on LinkedIn
+        &nbsp;
+        <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+        &nbsp;
+        &#8599;
+      </a>
     </div>
   );
 };
