@@ -10,7 +10,7 @@ import kanbanizeBanner from '../assets/kanbanize-banner-dark.png';
 import kanbanize from '../assets/kanbanize.png';
 import wizelineBanner from '../assets/wizeline-banner.png';
 import wizeline from '../assets/wizeline.svg';
-import Card from '../components/Card';
+import ProjectCard from './ProjectCard';
 /* import { ProjectsContext } from '../contexts/ProjectsContext'; */
 import { useTranslation } from 'react-i18next';
 import bamxBanner from '../assets/bamx-dark.png';
@@ -69,7 +69,9 @@ const Projects = () => {
       skills: ['React', 'CSS', 'Figma', 'UI/UX'],
       link: 'https://bamx.org.mx',
       preview: 'https://bamx.org.mx',
-      repo: 'https://github.com/Ant20ni02/banco-de-alimentos'
+      repo: 'https://github.com/Ant20ni02/banco-de-alimentos',
+      featured: true,
+      type: tFn('Projects.projectsList.p1.type')
     },
     {
       id: 2,
@@ -84,7 +86,9 @@ const Projects = () => {
       skills: ['Next.js', 'Tailwind'],
       link: 'https://www.wizeline.com/',
       preview: 'https://www.wizeline.com/',
-      repo: 'https://github.com/wizelineacademy/itesm-socioformador-ago-dec-2023-team-03'
+      repo: 'https://github.com/wizelineacademy/itesm-socioformador-ago-dec-2023-team-03',
+      featured: false,
+      type: tFn('Projects.projectsList.p2.type')
     },
     {
       id: 3,
@@ -99,7 +103,9 @@ const Projects = () => {
       skills: ['MongoDB', 'Express.js', 'Node.js', 'React.js'],
       link: 'https://www.a3eingenieros.com.mx',
       preview: 'https://meeting-rooms-app.vercel.app',
-      repo: 'https://github.com/elvisscochito/meeting-rooms-app'
+      repo: 'https://github.com/elvisscochito/meeting-rooms-app',
+      featured: true,
+      type: tFn('Projects.projectsList.p3.type')
     },
     {
       id: 4,
@@ -114,7 +120,9 @@ const Projects = () => {
       skills: ['Swift', 'iOS', 'Xcode', 'UI/UX'],
       link: 'https://github.com/elvisscochito/mycover-app',
       preview: 'https://github.com/elvisscochito/mycover-app',
-      repo: 'https://github.com/elvisscochito/mycover-app'
+      repo: 'https://github.com/elvisscochito/mycover-app',
+      featured: true,
+      type: tFn('Projects.projectsList.p4.type')
     },
     {
       id: 5,
@@ -129,7 +137,9 @@ const Projects = () => {
       skills: ['Python', 'Streamlit', 'Pandas', 'Data Visualization', 'AI/ML'],
       link: 'https://github.com/elvisscochito/data-analytics-dashboard',
       preview: 'https://danu-data-analytics-dashboard.streamlit.app',
-      repo: 'https://github.com/elvisscochito/data-analytics-dashboard'
+      repo: 'https://github.com/elvisscochito/data-analytics-dashboard',
+      featured: true,
+      type: tFn('Projects.projectsList.p5.type')
     },
     {
       id: 6,
@@ -144,7 +154,9 @@ const Projects = () => {
       skills: ['Unity', 'C#', 'Web3', 'React.js', 'CSS'],
       link: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
       preview: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
-      repo: 'https://github.com/elvisscochito/projects/tree/main/escaperoom'
+      repo: 'https://github.com/elvisscochito/projects/tree/main/escaperoom',
+      featured: false,
+      type: tFn('Projects.projectsList.p6.type')
     },
     {
       id: 7,
@@ -159,7 +171,9 @@ const Projects = () => {
       skills: ['React.js', 'Express.js', 'Node.js'],
       link: 'https://github.com/elvisscochito/kanbanize-lite',
       preview: 'https://github.com/elvisscochito/kanbanize-lite',
-      repo: 'https://github.com/elvisscochito/kanbanize-lite'
+      repo: 'https://github.com/elvisscochito/kanbanize-lite',
+      featured: false,
+      type: tFn('Projects.projectsList.p7.type')
     },
     {
       id: 8,
@@ -174,7 +188,9 @@ const Projects = () => {
       skills: ['Python', 'Flask', 'React', 'CSS', 'Figma', 'UI/UX'],
       link: 'https://www.instagram.com/tecmixtli/',
       preview: 'https://github.com/Autonomous-Mechatronics-Grand-Prix/Cuernavaca-2024/tree/main/Mision1-Control-de-Trayectoria/cva-drone/cesar-elviss-yemi/web/frontend',
-      repo: 'https://github.com/Autonomous-Mechatronics-Grand-Prix/Cuernavaca-2024/tree/main/Mision1-Control-de-Trayectoria/cva-drone/cesar-elviss-yemi/web/frontend'
+      repo: 'https://github.com/Autonomous-Mechatronics-Grand-Prix/Cuernavaca-2024/tree/main/Mision1-Control-de-Trayectoria/cva-drone/cesar-elviss-yemi/web/frontend',
+      featured: true,
+      type: tFn('Projects.projectsList.p8.type')
     },
     {
       id: 9,
@@ -189,7 +205,9 @@ const Projects = () => {
       skills: ['React.js', 'CSS', 'API'],
       link: 'https://github.com/MikeDev0X/Cotizador',
       preview: 'https://github.com/MikeDev0X/Cotizador',
-      repo: 'https://github.com/MikeDev0X/Cotizador'
+      repo: 'https://github.com/MikeDev0X/Cotizador',
+      featured: false,
+      type: tFn('Projects.projectsList.p9.type')
     },
     {
       id: 10,
@@ -204,7 +222,9 @@ const Projects = () => {
       skills: ['Marked', 'Mongoose', 'Node.js', 'Express.js'],
       link: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
       preview: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
-      repo: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog'
+      repo: 'https://github.com/elvisscochito/projects/tree/main/markdown-blog',
+      featured: false,
+      type: tFn('Projects.projectsList.p10.type')
     },
     {
       id: 11,
@@ -219,7 +239,9 @@ const Projects = () => {
       skills: ['MERN Stack', 'JWT', 'REST API'],
       link: 'https://github.com/elvisscochito/projects/tree/main/github-cards',
       preview: 'https://github-cards-rose.vercel.app',
-      repo: 'https://github.com/elvisscochito/projects/tree/main/github-cards'
+      repo: 'https://github.com/elvisscochito/projects/tree/main/github-cards',
+      featured: false,
+      type: tFn('Projects.projectsList.p11.type')
     },
     {
       id: 12,
@@ -234,7 +256,9 @@ const Projects = () => {
       skills: ['React.js', 'CSS', 'API'],
       link: 'https://github.com/elvisscochito/projects/tree/main/concert-cards',
       preview: 'https://concert-cards.vercel.app',
-      repo: 'https://github.com/elvisscochito/projects/tree/main/concert-cards'
+      repo: 'https://github.com/elvisscochito/projects/tree/main/concert-cards',
+      featured: false,
+      type: tFn('Projects.projectsList.p12.type')
     },
   ];
 
@@ -277,7 +301,7 @@ const Projects = () => {
           projects
             .filter(project => project.path.includes(activePath.path))
             .map(project => (
-              <Card
+              <ProjectCard
                 key={project.id}
                 brand={project.brand}
                 title={project.title}
@@ -290,6 +314,8 @@ const Projects = () => {
                 link={project.link}
                 preview={project.preview}
                 repo={project.repo}
+                featured={project.featured}
+                type={project.type}
               />
             ))
         }

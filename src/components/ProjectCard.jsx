@@ -1,11 +1,13 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faCircleInfo, faCircleXmark, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faCircleInfo, faCircleXmark, faCode, faGraduationCap, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* import PropTypes from 'prop-types'; */
 import { useState } from 'react';
-import styles from '../styles/Card.module.css';
+import { useTranslation } from 'react-i18next';
+import styles from '../styles/ProjectCard.module.css';
 
-const Card = ({ brand, title, role, date, thumbnail, logo, description, skills, /* link, */ preview, repo }) => {
+const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, skills, /* link, */ preview, repo, featured, type }) => {
+  const { t } = useTranslation("global");
   const [isFrontCard, setIsFrontCard] = useState(true);
 
   const handleCardClick = () => {
@@ -20,6 +22,12 @@ const Card = ({ brand, title, role, date, thumbnail, logo, description, skills, 
     }
 
     setIsFrontCard(!isFrontCard);
+  };
+
+  const typeIconMap = {
+    Academic: faGraduationCap,
+    Professional: faBriefcase,
+    Personal: faUser,
   };
 
   return (
@@ -67,7 +75,25 @@ const Card = ({ brand, title, role, date, thumbnail, logo, description, skills, 
           </figure>
 
           <footer className={styles.footer}>
+            {
+              /* featured && '⭐ Featured Project' */ featured ? (
+                <>
+                  <FontAwesomeIcon icon={faStar} className={styles.starIcon} data-tooltip-id="global-tooltip" data-tooltip-content={t('Projects.featuredProject')} />{/*  Featured Project &nbsp;|&nbsp; */}
+                </>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faStar} className={styles.starIconTransparent} data-tooltip-id="global-tooltip" data-tooltip-content={t('Projects.noFeaturedProject')} />{/*  Featured Project &nbsp;|&nbsp; */}
+                </>
+              )
+            }
             <a href={preview} target='_blank' rel='noopener noreferrer'>Preview Project &#8599;</a>
+            {
+              type && (
+                <>
+                  {/* &nbsp;|&nbsp;  */}<FontAwesomeIcon icon={typeIconMap[type]} className={styles.type} data-tooltip-id="global-tooltip" data-tooltip-content={`Type: ${type}`} /> {/* Type: {type} */}
+                </>
+              )
+            }
           </footer>
         </div>
 
@@ -104,4 +130,4 @@ const Card = ({ brand, title, role, date, thumbnail, logo, description, skills, 
       repo: PropTypes.string,
 }; */
 
-export default Card;
+export default ProjectCard;

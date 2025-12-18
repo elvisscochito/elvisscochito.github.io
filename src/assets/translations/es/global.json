@@ -343,6 +343,8 @@
       "game": "Juegos",
       "data": "Datos"
     },
+    "featuredProject": "Proyecto Destacado",
+    "noFeaturedProject": "No es un Proyecto Destacado",
     "projectsList": {
       "p1": {
         "title": "Sistema de banco de alimentos",
