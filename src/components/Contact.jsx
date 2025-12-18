@@ -272,7 +272,10 @@ const Contact = () => {
 
         <Modal ref={modalRef} />
 
-        <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`}>{t('Contact.form.send')} {isActive ? (
+        <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`} {...(isButtonDisabled && {
+          "data-tooltip-id": "global-tooltip",
+          "data-tooltip-content": t("Contact.form.btnDisabledTooltip")
+        })}>{t('Contact.form.send')} {isActive ? (
           <>
             WhatsApp
             <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />

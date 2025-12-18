@@ -531,7 +531,8 @@
       "bodyContent": "Body Content",
       "whatsappMessage": "Type Your WhatsApp Message Here...",
       "emailMessage": "Type Your Email Message Here...",
-      "send": "Send"
+      "send": "Send",
+      "btnDisabledTooltip": "Please fill in the input field to enable the send button."
     },
     "modalWhatsApp": {
       "title": "Message sent successfully via WhatsApp API!",
@@ -552,7 +553,8 @@
       "placeholder": "Type your email or phone number here",
       "successMessage": "Thank you for reaching out! I'll get back to you as soon as possible.",
       "errorMessage": "Oops! Something went wrong. Please try again later.",
-      "btn": "Send"
+      "btn": "Send",
+      "btnDisabledTooltip": "Please fill in the input field to enable the send button."
     },
     "modal": {
       "title": "Message Sent Successfully!",

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/QuickContact.module.css';
 import Modal from './Modal';
@@ -6,6 +6,8 @@ import Modal from './Modal';
 const QuickContact = () => {
   const { t } = useTranslation("global");
   const modalRef = useRef(null);
+  const formRef = useRef(null);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const [formData, setFormData] = useState({
     contactInfo: ''
@@ -69,21 +71,34 @@ const QuickContact = () => {
     /* console.log('Quick Contact Info Submitted:', formData.contactInfo); */
   }
 
+  useEffect(() => {
+    if (formRef.current) {
+      setIsButtonDisabled(!formRef.current.checkValidity());
+    }
+  }, [formData]);
+
   return (
     <section id='quick-contact' className={styles.quickContact}>
       <header className={styles.header}>
         <h2 className={styles.quickContactHeading}>{/* Do you feel lazy?  */} {t("QuickContact.heading")}</h2>
         <span className={styles.quickContactText}>{t("QuickContact.subheading")}{/*  just type your email or phone number and I will contact you. */}</span>
       </header>
-      <form className={styles.quickContactForm} onSubmit={handleSubmit}>
+      <form className={styles.quickContactForm} onSubmit={handleSubmit} ref={formRef}>
         <fieldset className={styles.fieldset}>
           <label htmlFor="quickContactInfo" className={styles.label}>{t("QuickContact.form.label")}</label>
-          <input type="text" id="quickContactInfo" name="contactInfo" className={styles.input} placeholder={t("QuickContact.form.placeholder")} value={formData.contactInfo} onChange={handleChange} />
+          <input type="text" id="quickContactInfo" name="contactInfo" className={styles.input} placeholder={t("QuickContact.form.placeholder")} value={formData.contactInfo} onChange={handleChange} required />
         </fieldset>
 
         <Modal ref={modalRef} />
 
-        <button type="submit" className={styles.submitButton}>{t("QuickContact.form.btn")}</button>
+        <button type="submit" disabled={isButtonDisabled} className={styles.submitButton}
+          {...(isButtonDisabled && {
+            "data-tooltip-id": "global-tooltip",
+            "data-tooltip-content": t("QuickContact.form.btnDisabledTooltip")
+          })}>
+          {t("QuickContact.form.btn")}
+          {/* <span className={`${styles.icon} ${styles.iconDisabled}`} aria-hidden="true">✉️</span> */}
+        </button>
       </form>
     </section>
   );
