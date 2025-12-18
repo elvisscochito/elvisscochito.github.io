@@ -65,13 +65,16 @@ section.faqs {
           /* color: var(--accent-color); */
         }
 
-        &:focus,
-        &:hover {
-          color: var(--accent-color);
+        @media (hover: hover) and (pointer: fine) {
 
-          /* &::after {
+          &:focus,
+          &:hover {
+            color: var(--accent-color);
+
+            /* &::after {
               color: var(--primary-color);
             } */
+          }
         }
       }
 

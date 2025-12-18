@@ -74,9 +74,24 @@ section.skills {
           align-items: center;
           gap: 0.5rem;
 
-          img.icon {
-            width: 2.5rem;
-            height: 2.5rem;
+          a.linkImage {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media (hover: hover) and (pointer: fine) {
+              &:is(:hover, :focus) {
+                transform: scale(1.1);
+                transition: transform 0.2s ease-in-out;
+              }
+            }
+
+            img.icon {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
           }
 
           /* span {
