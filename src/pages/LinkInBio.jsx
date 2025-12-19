@@ -3,9 +3,9 @@ import { faEnvelope, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawes
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import corncrunch from '../assets/corncrunch.png';
-import neza from '../assets/neza-logo.png';
-import profile from '../assets/profile.jpg';
+import corncrunch from '../assets/corncrunch.svg';
+import neza from '../assets/neza-logo.svg';
+import profile from '../assets/profile.webp';
 import tec from '../assets/tec.svg';
 import Modal from '../components/Modal';
 import styles from '../styles/LinkInBio.module.css';
