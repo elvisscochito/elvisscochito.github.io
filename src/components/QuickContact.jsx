@@ -104,7 +104,7 @@ const QuickContact = () => {
         <Modal ref={modalRef} />
 
         <button type="submit" disabled={!isFormValid || isLoading} className={styles.submitButton}
-          {...(!isFormValid && {
+          {...(!isFormValid && !isLoading && {
             "data-tooltip-id": "global-tooltip",
             "data-tooltip-content": t("QuickContact.form.btnDisabledTooltip")
           })}>

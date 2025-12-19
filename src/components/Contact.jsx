@@ -13,7 +13,8 @@ const Contact = () => {
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [isCheckedWhatsapp, setIsCheckedWhatsapp] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const [formData, setFormData] = useState({
     subject: t('Contact.formData.subject'),
@@ -44,8 +45,16 @@ const Contact = () => {
     });
   };
 
+  useEffect(() => {
+    if (formRef.current) {
+      setIsFormValid(formRef.current.checkValidity());
+    }
+  }, [isActive, formData]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     const { subject, name, /* email, */ message } = formData;
     /* const whatsappNumber = '+527771395795'; */
@@ -84,6 +93,16 @@ const Contact = () => {
               setTimeout(() => {
                 modalRef.current?.close();
               }, 3000);
+            } else {
+              const errorData = await response.json();
+              console.error('Error:', errorData);
+              alert(t('Contact.alertErrorWhatsapp'));
+              /* modalRef.current?.open(
+                'Error',
+                'There was an error sending your message via WhatsApp API. Please try again later.'
+              ); */
+
+              /* throw new Error(errorData.message || 'Failed to send message via WhatsApp API.'); */
             }
           } catch (error) {
             console.error('Error:', error);
@@ -92,6 +111,8 @@ const Contact = () => {
               'Error',
               'There was an error sending your message via WhatsApp API. Please try again later.'
             ); */
+          } finally {
+            setIsLoading(false);
           }
         }
         postWhatsApp();
@@ -152,11 +173,15 @@ const Contact = () => {
               modalRef.current?.close();
             }, 3000);
           } else {
+            const errorData = await response.json();
+            console.error('Error:', errorData);
             alert(t('Contact.alertErrorEmail'));
             /* modalRef.current?.open(
               'Error',
               'There was an error sending your message. Please try again later.'
             ); */
+
+            /* throw new Error(errorData.message || 'Failed to send message via email.'); */
           }
         } catch (error) {
           console.error('Error:', error);
@@ -165,6 +190,8 @@ const Contact = () => {
             'Error',
             'There was an error sending your message. Please try again later.'
           ); */
+        } finally {
+          setIsLoading(false);
         }
       };
 
@@ -196,11 +223,8 @@ const Contact = () => {
     }
   }, [isActive, formData]); */
 
-  useEffect(() => {
-    if (formRef.current) {
-      setIsButtonDisabled(!formRef.current.checkValidity());
-    }
-  }, [isActive, formData]);
+  const channel = isActive ? t("Contact.channels.whatsapp") : t("Contact.channels.email");
+  const channelIcon = isActive ? faWhatsapp : faPaperPlane;
 
   return (
     <section id="contact" className={styles.contact}>
@@ -272,20 +296,23 @@ const Contact = () => {
 
         <Modal ref={modalRef} />
 
-        <button type="submit" disabled={isButtonDisabled} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`} {...(isButtonDisabled && {
+        <button type="submit" disabled={!isFormValid || isLoading} /* title={isButtonDisabled ? "Please enter fields to enabled send" : undefined} */ className={`${styles.submitButton} ${isActive ? styles.whatsapp : styles.email}`} {...(!isFormValid && !isLoading && {
           "data-tooltip-id": "global-tooltip",
           "data-tooltip-content": t("Contact.form.btnDisabledTooltip")
-        })}>{t('Contact.form.send')} {isActive ? (
-          <>
-            WhatsApp
-            <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
-          </>
-        ) : (
-          <>
-            Email
-            <FontAwesomeIcon icon={faPaperPlane} className={styles.icon} />
-          </>
-        )}
+        })}>
+          {
+            isLoading ? (
+              <>
+                {t("Contact.form.sending")} {channel}...
+                <span className={styles.spinner} aria-label={`${t("Contact.form.sending")} ${channel}...`} />
+              </>
+            ) : (
+              <>
+                {t('Contact.form.send')} {channel}
+                <FontAwesomeIcon icon={channelIcon} className={styles.icon} />
+              </>
+            )
+          }
         </button>
       </form>
     </section>

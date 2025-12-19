@@ -493,6 +493,10 @@
       "send": "Enviar",
       "btnDisabledTooltip": "Por favor, completa el campo de entrada para habilitar el botón de enviar."
     },
+    "channels": {
+      "whatsapp": "WhatsApp",
+      "email": "Correo Electrónico"
+    },
     "modalWhatsApp": {
       "title": "¡Mensaje enviado exitosamente vía la API de WhatsApp!",
       "message": "¡Me pondré en contacto contigo pronto!",
