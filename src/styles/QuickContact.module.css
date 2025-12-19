@@ -95,6 +95,11 @@ section.quickContact {
       cursor: pointer;
       transition: background-color 0.3s ease;
 
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           background-color: #333;
@@ -110,6 +115,15 @@ section.quickContact {
 
       .icon {
         font-size: 1.2rem;
+      }
+
+      .spinner {
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid transparent;
+        border-top-color: currentColor;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
       }
     }
   }
@@ -152,5 +166,11 @@ section.quickContact {
         }
       }
     }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

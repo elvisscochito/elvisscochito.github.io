@@ -553,6 +553,7 @@
       "placeholder": "Type your email or phone number here",
       "successMessage": "Thank you for reaching out! I'll get back to you as soon as possible.",
       "errorMessage": "Oops! Something went wrong. Please try again later.",
+      "sending": "Sending...",
       "btn": "Send",
       "btnDisabledTooltip": "Please fill in the input field to enable the send button."
     },
