@@ -7,7 +7,8 @@ const QuickContact = () => {
   const { t } = useTranslation("global");
   const modalRef = useRef(null);
   const formRef = useRef(null);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const [formData, setFormData] = useState({
     contactInfo: ''
@@ -21,8 +22,16 @@ const QuickContact = () => {
     }));
   }
 
+  useEffect(() => {
+    if (formRef.current) {
+      setIsFormValid(formRef.current.checkValidity());
+    }
+  }, [formData]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     const contactInfo = formData.contactInfo.trim();
 
@@ -43,6 +52,7 @@ const QuickContact = () => {
 
         if (response.ok) {
           /* alert('Your quick contact info has been sent successfully! I will get in touch with you soon.'); */
+
           modalRef.current?.open(
             t("QuickContact.modal.title"),
             t("QuickContact.modal.message")
@@ -55,14 +65,22 @@ const QuickContact = () => {
           setTimeout(() => {
             modalRef.current?.close();
           }, 3000);
+        } else {
+          const errorData = await response.json();
+          throw new Error(errorData.message || 'Failed to send quick contact info.');
         }
       } catch (error) {
         console.error('Error:', error);
+        /* throw error; */
         alert('There was an error sending your quick contact info. Please try again later.');
+        /* setIsButtonDisabled(false); */
         /* modalRef.current?.open(
           'Error',
           'There was an error sending your quick contact info. Please try again later.'
         ); */
+      } finally {
+        setIsLoading(false);
+        /* setIsButtonDisabled(true); */
       }
     }
 
@@ -70,12 +88,6 @@ const QuickContact = () => {
 
     /* console.log('Quick Contact Info Submitted:', formData.contactInfo); */
   }
-
-  useEffect(() => {
-    if (formRef.current) {
-      setIsButtonDisabled(!formRef.current.checkValidity());
-    }
-  }, [formData]);
 
   return (
     <section id='quick-contact' className={styles.quickContact}>
@@ -91,12 +103,21 @@ const QuickContact = () => {
 
         <Modal ref={modalRef} />
 
-        <button type="submit" disabled={isButtonDisabled} className={styles.submitButton}
-          {...(isButtonDisabled && {
+        <button type="submit" disabled={!isFormValid || isLoading} className={styles.submitButton}
+          {...(!isFormValid && !isLoading && {
             "data-tooltip-id": "global-tooltip",
             "data-tooltip-content": t("QuickContact.form.btnDisabledTooltip")
           })}>
-          {t("QuickContact.form.btn")}
+          {
+            isLoading ? (
+              <>
+                {t("QuickContact.form.sending")}
+                <span className={styles.spinner} aria-label={t("QuickContact.form.sending")} />
+              </>
+            ) : (
+              t("QuickContact.form.btn")
+            )
+          }
           {/* <span className={`${styles.icon} ${styles.iconDisabled}`} aria-hidden="true">✉️</span> */}
         </button>
       </form>
