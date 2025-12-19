@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Navbar.module.css';
+import AppearanceDropdown from './AppearanceDropdown';
 import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
@@ -112,6 +113,9 @@ const Navbar = () => {
         </li>
         <li className={styles.navbarItem}>
           |<ToggleLanguage />
+        </li>
+        <li className={styles.navbarItem}>
+          |<AppearanceDropdown />
         </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
