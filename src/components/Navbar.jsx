@@ -182,6 +182,9 @@ const Navbar = () => {
           {/* <FontAwesomeIcon icon={faLanguage} /> */}
           {/* Toggle  */}{t('Navbar.language')} {/* |  */}<ToggleLanguage />{/*  | */}
         </li>
+        <li className={styles.navbarItem}>
+          {/* | */}<AppearanceDropdown />
+        </li>
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>
         </li> */}

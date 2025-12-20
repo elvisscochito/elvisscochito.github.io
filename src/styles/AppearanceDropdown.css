@@ -1,0 +1,44 @@
+option {
+  padding: 8px 12px;
+  background-color: red;
+
+  &:hover {
+    background-color: blue;
+  }
+
+  &:checked {
+    background-color: yellow;
+  }
+
+  &:focus {
+    outline: 2px solid green;
+  }
+
+  &:disabled {
+    background-color: gray;
+    color: darkgray;
+    cursor: not-allowed;
+  }
+
+  /* &:checked {
+    font-weight: bold;
+  } */
+}
+
+/* select,
+::picker(select) { */
+/* padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:focus {
+    border-color: #646cff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.3);
+  } */
+
+/* appearance: base-select;
+} */

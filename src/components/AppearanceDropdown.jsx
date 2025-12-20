@@ -1,41 +1,31 @@
+/* import { faGear, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'; */
+/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
 import { useContext } from "react";
+import '../styles/AppearanceDropdown.css';
 import ThemeContext from "./ThemeContext";
 
-const options = {
-  light: "Light Mode",
-  dark: "Dark Mode",
-  system: "System Default",
-}
+const options = [
+  { key: "light", label: "Light Mode", icon: /* faSun */"☀️" },
+  { key: "dark", label: "Dark Mode", icon: /* faMoon */"🌙" },
+  { key: "system", label: "System Default", icon: /* faGear */"🖥" },
+];
 
 const AppearanceDropdown = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-
-  /* const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    console.log(`Switched to ${theme === "light" ? "dark" : "light"} mode`);
-  }; */
 
   const handleChange = (e) => {
     setTheme(e.target.value);
     /* console.log(`Switched to ${e.target.value} mode`); */
   };
 
-  /* const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else if (theme === "dark") {
-      setTheme("system");
-    } else {
-      setTheme("light");
-    }
-  } */
-
   return (
     <>
-      <select value={theme} onChange={handleChange} aria-label="Select Appearance Mode">
-        {Object.entries(options).map(([key, label]) => (
-          <option key={key} value={key}>
-            {label}
+      {/* <label htmlFor="appearance-select" className="sr-only">Select Appearance Mode</label> */}
+      <select id="appearance-select" value={theme} onChange={handleChange} aria-label="Select Appearance Mode">
+        {options.map((option) => (
+          <option key={option.key} value={option.key}>
+            {/* {option.icon} */} {option.label}
+            {/* <FontAwesomeIcon icon={option.icon} className="appearance-icon" /> {option.label} */}
           </option>
         ))}
       </select>
