@@ -114,6 +114,13 @@ ul.navbarContainer li.navbarItem:has(button) {
   gap: 0.5rem;
 }
 
+ul.navbarContainer li.navbarItem {
+  .settingsIcon {
+    cursor: pointer;
+    padding: 0rem 0rem 0rem 1rem;
+  }
+}
+
 @media only screen and (max-width: 768px) {
 
   nav.navbar,

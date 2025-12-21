@@ -1,14 +1,17 @@
-import { faBars, /* faLanguage,  */ faX } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faGear, /* faLanguage,  */ faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, /*  useRef, */ useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Navbar.module.css';
 import AppearanceDropdown from './AppearanceDropdown';
-import SearchInput from './SearchInput';
+import CommandPaletteModal from './CommandPaletteModal';
+/* import SearchInput from './SearchInput'; */
+import Settings from './Settings';
 import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
   const { t } = useTranslation("global");
+  const modalRef = CommandPaletteModal /* useRef(null) */;
   const [isActiveHashLink, setIsActiveHashLink] = useState('home');
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,6 +56,12 @@ const Navbar = () => {
 
   const toggleSidebar = () => {
     setIsSidebarActive(!isSidebarActive);
+  }
+
+  const openSettings = () => {
+    console.log("Open Settings Modal");
+
+    modalRef.current?.open();
   }
 
   return (
@@ -112,14 +121,17 @@ const Navbar = () => {
         <li className={styles.navbarItem}>
           <a href="#faqs" className={isActiveHashLink === 'faqs' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('faqs')} accessKey='F'>{t('Navbar.faqs')}{/* Preguntas Frecuentes */}</a>
         </li>
+        {/* <li className={styles.navbarItem}> */}
+        {/* |<ToggleLanguage /> */}{/* <AppearanceDropdown /> */}
+        {/* </li> */}
+        {/* <li className={styles.navbarItem}> */}
+        {/* | */}{/* <SearchInput />
+        </li> */}
+        {/* <li className={styles.navbarItem}> */}
+        {/* | */}{/* <AppearanceDropdown />
+        </li> */}
         <li className={styles.navbarItem}>
-          |<ToggleLanguage />{/* <AppearanceDropdown /> */}
-        </li>
-        <li className={styles.navbarItem}>
-          {/* | */}<SearchInput />
-        </li>
-        <li className={styles.navbarItem}>
-          {/* | */}<AppearanceDropdown />
+          |<FontAwesomeIcon icon={faGear} className={styles.settingsIcon} onClick={openSettings} />
         </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
@@ -127,6 +139,10 @@ const Navbar = () => {
           </button>
         </li>
       </ul>
+
+      <CommandPaletteModal ref={modalRef}>
+        <Settings />
+      </CommandPaletteModal>
 
       <ul className={`${styles.sidebarContainer} ${isSidebarActive ? styles.isSidebarActive : styles.sidebarInactive}`}>
         <li className={styles.navbarItem}>
