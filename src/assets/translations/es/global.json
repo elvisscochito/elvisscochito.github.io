@@ -103,7 +103,8 @@
     "contact": "Contacto",
     "quickContact": "Contacto Rápido",
     "faqs": "Preguntas",
-    "language": "Idioma:"
+    "language": "Idioma:",
+    "appearance": "Apariencia:"
   },
   "HonorsAndAwards": {
     "heading": "Honores, Premios y Experiencias",
