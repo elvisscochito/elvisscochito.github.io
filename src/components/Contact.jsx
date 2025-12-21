@@ -226,6 +226,14 @@ const Contact = () => {
   const channel = isActive ? t("Contact.channels.whatsapp") : t("Contact.channels.email");
   const channelIcon = isActive ? faWhatsapp : faPaperPlane;
 
+  const emailLabel = isActive
+    ? t('Contact.form.emailWhatsApp')
+    : t('Contact.form.email');
+
+  const phoneLabel = isActive
+    ? t('Contact.form.phone')
+    : t('Contact.form.phoneEmail');
+
   return (
     <section id="contact" className={styles.contact}>
       <header className={styles.header}>
@@ -266,19 +274,13 @@ const Contact = () => {
           <input type="text" id="name" name="name" placeholder={t('Contact.form.namePlaceholder')} /* title='Enter your full name' */ value={formData.name} /* onChange={handleChange} */ onInput={autoCapitalizeWords} minLength={3} maxLength={32} /* pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$" */ /* onInvalid={e => e.target.setCustomValidity('Please enter a valid name.')} */ autoComplete='name' required />
         </fieldset>
 
-        {
-          !isActive && (
-            <>
-              <fieldset className={styles.fieldset}>
-                <label htmlFor="email"> <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;{t('Contact.form.email')}</label>
-                <input type="email" id="email" name="email" placeholder={t('Contact.form.emailPlaceholder')} /* title='Enter your email address' */ value={formData.email} /* onChange={handleChange} */ onInput={autoLowercaseCharacters} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" /* onInvalid={e => e.target.setCustomValidity('Please enter a valid email address.')} */ autoComplete='email' required />
-              </fieldset>
-            </>
-          )
-        }
+        <fieldset className={styles.fieldset}>
+          <label htmlFor="email"><FontAwesomeIcon icon={faEnvelope} className={styles.icon} />&nbsp;{emailLabel}</label>
+          <input type="email" id="email" name="email" placeholder={t('Contact.form.emailPlaceholder')} /* title='Enter your email address' */ value={formData.email} /* onChange={handleChange} */ onInput={autoLowercaseCharacters} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" /* onInvalid={e => e.target.setCustomValidity('Please enter a valid email address.')} */ autoComplete='email' required={!isActive} />
+        </fieldset>
 
         <fieldset className={styles.fieldset}>
-          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp; {t('Contact.form.phone')} {!isActive && '(optional)'}:</label>
+          <label htmlFor="phone"> <FontAwesomeIcon icon={faPhone} className={styles.icon} />&nbsp;{phoneLabel}</label>
           {/* verify pattern */}
           <input type="tel" id="phone" name="phone" placeholder={t('Contact.form.phonePlaceholder')} /* title='Enter your phone number' */ value={formData.phone} /* onChange={handleChange} */ onInput={allowOnlyNumbers} minLength={4} maxLength={16} pattern='(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?' /* onInvalid={e => e.target.setCustomValidity('Please enter a valid phone number.')} */ autoComplete='tel' required={isActive} />
         </fieldset>

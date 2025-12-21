@@ -5,6 +5,16 @@
   cursor: none;
 } */
 
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #213547;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -76,6 +76,7 @@
   },
   "Services": {
     "heading": "Servicios",
+    "btn": "Página de Servicios en LinkedIn \u2197",
     "WebDevelopment": "Desarrollo Web",
     "SoftwareDevelopment": "Desarrollo de Software",
     "BusinessAnalytics": "Análisis de Negocios",
@@ -102,7 +103,8 @@
     "contact": "Contacto",
     "quickContact": "Contacto Rápido",
     "faqs": "Preguntas",
-    "language": "Idioma:"
+    "language": "Idioma:",
+    "appearance": "Apariencia:"
   },
   "HonorsAndAwards": {
     "heading": "Honores, Premios y Experiencias",
@@ -483,8 +485,10 @@
       "name": "Nombre:",
       "namePlaceholder": "Escribe tu nombre aquí, ej. Juan Pérez",
       "email": "Correo electrónico:",
+      "emailWhatsApp": "Correo electrónico (Opcional):",
       "emailPlaceholder": "Escribe tu correo electrónico aquí, ej. ejemplo@email.com",
       "phone": "Número de teléfono",
+      "phoneEmail": "Número de teléfono (Opcional):",
       "phonePlaceholder": "Escribe tu número de teléfono aquí, ej. +521234567890",
       "message": "Mensaje",
       "bodyContent": "Contenido del cuerpo",

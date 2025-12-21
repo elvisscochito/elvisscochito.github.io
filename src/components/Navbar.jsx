@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Navbar.module.css';
+import AppearanceDropdown from './AppearanceDropdown';
+/* import SearchInput from './SearchInput'; */
 import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
@@ -60,7 +62,7 @@ const Navbar = () => {
       </a>
       <ul className={styles.navbarContainer}>
         <li className={styles.navbarItem}>
-          <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')}>{t('Navbar.home')}</a>
+          <a href="#home" className={isActiveHashLink === 'home' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('home')} accessKey='H'>{t('Navbar.home')}</a>
         </li>
         <li className={styles.navbarItem}>
           <a href="#about" className={isActiveHashLink === 'about' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('about')}>{t('Navbar.about')}</a>
@@ -111,7 +113,13 @@ const Navbar = () => {
           <a href="#faqs" className={isActiveHashLink === 'faqs' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('faqs')}>{t('Navbar.faqs')}{/* Preguntas Frecuentes */}</a>
         </li>
         <li className={styles.navbarItem}>
-          |<ToggleLanguage />
+          |<ToggleLanguage />{/* <AppearanceDropdown /> */}
+        </li>
+        {/* <li className={styles.navbarItem}> */}
+        {/* | */}{/* <SearchInput />
+        </li> */}
+        <li className={styles.navbarItem}>
+          {/* | */}<AppearanceDropdown />
         </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
@@ -177,6 +185,9 @@ const Navbar = () => {
         <li className={styles.navbarItem}>
           {/* <FontAwesomeIcon icon={faLanguage} /> */}
           {/* Toggle  */}{t('Navbar.language')} {/* |  */}<ToggleLanguage />{/*  | */}
+        </li>
+        <li className={styles.navbarItem}>
+          {t('Navbar.appearance')} {/* | */}<AppearanceDropdown />
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>

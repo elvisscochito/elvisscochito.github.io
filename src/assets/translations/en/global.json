@@ -103,7 +103,8 @@
     "contact": "Contact",
     "quickContact": "Quick Contact",
     "faqs": "FAQs",
-    "language": "Language:"
+    "language": "Language:",
+    "appearance": "Appearance:"
   },
   "HonorsAndAwards": {
     "heading": "Honors, Awards & Experiences",
@@ -524,8 +525,10 @@
       "name": "Name:",
       "namePlaceholder": "Type Your Name Here, e.g. John Doe",
       "email": "From Email:",
+      "emailWhatsApp": "Email (Optional):",
       "emailPlaceholder": "Type Your Email Address Here, e.g. example@email.com",
-      "phone": "Phone Number",
+      "phone": "Phone Number:",
+      "phoneEmail": "Phone Number (Optional):",
       "phonePlaceholder": "Type Your Phone Number Here, e.g. +1234567890",
       "message": "Message",
       "bodyContent": "Body Content",

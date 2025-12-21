@@ -195,7 +195,7 @@ ul.navbarContainer li.navbarItem:has(button) {
         }
       }
 
-      li.navbarItem:nth-last-of-type(3) a {
+      li.navbarItem:nth-last-of-type(4) a {
         color: light-dark(#fff, #000);
         font-weight: bold;
         background-color: light-dark(#18181B, #f0f0f0);
@@ -203,7 +203,7 @@ ul.navbarContainer li.navbarItem:has(button) {
         border-radius: 0.5rem;
       }
 
-      li.navbarItem:last-child {
+      li.navbarItem:nth-last-of-type(2) {
         margin-top: auto;
         display: flex;
         flex-direction: row !important;
@@ -211,6 +211,14 @@ ul.navbarContainer li.navbarItem:has(button) {
         align-items: center;
         gap: 0rem !important;
         /* width: 100%; */
+      }
+
+      li.navbarItem:last-of-type {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
       }
     }
 
