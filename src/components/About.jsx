@@ -76,6 +76,7 @@ const About = () => {
                 <a href="https://www.tec.mx/en" target="_blank" rel="noopener noreferrer">
                   Tecnológico de Monterrey, Campus Monterrey&#8599;
                 </a>
+                {/* (On Hold) */}
               </span>
               <span>
                 <a href="https://tec.mx/en/computer-science-and-information-technologies/bs-in-computer-science-and-technology" target="_blank" rel="noopener noreferrer">
