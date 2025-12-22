@@ -53,6 +53,17 @@ const SearchInput = ({ onSelect }) => {
     } */
   };
 
+  const handleChange = (e) => {
+    const inputValue = e.target.value;
+    setValue(inputValue);
+    navigateToSection(inputValue);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    navigateToSection(value);
+  };
+
   /* const handleChange = (e) => { */
   /* const inputValue = e.target.value.toLowerCase();
   const sectionHash = SECTIONS_MAP[inputValue];
@@ -106,13 +117,9 @@ const SearchInput = ({ onSelect }) => {
   }; */
 
   return (
-    <form onSubmit={(e) => { e.preventDefault(); navigateToSection(value); }} className={styles.searchForm}>
+    <form onSubmit={onSubmit} className={styles.searchForm}>
       {/* <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: '#ffffff', marginRight: '8px' }} /> */}
-      <input type="text" id="search-input" className={styles.searchInput} value={value} placeholder="For sections within page... " onChange={(e) => {
-        const v = e.target.value;
-        setValue(v);
-        navigateToSection(v);
-      }} aria-label="Search sections" list="search-suggestions" />
+      <input type="text" id="search-input" className={styles.searchInput} value={value} placeholder="For sections within page... " onChange={handleChange} aria-label="Search sections" list="search-suggestions" />
       <datalist id="search-suggestions">
         <option value="Home" />
         <option value="About" />
