@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import styles from '../styles/ToggleLanguage.module.css';
 
 const ToggleLanguage = () => {
-  const { i18n } = useTranslation(/* "global" */);
+  const { t, i18n } = useTranslation("global");
   const [language, setLanguage] = useState(i18n.language || 'en');
 
   const handleToggleLanguage = () => {
@@ -15,11 +15,24 @@ const ToggleLanguage = () => {
 
   return (
     <button
+      id='language-button'
       className={styles.toggleButton}
       onClick={handleToggleLanguage}
       aria-label="Toggle Language"
     >
-      {language === 'en' ? 'ES' : 'EN'}
+      {language === 'en' ? (
+        <>
+          {t("Settings.ToggleLanguage.spanish")}
+          &nbsp;
+          <abbr title="Cambiar a Español">&#40;ES&#41;</abbr>
+        </>
+      ) : (
+        <>
+          {t("Settings.ToggleLanguage.english")}
+          &nbsp;
+          <abbr title="Switch to English">&#40;EN&#41;</abbr>
+        </>
+      )}
     </button>
   );
 };

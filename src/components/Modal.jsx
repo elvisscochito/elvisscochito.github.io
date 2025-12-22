@@ -48,6 +48,7 @@ const Modal = forwardRef((_, ref) => {
     <dialog ref={modalRef} className={styles.modal} onClick={handleBackdropOutsideClick}>
       <h2>{content.title}</h2>
       <p>{content.message}</p>
+      {/* TODO: HEADER, BODY AND FOOTER */}
 
       <button className={styles.closeModalBtn} onClick={() => modalRef.current?.close()}>
         {content.btn || "Close"}

@@ -131,7 +131,9 @@ const Navbar = () => {
         {/* | */}{/* <AppearanceDropdown />
         </li> */}
         <li className={styles.navbarItem}>
-          |<FontAwesomeIcon icon={faGear} className={styles.settingsIcon} onClick={openSettings} />
+          <button type='button' className={styles.settingsButton} onClick={openSettings} accessKey='K' aria-label="Open command palette">
+            |<FontAwesomeIcon icon={faGear} className={styles.settingsIcon} />
+          </button>
         </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>

@@ -115,9 +115,28 @@ ul.navbarContainer li.navbarItem:has(button) {
 }
 
 ul.navbarContainer li.navbarItem {
-  .settingsIcon {
-    cursor: pointer;
-    padding: 0rem 0rem 0rem 1rem;
+
+  button.settingsButton {
+    background: none;
+    border: none;
+    /* color: var(--text-aux-color); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0.5rem; */
+    font-size: inherit;
+
+    .settingsIcon {
+      cursor: pointer;
+      padding: 0rem 0rem 0rem 1rem;
+      font-size: 1.2rem;
+      color: var(--text-aux-color);
+
+      &:hover {
+        color: var(--text-color);
+      }
+    }
   }
 }
 
@@ -216,7 +235,7 @@ ul.navbarContainer li.navbarItem {
         flex-direction: row !important;
         justify-content: center;
         align-items: center;
-        gap: 0rem !important;
+        gap: 0.5rem !important;
         /* width: 100%; */
       }
 

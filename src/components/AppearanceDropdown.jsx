@@ -1,17 +1,19 @@
 import { faGear, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from "react";
+import { useTranslation } from 'react-i18next';
 import '../styles/AppearanceDropdown.css';
 import ThemeContext from "./ThemeContext";
 
-const options = [
-  { key: "light", label: "Light"/* "Light Mode" */, icon: faSun/* "☀️" */ },
-  { key: "dark", label: "Dark"/* "Dark Mode" */, icon: faMoon/* "🌙" */ },
-  { key: "system", label: "System"/* "System Default" */, icon: faGear/* "🖥" */ },
-];
-
 const AppearanceDropdown = () => {
+  const { t } = useTranslation("global");
   const { theme, setTheme } = useContext(ThemeContext);
+
+  const options = [
+    { key: "light", label: t("Settings.AppearanceDropdown.light")/* "Light Mode" */, icon: faSun/* "☀️" */ },
+    { key: "dark", label: t("Settings.AppearanceDropdown.dark")/* "Dark Mode" */, icon: faMoon/* "🌙" */ },
+    { key: "system", label: t("Settings.AppearanceDropdown.system")/* "System Default" */, icon: faGear/* "🖥" */ },
+  ];
 
   const handleChange = (e) => {
     setTheme(e.target.value);
