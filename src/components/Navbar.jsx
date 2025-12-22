@@ -3,11 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Navbar.module.css';
-import AppearanceDropdown from './AppearanceDropdown';
 import CommandPaletteModal from './CommandPaletteModal';
 /* import SearchInput from './SearchInput'; */
 import Settings from './Settings';
-import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
   const { t } = useTranslation("global");
@@ -207,11 +205,9 @@ const Navbar = () => {
           <a href="#faqs" className={isActiveHashLink === 'faqs' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('faqs')} /* accessKey='F' */>{t('Navbar.faqs')}{/* Preguntas Frecuentes */}</a>
         </li>
         <li className={styles.navbarItem}>
-          {/* <FontAwesomeIcon icon={faLanguage} /> */}
-          {/* Toggle  */}{t('Navbar.language')} {/* |  */}<ToggleLanguage />{/*  | */}
-        </li>
-        <li className={styles.navbarItem}>
-          {t('Navbar.appearance')} {/* | */}<AppearanceDropdown />
+          <button type='button' className={styles.settingsButton} onClick={openSettings} accessKey='K' aria-label="Open command palette">
+            <FontAwesomeIcon icon={faGear} className={styles.settingsIcon} />
+          </button>
         </li>
         {/* <li className={styles.navbarItem}>
           <a href="#quick-contact" className={isActiveHashLink === 'quick-contact' ? styles.activeLink : styles.navbarLink} onClick={() => setIsActiveHashLink('quick-contact')}>Quick Contact</a>

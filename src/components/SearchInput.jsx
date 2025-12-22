@@ -1,6 +1,7 @@
 /* import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
 import styles from '../styles/SearchInput.module.css';
+/* import { useState } from 'react'; */
 
 const SECTIONS_MAP = {
   "home": "#home",
@@ -30,15 +31,16 @@ const SECTIONS_MAP = {
 }
 
 const SearchInput = ({ onSelect }) => {
+  /* const [value, setValue] = useState(''); */
 
   const handleChange = (e) => {
     const inputValue = e.target.value.toLowerCase();
-    const hash = SECTIONS_MAP[inputValue];
+    const sectionHash = SECTIONS_MAP[inputValue];
 
-    if (!hash) return;
+    if (!sectionHash) return;
 
     /* navigation */
-    window.location.hash = hash;
+    window.location.hash = sectionHash;
 
     /* close modal */
     onSelect?.();

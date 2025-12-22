@@ -31,3 +31,23 @@ ul.settingsList {
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  ul.settingsList {
+    gap: 1rem;
+
+    li.settingItem:first-child {
+      display: none;
+    }
+
+    li.settingItem:nth-of-type(2) {
+      margin-top: 1rem;
+    }
+
+    li.settingItem {
+      label.settingLabel {
+        font-size: 1rem;
+      }
+    }
+  }
+}
