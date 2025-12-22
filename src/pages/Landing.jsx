@@ -16,6 +16,7 @@ import HonorsAndAwards from '../components/HonorsAndAwards'
 import Languages from '../components/Languages'
 import LicensesAndCertifications from '../components/LicensesAndCertifications'
 import Navbar from '../components/Navbar'
+import Pricing from '../components/Pricing'
 import Projects from '../components/Projects'
 import Publications from '../components/Publications'
 import QuickContact from '../components/QuickContact'
@@ -49,6 +50,7 @@ function Landing() {
       <ActivitiesAndSocieties />
       <HobbiesAndInterests />
       <Projects />
+      <Pricing />
       <SocialProof />
       <Contact />
       <QuickContact />
