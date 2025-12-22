@@ -8,13 +8,25 @@ input.searchInput {
   &:focus {
     outline: none;
     border: 1px solid var(--accent-color);
-    /* box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2); */
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
   }
+
+  /* disabled all focus types */
+  /* &:focus-visible {
+    outline: none;
+    border: 1px solid var(--accent-color);
+  } */
 }
 
 /* datalist#search-suggestions {
   option {
     font-size: 0.875rem;
     padding: 0.25rem 0.5rem;
+  }
+} */
+
+/* @media only screen and (max-width: 768px) {
+  input.searchInput {
+    font-size: 0.75rem;
   }
 } */
