@@ -1,7 +1,7 @@
 /* import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
+import { useState } from 'react';
 import styles from '../styles/SearchInput.module.css';
-/* import { useState } from 'react'; */
 
 const SECTIONS_MAP = {
   "home": "#home",
@@ -30,31 +30,51 @@ const SECTIONS_MAP = {
   "shortcuts": "Shortcuts" */
 }
 
-const SearchInput = ({ onSelect }) => {
-  /* const [value, setValue] = useState(''); */
+const inputValue = (v) => v.toLowerCase().trim();
 
-  const handleChange = (e) => {
-    const inputValue = e.target.value.toLowerCase();
-    const sectionHash = SECTIONS_MAP[inputValue];
+const SearchInput = ({ onSelect }) => {
+  const [value, setValue] = useState('');
+
+  const navigateToSection = (raw/* sectionHash */) => {
+    const key = inputValue(raw);
+    const sectionHash = SECTIONS_MAP[key];
 
     if (!sectionHash) return;
 
-    /* navigation */
     window.location.hash = sectionHash;
 
-    /* close modal */
     onSelect?.();
-
-    /* clear input */
-    e.target.value = '';
-
-    /* if (hash) {
-      const sectionElement = document.querySelector(hash);
+    setValue('');
+    /* if (sectionHash) {
+      const sectionElement = document.querySelector(sectionHash);
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' });
       }
     } */
-  }
+  };
+
+  /* const handleChange = (e) => { */
+  /* const inputValue = e.target.value.toLowerCase();
+  const sectionHash = SECTIONS_MAP[inputValue];
+
+  if (!sectionHash) return; */
+
+  /* navigation */
+  /* window.location.hash = sectionHash; */
+
+  /* close modal */
+  /* onSelect?.(); */
+
+  /* clear input */
+  /* e.target.value = ''; */
+
+  /* if (hash) {
+    const sectionElement = document.querySelector(hash);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  } */
+  /* } */
 
   /* const handleInputChange = (e) => {
     const inputValue = e.target.value.toLowerCase();
@@ -86,9 +106,13 @@ const SearchInput = ({ onSelect }) => {
   }; */
 
   return (
-    <>
+    <form onSubmit={(e) => { e.preventDefault(); navigateToSection(value); }} className={styles.searchForm}>
       {/* <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: '#ffffff', marginRight: '8px' }} /> */}
-      <input type="text" id="search-input" className={styles.searchInput} placeholder="For sections within page... " onChange={handleChange} aria-label="Search sections" list="search-suggestions" />
+      <input type="text" id="search-input" className={styles.searchInput} value={value} placeholder="For sections within page... " onChange={(e) => {
+        const v = e.target.value;
+        setValue(v);
+        navigateToSection(v);
+      }} aria-label="Search sections" list="search-suggestions" />
       <datalist id="search-suggestions">
         <option value="Home" />
         <option value="About" />
@@ -115,7 +139,7 @@ const SearchInput = ({ onSelect }) => {
         <option value="Accessibility" />
         <option value="Shortcuts" /> */}
       </datalist>
-    </>
+    </form>
   );
 };
 
