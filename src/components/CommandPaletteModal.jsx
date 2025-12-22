@@ -1,4 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
+/* import { faX } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; */
 import styles from "../styles/CommandPaletteModal.module.css";
 
 const CommandPaletteModal = forwardRef(({ children }, ref) => {
@@ -41,7 +43,7 @@ const CommandPaletteModal = forwardRef(({ children }, ref) => {
     <dialog ref={modalRef} className={styles.modal} onClick={handleBackdropOutsideClick}>
       {children}
       <button className={styles.closeModalBtn} onClick={() => modalRef.current?.close()}>
-        Close
+        Close{/* <FontAwesomeIcon icon={faX} /> */}
       </button>
     </dialog>
   )

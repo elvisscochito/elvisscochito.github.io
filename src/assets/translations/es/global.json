@@ -640,5 +640,20 @@
       "linkedin": "Visita mi perfil de LinkedIn \u2197",
       "github": "Checa mi GitHub \u2197"
     }
+  },
+  "Settings": {
+    "heading": "Paleta de Comandos de Configuración",
+    "subheading": "Personaliza tu experiencia.",
+    "ToggleLanguage": {
+      "language": "Idioma:",
+      "english": "English",
+      "spanish": "Spanish"
+    },
+    "AppearanceDropdown": {
+      "appearance": "Apariencia:",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    }
   }
 }

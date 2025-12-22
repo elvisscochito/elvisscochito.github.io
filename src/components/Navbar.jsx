@@ -1,6 +1,6 @@
 import { faBars, faGear, /* faLanguage,  */ faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useLayoutEffect, /*  useRef, */ useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Navbar.module.css';
 import AppearanceDropdown from './AppearanceDropdown';
@@ -11,7 +11,7 @@ import ToggleLanguage from './ToggleLanguage';
 
 const Navbar = () => {
   const { t } = useTranslation("global");
-  const modalRef = CommandPaletteModal /* useRef(null) */;
+  const modalRef = useRef(null);
   const [isActiveHashLink, setIsActiveHashLink] = useState('home');
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,6 +62,12 @@ const Navbar = () => {
     console.log("Open Settings Modal");
 
     modalRef.current?.open();
+  }
+
+  const closeSettings = () => {
+    console.log("Close Settings Modal");
+
+    modalRef.current?.close();
   }
 
   return (
@@ -131,7 +137,9 @@ const Navbar = () => {
         {/* | */}{/* <AppearanceDropdown />
         </li> */}
         <li className={styles.navbarItem}>
-          |<FontAwesomeIcon icon={faGear} className={styles.settingsIcon} onClick={openSettings} />
+          <button type='button' className={styles.settingsButton} onClick={openSettings} accessKey='K' aria-label="Open command palette">
+            |<FontAwesomeIcon icon={faGear} className={styles.settingsIcon} />
+          </button>
         </li>
         <li className={styles.navbarItem}>
           <button className={styles.menuButton} onClick={toggleSidebar}>
@@ -141,7 +149,7 @@ const Navbar = () => {
       </ul>
 
       <CommandPaletteModal ref={modalRef}>
-        <Settings />
+        <Settings onClose={closeSettings} />
       </CommandPaletteModal>
 
       <ul className={`${styles.sidebarContainer} ${isSidebarActive ? styles.isSidebarActive : styles.sidebarInactive}`}>

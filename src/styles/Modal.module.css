@@ -10,6 +10,9 @@ dialog.modal:modal {
 
   /* width: 100%;
   max-width: 24rem; */
+
+  display: flex;
+  flex-direction: column;
 }
 
 dialog.modal::backdrop {
@@ -30,6 +33,9 @@ button.closeModalBtn {
   background: black;
   color: white;
   font-weight: bold;
+
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 /* @keyframes fade-in {
