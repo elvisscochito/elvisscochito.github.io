@@ -1,12 +1,12 @@
-import { faCircleHalfStroke, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke, faLanguage, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Settings.module.css';
 import AppearanceDropdown from './AppearanceDropdown';
-/* import SearchInput from "./SearchInput"; */
+import SearchInput from "./SearchInput";
 import ToggleLanguage from "./ToggleLanguage";
 
-const Settings = () => {
+const Settings = ({ onClose }) => {
   const { t } = useTranslation("global");
 
   /* const isMac = navigator.platform.includes("Mac");
@@ -22,10 +22,10 @@ const Settings = () => {
         <li className={styles.instructionItem}>Press <kbd>{shortcut}</kbd> to open the settings menu.</li>
       </ul> */}
       <ul className={styles.settingsList}>
-        {/* <li className={styles.settingItem}>
-          <label htmlFor="search-input" className={styles.settingLabel}>Search:</label>
-          <SearchInput />
-        </li> */}
+        <li className={styles.settingItem}>
+          <label htmlFor="search-input" className={styles.settingLabel}><FontAwesomeIcon icon={faMagnifyingGlass} />&nbsp;Search:</label>
+          <SearchInput onSelect={onClose} />
+        </li>
         <li className={styles.settingItem}>
           <label htmlFor="language-button" className={styles.settingLabel}>
             <FontAwesomeIcon icon={faLanguage} />&nbsp;{t("Settings.ToggleLanguage.language")}
