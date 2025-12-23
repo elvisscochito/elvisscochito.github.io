@@ -217,6 +217,7 @@ section.workExperience {
 @media only screen and (max-width: 768px) {
   section.workExperience {
     padding: 0 1.5rem 1.5rem 1.5rem;
+    gap: 1rem;
 
     header.header {
       h2.workExperienceHeading {
@@ -245,13 +246,18 @@ section.workExperience {
           gap: 1rem;
           margin-bottom: 0.5rem; */
 
-        img.logo {
-          position: static;
-          /* top: 0rem;
+
+        a.logoLink {
+          text-decoration: none;
+
+          img.logo {
+            position: static;
+            /* top: 0rem;
           left: -25rem; */
-          width: 3.5rem;
-          height: 3.5rem;
-          /* margin-bottom: 1rem; */
+            width: 3.5rem;
+            height: 3.5rem;
+            /* margin-bottom: 1rem; */
+          }
         }
 
         /* } */
