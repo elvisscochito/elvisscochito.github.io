@@ -438,6 +438,159 @@
     "demo": "Demostración en Vivo",
     "linkBtn": "Vista Previa del Proyecto"
   },
+  "Pricing": {
+    "heading": "Precios",
+    "subheading": "Ofrezco estas opciones populares, con precios asequibles y flexibles, adaptados a tus necesidades específicas, presupuesto y objetivos.",
+    "startingAt": "Comenzando Desde:",
+    "startedFrom": "Comienza Desde",
+    "contactMe": "Contáctame",
+    "contactForQuote": "Contáctame para",
+    "pricingList": {
+      "p1": {
+        "tag": "Desarrollo Web",
+        "title": "Página de Aterrizaje",
+        "price": "$525.92 USD",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Planificación Estratégica 5w's",
+          "f2": "Diseño Responsivo",
+          "f3": "Diseño de Maqueta (UI/UX)",
+          "f4": "Hosting + Dominio Personalizado",
+          "f5": "Vanilla, Librerías o Frameworks",
+          "f6": "Optimización SEO Básica/Amigable con SEO",
+          "f7": "Integración de Análisis",
+          "f8": "Integración de Formulario de Contacto",
+          "f9": "Enlaces de Redes Sociales",
+          "f10": "Gráficos e Imágenes Personalizados"
+        }
+      },
+      "p2": {
+        "tag": "Desarrollo Móvil",
+        "title": "Aplicación Móvil",
+        "price": "$525.92 USD",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Diseño de Maqueta (UI/UX)",
+          "f2": "iPhone y/o Android",
+          "f3": "Desarrollo Multiplataforma (iOS y Android)",
+          "f4": "Despliegue en App Stores",
+          "f5": "Diseño Responsivo",
+          "f6": "Notificaciones Push",
+          "f7": "Integración de Backend/API",
+          "f8": "Gráficos e Imágenes Personalizados",
+          "f9": "Optimización de Rendimiento"
+        }
+      },
+      "p3": {
+        "tag": "Ciencia de Datos",
+        "title": "Panel de Datos",
+        "price": "$525.92 USD",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Visualización de Datos Hermosa",
+          "f2": "Predicción y Análisis de Tendencias",
+          "f3": "Paneles Interactivos",
+          "f4": "Segmentación Avanzada",
+          "f5": "Toma de Decisiones Basada en Datos",
+          "f6": "Hechos, Métricas e Información",
+          "f7": "KPI's y Generación de Reportes",
+          "f8": "Integración con Fuentes de Datos",
+          "f9": "Actualizaciones de Datos en Tiempo Real",
+          "f10": "Diseños Personalizables",
+          "f11": "Control de Acceso de Usuarios"
+        }
+      },
+      "p4": {
+        "tag": "Desarrollo de Software",
+        "title": "Otro Proyecto (Software Personalizado)",
+        "price": "Consultar el Precio o Solicitar una Cotización Personalizada",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Soporte Técnico Continuo",
+          "f2": "Precios precisos basados en el alcance y requisitos del proyecto",
+          "f3": "Soluciones personalizadas adaptadas a tus necesidades",
+          "f4": "Análisis de Requisitos",
+          "f5": "Diseño y Arquitectura del Sistema",
+          "f6": "Diseño de Interfaz de Usuario (UI)",
+          "f7": "Desarrollo de Backend",
+          "f8": "Integración de Base de Datos",
+          "f9": "Desarrollo de API",
+          "f10": "Pruebas y Aseguramiento de Calidad",
+          "f11": "Despliegue y Mantenimiento"
+        }
+      },
+      "p6": {
+        "tag": "Ciencia de Datos",
+        "title": "Análisis de Datos",
+        "price": "657.96 USD",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Limpieza y Preprocesamiento de Datos",
+          "f2": "Análisis Exploratorio de Datos (EDA)",
+          "f3": "Análisis Estadístico",
+          "f4": "Visualización de Datos",
+          "f5": "Modelado Predictivo",
+          "f6": "Algoritmos de Aprendizaje Automático",
+          "f7": "Generación de Reportes",
+          "f8": "Presentación de Hallazgos"
+        }
+      },
+      "p5": {
+        "tag": "Desarrollo Web",
+        "title": "Sitio Web Completo",
+        "price": "1,315.92 USD",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Todo en Página de Aterrizaje",
+          "f2": "Diseño Multipágina",
+          "f3": "Optimización SEO Avanzada/Amigable con SEO",
+          "f4": "Integración de Blog",
+          "f5": "Funcionalidad de Comercio Electrónico",
+          "f6": "Integración de CMS",
+          "f7": "Integración de Registro de Boletín",
+          "f8": "Configuración Avanzada de Análisis",
+          "f9": "Optimización de Rendimiento",
+          "f10": "Soporte y Mantenimiento Continuo (1 Mes)"
+        }
+      },
+      "basic": {
+        "title": "Básico",
+        "price": "$19",
+        "frequency": "por mes",
+        "features": {
+          "f1": "Acceso a características básicas",
+          "f2": "Soporte por correo electrónico",
+          "f3": "Un solo usuario"
+        },
+        "btn": "Elegir Básico"
+      },
+      "standard": {
+        "title": "Estándar",
+        "price": "$49",
+        "frequency": "por mes",
+        "features": {
+          "f1": "Acceso a todas las características",
+          "f2": "Soporte por correo electrónico prioritario",
+          "f3": "Hasta 5 usuarios"
+        },
+        "btn": "Elegir Estándar"
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "$99",
+        "frequency": "por mes",
+        "features": {
+          "f1": "Todas las características de Estándar",
+          "f2": "Soporte telefónico y por correo electrónico 24/7",
+          "f3": "Usuarios ilimitados"
+        },
+        "btn": "Elegir Premium"
+      }
+    },
+    "btn": "Contáctame",
+    "disclaimer": "* El precio y tiempo de entrega pueden variar según la complejidad y requisitos del proyecto. Garantizo calidad, ética de trabajo y transparencia en todos mis proyectos.",
+    "disclaimer2": "Nota: Los precios mencionados son puntos de partida y pueden variar según los requisitos específicos y la complejidad de cada proyecto. Contáctame para obtener una cotización personalizada adaptada a tus necesidades."
+  },
   "SocialProof": {
     "heading": "Testimonios",
     "subheading": "Lo que otros compañeros y clientes dicen sobre mí.",

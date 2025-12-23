@@ -16,6 +16,7 @@ import HonorsAndAwards from '../components/HonorsAndAwards'
 import Languages from '../components/Languages'
 import LicensesAndCertifications from '../components/LicensesAndCertifications'
 import Navbar from '../components/Navbar'
+import Pricing from '../components/Pricing'
 import Projects from '../components/Projects'
 import Publications from '../components/Publications'
 import QuickContact from '../components/QuickContact'
@@ -29,7 +30,8 @@ import styles from '../styles/Tooltip.module.css'
 
 function Landing() {
   return (
-    <div className="Landing">
+    /* disabled interactive background / pointer event? */
+    <div className="Landing" /* inert */>
       <ScrollProgressBar />
       <CustomCursor />
       <Navbar />
@@ -49,6 +51,7 @@ function Landing() {
       <ActivitiesAndSocieties />
       <HobbiesAndInterests />
       <Projects />
+      <Pricing />
       <SocialProof />
       <Contact />
       <QuickContact />

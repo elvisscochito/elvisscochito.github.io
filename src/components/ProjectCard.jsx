@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/ProjectCard.module.css';
 
-const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, skills, /* link, */ preview, repo, featured, type }) => {
+const ProjectCard = ({ key, brand, title, role, date, thumbnail, logo, description, skills, /* link, */ preview, repo, featured, type }) => {
   const { t } = useTranslation("global");
   const [isFrontCard, setIsFrontCard] = useState(true);
 
@@ -71,7 +71,7 @@ const ProjectCard = ({ brand, title, role, date, thumbnail, logo, description, s
           </header>
 
           <figure className={styles.body}>
-            <img src={thumbnail} alt="Project 1" />
+            <img src={thumbnail} alt={`Project ${key}`} />
             <a href={preview} target='_blank' rel='noopener noreferrer' className={styles.linkImage}><img src={logo} alt="Brand Logo" className={styles.brandLogo} /></a>
             <figcaption className={styles.figcaption}>&quot;{title}&quot; <span>{/* - */}• {/* | */} {brand}</span></figcaption>
           </figure>

@@ -5,7 +5,9 @@
     /* #171717 */
   ;
   --text-aux-color: #666666;
-  --details: hwb(0 75% 25%);
+  --details: hwb(0 75% 25%)
+    /* #eaeaea */
+  ;
   --accent-color: #007bff;
   color-scheme: light dark;
   accent-color: var(--accent-color);

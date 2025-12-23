@@ -473,6 +473,159 @@
     "demo": "Live Demo",
     "linkBtn": "Preview Project"
   },
+  "Pricing": {
+    "heading": "Pricing",
+    "subheading": "I offer this popular options, in an affordable and flexible pricing, tailored to your specific needs, budget and goals.",
+    "startingAt": "Starting at:",
+    "startedFrom": "Started From",
+    "contactMe": "Contact Me",
+    "contactForQuote": "Contact me for",
+    "pricingList": {
+      "p1": {
+        "tag": "Web Development",
+        "title": "Landing Page",
+        "price": "$525.92 USD",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "5w's Strategic Planning",
+          "f2": "Responsive Design",
+          "f3": "Mockup Design (UI/UX)",
+          "f4": "Hosting + Custom Domain",
+          "f5": "Vanilla, Libraries or Frameworks",
+          "f6": "Basic SEO Optimization/SEO Friendly",
+          "f7": "Analytics Integration",
+          "f8": "Contact Form Integration",
+          "f9": "Social Media Links",
+          "f10": "Custom Graphics and Images"
+        }
+      },
+      "p2": {
+        "tag": "Mobile Development",
+        "title": "Mobile Application",
+        "price": "$525.92 USD",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "Mockup Design (UI/UX)",
+          "f2": "iPhone and/or Android",
+          "f3": "Cross-Platform Development (iOS and Android)",
+          "f4": "Deployment to App Stores",
+          "f5": "Responsive Design",
+          "f6": "Push Notifications",
+          "f7": "Backend/API Integration",
+          "f8": "Custom Graphics and Images",
+          "f9": "Performance Optimization"
+        }
+      },
+      "p3": {
+        "tag": "Data Science",
+        "title": "Data Dashboard",
+        "price": "$525.92 USD",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "Beautiful Data Visualization",
+          "f2": "Forecasting and Trend analysis",
+          "f3": "Interactive Dashboards",
+          "f4": "Advanced Segmentation",
+          "f5": "Data-Driven Decision-Making",
+          "f6": "Facts, Metrics and Insights",
+          "f7": "KPI's and Report Generation",
+          "f8": "Integration with Data Sources",
+          "f9": "Real-Time Data Updates",
+          "f10": "Customizable Layouts",
+          "f11": "User Access Control"
+        }
+      },
+      "p4": {
+        "tag": "Software Development",
+        "title": "Other Project (Custom Software)",
+        "price": "Pricing or Request a Custom Quote",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "Ongoing Technical Support",
+          "f2": "Accurate pricing based on project scope and requirements",
+          "f3": "Custom Solutions tailored to your needs",
+          "f4": "Requirement Analysis",
+          "f5": "System Design and Architecture",
+          "f6": "User Interface (UI) Design",
+          "f7": "Backend Development",
+          "f8": "Database Integration",
+          "f9": "API Development",
+          "f10": "Testing and Quality Assurance",
+          "f11": "Deployment and Maintenance"
+        }
+      },
+      "p6": {
+        "tag": "Data Science",
+        "title": "Data Analysis",
+        "price": "657.96 USD",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "Data Cleaning and Preprocessing",
+          "f2": "Exploratory Data Analysis (EDA)",
+          "f3": "Statistical Analysis",
+          "f4": "Data Visualization",
+          "f5": "Predictive Modeling",
+          "f6": "Machine Learning Algorithms",
+          "f7": "Report Generation",
+          "f8": "Presentation of Findings"
+        }
+      },
+      "p5": {
+        "tag": "Web Development",
+        "title": "Full Website",
+        "price": "1,315.92 USD",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "Everything in Landing Page",
+          "f2": "Multi-Page Design",
+          "f3": "Advanced SEO Optimization/SEO Friendly",
+          "f4": "Blog Integration",
+          "f5": "E-commerce Functionality",
+          "f6": "CMS Integration",
+          "f7": "Newsletter Signup Integration",
+          "f8": "Advanced Analytics Setup",
+          "f9": "Performance Optimization",
+          "f10": "Ongoing Support and Maintenance (1 Month)"
+        }
+      },
+      "basic": {
+        "title": "Basic",
+        "price": "$19",
+        "frequency": "per month",
+        "features": {
+          "f1": "Access to basic features",
+          "f2": "Email support",
+          "f3": "Single user"
+        },
+        "btn": "Choose Basic"
+      },
+      "standard": {
+        "title": "Standard",
+        "price": "$49",
+        "frequency": "per month",
+        "features": {
+          "f1": "Access to all features",
+          "f2": "Priority email support",
+          "f3": "Up to 5 users"
+        },
+        "btn": "Choose Standard"
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "$99",
+        "frequency": "per month",
+        "features": {
+          "f1": "All Standard features",
+          "f2": "24/7 Phone & Email support",
+          "f3": "Unlimited users"
+        },
+        "btn": "Choose Premium"
+      }
+    },
+    "btn": "Contact Me",
+    "disclaimer": "* Price and delivery time may vary based on project complexity and requirements. I ensure quality, work ethic and transparency in all my projects.",
+    "disclaimer2": "Note: The prices mentioned are starting points and may vary based on the specific requirements and complexity of each project. Contact me for a personalized quote tailored to your needs."
+  },
   "SocialProof": {
     "heading": "Social Proof",
     "subheading": "Here are some testimonials from my colleagues and clients.",
