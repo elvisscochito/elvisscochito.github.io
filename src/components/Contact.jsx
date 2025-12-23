@@ -266,7 +266,7 @@ const Contact = () => {
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="subject">                <FontAwesomeIcon icon={faHeading} className={styles.icon} />&nbsp;{isActive ? t('Contact.form.title') : t('Contact.form.subject')}:</label>
-          <input type="text" id="subject" name="subject" placeholder={isActive ? t('Contact.form.titlePlaceholder') : t('Contact.form.subjectPlaceholder')} /* title='Enter the subject/title of your email/message' */ value={formData.subject} onChange={handleChange} required />
+          <input type="text" id="subject" name="subject" placeholder={isActive ? t('Contact.form.titlePlaceholder') : t('Contact.form.subjectPlaceholder')} /* title='Enter the subject/title of your email/message' */ value={formData.subject} onChange={handleChange} required spellCheck />
         </fieldset>
 
         <fieldset className={styles.fieldset}>
@@ -287,7 +287,7 @@ const Contact = () => {
 
         <fieldset className={styles.fieldset}>
           <label htmlFor="message"> <FontAwesomeIcon icon={faMessage} className={styles.icon} />&nbsp; {isActive ? t('Contact.form.message') : t('Contact.form.bodyContent')}:</label>
-          <textarea id="message" name="message" placeholder={isActive ? t('Contact.form.whatsappMessage') : t('Contact.form.emailMessage')} onChange={handleChange} value={formData.message} required></textarea>
+          <textarea id="message" name="message" placeholder={isActive ? t('Contact.form.whatsappMessage') : t('Contact.form.emailMessage')} onChange={handleChange} value={formData.message} required spellCheck></textarea>
         </fieldset>
 
         {/* <fieldset className={styles.fieldset}>

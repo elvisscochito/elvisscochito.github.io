@@ -114,7 +114,7 @@ section.pricingSection {
       }
 
       span.currency {
-        font-weight: bold;
+        font-weight: 600;
         /* font-size: 1.2rem; */
       }
 
@@ -179,6 +179,7 @@ section.pricingSection {
     font-size: 1rem;
     text-align: center;
     color: var(--details);
+    width: 64ch;
     /* margin-top: 1rem; */
 
     /* .icon {

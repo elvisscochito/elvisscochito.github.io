@@ -30,7 +30,8 @@ import styles from '../styles/Tooltip.module.css'
 
 function Landing() {
   return (
-    <div className="Landing">
+    /* disabled interactive background / pointer event? */
+    <div className="Landing" /* inert */>
       <ScrollProgressBar />
       <CustomCursor />
       <Navbar />

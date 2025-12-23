@@ -32,6 +32,11 @@ const Settings = ({ onClose }) => {
           </label>
           <ToggleLanguage />
         </li>
+        {/* <li className={styles.settingItem}>
+          <label htmlFor="currency-toggle" className={styles.settingLabel}>
+            <FontAwesomeIcon icon={faCookie} />&nbsp;Currency:
+          </label>
+        </li> */}
         <li className={styles.settingItem}>
           <label htmlFor="appearance-select" className={styles.settingLabel}/*  sr-only */>
             <FontAwesomeIcon icon={faCircleHalfStroke} />&nbsp;{t("Settings.AppearanceDropdown.appearance")}

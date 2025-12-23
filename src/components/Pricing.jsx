@@ -1,74 +1,123 @@
-import { faArrowDown, faCircleCheck, faCode, faDashboard, faGlobe, faInfoCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDashboard, faGlobe, faInfoCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Pricing.module.css';
+import PricingCard from './PricingCard';
+
 const Pricing = () => {
+  const { t } = useTranslation("global");
+
+  const buildHobbies = (tFn) => [
+    {
+      id: 1,
+      icon: faGlobe,
+      tag: tFn('Pricing.pricingList.p1.tag'),
+      title: tFn('Pricing.pricingList.p1.title'),
+      price: tFn('Pricing.pricingList.p1.price'),
+      frequency: tFn('Pricing.pricingList.p1.frequency'),
+      features: [
+        tFn('Pricing.pricingList.p1.featuresList.f1'),
+        tFn('Pricing.pricingList.p1.featuresList.f2'),
+        tFn('Pricing.pricingList.p1.featuresList.f3'),
+        tFn('Pricing.pricingList.p1.featuresList.f4'),
+        tFn('Pricing.pricingList.p1.featuresList.f5'),
+        tFn('Pricing.pricingList.p1.featuresList.f6'),
+        tFn('Pricing.pricingList.p1.featuresList.f7'),
+        tFn('Pricing.pricingList.p1.featuresList.f8'),
+        tFn('Pricing.pricingList.p1.featuresList.f9'),
+        tFn('Pricing.pricingList.p1.featuresList.f10')
+      ],
+    },
+    {
+      id: 2,
+      icon: faPhone,
+      tag: tFn('Pricing.pricingList.p2.tag'),
+      title: tFn('Pricing.pricingList.p2.title'),
+      price: tFn('Pricing.pricingList.p2.price'),
+      frequency: tFn('Pricing.pricingList.p2.frequency'),
+      features: [
+        tFn('Pricing.pricingList.p2.featuresList.f1'),
+        tFn('Pricing.pricingList.p2.featuresList.f2'),
+        tFn('Pricing.pricingList.p2.featuresList.f3'),
+        tFn('Pricing.pricingList.p2.featuresList.f4'),
+        tFn('Pricing.pricingList.p2.featuresList.f5'),
+        tFn('Pricing.pricingList.p2.featuresList.f6'),
+        tFn('Pricing.pricingList.p2.featuresList.f7'),
+        tFn('Pricing.pricingList.p2.featuresList.f8'),
+        tFn('Pricing.pricingList.p2.featuresList.f9'),
+      ],
+    },
+    {
+      id: 3,
+      icon: faDashboard,
+      tag: tFn('Pricing.pricingList.p3.tag'),
+      title: tFn('Pricing.pricingList.p3.title'),
+      price: tFn('Pricing.pricingList.p3.price'),
+      frequency: tFn('Pricing.pricingList.p3.frequency'),
+      features: [
+        tFn('Pricing.pricingList.p3.featuresList.f1'),
+        tFn('Pricing.pricingList.p3.featuresList.f2'),
+        tFn('Pricing.pricingList.p3.featuresList.f3'),
+        tFn('Pricing.pricingList.p3.featuresList.f4'),
+        tFn('Pricing.pricingList.p3.featuresList.f5'),
+        tFn('Pricing.pricingList.p3.featuresList.f6'),
+        tFn('Pricing.pricingList.p3.featuresList.f7'),
+        tFn('Pricing.pricingList.p3.featuresList.f8'),
+        tFn('Pricing.pricingList.p3.featuresList.f9'),
+        tFn('Pricing.pricingList.p3.featuresList.f10'),
+        tFn('Pricing.pricingList.p3.featuresList.f11'),
+      ],
+    },
+    {
+      id: 4,
+      icon: faCode,
+      tag: tFn('Pricing.pricingList.p4.tag'),
+      title: tFn('Pricing.pricingList.p4.title'),
+      price: tFn('Pricing.pricingList.p4.price'),
+      frequency: tFn('Pricing.pricingList.p4.frequency'),
+      features: [
+        tFn('Pricing.pricingList.p4.featuresList.f1'),
+        tFn('Pricing.pricingList.p4.featuresList.f2'),
+        tFn('Pricing.pricingList.p4.featuresList.f3'),
+        tFn('Pricing.pricingList.p4.featuresList.f4'),
+      ],
+    }
+  ];
+
+  const [plans, setPlans] = useState(buildHobbies(t));
+
+  useEffect(() => {
+    setPlans(buildHobbies(t));
+  }, [t]);
+
   return (
     <section id='pricing' className={styles.pricingSection}>
       <header className={styles.header}>
-        <h2 className={styles.heading}>Pricing</h2>
+        <h2 className={styles.heading}>{t('Pricing.heading')}</h2>
         <span className={styles.subheading}>
-          {/* Choose the offer that best fits your needs and budget. Whether you're an individual or a business, I have options for everyone.  */}I offer this popular options{/* listenings */}, in an affordable and flexible pricing, tailored to your specific needs, budget and goals.
+          {/* Choose the offer that best fits your needs and budget. Whether you're an individual or a business, I have options for everyone.  */}{t('Pricing.subheading')}
         </span>
       </header>
       <ul className={styles.pricingList}>
-        <li className={styles.pricingItem}>
-          <span className={styles.tag}><FontAwesomeIcon icon={faGlobe} className={styles.icon} /> Web Development</span>
-          {/* <figure className={styles.figure}>
-            <img src="https://via.placeholder.com/150" alt="Basic Plan" className={styles.image} />
-            <figcaption className={styles.figcaption}>Basic Plan</figcaption>
-          </figure> */}
-          <h3 className={styles.planName}>Landing Page</h3>
-          <p className={styles.planPrice}>Started From <span className={styles.currency}>&#36;525.92 USD</span></p>
-          {/* <span className={styles.tagline}>Perfect for individuals and small businesses looking to establish an online presence.</span> */}
-          <ul className={styles.featuresList}>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> 5w's Strategic</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Responsive Design</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Mockup Design (UI/UX)</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Hosting + Custom Domain</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> {/* Develop with  */}{/* Built-in technologies  or modern  */}Vanilla, Libraries or Frameworks</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Basic SEO</li>
-          </ul>
-          <a href='#contact' className={styles.linkButton}>Contact Me <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
-        </li>
-        <li className={styles.pricingItem}>
-          <span className={styles.tag}><FontAwesomeIcon icon={faPhone} className={styles.icon} /> Mobile Development</span>
-          <h3 className={styles.planName}>Mobile Application</h3>
-          <p className={styles.planPrice}>Started From <span className={styles.currency}>&#36;525.92 USD</span></p>
-          <ul className={styles.featuresList}>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Mockup Design (UI/UX)</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> iPhone and/or Android</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Deployment to App Stores</li>
-          </ul>
-          <a href='#contact' className={styles.linkButton}>Contact Me <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
-        </li>
-        <li className={styles.pricingItem}>
-          <span className={styles.tag}><FontAwesomeIcon icon={faDashboard} className={styles.icon} /> Data Science</span>
-          <h3 className={styles.planName}>Data Dashboard</h3>
-          <p className={styles.planPrice}>Started From <span className={styles.currency}>&#36;525.92 USD</span></p>
-          <ul className={styles.featuresList}>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Beautiful Data Visualization</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Forecasting and Trend analysis</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Interactive Dashboards</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Advanced Segmentation</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Data-Driven Decision-Making</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Facts, Metrics and Insights</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> KPI's and Reports</li>
-          </ul>
-          <a href='#contact' className={styles.linkButton}>Contact Me <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
-        </li>
-        <li className={styles.pricingItem}>
-          <span className={styles.tag}><FontAwesomeIcon icon={faCode} className={styles.icon} /> Software Development</span>
-          <h3 className={styles.planName}>Other Project</h3>
-          <p className={styles.planPrice}>Contact me <span className={styles.currency}>for pricing</span></p>
-          <ul className={styles.featuresList}>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Ongoing Technical Support</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Accurate pricing</li>
-            <li><FontAwesomeIcon icon={faCircleCheck} className={styles.icon} /> Custom Solutions</li>
-          </ul>
-          <a href='#contact' className={styles.linkButton}>Contact me <FontAwesomeIcon icon={faArrowDown} className={styles.icon} /></a>
-        </li>
+        {
+          plans.map((plan) => (
+            <li key={plan.id} className={styles.pricingItem}>
+              <PricingCard
+                cardKey={plan.id}
+                icon={plan.icon}
+                tag={plan.tag}
+                title={plan.title}
+                price={plan.price}
+                frequency={plan.frequency}
+                features={plan.features}
+                btn={plan.btn}
+              />
+            </li>
+          ))
+        }
       </ul>
-      <span className={styles.disclaimer}><FontAwesomeIcon icon={faInfoCircle} className={styles.icon} /> * Price may vary based on project complexity and requirements.</span>
+      <span className={styles.disclaimer}><FontAwesomeIcon icon={faInfoCircle} className={styles.icon} /> {t('Pricing.disclaimer')}</span>
     </section>
   );
 };
