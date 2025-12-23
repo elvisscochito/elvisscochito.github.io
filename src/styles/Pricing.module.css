@@ -1,0 +1,255 @@
+section.pricingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem 1.5rem 2rem;
+
+  header.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2.heading {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+
+    span.subheading {
+      font-size: 1.5rem;
+      text-align: center;
+      width: 64ch;
+    }
+  }
+
+  ul.pricingList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    /* width: 100%; */
+    /* background-color: red; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr);
+    place-items: start; */
+    /* justify-items: center; */
+    /* center in x */
+    /* width: 100%; */
+    /* align in y */
+    /* align-items: stretch; */
+
+    li.pricingItem {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1px solid #eaeaea;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      /* width: 20rem; */
+      max-width: 20rem;
+      /* height: 24rem; */
+
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:is(:hover, :focus) {
+          transform: scale(1.05);
+
+          h3.planName {
+            color: var(--accent-color);
+          }
+
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+          /* transform: translateY(-5px); */
+        }
+      }
+
+      /* figure.figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+      /* margin-bottom: 1rem; */
+
+      /* img.image {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 0.5rem;
+          margin-bottom: 0.5rem;
+          position: relative;
+        }
+
+        figcaption.figcaption {
+          font-size: 1.2rem;
+          font-weight: 500;
+
+          position: absolute; */
+      /* top: 50%;
+          left: 50%;
+          transform: translate(-50%, 50%); */
+      /* background: rgba(0, 0, 0, 0.6);
+          color: white;
+          padding: 4px 8px;
+          border-radius: 0.3rem;
+          z-index: 10;
+        }
+      } */
+
+      h3.planName {
+        font-size: 1.8rem;
+        /* margin-bottom: 0.5rem; */
+      }
+
+      p.planPrice {
+        font-size: 1.5rem;
+        /* margin-bottom: 1rem; */
+        /* font-weight: bold; */
+      }
+
+      span.currency {
+        font-weight: bold;
+        /* font-size: 1.2rem; */
+      }
+
+      span.tag {
+        display: inline-block;
+        /* margin-bottom: 1rem; */
+        padding: 0.25rem 0.75rem;
+        background-color: #f5f5f5;
+        border: 1px solid #eaeaea;
+        color: var(--details);
+        border-radius: 2.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      ul.featuresList {
+        list-style: none;
+        /* padding: 0; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* font-size: 1.2rem; */
+        gap: 0.5rem;
+
+        li {
+          /* margin-bottom: 0.5rem; */
+
+          .icon {
+            /* margin-right: 0.5rem; */
+            color: var(--accent-color);
+          }
+        }
+      }
+
+      a.linkButton {
+        margin-top: 0.5rem;
+        padding: 0.5rem 1rem;
+        /* 0.75rem 1.5rem */
+        ;
+        background-color: var(--accent-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        /* font-size: 1.2rem; */
+        cursor: pointer;
+        font-weight: 500;
+
+        @media (hover: hover) and (pointer: fine) {
+          &:is(:hover, :focus) {
+            background-color: #005bb5;
+            transition: background-color 0.2s ease-in-out;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  span.disclaimer {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--details);
+    /* margin-top: 1rem; */
+
+    /* .icon {
+      margin-right: 0.5rem;
+      color: var(--accent-color);
+    } */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section.pricingSection {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    gap: 1rem;
+
+    header.header {
+      h2.heading {
+        font-size: 2rem;
+      }
+
+      span.subheading {
+        font-size: 1.2rem;
+        width: 32ch;
+      }
+    }
+
+    ul.pricingList {
+      /* grid-template-columns: repeat(1, 1fr); */
+      gap: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li.pricingItem {
+        /* max-width: 100%; */
+        padding: 0.75rem;
+        max-width: 10rem;
+
+        span.tag {
+          font-size: 0.7rem;
+          padding: 0.2rem 0.5rem;
+        }
+
+        h3.planName {
+          font-size: 1.5rem;
+        }
+
+        p.planPrice {
+          font-size: 1.2rem;
+        }
+
+        /* span.currency {
+          font-size: 0.9rem;
+        } */
+
+        ul.featuresList {
+          li {
+            font-size: 1rem;
+          }
+        }
+
+        a.linkButton {
+          font-size: 0.9rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+    }
+
+    span.disclaimer {
+      font-size: 0.9rem;
+    }
+  }
+}
