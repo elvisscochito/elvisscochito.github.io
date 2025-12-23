@@ -179,7 +179,7 @@ section.pricingSection {
     font-size: 1rem;
     text-align: center;
     color: var(--details);
-    width: 64ch;
+    max-width: 64ch;
     /* margin-top: 1rem; */
 
     /* .icon {
@@ -251,6 +251,7 @@ section.pricingSection {
 
     span.disclaimer {
       font-size: 0.9rem;
+      max-width: 32ch;
     }
   }
 }
