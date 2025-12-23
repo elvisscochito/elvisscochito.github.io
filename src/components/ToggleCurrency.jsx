@@ -1,17 +1,27 @@
-import { useState } from 'react';
+import { /* useState , */ useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/ToggleCurrency.module.css';
+import CurrencyContext from './CurrencyContext';
 
 const ToggleCurrency = () => {
   const { t } = useTranslation("global");
-  const [currency, setCurrency] = useState('USD');
+
+  console.log(useContext(CurrencyContext));
+
+  const { currency, setCurrency } = useContext(CurrencyContext);
 
   const handleToggleCurrency = () => {
     const newCurrency = currency === 'USD' ? 'MXN' : 'USD';
     setCurrency(newCurrency);
-    localStorage.setItem('currency', newCurrency);
-    // TODO: Add additional logic here to update prices site-wide
   };
+
+  /* const [currency, setCurrency] = useState('USD'); */
+
+  /* const handleToggleCurrency = () => {
+    const newCurrency = currency === 'USD' ? 'MXN' : 'USD';
+    setCurrency(newCurrency);
+    localStorage.setItem('currency', newCurrency);
+  }; */
 
   return (
     <button
