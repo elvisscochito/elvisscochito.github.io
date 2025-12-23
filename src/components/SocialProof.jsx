@@ -15,6 +15,7 @@ const SocialProof = () => {
       linkedin: 'https://www.linkedin.com/in/facundo-prieto/',
       name: tfn('SocialProof.proofsList.p1.name'),
       position: tfn('SocialProof.proofsList.p1.position'),
+      company: tfn('SocialProof.proofsList.p1.company'),
       date: tfn('SocialProof.proofsList.p1.date'),
       comment: tfn('SocialProof.proofsList.p1.comment'),
       link: "https://www.linkedin.com/services/page/94049531a961b25782/",
@@ -27,6 +28,7 @@ const SocialProof = () => {
       name: tfn('SocialProof.proofsList.p2.name'),
       date: tfn('SocialProof.proofsList.p2.date'),
       position: tfn('SocialProof.proofsList.p2.position'),
+      company: tfn('SocialProof.proofsList.p2.company'),
       comment: tfn('SocialProof.proofsList.p2.comment'),
       link: "https://www.linkedin.com/in/elviro-dominguez-soriano/details/recommendations/",
       type: tfn('SocialProof.proofsList.p2.type')
@@ -67,6 +69,7 @@ const SocialProof = () => {
               linkedin={proof.linkedin}
               name={proof.name}
               position={proof.position}
+              company={proof.company}
               date={proof.date}
               comment={proof.comment}
               link={proof.link}
