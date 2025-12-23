@@ -124,7 +124,7 @@ section.pricingSection {
         padding: 0.25rem 0.75rem;
         background-color: #f5f5f5;
         border: 1px solid #eaeaea;
-        color: var(--text-aux-color);
+        color: var(--details);
         border-radius: 2.5rem;
         font-size: 0.8rem;
         font-weight: 500;
@@ -178,7 +178,7 @@ section.pricingSection {
   span.disclaimer {
     font-size: 1rem;
     text-align: center;
-    color: var(--details);
+    color: var(--text-aux-color);
     max-width: 64ch;
     /* margin-top: 1rem; */
 

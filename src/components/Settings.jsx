@@ -1,4 +1,4 @@
-import { faCircleHalfStroke, faLanguage, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke, faLanguage, faMagnifyingGlass /* , faMoneyBill */ } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Settings.module.css';
@@ -34,7 +34,7 @@ const Settings = ({ onClose }) => {
         </li>
         {/* <li className={styles.settingItem}>
           <label htmlFor="currency-toggle" className={styles.settingLabel}>
-            <FontAwesomeIcon icon={faCookie} />&nbsp;Currency:
+            <FontAwesomeIcon icon={faMoneyBill} />&nbsp;Currency:
           </label>
         </li> */}
         <li className={styles.settingItem}>
