@@ -19,7 +19,12 @@ const PricingCard = ({ cardKey, icon, tag, title, price, frequency, features }) 
             ? t('Pricing.contactForQuote')
             : t('Pricing.startedFrom')
         }
-        <span className={styles.currency}> {price}</span>{/*  | ({frequency}) */}</p>
+        <span className={styles.currency}> {price}</span>
+        {/* {
+          cardKey !== 4 &&
+          <span className={styles.frequency}>&nbsp;| ({frequency})</span>
+        } */}
+      </p>
       {/* <span className={styles.tagline}>Perfect for individuals and small businesses looking to establish an online presence.</span> */}
       <ul className={styles.featuresList}>
         {

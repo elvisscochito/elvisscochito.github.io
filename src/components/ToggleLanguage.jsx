@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/ToggleLanguage.module.css';
 
+/* const LANGUAGE_KEY = 'language'; */
+
 const ToggleLanguage = () => {
   const { t, i18n } = useTranslation("global");
   const [language, setLanguage] = useState(i18n.language || 'en');

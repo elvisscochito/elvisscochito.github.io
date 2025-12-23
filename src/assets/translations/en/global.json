@@ -484,7 +484,12 @@
       "p1": {
         "tag": "Web Development",
         "title": "Landing Page",
-        "price": "$525.92 USD",
+        "price": {
+          "minUSD": "$525.92 USD $262.96 USD",
+          "minMXN": "9,582.47 MXN 5,000 MXN",
+          "USD": "$466.32 USD",
+          "MXN": "$8,364.00 MXN"
+        },
         "frequency": "One-Time Payment",
         "featuresList": {
           "f1": "5w's Strategic Planning",
@@ -502,7 +507,12 @@
       "p2": {
         "tag": "Mobile Development",
         "title": "Mobile Application",
-        "price": "$525.92 USD",
+        "price": {
+          "minUSD": "$1,315.92 USD $657.96 USD",
+          "minMXN": "23,982.47 MXN 12,000 MXN",
+          "USD": "$788.88 USD",
+          "MXN": "$14,366.18 MXN"
+        },
         "frequency": "One-Time Payment",
         "featuresList": {
           "f1": "Mockup Design (UI/UX)",
@@ -519,7 +529,12 @@
       "p3": {
         "tag": "Data Science",
         "title": "Data Dashboard",
-        "price": "$525.92 USD",
+        "price": {
+          "minUSD": "$1,315.92 USD $1,047.84 USD",
+          "minMXN": "23,982.47 MXN 19,084.24 MXN",
+          "USD": "$657.96 USD",
+          "MXN": "$12,000.00 MXN"
+        },
         "frequency": "One-Time Payment",
         "featuresList": {
           "f1": "Beautiful Data Visualization",
@@ -845,6 +860,11 @@
       "language": "Language:",
       "english": "Inglés",
       "spanish": "Español"
+    },
+    "ToggleCurrency": {
+      "currency": "Currency:",
+      "usd": "USD - US Dollar",
+      "mxn": "MXN - Mexican Peso"
     },
     "AppearanceDropdown": {
       "appearance": "Appearance:",

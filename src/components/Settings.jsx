@@ -1,9 +1,10 @@
-import { faCircleHalfStroke, faLanguage, faMagnifyingGlass /* , faMoneyBill */ } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke, faLanguage, faMagnifyingGlass, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Settings.module.css';
 import AppearanceDropdown from './AppearanceDropdown';
 import SearchInput from "./SearchInput";
+import ToggleCurrency from './ToggleCurrency';
 import ToggleLanguage from "./ToggleLanguage";
 
 const Settings = ({ onClose }) => {
@@ -32,11 +33,12 @@ const Settings = ({ onClose }) => {
           </label>
           <ToggleLanguage />
         </li>
-        {/* <li className={styles.settingItem}>
+        <li className={styles.settingItem}>
           <label htmlFor="currency-toggle" className={styles.settingLabel}>
-            <FontAwesomeIcon icon={faMoneyBill} />&nbsp;Currency:
+            <FontAwesomeIcon icon={faMoneyBill} />&nbsp;{t("Settings.ToggleCurrency.currency")}
           </label>
-        </li> */}
+          <ToggleCurrency />
+        </li>
         <li className={styles.settingItem}>
           <label htmlFor="appearance-select" className={styles.settingLabel}/*  sr-only */>
             <FontAwesomeIcon icon={faCircleHalfStroke} />&nbsp;{t("Settings.AppearanceDropdown.appearance")}
