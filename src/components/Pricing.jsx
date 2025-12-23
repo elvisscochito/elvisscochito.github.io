@@ -1,12 +1,14 @@
 import { faCode, faDashboard, faGlobe, faInfoCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Pricing.module.css';
+import CurrencyContext from './CurrencyContext';
 import PricingCard from './PricingCard';
 
 const Pricing = () => {
   const { t } = useTranslation("global");
+  const { currency } = useContext(CurrencyContext);
 
   const buildHobbies = (tFn) => [
     {
@@ -14,7 +16,11 @@ const Pricing = () => {
       icon: faGlobe,
       tag: tFn('Pricing.pricingList.p1.tag'),
       title: tFn('Pricing.pricingList.p1.title'),
-      price: tFn('Pricing.pricingList.p1.price'),
+      price:
+        /* currency === 'USD'
+          ? tFn('Pricing.pricingList.p1.price.USD')
+          : tFn('Pricing.pricingList.p1.price.MXN') */
+        tFn(`Pricing.pricingList.p1.price.${currency}`),
       frequency: tFn('Pricing.pricingList.p1.frequency'),
       features: [
         tFn('Pricing.pricingList.p1.featuresList.f1'),
@@ -34,7 +40,7 @@ const Pricing = () => {
       icon: faPhone,
       tag: tFn('Pricing.pricingList.p2.tag'),
       title: tFn('Pricing.pricingList.p2.title'),
-      price: tFn('Pricing.pricingList.p2.price'),
+      price: tFn(`Pricing.pricingList.p2.price.${currency}`),
       frequency: tFn('Pricing.pricingList.p2.frequency'),
       features: [
         tFn('Pricing.pricingList.p2.featuresList.f1'),
@@ -53,7 +59,7 @@ const Pricing = () => {
       icon: faDashboard,
       tag: tFn('Pricing.pricingList.p3.tag'),
       title: tFn('Pricing.pricingList.p3.title'),
-      price: tFn('Pricing.pricingList.p3.price'),
+      price: tFn(`Pricing.pricingList.p3.price.${currency}`),
       frequency: tFn('Pricing.pricingList.p3.frequency'),
       features: [
         tFn('Pricing.pricingList.p3.featuresList.f1'),
@@ -89,7 +95,7 @@ const Pricing = () => {
 
   useEffect(() => {
     setPlans(buildHobbies(t));
-  }, [t]);
+  }, [t, currency]);
 
   return (
     <section id='pricing' className={styles.pricingSection}>

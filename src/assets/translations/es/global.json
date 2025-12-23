@@ -449,7 +449,10 @@
       "p1": {
         "tag": "Desarrollo Web",
         "title": "Página de Aterrizaje",
-        "price": "$525.92 USD",
+        "price": {
+          "USD": "$466.32 USD",
+          "MXN": "$8,364.00 MXN"
+        },
         "frequency": "Pago Único",
         "featuresList": {
           "f1": "Planificación Estratégica 5w's",
@@ -467,7 +470,10 @@
       "p2": {
         "tag": "Desarrollo Móvil",
         "title": "Aplicación Móvil",
-        "price": "$525.92 USD",
+        "price": {
+          "USD": "$788.88 USD",
+          "MXN": "14,366.18 MXN"
+        },
         "frequency": "Pago Único",
         "featuresList": {
           "f1": "Diseño de Maqueta (UI/UX)",
@@ -484,7 +490,10 @@
       "p3": {
         "tag": "Ciencia de Datos",
         "title": "Panel de Datos",
-        "price": "$525.92 USD",
+        "price": {
+          "USD": "$657.96 USD",
+          "MXN": "$12,000.00 MXN"
+        },
         "frequency": "Pago Único",
         "featuresList": {
           "f1": "Visualización de Datos Hermosa",
