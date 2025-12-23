@@ -802,6 +802,11 @@
       "english": "English",
       "spanish": "Spanish"
     },
+    "ToggleCurrency": {
+      "currency": "Moneda:",
+      "usd": "USD - Dólar Estadounidense",
+      "mxn": "MXN - Peso Mexicano"
+    },
     "AppearanceDropdown": {
       "appearance": "Apariencia:",
       "light": "Claro",

@@ -846,6 +846,11 @@
       "english": "Inglés",
       "spanish": "Español"
     },
+    "ToggleCurrency": {
+      "currency": "Currency:",
+      "usd": "USD - US Dollar",
+      "mxn": "MXN - Mexican Peso"
+    },
     "AppearanceDropdown": {
       "appearance": "Appearance:",
       "light": "Light",
