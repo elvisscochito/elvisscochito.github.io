@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faContactBook, faEnvelope, faFile, faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/SocialPath.module.css';
@@ -9,6 +9,9 @@ const Social = () => {
   return (
     <div className={styles.container}>
       {/* <h2>@</h2> */}
+      <a href="https://www.elvirodominguez.com/link-in-bio?tab=Projects" /* target="_blank" */ rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.LinkInBio")}>
+        <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
+      </a>
       <a href="https://www.linkedin.com/in/elviro-dominguez-soriano" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.linkedin")}>
         <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
       </a>
@@ -23,6 +26,12 @@ const Social = () => {
       </a>
       <a href="tel:+527771395795" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.phone")}>
         <FontAwesomeIcon icon={faPhone} className={styles.icon} />
+      </a>
+      <a href="/contact.vcf" download="contact.vcf" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.contactCard")}>
+        <FontAwesomeIcon icon={faContactBook} className={styles.icon} />
+      </a>
+      <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=share_link" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.resume")} className={styles.headerLink}>
+        <FontAwesomeIcon icon={faFile} className={styles.icon} />
       </a>
     </div>
   );

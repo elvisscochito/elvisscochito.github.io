@@ -47,11 +47,14 @@
     "title": "Empresas con y para las que he trabajado:"
   },
   "SocialPath": {
+    "LinkInBio": "Mi Link en Bio \u2197",
     "linkedin": "Mi LinkedIn \u2197",
     "github": "Mi GitHub \u2197",
     "whatsapp": "Mi WhatsApp \u2197",
     "email": "Mi Correo \u2197",
-    "phone": "Mi Número de Teléfono \u2197"
+    "phone": "Mi Número de Teléfono \u2197",
+    "contactCard": "Mi Tarjeta de Contacto \u2197",
+    "resume": "Mi Currículum \u2197"
   },
   "About": {
     "heading": "¿Qué hay sobre mí?",
