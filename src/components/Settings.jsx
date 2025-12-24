@@ -28,7 +28,7 @@ const Settings = ({ onClose }) => {
       <ul className={styles.settingsList}>
         {
           !isLinkInBioPage && (
-            <li className={styles.settingItem}>
+            <li className={`${styles.settingItem} ${styles.searchItem}`}>
               <label htmlFor="search-input" className={styles.settingLabel}><FontAwesomeIcon icon={faMagnifyingGlass} />&nbsp;Search:</label>
               <SearchInput onSelect={onClose} />
             </li>
