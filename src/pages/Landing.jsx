@@ -1,5 +1,5 @@
-import { Tooltip } from 'react-tooltip'
-import 'react-tooltip/dist/react-tooltip.css'
+/* import { Tooltip } from 'react-tooltip' */
+/* import 'react-tooltip/dist/react-tooltip.css' */
 import '../App.css'
 import About from '../components/About'
 import ActivitiesAndSocieties from '../components/ActivitiesAndSocieties'
@@ -26,7 +26,7 @@ import SocialPath from '../components/SocialPath'
 import SocialProof from '../components/SocialProof'
 import SoftSkills from '../components/SoftSkills'
 import WorkExperience from '../components/WorkExperience'
-import styles from '../styles/Tooltip.module.css'
+/* import styles from '../styles/Tooltip.module.css' */
 
 function Landing() {
   return (
@@ -59,7 +59,7 @@ function Landing() {
       {/* Global Tooltip for cards and other elements that use data-tooltip-id="global-tooltip" */}
       {/* Add a stable global class name so we can hide/show the tooltip with a simple body class when cards flip */}
       {/* <Tooltip id="global-tooltip" place="top" className={styles.tooltip} /> */}
-      <Tooltip id="global-tooltip" place="top" className={`global-tooltip ${styles.tooltip}`} />
+      {/* <Tooltip id="global-tooltip" place="top" className={`global-tooltip ${styles.tooltip}`} /> */}
       {/* </main> */}
       <BackToTop />
       <Footer />

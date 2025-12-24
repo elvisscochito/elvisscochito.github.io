@@ -1,18 +1,22 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin, faMedium, faPaypal, faTiktok, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faContactBook, faEnvelope, faFile, faGear, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+/* import contact from '../assets/contact.svg'; */
 import corncrunch from '../assets/corncrunch.svg';
 import neza from '../assets/neza-logo.svg';
 import profile from '../assets/profile.webp';
 import tec from '../assets/tec.svg';
+import CommandPaletteModal from '../components/CommandPaletteModal';
 import Modal from '../components/Modal';
+import Settings from '../components/Settings';
 import styles from '../styles/LinkInBio.module.css';
 
 function LinkInBio() {
   const { t } = useTranslation("global");
   const modalRef = useRef(null);
+  const modalRefSettings = useRef(null);
   const [tabs, setTabs] = useState([
     {
       id: 1,
@@ -131,14 +135,35 @@ function LinkInBio() {
     );
   }
 
+  const openSettings = () => {
+    /* console.log("Open Settings Modal"); */
+
+    modalRefSettings.current?.open();
+  }
+
+  const closeSettings = () => {
+    /* console.log("Close Settings Modal"); */
+
+    modalRefSettings.current?.close();
+  }
+
   return (
     <>
       <nav className={styles.navbar}>
-        <h2 className={styles.navbarTitle}>Link In Bio</h2>
-        {/* <a href="https://www.elvirodominguez.com/" target="_blank" rel="noopener noreferrer" className={styles.navbarLink}>
-          &#8592; Back to Website */} {/* {t("LinkInBio.backToWebsite")} */}
-        {/* </a> */}
+        <a href="https://www.elvirodominguez.com/" /* target="_blank" */ rel="noopener noreferrer" className={styles.navbarLink}>
+          &#8592; {/* Go */}{t("LinkInBio.backBtn")}{/*  to Website */} {/* {t("LinkInBio.backToWebsite")} */}
+        </a>
+
+        <h2 className={styles.navbarTitle}>{t("LinkInBio.heading")}</h2>
+
+        <button type='button' className={styles.settingsButton} onClick={openSettings} accessKey='K' aria-label="Open command palette">
+          <FontAwesomeIcon icon={faGear} className={styles.settingsIcon} />
+        </button>
       </nav>
+
+      <CommandPaletteModal ref={modalRefSettings}>
+        <Settings onClose={closeSettings} />
+      </CommandPaletteModal>
 
       <div className={styles.linkInBio}>
         {/* TODO: ADD Modal like Instagram Stories */}
@@ -153,7 +178,7 @@ function LinkInBio() {
           <span className={styles.username}>@elvisscochito</span>
           <h1 className={styles.heading}>Elviro Dominguez Soriano</h1>
 
-          <p className={styles.subheading}>CS Student <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer" className={styles.link}>@tecdemonterrey <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>  (On Hold)</p>
+          <p className={styles.subheading}>{t("LinkInBio.student")} <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer" className={styles.link}>@tecdemonterrey <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>  {t("LinkInBio.hold")}</p>
 
           {/* <div className={styles.description}>
             <span className={styles.location}>
@@ -181,26 +206,32 @@ function LinkInBio() {
           {/* </div> */}
 
           <div className={styles.socialLinks}>
-            <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20Job%20Opportunity&body=Hello,%20Elviro:%0D%0A%0D%0AI%20want%20to%20get%20in%20touch%20with%20you%20regarding%20a%20job%20opportunity..." target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.email")} className={styles.headerLink}>
+            <a href="/contact.vcf" download="contact.vcf" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl1.name")} className={styles.headerLink}>
+              <FontAwesomeIcon icon={faContactBook} className={styles.icon} />
+            </a>
+            <a href="mailto:contact@elvirodominguez.com?subject=Contacting%20for%20Job%20Opportunity&body=Hello,%20Elviro:%0D%0A%0D%0AI%20want%20to%20get%20in%20touch%20with%20you%20regarding%20a%20job%20opportunity..." target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl2.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             </a>
-            <a href="tel:+527771395795" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.whatsapp")} className={styles.headerLink}>
+            <a href="tel:+527771395795" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl3.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faPhone} className={styles.icon} />
             </a>
-            <a href="https://www.linkedin.com/in/elviro-dominguez-soriano" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.linkedin")} className={styles.headerLink}>
+            <a href="https://www.linkedin.com/in/elviro-dominguez-soriano" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl4.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
             </a>
-            <a href="https://github.com/elvisscochito" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.github")} className={styles.headerLink}>
+            <a href="https://github.com/elvisscochito" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl5.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faGithub} className={styles.icon} />
             </a>
-            <a href="https://www.elvirodominguez.com/" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content="Personal Website" className={styles.headerLink}>
+            <a href="https://www.elvirodominguez.com/" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl6.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
             </a>
-            <a href='https://maps.app.goo.gl/bvc5VhjiGeQQvTNV9' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
+            <a href='https://maps.app.goo.gl/bvc5VhjiGeQQvTNV9' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl7.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             </a>
-            <a href='https://www.paypal.com/paypalme/elvirodominguez' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.location")} className={styles.headerLink}>
+            <a href='https://www.paypal.com/paypalme/elvirodominguez' target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl8.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faPaypal} className={styles.icon} />
+            </a>
+            <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=share_link" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl9.name")} className={styles.headerLink}>
+              <FontAwesomeIcon icon={faFile} className={styles.icon} />
             </a>
           </div>
 
@@ -227,6 +258,14 @@ function LinkInBio() {
           {/* {t("LinkInBio.disclaimer")} */}
           {/* </p>
           </div> */}
+
+          {/* <a href="#content" className={styles.skipLink}aria-label="Scroll Down to Content">Skip to Content</a> */}
+
+          {/* <a href="/contact.vcf" download="contact.vcf" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.email")} className={styles.saveContactBtn}> */}
+          {/* <img src={contact} alt="Contact Icon" className={styles.icon} /> */}
+          {/* <FontAwesomeIcon icon={faContactBook} className={styles.icon} />
+            Save/Download Contact
+          </a> */}
         </header>
 
         <div className={styles.switchTab}>
@@ -308,7 +347,7 @@ function LinkInBio() {
         </div>
 
         <footer className={styles.footer}>
-          <span className={styles.footerText}>Copyright &#169; {new Date().getFullYear()}. Elviro Dominguez Soriano. All rights reserved.</span>
+          <span className={styles.footerText}>Copyright &#169; {new Date().getFullYear()}. Elviro Dominguez Soriano. {t('LinkInBio.rights')}</span>
         </footer>
 
         <Modal ref={modalRef} />

@@ -804,7 +804,8 @@
     }
   },
   "Settings": {
-    "heading": "Paleta de Comandos de Configuración",
+    "heading": "Panel de Configuración",
+    "heading2": "Paleta de Comandos de Configuración | Ctrl + K | Configuración de la Página | Panel de Configuración",
     "subheading": "Personaliza tu experiencia.",
     "ToggleLanguage": {
       "language": "Idioma:",
@@ -822,5 +823,67 @@
       "dark": "Oscuro",
       "system": "Sistema"
     }
+  },
+  "LinkInBio": {
+    "backgroundAlert": "Nota: Estás siendo redirigido a una página externa de Link in Bio.",
+    "exitAlert": "Estás a punto de salir de mi sitio web de portafolio. ¿Quieres continuar?",
+    "backBtn": "Volver",
+    "backBtn2": "Volver al Portafolio",
+    "heading": "Link in Bio",
+    "heading2": "Enlaces de Perfil",
+    "subheading": "Acceso rápido a mis enlaces principales.",
+    "student": "Estudiante de CS",
+    "hold": "(En espera)",
+    "studentDisclaimer": "Nota: Esta página de Link in Bio es parte de un proyecto estudiantil y puede no representar mi portafolio profesional completo. Para obtener información más completa sobre mis habilidades, proyectos y experiencias, visita mi sitio web principal de portafolio.",
+    "socialLinksList": {
+      "sl1": {
+        "name": "Tarjeta de Contacto \u2197"
+      },
+      "sl2": {
+        "name": "Correo Electrónico \u2197"
+      },
+      "sl3": {
+        "name": "Número de Teléfono \u2197"
+      },
+      "sl4": {
+        "name": "Perfil de LinkedIn \u2197"
+      },
+      "sl5": {
+        "name": "Perfil de GitHub \u2197"
+      },
+      "sl6": {
+        "name": "Sitio web de Portafolio Personal \u2197"
+      },
+      "sl7": {
+        "name": "Ubicación \u2197"
+      },
+      "sl8": {
+        "name": "PayPal \u2197"
+      },
+      "sl9": {
+        "name": "Currículum Vitae \u2197"
+      },
+      "sl10": {
+        "name": "Sitio web del portafolio",
+        "description": "Explora mis proyectos, habilidades y experiencias."
+      },
+      "sl11": {
+        "name": "Perfil de LinkedIn",
+        "description": "Conéctate conmigo profesionalmente."
+      },
+      "sl12": {
+        "name": "Perfil de GitHub",
+        "description": "Consulta mis repositorios de código."
+      },
+      "sl13": {
+        "name": "Currículum Vitae",
+        "description": "Descarga mi currículum más reciente."
+      },
+      "sl14": {
+        "name": "Contáctame",
+        "description": "Ponte en contacto para oportunidades."
+      }
+    },
+    "rights": "Todos los derechos reservados."
   }
 }

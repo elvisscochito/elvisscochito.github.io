@@ -9,6 +9,7 @@ button.toggleButton {
   width: 100%;
   transition: all 0.3s ease-in-out;
   color: var(--text-aux-color);
+  text-align: left;
 
   &:hover {
     /* background-color: #F5F5F5; */

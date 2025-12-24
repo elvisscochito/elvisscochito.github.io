@@ -6,7 +6,7 @@ import CurrencyContext from './CurrencyContext';
 const ToggleCurrency = () => {
   const { t } = useTranslation("global");
 
-  console.log(useContext(CurrencyContext));
+  /* console.log(useContext(CurrencyContext)); */
 
   const { currency, setCurrency } = useContext(CurrencyContext);
 
