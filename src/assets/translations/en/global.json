@@ -854,7 +854,8 @@
     }
   },
   "Settings": {
-    "heading": "Settings Command Palette",
+    "heading": "Settings Panel",
+    "heading2": "Settings Command Palette | Ctrl + K | Settings Panel | Website Settings",
     "subheading": "Customize your experience.",
     "ToggleLanguage": {
       "language": "Language:",
@@ -872,5 +873,65 @@
       "dark": "Dark",
       "system": "System"
     }
+  },
+  "LinkInBio": {
+    "backgroundAlert": "Note: You are being redirected to an external Link in Bio page.",
+    "exitAlert": "You are about to leave my portfolio website. Do you want to continue?",
+    "backBtn": "Back",
+    "heading": "Link in Bio",
+    "subheading": "Quick access to my main links.",
+    "student": "CS Student",
+    "hold": "(On Hold)",
+    "studentDisclaimer": "Note: This Link in Bio page is part of a student project and may not represent my full professional portfolio. For more comprehensive information about my skills, projects, and experiences, please visit my main portfolio website.",
+    "socialLinksList": {
+      "sl1": {
+        "name": "Contact Card \u2197"
+      },
+      "sl2": {
+        "name": "Email \u2197"
+      },
+      "sl3": {
+        "name": "Phone Number \u2197"
+      },
+      "sl4": {
+        "name": "LinkedIn Profile \u2197"
+      },
+      "sl5": {
+        "name": "GitHub Profile \u2197"
+      },
+      "sl6": {
+        "name": "Personal Portfolio Website \u2197"
+      },
+      "sl7": {
+        "name": "Location \u2197"
+      },
+      "sl8": {
+        "name": "PayPal \u2197"
+      },
+      "sl9": {
+        "name": "Resume/CV \u2197"
+      },
+      "sl10": {
+        "name": "Portfolio Website",
+        "description": "Explore my projects, skills, and experiences."
+      },
+      "sl11": {
+        "name": "LinkedIn Profile",
+        "description": "Connect with me professionally."
+      },
+      "sl12": {
+        "name": "GitHub Profile",
+        "description": "Check out my code repositories."
+      },
+      "sl13": {
+        "name": "Resume/CV",
+        "description": "Download my latest resume."
+      },
+      "sl14": {
+        "name": "Contact Me",
+        "description": "Get in touch for opportunities."
+      }
+    },
+    "rights": "All rights reserved."
   }
 }
