@@ -89,6 +89,9 @@ const WorkExperience = () => {
           ))
         }
       </div>
+      <footer className={styles.footer}>
+        <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btn}>{t('WorkExperience.btn')}</a>
+      </footer>
     </section>
   );
 }
