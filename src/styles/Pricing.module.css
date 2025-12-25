@@ -257,6 +257,14 @@ section.pricingSection {
           font-size: 0.9rem;
           padding: 0.4rem 0.8rem;
         }
+
+        /* &:last-child {
+          max-width: */
+        /* 16rem */
+        /* 14rem */
+        /* fit-content */
+        /* ;
+        } */
       }
     }
 
