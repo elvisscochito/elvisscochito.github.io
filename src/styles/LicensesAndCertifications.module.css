@@ -112,7 +112,7 @@ section.LicensesAndCertifications {
       display: flex;
       gap: 1rem;
       flex-direction: row;
-      justify-content: flex-start;
+      /* justify-content: flex-start; */
       align-items: flex-start;
       flex-wrap: wrap;
       /* grid-template-columns: repeat(2, 1fr); */

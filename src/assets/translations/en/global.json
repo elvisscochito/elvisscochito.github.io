@@ -30,7 +30,7 @@
       "Or": "or",
       "Full-Time": "Full-Time",
       "Any": "or any other",
-      "Opportunity": "job opportunity",
+      "Opportunity": "related job opportunity",
       "cta": {
         "btn": "Get in touch",
         "btnAux": "View Resume"
@@ -151,7 +151,7 @@
     "tecResponsibilities": {
       "r1": "Gained a strong design sense, applied to webs and mobile User Interfaces designs in academic projects."
     },
-    "btn": "View Resume \u2197"
+    "btn": "Download Resume"
   },
   "SoftSkills": {
     "heading": "Soft Skills.",
@@ -478,12 +478,13 @@
     "linkBtn": "Preview Project"
   },
   "Pricing": {
-    "heading": "Pricing",
+    "heading": "Professional Service Rates",
     "subheading": "I offer this popular options, in an affordable and flexible pricing, tailored to your specific needs, budget and goals.",
     "startingAt": "Starting at:",
     "startedFrom": "Started From",
     "contactMe": "Contact Me",
     "contactForQuote": "Contact me for",
+    "contactForOffer": "Contact me for Offer me a",
     "pricingList": {
       "p1": {
         "tag": "Web Development",
@@ -573,7 +574,51 @@
           "f11": "Deployment and Maintenance"
         }
       },
-      "p6": {
+      "p5": {
+        "tag": "IT Position",
+        "title": "Formal Job Offer",
+        "price": "Competitive Salary Based on Experience",
+        "frequency": "One-Time Payment",
+        "featuresList": {
+          "f1": "Web, Data Science, Mobile, Networking, DevOps or IT related position",
+          "f2": "Part-Time, Full-Time or Contract (Temporary, Fixed-term and/or Permanent) Position",
+          "f3": "Hybrid, Remote or On-Site Work",
+          "f4": "Willing to relocate",
+          "f5": "Competitive Salary",
+          "f6": "Benefits Package",
+          "f7": "Professional Development Opportunities",
+          "f8": "Challenging Projects",
+          "f9": "Collaborative Work Environment",
+          "f10": "Career Growth Opportunities",
+          "f11": "Work-Life Balance Initiatives",
+          "f12": "Health and Wellness Programs",
+          "f13": "Additional Perks and Benefits",
+          "f14": "Health Insurance",
+          "f15": "Retirement Plans",
+          "f16": "Paid Time Off",
+          "f17": "Flexible Work Hours",
+          "f18": "Remote Work Options",
+          "f19": "Professional Development Support",
+          "f20": "Employee Recognition Programs",
+          "f21": "Diversity and Inclusion Initiatives",
+          "f22": "Comprehensive Job Role",
+          "f23": "Clear Responsibilities and Expectations",
+          "f24": "Supportive Onboarding Process",
+          "f25": "Access to Necessary Tools and Resources",
+          "f26": "Mentorship and Guidance",
+          "f27": "Regular Performance Feedback",
+          "f28": "Opportunities for Skill Development",
+          "f29": "Positive Work Culture",
+          "f30": "Employee Wellness Programs",
+          "f31": "Workplace Flexibility",
+          "f32": "Inclusive and Diverse Environment",
+          "f33": "Recognition and Rewards",
+          "f34": "Team Collaboration Opportunities",
+          "f35": "Challenging and Impactful Projects",
+          "f36": "Clear Career Pathways"
+        }
+      },
+      "p7": {
         "tag": "Data Science",
         "title": "Data Analysis",
         "price": "657.96 USD",
@@ -589,7 +634,7 @@
           "f8": "Presentation of Findings"
         }
       },
-      "p5": {
+      "p6": {
         "tag": "Web Development",
         "title": "Full Website",
         "price": "1,315.92 USD",
@@ -787,6 +832,18 @@
       "f27": {
         "question": "What is your pricing structure?",
         "answer": "My pricing structure varies depending on the project's scope, complexity, and requirements. I typically provide custom quotes based on the specific needs of each project. I offer competitive rates and am open to discussing project budgets to find a solution that works for both parties."
+      },
+      "f28": {
+        "question": "Do you charge fixed prices or hourly rates?",
+        "answer": "I offer both fixed-price projects and hourly rate services, depending on the scope of work, project requirements, and client preferences. Before starting, you will always receive a clear quote with pricing and estimated timelines. Ultimately, I am open to discussing and agreeing on the pricing structure that best suits the project's needs and ensures a successful collaboration."
+      },
+      "f29": {
+        "question": "What are your payment structure and terms?",
+        "answer": "My payment structure is flexible and depends on the project's scope and client preferences. I accept both one-time payments and multiple payments (based on milestones or phases). For larger projects, an upfront deposit of 25-35% is required before starting, with the remaining balance paid upon completion or at agreed milestones or phases. However, I often recommend breaking down the payment to ensure mutual satisfaction throughout the development process. All payment terms are discussed and agreed upon before the project begins to ensure clarity and transparency that works best for both parties."
+      },
+      "f30": {
+        "question": "What are your payment methods?",
+        "answer": "I accept various payment methods, including bank transfers, bank deposits, PayPal, and other secure online payment platforms."
       },
       "f10": {
         "question": "Which companies have you worked with or for?",

@@ -232,7 +232,7 @@ section.workExperience {
   } */
 
   footer.footer {
-    width: 50%;
+    width: 45%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -247,7 +247,7 @@ section.workExperience {
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     align-self: flex-end;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 
     /* @media (hover: hover) and (pointer: fine) {
         &:hover {
@@ -328,6 +328,10 @@ section.workExperience {
     footer.footer {
       width: 100%;
       /* justify-content: center; */
+
+      a.btn {
+        font-size: 0.8rem;
+      }
     }
   }
 }

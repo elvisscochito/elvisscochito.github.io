@@ -21,7 +21,7 @@ const FAQ = () => {
       },
       "f23": {
         "question": "What is your typical project timeline?",
-        "answer": "Project timelines can vary depending on the scope and complexity of the project. I work closely with clients to establish realistic timelines and ensure timely delivery."
+        "answer": "Project timelines can vary depending on the scope and complexity of the project. I work closely with clients to establish realistic timelines and ensure timely delivery. The project timeline varies depending on the scope and complexity of the project. I work closely with clients to establish realistic timelines and ensure timely delivery of high-quality work."
       },
       "f24": {
         "question": "What is your preferred method of communication?",
@@ -66,7 +66,23 @@ const FAQ = () => {
       "f34": {
         "question": "What is your preferred project type?",
         "answer": "I enjoy working on a variety of project types, including web applications, mobile apps, data analysis projects, and software development tasks. I'm adaptable and open to exploring new project types as well."
-      }
+      },
+      "f28": {
+        "question": "Do you charge fixed prices or hourly rates?",
+        "answer": "I offer both fixed-price projects and hourly rate services, depending on the scope of work, project requirements, and client preferences. For smaller, well-defined projects, I often prefer fixed-price arrangements to provide clarity and predictability for both parties. For larger or ongoing projects with evolving requirements, I may opt for hourly rates to accommodate flexibility and changes in scope. Ultimately, I am open to discussing and agreeing on the pricing structure that best suits the project's needs and ensures a successful collaboration."
+      },
+       "f29": {
+        "question": "What is your payment structure?",
+        "answer": "My payment structure typically involves an initial deposit or milestone payments for larger projects, with the remaining balance due upon project completion. I accept various payment methods, including bank transfers, PayPal, and other secure online payment platforms. Specific payment terms can be discussed and agreed upon before starting any project to ensure clarity and mutual understanding."
+      },
+      "f30": {
+        "question": "What is your payment policy?",
+        "answer": "My payment policy typically involves an initial deposit or milestone payments for larger projects, with the remaining balance due upon project completion. I accept various payment methods, including bank transfers, PayPal, and other secure online payment platforms. Specific payment terms can be discussed and agreed upon before starting any project to ensure clarity and mutual understanding."
+      },
+      "f31": {
+        "question": "What is your payment terms?",
+        "answer": "My payment terms typically include a deposit upfront (usually 30-50% of the total project cost) before starting the work, with the remaining balance due upon project completion or at agreed-upon milestones. I accept various payment methods, including bank transfers, PayPal, and other secure payment platforms. Specific payment terms can be discussed and agreed upon based on the project's scope and client preferences."
+      },
   ]; */
 
   return (

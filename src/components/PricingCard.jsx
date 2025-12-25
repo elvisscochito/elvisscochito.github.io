@@ -5,6 +5,14 @@ import styles from '../styles/Pricing.module.css';
 
 const PricingCard = ({ cardKey, icon, tag, title, price, frequency, features }) => {
   const { t } = useTranslation("global");
+
+  const pricingLabel =
+    cardKey === 4
+      ? t('Pricing.contactForQuote')
+      : cardKey === 5
+        ? t('Pricing.contactForOffer')
+        : t('Pricing.startedFrom');
+
   return (
     <>
       <span className={styles.tag}><FontAwesomeIcon icon={icon} className={styles.icon} /> {tag}</span>
@@ -14,11 +22,7 @@ const PricingCard = ({ cardKey, icon, tag, title, price, frequency, features }) 
       </figure> */}
       <h3 className={styles.planName}>{title}</h3>
       <p className={styles.planPrice}>
-        {
-          cardKey === 4
-            ? t('Pricing.contactForQuote')
-            : t('Pricing.startedFrom')
-        }
+        {pricingLabel}
         <span className={styles.currency}> {price}</span>
         {/* {
           cardKey !== 4 &&

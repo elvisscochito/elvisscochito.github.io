@@ -1,4 +1,4 @@
-import { faCode, faDashboard, faGlobe, faInfoCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDashboard, faGlobe, faInfoCircle, faLaptop, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -87,6 +87,25 @@ const Pricing = () => {
         tFn('Pricing.pricingList.p4.featuresList.f2'),
         tFn('Pricing.pricingList.p4.featuresList.f3'),
         tFn('Pricing.pricingList.p4.featuresList.f4'),
+      ],
+    },
+    {
+      id: 5,
+      icon: faLaptop,
+      tag: tFn('Pricing.pricingList.p5.tag'),
+      title: tFn('Pricing.pricingList.p5.title'),
+      price: tFn('Pricing.pricingList.p5.price'),
+      frequency: tFn('Pricing.pricingList.p5.frequency'),
+      features: [
+        tFn('Pricing.pricingList.p5.featuresList.f1'),
+        tFn('Pricing.pricingList.p5.featuresList.f2'),
+        tFn('Pricing.pricingList.p5.featuresList.f9'),
+        tFn('Pricing.pricingList.p5.featuresList.f10'),
+        tFn('Pricing.pricingList.p5.featuresList.f11'),
+        tFn('Pricing.pricingList.p5.featuresList.f3'),
+        tFn('Pricing.pricingList.p5.featuresList.f4'),
+        tFn('Pricing.pricingList.p5.featuresList.f5'),
+        tFn('Pricing.pricingList.p5.featuresList.f6')
       ],
     }
   ];
