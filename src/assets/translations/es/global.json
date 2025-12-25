@@ -29,8 +29,8 @@
       "Part-Time": "Medio Tiempo",
       "Or": "o",
       "Full-Time": "Tiempo Completo",
-      "Any": "o cualquier otro",
-      "Opportunity": "oportunidad de trabajo",
+      "Any": "o cualquier otra oportunidad",
+      "Opportunity": "relacionada de trabajo",
       "cta": {
         "btn": "Contáctame",
         "btnAux": "Ver Currículum"
@@ -150,7 +150,8 @@
     "tecLocationType": "Presencial",
     "tecResponsibilities": {
       "r1": "Adquirí un fuerte sentido del diseño, aplicado a diseños de interfaces de usuario web y móviles en proyectos académicos."
-    }
+    },
+    "btn": "Descargar Currículum"
   },
   "SoftSkills": {
     "heading": "Habilidades Blandas.",
@@ -442,12 +443,13 @@
     "linkBtn": "Vista Previa del Proyecto"
   },
   "Pricing": {
-    "heading": "Precios",
+    "heading": "Tarifas de Servicios Freelance",
     "subheading": "Ofrezco estas opciones populares, con precios asequibles y flexibles, adaptados a tus necesidades específicas, presupuesto y objetivos.",
     "startingAt": "Comenzando Desde:",
     "startedFrom": "Comienza Desde",
     "contactMe": "Contáctame",
     "contactForQuote": "Contáctame para",
+    "contactForOffer": "Contáctame para Ofrecerme un",
     "pricingList": {
       "p1": {
         "tag": "Desarrollo Web",
@@ -531,7 +533,27 @@
           "f11": "Despliegue y Mantenimiento"
         }
       },
-      "p6": {
+      "p5": {
+        "tag": "Posición en TI",
+        "title": "Oferta de Trabajo Formal",
+        "price": "Salario Competitivo Basado en Experiencia",
+        "frequency": "Pago Único",
+        "featuresList": {
+          "f1": "Posición en Web, Ciencia de Datos, Móvil, Redes, DevOps o relacionada con TI",
+          "f2": "Posición de Medio Tiempo, Tiempo Completo o Contrato (Temporal, Plazo Fijo y/o Permanente)",
+          "f3": "Trabajo Híbrido, Remoto o Presencial",
+          "f4": "Dispuesto a cambiar de ubicación",
+          "f5": "Salario Competitivo",
+          "f6": "Paquete de Beneficios",
+          "f7": "Oportunidades de Desarrollo Profesional",
+          "f8": "Proyectos Desafiantes",
+          "f9": "Ambiente de Trabajo Colaborativo",
+          "f10": "Oportunidades de Crecimiento Profesional",
+          "f11": "Iniciativas de Equilibrio Trabajo-Vida",
+          "f12": "Programas de Salud y Bienestar"
+        }
+      },
+      "p7": {
         "tag": "Ciencia de Datos",
         "title": "Análisis de Datos",
         "price": "657.96 USD",
@@ -547,7 +569,7 @@
           "f8": "Presentación de Hallazgos"
         }
       },
-      "p5": {
+      "p6": {
         "tag": "Desarrollo Web",
         "title": "Sitio Web Completo",
         "price": "1,315.92 USD",
@@ -736,6 +758,18 @@
       "f27": {
         "question": "¿Cuál es tu estructura de precios?",
         "answer": "Mi estructura de precios varía dependiendo del alcance, complejidad y requerimientos del proyecto. Típicamente proporciono cotizaciones personalizadas basadas en las necesidades específicas de cada proyecto. Ofrezco tarifas competitivas y estoy abierto a discutir presupuestos de proyectos para encontrar una solución que funcione para ambas partes."
+      },
+      "f28": {
+        "question": "¿Cobras precios fijos o tarifas por hora?",
+        "answer": "Ofrezco tanto proyectos con precio fijo como servicios con tarifa por hora, dependiendo del alcance del trabajo, los requisitos del proyecto y las preferencias del cliente. Antes de comenzar, siempre recibirás una cotización clara con precios y cronogramas estimados. En última instancia, estoy abierto a discutir y acordar la estructura de precios que mejor se adapte a las necesidades del proyecto y asegure una colaboración exitosa."
+      },
+      "f29": {
+        "question": "¿Cuál es tu estructura de pago y términos?",
+        "answer": "Mi estructura de pago es flexible y depende del alcance del proyecto y las preferencias del cliente. Acepto tanto pagos únicos como pagos múltiples (basados en hitos o fases). Para proyectos más grandes, se requiere un depósito inicial del 25-35% antes de comenzar, con el saldo restante pagado al finalizar o en hitos o fases acordados. Sin embargo, a menudo recomiendo dividir el pago para asegurar la satisfacción mutua durante todo el proceso de desarrollo. Todos los términos de pago se discuten y acuerdan antes de que comience el proyecto para garantizar claridad y transparencia que funcione mejor para ambas partes."
+      },
+      "f30": {
+        "question": "¿Cuáles son tus métodos de pago?",
+        "answer": "Acepto varios métodos de pago, incluyendo transferencias bancarias, depósitos bancarios, PayPal y otras plataformas de pago en línea seguras."
       },
       "f10": {
         "question": "¿Con qué empresas has trabajado o para qué empresas has trabajado?",

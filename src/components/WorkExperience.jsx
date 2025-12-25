@@ -1,3 +1,5 @@
+import { faCircleArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import softtek from '../assets/softtek.svg';
@@ -90,7 +92,7 @@ const WorkExperience = () => {
         }
       </div>
       <footer className={styles.footer}>
-        <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=sharing" target="_blank" className={styles.btn}>{t('WorkExperience.btn')}</a>
+        <a href="https://drive.usercontent.google.com/download?id=1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK&export=download&authuser=0" /* target="_blank" */ className={styles.btn}>{t('WorkExperience.btn')} <FontAwesomeIcon icon={faCircleArrowDown} /></a>
       </footer>
     </section>
   );
