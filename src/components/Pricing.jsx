@@ -99,16 +99,13 @@ const Pricing = () => {
       features: [
         tFn('Pricing.pricingList.p5.featuresList.f1'),
         tFn('Pricing.pricingList.p5.featuresList.f2'),
-        tFn('Pricing.pricingList.p5.featuresList.f3'),
-        tFn('Pricing.pricingList.p5.featuresList.f4'),
-        tFn('Pricing.pricingList.p5.featuresList.f5'),
-        tFn('Pricing.pricingList.p5.featuresList.f6'),
-        tFn('Pricing.pricingList.p5.featuresList.f7'),
-        tFn('Pricing.pricingList.p5.featuresList.f8'),
         tFn('Pricing.pricingList.p5.featuresList.f9'),
         tFn('Pricing.pricingList.p5.featuresList.f10'),
         tFn('Pricing.pricingList.p5.featuresList.f11'),
-        tFn('Pricing.pricingList.p5.featuresList.f12')
+        tFn('Pricing.pricingList.p5.featuresList.f3'),
+        tFn('Pricing.pricingList.p5.featuresList.f4'),
+        tFn('Pricing.pricingList.p5.featuresList.f5'),
+        tFn('Pricing.pricingList.p5.featuresList.f6')
       ],
     }
   ];

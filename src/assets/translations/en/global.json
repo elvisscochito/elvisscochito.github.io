@@ -478,7 +478,7 @@
     "linkBtn": "Preview Project"
   },
   "Pricing": {
-    "heading": "Freelance Rates",
+    "heading": "Professional Service Rates",
     "subheading": "I offer this popular options, in an affordable and flexible pricing, tailored to your specific needs, budget and goals.",
     "startingAt": "Starting at:",
     "startedFrom": "Started From",
@@ -580,7 +580,7 @@
         "price": "Competitive Salary Based on Experience",
         "frequency": "One-Time Payment",
         "featuresList": {
-          "f1": "Web, Data Science, Mobile, Networking, DevOps, IT related position",
+          "f1": "Web, Data Science, Mobile, Networking, DevOps or IT related position",
           "f2": "Part-Time, Full-Time or Contract (Temporary, Fixed-term and/or Permanent) Position",
           "f3": "Hybrid, Remote or On-Site Work",
           "f4": "Willing to relocate",
