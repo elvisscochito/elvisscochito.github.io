@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 /* import contact from '../assets/contact.svg'; */
 import corncrunch from '../assets/corncrunch.svg';
+/* import nezaBorder from '../assets/neza-logo-border.svg'; */
 import neza from '../assets/neza-logo.svg';
 import profile from '../assets/profile.webp';
 import tec from '../assets/tec.svg';
@@ -178,7 +179,16 @@ function LinkInBio() {
           <span className={styles.username}>@elvisscochito</span>
           <h1 className={styles.heading}>Elviro Dominguez Soriano</h1>
 
-          <p className={styles.subheading}>{t("LinkInBio.student")} <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer" className={styles.link}>@tecdemonterrey <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>  {t("LinkInBio.hold")}</p>
+          <p className={styles.subheading}>
+
+            {t("LinkInBio.student")} <a href="https://tec.mx/en" target="_blank" rel="noopener noreferrer" className={styles.link}>@tecdemonterrey <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>  {t("LinkInBio.hold")}
+
+            <br />
+
+            Founder of <a href="https://www.nezastartup.com/link-in-bio" target="_blank" rel="noopener noreferrer" className={styles.link}>@nezastartup <img /* src={nezaBorder} */ alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>
+
+            {/* Creator of <a href="https://www.corncrunch.com/link-in-bio" target="_blank" rel="noopener noreferrer" className={styles.link}>@corncrunch <img src={tec} alt="TEC Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a> */}
+          </p>
 
           {/* <div className={styles.description}>
             <span className={styles.location}>
