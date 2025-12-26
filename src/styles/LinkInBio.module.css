@@ -190,11 +190,23 @@ div.linkInBio {
         text-decoration: none;
       }
 
-      a.link:last-of-type {
-        img {
+      @media (prefers-color-scheme: light) {
+        a.link:last-of-type img {
           content: url("../assets/neza-logo-dark.svg");
         }
       }
+
+      @media (prefers-color-scheme: dark) {
+        a.link:last-of-type img {
+          content: url("../assets/neza-logo.svg");
+        }
+      }
+
+      /* a.link:last-of-type {
+        img {
+          content: url("../assets/neza-logo-dark.svg");
+        }
+      } */
     }
 
     div.socialLinks {
@@ -546,12 +558,6 @@ div.linkInBio {
         flex-wrap: nowrap;
       }
     }
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  a.link:last-of-type img {
-    content: url("../assets/neza-logo.svg");
   }
 }
 
