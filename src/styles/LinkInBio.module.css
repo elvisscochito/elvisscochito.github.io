@@ -189,6 +189,12 @@ div.linkInBio {
         border-bottom: 1px solid var(--accent-color);
         text-decoration: none;
       }
+
+      a.link:last-of-type {
+        img {
+          content: url("../assets/neza-logo-dark.svg");
+        }
+      }
     }
 
     div.socialLinks {
@@ -540,6 +546,12 @@ div.linkInBio {
         flex-wrap: nowrap;
       }
     }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  a.link:last-of-type img {
+    content: url("../assets/neza-logo.svg");
   }
 }
 
