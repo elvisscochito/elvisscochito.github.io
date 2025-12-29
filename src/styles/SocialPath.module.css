@@ -46,7 +46,7 @@ div.container {
     color: light-dark(#0e9f0e, #0e9f0e);
   }
 
-  a:is(:nth-of-type(5), :nth-of-type(5), :nth-of-type(6)) .icon {
+  a:is(:nth-of-type(5), :nth-of-type(5), :nth-of-type(6), :nth-of-type(8)) .icon {
     color: var(--details);
   }
 
@@ -54,8 +54,13 @@ div.container {
     color: light-dark(rgb(169, 134, 63), rgb(217, 180, 100));
   }
 
+  /* calendar/calendly */
   a:is(:last-of-type) .icon {
-    color: var(--details);
+    color: light-dark(#4d90fe, #4d90fe);
+    /* red */
+    /* color: light-dark(#d14836, #d14836); */
+    /* apple maps red color */
+    /* color: light-dark(#ff3b30, #ff453a); */
   }
 }
 

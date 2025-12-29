@@ -54,7 +54,8 @@
     "email": "Mi Correo \u2197",
     "phone": "Mi Número de Teléfono \u2197",
     "contactCard": "Mi Tarjeta de Contacto \u2197",
-    "resume": "Mi Currículum \u2197"
+    "resume": "Mi Currículum \u2197",
+    "calendly": "Programa una reunión conmigo \u2197"
   },
   "About": {
     "heading": "¿Qué hay sobre mí?",
@@ -845,7 +846,9 @@
       "email": "Envíame un correo electrónico \u2197",
       "whatsapp": "Hablemos por WhatsApp \u2197",
       "linkedin": "Visita mi perfil de LinkedIn \u2197",
-      "github": "Checa mi GitHub \u2197"
+      "github": "Checa mi GitHub \u2197",
+      "resume": "Ver mi Currículum \u2197",
+      "calendly": "Programa una reunión \u2197"
     }
   },
   "Settings": {
@@ -909,22 +912,25 @@
         "name": "Currículum Vitae \u2197"
       },
       "sl10": {
+        "name": "Programar una reunión \u2197"
+      },
+      "sl11": {
         "name": "Sitio web del portafolio",
         "description": "Explora mis proyectos, habilidades y experiencias."
       },
-      "sl11": {
+      "sl12": {
         "name": "Perfil de LinkedIn",
         "description": "Conéctate conmigo profesionalmente."
       },
-      "sl12": {
+      "sl13": {
         "name": "Perfil de GitHub",
         "description": "Consulta mis repositorios de código."
       },
-      "sl13": {
+      "sl14": {
         "name": "Currículum Vitae",
         "description": "Descarga mi currículum más reciente."
       },
-      "sl14": {
+      "sl15": {
         "name": "Contáctame",
         "description": "Ponte en contacto para oportunidades."
       }

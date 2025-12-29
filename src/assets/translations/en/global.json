@@ -54,7 +54,8 @@
     "phone": "My Phone Number \u2197",
     "contactCard": "My Contact Card \u2197",
     "LinkInBio": "My Link in Bio \u2197",
-    "resume": "My Resume/CV \u2197"
+    "resume": "My Resume/CV \u2197",
+    "calendly": "Schedule a Meeting with Me \u2197"
   },
   "About": {
     "heading": "What about me?",
@@ -919,7 +920,9 @@
       "email": "Send me an email \u2197",
       "whatsapp": "Chat with me on WhatsApp \u2197",
       "linkedin": "Visit my LinkedIn profile \u2197",
-      "github": "Check out my GitHub \u2197"
+      "github": "Check out my GitHub \u2197",
+      "resume": "View my Resume/CV \u2197",
+      "calendly": "Schedule a meeting with me \u2197"
     }
   },
   "Settings": {
@@ -981,22 +984,25 @@
         "name": "Resume/CV \u2197"
       },
       "sl10": {
+        "name": "Schedule a Meeting \u2197"
+      },
+      "sl11": {
         "name": "Portfolio Website",
         "description": "Explore my projects, skills, and experiences."
       },
-      "sl11": {
+      "sl12": {
         "name": "LinkedIn Profile",
         "description": "Connect with me professionally."
       },
-      "sl12": {
+      "sl13": {
         "name": "GitHub Profile",
         "description": "Check out my code repositories."
       },
-      "sl13": {
+      "sl14": {
         "name": "Resume/CV",
         "description": "Download my latest resume."
       },
-      "sl14": {
+      "sl15": {
         "name": "Contact Me",
         "description": "Get in touch for opportunities."
       }

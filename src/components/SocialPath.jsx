@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faContactBook, faEnvelope, faFile, faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faContactBook, faEnvelope, faFile, faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/SocialPath.module.css';
@@ -32,6 +32,9 @@ const Social = () => {
       </a>
       <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=share_link" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.resume")} className={styles.headerLink}>
         <FontAwesomeIcon icon={faFile} className={styles.icon} />
+      </a>
+      <a href="https://calendly.com/neza-startup/meeting" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.calendly")} className={styles.headerLink}>
+        <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
       </a>
     </div>
   );
