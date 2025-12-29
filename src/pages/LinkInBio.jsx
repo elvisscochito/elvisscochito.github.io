@@ -1,5 +1,5 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin, faMedium, faPaypal, faTiktok, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faContactBook, faEnvelope, faFile, faGear, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faContactBook, faEnvelope, faFile, faGear, faGlobe, faLocationDot, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -242,6 +242,9 @@ function LinkInBio() {
             </a>
             <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=share_link" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl9.name")} className={styles.headerLink}>
               <FontAwesomeIcon icon={faFile} className={styles.icon} />
+            </a>
+            <a href="https://calendly.com/neza-startup/meeting" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl10.name")} className={styles.headerLink}>
+              <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
             </a>
           </div>
 

@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faContactBook, faEnvelope, faFile, faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faContactBook, faEnvelope, faFile, faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/Footer.module.css';
@@ -12,7 +12,10 @@ const Footer = () => {
       <p>{t('Footer.paragraph')} {t('Footer.by')} Elviro Dominguez Soriano. Copyright &copy; {new Date().getFullYear()} {t('Footer.rights')}</p>
       <hr className={styles.divider} />
       <div className={styles.footerLinks}>
-        <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=share_link" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("LinkInBio.socialLinksList.sl9.name")} className={styles.headerLink}>
+        <a href="https://calendly.com/neza-startup/meeting" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("Footer.Links.calendly")} className={styles.headerLink}>
+          <FontAwesomeIcon icon={faCalendar} className={styles.icon} />
+        </a>
+        <a href="https://drive.google.com/file/d/1njTFGZCH0N8A3AmNbSSXfdo-4RofscqK/view?usp=share_link" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("Footer.Links.resume")} className={styles.headerLink}>
           <FontAwesomeIcon icon={faFile} className={styles.icon} />
         </a>
         <a href="/contact.vcf" download="contact.vcf" target="_blank" rel="noopener noreferrer" data-tooltip-id="global-tooltip" data-tooltip-content={t("SocialPath.contactCard")}>
