@@ -236,7 +236,8 @@ div.linkInBio {
           }
 
           &:first-of-type:hover .icon {
-            color: light-dark(rgb(222, 201, 160), rgb(180, 160, 120));
+            /* color: light-dark(rgb(222, 201, 160), rgb(180, 160, 120)); */
+            color: light-dark(rgb(169, 134, 63), rgb(217, 180, 100));
           }
 
           &:nth-of-type(2):hover .icon {
@@ -272,6 +273,11 @@ div.linkInBio {
           /* Resume */
           &:nth-of-type(9):hover .icon {
             color: light-dark(var(--text-aux-color), var(--details));
+          }
+
+          /* Calendly */
+          &:nth-of-type(10):hover .icon {
+            color: light-dark(#4d90fe, #4d90fe);
           }
         }
       }
