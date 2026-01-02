@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import softtek from '../assets/softtek.svg';
 import tec from '../assets/tecnologico.svg';
+/* import microsoft from '../assets/microsoft_logo.svg'; */
+/* import neza from '../assets/neza-logo-dark.svg'; */
 import styles from '../styles/WorkExperience.module.css';
 import WorkExperienceCard from './WorkExperienceCard.jsx';
 
@@ -13,9 +15,30 @@ const WorkExperience = () => {
   const buildExperiences = (tFn) => [
     /* {
       id: 1,
+      title: 'Cloud Support Engineer | Technical Support Engineering',
+      website: "https://www.microsoft.com/en-us/",
+      logo: microsoft,
+      company: 'Microsoft',
+      type: 'Full-Time',
+      positionLink: "https://apply.careers.microsoft.com/careers/job/1970393556626697?domain=microsoft.com&hl=en-us",
+      date: 'Jan 2026 - Present',
+      duration: 'Present',
+      location: 'Santa Fe, Mexico City, Mexico',
+      locationType: 'On-Site',
+      responsibilities: [
+        'Providing technical support to Microsoft products and services.',
+        'Assisting enterprises customers in troubleshooting and resolving technical issues related to Microsoft Azure, Microsoft 365, and other cloud services.',
+        'Collaborating with cross-functional teams to ensure timely resolution of customer issues and enhance customer satisfaction.'
+      ]
+    }, */
+    /* {
+      id: 2,
       title: 'Software Engineer',
+      website: "https://www.nezastartup.com",
       company: 'Neza Startup',
+      logo: neza,
       type: 'Self-Employed',
+      positionLink: "https://www.nezastartup.com",
       date: 'May 2025 - Present',
       duration: '7 months',
       location: 'Monterrey, Nuevo León, Mexico',
@@ -25,7 +48,7 @@ const WorkExperience = () => {
       ]
     }, */
     {
-      id: 2,
+      id: 3,
       title: tFn('WorkExperience.softtekTitle'),
       website: "https://www.softtek.com",
       company: 'Softtek',
@@ -41,7 +64,7 @@ const WorkExperience = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: tFn('WorkExperience.tecTitle'),
       company: 'Tecnológico de Monterrey',
       website: "https://www.tec.mx/en",
