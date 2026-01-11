@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import microsoft from '../assets/microsoft_letter_logo.svg';
 import neza from '../assets/neza.svg';
 import softtek from '../assets/softtek.svg';
 import tec from '../assets/tecnologico.svg';
@@ -22,15 +23,8 @@ const CompaniesSlider = () => {
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
           </a>
-
-          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
           </a>
 
           <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
@@ -42,15 +36,8 @@ const CompaniesSlider = () => {
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
           </a>
-
-          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
           </a>
 
           <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
@@ -62,6 +49,9 @@ const CompaniesSlider = () => {
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
           </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
+          </a>
 
           <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
@@ -71,6 +61,35 @@ const CompaniesSlider = () => {
           </a>
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
+          </a>
+
+          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
+          </a>
+
+          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
           </a>
         </div>
         <div aria-hidden="true" className={styles.sliderTrack}>
@@ -84,15 +103,8 @@ const CompaniesSlider = () => {
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
           </a>
-
-          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
           </a>
 
           <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
@@ -104,15 +116,8 @@ const CompaniesSlider = () => {
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
           </a>
-
-          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
-          </a>
-          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
-            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
           </a>
 
           <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
@@ -124,6 +129,9 @@ const CompaniesSlider = () => {
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
           </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
+          </a>
 
           <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
@@ -133,6 +141,35 @@ const CompaniesSlider = () => {
           </a>
           <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
             <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
+          </a>
+
+          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
+          </a>
+
+          <a href="https://tec.mx/es" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={tec} alt="Company Logo 1" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.softtek.com" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={softtek} alt="Company Logo 2" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.nezastartup.com/link-in-bio" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={neza} alt="Company Logo 3" className={styles.companyLogo} />
+          </a>
+          <a href="https://www.microsoft.com/en-us/" target='_blank' rel='noopener noreferrer' className={styles.linkImage}>
+            <img src={microsoft} alt="Company Logo 4" className={styles.companyLogo} />
           </a>
         </div>
       </div>

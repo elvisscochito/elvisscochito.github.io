@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 /* import contact from '../assets/contact.svg'; */
 import corncrunch from '../assets/corncrunch.svg';
 /* import nezaBorder from '../assets/neza-logo-border.svg'; */
-/* import microsoft from '../assets/microsoft_logo.svg'; */
+import microsoft from '../assets/microsoft_logo.svg';
 import neza from '../assets/neza-logo.svg';
 import profile from '../assets/profile.webp';
 import tec from '../assets/tec.svg';
@@ -192,7 +192,7 @@ function LinkInBio() {
 
             <br />
 
-            {/* Engineer at <a href="https://www.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer" className={styles.link}>@microsoft <img src={microsoft} alt="Microsoft Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a> */}
+            Engineer at <a href="https://www.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer" className={styles.link}>@microsoft <img src={microsoft} alt="Microsoft Logo" style={{ width: '1em', verticalAlign: 'middle' }} /> &#8599;</a>
           </p>
 
           {/* <div className={styles.description}>

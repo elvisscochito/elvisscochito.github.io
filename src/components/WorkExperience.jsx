@@ -2,9 +2,9 @@ import { faCircleArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import microsoft from '../assets/microsoft_logo.svg';
 import softtek from '../assets/softtek.svg';
 import tec from '../assets/tecnologico.svg';
-/* import microsoft from '../assets/microsoft_logo.svg'; */
 /* import neza from '../assets/neza-logo-dark.svg'; */
 import styles from '../styles/WorkExperience.module.css';
 import WorkExperienceCard from './WorkExperienceCard.jsx';
@@ -13,9 +13,9 @@ const WorkExperience = () => {
   const { t, i18n } = useTranslation("global");
 
   const buildExperiences = (tFn) => [
-    /* {
+    {
       id: 1,
-      title: 'Cloud Support Engineer | Technical Support Engineering',
+      title: 'Engineer' /* 'Cloud Support Engineer | Technical Support Engineering' */,
       website: "https://www.microsoft.com/en-us/",
       logo: microsoft,
       company: 'Microsoft',
@@ -26,11 +26,15 @@ const WorkExperience = () => {
       location: 'Santa Fe, Mexico City, Mexico',
       locationType: 'On-Site',
       responsibilities: [
-        'Providing technical support to Microsoft products and services.',
-        'Assisting enterprises customers in troubleshooting and resolving technical issues related to Microsoft Azure, Microsoft 365, and other cloud services.',
-        'Collaborating with cross-functional teams to ensure timely resolution of customer issues and enhance customer satisfaction.'
+        /* 'Hired as an Engineer at Microsoft and currently undergoing training to provide technical support for enterprise customers related to Microsoft cloud services.' */ /* ,
+        /* 'Engeneering solutions and providing technical support for Microsoft cloud services.', */
+        /* 'Engaging with customers to provide expert technical support and solutions for Microsoft cloud services.', */
+        /* 'Providing technical support to Microsoft products and services.', */
+        /* 'Assisting enterprises customers in troubleshooting and resolving technical issues related to Microsoft Azure, Microsoft 365, and other cloud services.',
+        'Collaborating with cross-functional teams to ensure timely resolution of customer issues and enhance customer satisfaction.' *//* ,
+      'Documenting solutions and contributing to knowledge base improvements.' */
       ]
-    }, */
+    },
     /* {
       id: 2,
       title: 'Software Engineer',
