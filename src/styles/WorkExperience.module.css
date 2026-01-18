@@ -209,12 +209,12 @@ section.workExperience {
   div.experiencesContainer::before {
     content: '';
     position: absolute;
-    top: 35%;
+    top: 40%;
     /* Centro del contenedor */
     left: -7.5%;
     width: 1.5px;
     /* Ajusta el ancho de la línea */
-    height: 45%;
+    height: 75%;
     /* Ajusta la altura de la línea (50% de la altura del contenedor) */
     background-color: #eaeaea;
     /* Ajusta el color de la línea */
