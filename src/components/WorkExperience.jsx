@@ -26,7 +26,8 @@ const WorkExperience = () => {
       location: 'Santa Fe, Mexico City, Mexico',
       locationType: 'On-Site',
       responsibilities: [
-        'Providing technical support for Microsoft SharePoint Online including site administration, permissions, content governance and management, website design and rendering issues and collaboration features.',
+        'Providing technical support and troubleshooting for Microsoft SharePoint Online, including site administration, permissions, content governance and management, website design and rendering issues, and collaboration features.',
+        /* 'Providing technical support and troubleshooting process to enterprise customers using Microsoft SharePoint Online, including site administration, permissions, content governance and management, website design and rendering issues, and collaboration features.', */
         /* "SharePoint Online and OneDrive for Business support", */
         /* 'Hired as an Engineer at Microsoft and currently undergoing training to provide technical support for enterprise customers related to Microsoft cloud services.' */ /* ,
         /* 'Engeneering solutions and providing technical support for Microsoft cloud services.', */
