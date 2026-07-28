@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import * as emailController from '../controllers/email.controller.js';
 
 dotenv.config();
 
@@ -89,6 +90,11 @@ export async function postWhatsAppMessage(req, res) {
       body: JSON.stringify(payload)
     });
 
+    await emailController.postEmail(req, res);
+
+    const data0 = await response.json();
+    return res.status(200).json({ message: 'WhatsApp message sent successfully', data: data0 });
+
     const data = await response.json();
     return res.status(200).json({ message: 'WhatsApp message sent successfully', data: data });
   } catch (error) {
@@ -145,6 +151,7 @@ export async function postWhatsAppQuickMessage(req, res) {
 
     const data = await response.json();
     return res.status(200).json({ message: 'WhatsApp quick contact message sent successfully', data: data });
+
   } catch (error) {
     console.error('Error sending WhatsApp quick contact message:', error);
     return res.status(500).json({ message: 'Internal server error', details: error.message });

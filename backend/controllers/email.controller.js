@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
 
+/* export const postEmail = async (req, res)  */
+
 export const postEmail = ("/api/postEmail", async (req, res) => {
   const { subject, name, email, phone, message } = req.body;
 
@@ -52,7 +54,7 @@ export const postEmail = ("/api/postEmail", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      /* service: "iCloud", */
+      /* service: "iCloud", https://support.apple.com/es-mx/102525 */
       host: "smtp.mail.me.com",
       port: 587, // true for 465, false for other ports
       secure: false,
