@@ -5,7 +5,7 @@ const SMTP_HOST = process.env.SMTP_HOST || 'smtp.mail.me.com';
 const SMTP_PORT = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587;
 const SMTP_USER = process.env.SMTP_USER;
 const SMTP_PASS = process.env.SMTP_PASS;
-const SMTP_FROM = process.env.SMTP_FROM || `"${process.env.SMTP_FROM_NAME || 'Portfolio'}" <contact@${process.env.SMTP_FROM_DOMAIN || 'example.com'}>`;
+const SMTP_FROM = process.env.SMTP_FROM/*  || `"${process.env.SMTP_FROM_NAME || 'Portfolio'}" <contact@${process.env.SMTP_FROM_DOMAIN || 'example.com'}>` */;
 const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || process.env.SMTP_USER;
 
 const WHATSAPP_BOT_ID = process.env.WHATSAPP_BOT_ID;
