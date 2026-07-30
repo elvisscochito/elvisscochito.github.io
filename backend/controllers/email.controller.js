@@ -9,10 +9,10 @@ const SMTP_FROM = process.env.SMTP_FROM/*  || `${process.env.SMTP_FROM_NAME} <co
 
 const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || process.env.SMTP_USER;
 
-export async function sendEmailNotification({ subject, name, email, phone, message }) {
-  if (!subject || !name || !email || !message) {
+export async function sendEmailNotification({ subject, name, email = "not provided (optional)", phone = "not provided (optional)", message }) {
+  /* if (!subject || !name || !email || !message) {
     throw new Error("Missing required email fields");
-  }
+  } */
 
   if (!SMTP_USER || !SMTP_PASS) {
     throw new Error("SMTP credentials are not configured in environment variables.");
@@ -40,9 +40,10 @@ export async function sendEmailNotification({ subject, name, email, phone, messa
       <br/>
       <p>"${message}"</p>
       <br/>
-      ${email}
+      <span>Email: <b>${email}</b></span>
+      <br/>
+      <span>Phone: <b>${phone}</b></span>
       <br/><br/>
-      ${phone ? `${phone}<br/><br/>` : "Not provided (optional)<br/><br/>"}
       <span>Sent from Portfolio</span>`,
   });
 }
