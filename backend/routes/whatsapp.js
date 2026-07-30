@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post('/postWhatsApp', whatsappController.postWhatsAppMessage);
 /* router.post('/postWhatsAppMessage', whatsappController.postWhatsAppMessage); */
-router.post('/postWhatsAppQuickMessage', whatsappController.postWhatsAppQuickMessage);
+router.post('/postQuickNotification', whatsappController.postQuickNotification);
 
 export default router;
