@@ -1,11 +1,9 @@
+import 'dotenv/config';
 import cors from "cors";
-import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
 import emailRoutes from './routes/email.js';
 import whatsappRoutes from './routes/whatsapp.js';
-
-dotenv.config();
 
 const app = express();
 app.use(cors());
