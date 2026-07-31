@@ -42,7 +42,7 @@ const QuickContact = () => {
 
     const postWhatsAppQuickMessage = async () => {
       try {
-        const response = await fetch("/api/postWhatsAppQuickMessage", {
+        const response = await fetch("/api/postQuickNotification", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
